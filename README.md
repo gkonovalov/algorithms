@@ -2,35 +2,9 @@
 
 Need to prepare description.
 
-<style>
-pre {
-  //color: #008F11;
-  background-color: transparent;
-}
-
-a:link {
-  font-weight: bold;
-  //color: #008F11;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:visited {
-  //color: #00ae17;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:hover {
-  //color: #00ae17;
-  background-color: transparent;
-  text-decoration: underline;
-}
-</style>
-
 ## Algorithms
-<pre>
-<a href="algorithms">Algorithms</a>
+<pre style=" background-color: transparent;">
+<a style="font-weight: bold; color: #008F11;" href="algorithms">Algorithms</a>
 ├── <a href="algorithms/arrays">Arrays</a>
 │   ├── <a href="algorithms/arrays/searching">Searching</a>
 │   │   ├── <a href="algorithms/arrays/searching/LinearSearch.java">Linear Search</a>

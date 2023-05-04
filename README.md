@@ -3,10 +3,10 @@
 Need to prepare description.
 
 ## Algorithms
-<pre style=" background-color: transparent;">
-<a style="font-weight: bold; color: #008F11;" href="algorithms">Algorithms</a>
-├── <a href="algorithms/arrays">Arrays</a>
-│   ├── <a href="algorithms/arrays/searching">Searching</a>
+<pre>
+<a href="algorithms"><b>Algorithms</b></a >
+├── <a href="algorithms/arrays"><b>Arrays</b></a>
+│   ├── <a href="algorithms/arrays/searching"><b>Searching</b></a>
 │   │   ├── <a href="algorithms/arrays/searching/LinearSearch.java">Linear Search</a>
 │   │   ├── Binary Search 
 │   │   ├── Interpolation Search

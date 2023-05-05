@@ -4,10 +4,10 @@ Need to prepare description.
 
 ## Algorithms
 <pre>
-<a href="algorithms"><b>Algorithms</b></a >
-├── <a href="algorithms/arrays"><b>Arrays</b></a>
-│   ├── <a href="algorithms/arrays/searching"><b>Searching</b></a>
-│   │   ├── <a href="algorithms/arrays/searching/LinearSearch.java">Linear Search</a>
+<a href="src/algorithms"><b>Algorithms</b></a >
+├── <a href="src/algorithms/arrays"><b>Arrays</b></a>
+│   ├── <a href="src/algorithms/arrays/searching"><b>Searching</b></a>
+│   │   ├── <a href="src/algorithms/arrays/searching/LinearSearch.java"><b>Linear Search</b></a>
 │   │   ├── Binary Search 
 │   │   ├── Interpolation Search
 │   │   ├── Exponential Search

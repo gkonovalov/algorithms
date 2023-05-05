@@ -7,7 +7,8 @@ import java.util.Arrays;
  * <p>
  * Binary Search implementation. Recursive and iterative approach.
  * </p>
- * Runtime Complexity: Average O(log n) and Worst Case O(log n) for the {@code searchRecursive} and {@code searchIterative}
+ * Runtime Complexity: Average O(log n) and Worst Case O(log n)
+ * for the {@code searchRecursive} and {@code searchIterative}
  * Space Complexity: O(n)
  */
 public class BinarySearch {

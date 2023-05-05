@@ -6,19 +6,19 @@ package algorithms.arrays.searching;
  * Linear search implementation.
  * </p>
  * Runtime Complexity: O(n)
- * Space Complexity: O(1)
+ * Space Complexity: O(n)
  */
 public class LinearSearch {
 
-    private static final Integer[] sortedArray = {-555, -2, -1, 3, 4, 5, 13, 20, 25, 40, 42, 44, 53};
-
     public static void main(final String[] args) {
-        System.out.println("Position:" + findNumber(53));
+        final int[] arr = {40, -2, 4, 44, 5, 42, 13, 20, -555, 25, 3, -1, 53};
+
+        System.out.println("Position:" + searchIteratively(arr, 42));
     }
 
-    private static int findNumber(final int searchInt) {
-        for (int i = 0; i < sortedArray.length; i++) {
-            if (searchInt == sortedArray[i]) {
+    public static int searchIteratively(final int[] arr, final int num) {
+        for (int i = 0; i < arr.length; i++) {
+            if (num == arr[i]) {
                 return i;
             }
         }

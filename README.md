@@ -8,7 +8,7 @@ Need to prepare description.
 ├── <a href="src/algorithms/arrays"><b>Arrays</b></a>
 │   ├── <a href="src/algorithms/arrays/searching"><b>Searching</b></a>
 │   │   ├── <a href="src/algorithms/arrays/searching/LinearSearch.java"><b>Linear Search</b></a>
-│   │   ├── Binary Search 
+│   │   ├── <a href="src/algorithms/arrays/searching/BinarySearch.java"><b>Binary Search</b></a> 
 │   │   ├── Interpolation Search
 │   │   ├── Exponential Search
 │   │   ├── Jump Search 

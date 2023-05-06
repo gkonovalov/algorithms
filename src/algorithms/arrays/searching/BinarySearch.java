@@ -47,7 +47,10 @@ public class BinarySearch {
         return searchRecursivelyHelper(arr, 0, arr.length - 1, num);
     }
 
-    private static int searchRecursivelyHelper(final int[] arr, final int start, final int end, final int num) {
+    private static int searchRecursivelyHelper(final int[] arr,
+                                               final int start,
+                                               final int end,
+                                               final int num) {
         while (start <= end) {
             final int center = (end - start) / 2 + start;
 

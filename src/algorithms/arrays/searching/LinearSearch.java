@@ -6,7 +6,7 @@ package algorithms.arrays.searching;
  * Linear search implementation.
  * </p>
  * Runtime Complexity: O(n)
- * Space Complexity: O(n)
+ * Space Complexity: O(1)
  */
 public class LinearSearch {
 

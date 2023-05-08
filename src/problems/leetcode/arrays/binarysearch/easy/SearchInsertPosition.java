@@ -5,7 +5,9 @@ package problems.leetcode.arrays.binarysearch.easy;
  * Created by Georgiy Konovalov on 8/04/2023.
  * <p>
  *
- * @see <a href="https://leetcode.com/problems/search-insert-position/">[Easy][35] - Search Insert Position</a>
+ * @see <a href="https://leetcode.com/problems/search-insert-position/">
+ *     [Easy][35] - Search Insert Position
+ *     </a>
  * </p>
  * Runtime Complexity: O(log n)
  * Space Complexity: O(1)

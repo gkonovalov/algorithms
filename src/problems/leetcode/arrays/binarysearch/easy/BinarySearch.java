@@ -5,7 +5,9 @@ package problems.leetcode.arrays.binarysearch.easy;
  * Created by Georgiy Konovalov on 8/04/2023.
  * <p>
  *
- * @see <a href="https://leetcode.com/problems/binary-search/">[Easy][704] - Binary Search</a>
+ * @see <a href="https://leetcode.com/problems/binary-search/">
+ *     [Easy][704] - Binary Search
+ *     </a>
  * </p>
  * Runtime Complexity: O(log n)
  * Space Complexity: O(1)

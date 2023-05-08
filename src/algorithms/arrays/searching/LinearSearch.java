@@ -10,13 +10,13 @@ package algorithms.arrays.searching;
  */
 public class LinearSearch {
 
-    public static void main(final String[] args) {
-        final int[] arr = {40, -2, 4, 44, 5, 42, 13, 20, -555, 25, 3, -1, 53};
+    public static void main(String[] args) {
+        int[] arr = {40, -2, 4, 44, 5, 42, 13, 20, -555, 25, 3, -1, 53};
 
         System.out.println("Position:" + searchIteratively(arr, 42));
     }
 
-    public static int searchIteratively(final int[] arr, final int num) {
+    public static int searchIteratively(int[] arr, int num) {
         for (int i = 0; i < arr.length; i++) {
             if (num == arr[i]) {
                 return i;

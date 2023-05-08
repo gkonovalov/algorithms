@@ -13,23 +13,23 @@ import java.util.Arrays;
  */
 public class BinarySearch {
 
-    public static void main(final String[] args) {
-        final int[] arr = {40, -2, 4, 44, 5, 42, 13, 20, -555, 25, 3, -1, 53};
+    public static void main(String[] args) {
+        int[] arr = {40, -2, 4, 44, 5, 42, 13, 20, -555, 25, 3, -1, 53};
 
         Arrays.sort(arr);
 
         System.out.println("Sorted Array:" + Arrays.toString(arr));
-        System.out.println("Binary Search Java:" + Arrays.binarySearch(arr, 42));
+        System.out.println("Binary Search Java SDK:" + Arrays.binarySearch(arr, 42));
         System.out.println("Binary Search Iterative:" + searchIteratively(arr, 42));
         System.out.println("Binary Search Recursive:" + searchRecursively(arr, 42));
     }
 
-    public static int searchIteratively(final int[] arr, final int num) {
+    public static int searchIteratively(int[] arr, int num) {
         int start = 0;
         int end = arr.length - 1;
 
         while (start <= end) {
-            final int center = (end - start) / 2 + start;
+            int center = (end - start) / 2 + start;
 
             if (num < arr[center]) {
                 end = center - 1;
@@ -43,16 +43,13 @@ public class BinarySearch {
         return -1;
     }
 
-    public static int searchRecursively(final int[] arr, final int num) {
+    public static int searchRecursively(int[] arr, int num) {
         return searchRecursivelyHelper(arr, 0, arr.length - 1, num);
     }
 
-    private static int searchRecursivelyHelper(final int[] arr,
-                                               final int start,
-                                               final int end,
-                                               final int num) {
+    private static int searchRecursivelyHelper(int[] arr, int start, int end, int num) {
         while (start <= end) {
-            final int center = (end - start) / 2 + start;
+            int center = (end - start) / 2 + start;
 
             if (num < arr[center]) {
                 return searchRecursivelyHelper(arr, start, center - 1, num);

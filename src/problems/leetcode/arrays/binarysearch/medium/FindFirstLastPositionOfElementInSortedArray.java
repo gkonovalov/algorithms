@@ -32,7 +32,7 @@ public class FindFirstLastPositionOfElementInSortedArray {
     private static int binarySearch(int[] nums, int target, boolean isLeft) {
         int start = 0;
         int end = nums.length - 1;
-        int indx = -1;
+        int index = -1;
 
         while (start <= end) {
             int center = (end - start) / 2 + start;
@@ -47,12 +47,12 @@ public class FindFirstLastPositionOfElementInSortedArray {
                 } else {
                     start = center + 1;
                 }
-                indx = center;
+                index = center;
             }
 
         }
 
-        return indx;
+        return index;
     }
 
 

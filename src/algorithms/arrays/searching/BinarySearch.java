@@ -20,6 +20,7 @@ public class BinarySearch {
         System.out.println("Sorted Array:" + Arrays.toString(arr));
         System.out.println("Binary Search Java SDK:" + Arrays.binarySearch(arr, 42));
         System.out.println("Binary Search Iterative:" + searchIteratively(arr, 42));
+        System.out.println("Binary Search Iterative2:" + searchIteratively2(arr, 42));
         System.out.println("Binary Search Recursive:" + searchRecursively(arr, 42));
     }
 
@@ -40,6 +41,22 @@ public class BinarySearch {
         }
 
         return -1;
+    }
+
+    public static int searchIteratively2(int[] arr, int num) {
+        int start = 0;
+        int end = arr.length - 1;
+
+        while (start < end) {
+            int center = (end - start) / 2 + start;
+
+            if (num <= arr[center]) {
+                end = center;
+            } else {
+                start = center + 1;
+            }
+        }
+        return end;
     }
 
     public static int searchRecursively(int[] arr, int num) {

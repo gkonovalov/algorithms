@@ -4,8 +4,9 @@ package problems.leetcode.arrays.binarysearch.easy;
 /**
  * Created by Georgiy Konovalov on 8/04/2023.
  * <p>
- *
- * @see <a href="https://leetcode.com/problems/first-bad-version/">[Easy][278] - First Bad Version</a>
+ * @see <a href="https://leetcode.com/problems/first-bad-version/">
+ *     [Easy][278] - First Bad Version
+ *      </a>
  * </p>
  * Runtime Complexity: O(log n)
  * Space Complexity: O(1)
@@ -17,6 +18,22 @@ public class FirstBadVersion {
     }
 
     public static int firstBadVersion(int n) {
+        int start = 1;
+        int end = n;
+
+        while (start < end) {
+            int center = (end - start) / 2 + start;
+
+            if (isBadVersion(center)) {
+                end = center;
+            } else {
+                start = center + 1;
+            }
+        }
+        return end;
+    }
+
+    public static int firstBadVersion2(int n) {
         int start = 1;
         int end = n;
 

@@ -4,10 +4,9 @@ package problems.leetcode.arrays.binarysearch.medium;
 /**
  * Created by Georgiy Konovalov on 8/04/2023.
  * <p>
- *
  * @see <a href="https://leetcode.com/problems/cutting-ribbons/">
- * [Medium][1891] - Cutting Ribbons
- * </a>
+ *          [Medium][1891] - Cutting Ribbons
+ *      </a>
  * </p>
  * Runtime Complexity: O(n log n)
  * Space Complexity: O(1)

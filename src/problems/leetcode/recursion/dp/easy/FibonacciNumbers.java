@@ -31,16 +31,16 @@ public class FibonacciNumbers {
         return fibRecursiveTopDown(n - 1) + fibRecursiveTopDown(n - 2);
     }
 
-    public static int fibMemoizationTopDown(int n, int[] mem) {
+    public static int fibMemoizationTopDown(int n, int[] memo) {
         if (n <= 1) {
             return n;
         }
 
-        if (mem[n] == 0) {
-            mem[n] = fibMemoizationTopDown(n - 1, mem) + fibMemoizationTopDown(n - 2, mem);
+        if (memo[n] != 0) {
+            return memo[n];
         }
 
-        return mem[n];
+        return fibMemoizationTopDown(n - 1, memo) + fibMemoizationTopDown(n - 2, memo);
     }
 
     public static int fibDPBottomUp(int n) {

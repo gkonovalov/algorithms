@@ -87,7 +87,7 @@ Need to prepare description.
 │   │   ├── Strongly Connected Component
 │   │   │   ├── Kusaraju
 │   │   │   └── Tarjan
-│   │   └── Union-Find
+│   │   └── <a href="src/algorithms/graphs/connectivity/unionfind"><b>Union-Find</b></a>
 │   ├── Cycle Detection
 │   ├── Coloring
 │   ├── Bridges 

@@ -14,7 +14,7 @@ Need to prepare description.
 │   │   ├── Jump Search 
 │   │   └── Ternary Search
 │   ├── Sorting
-│   │   ├── Bubble Sort 
+│   │   ├── <a href="src/algorithms/arrays/sorting/BubbleSort.java"><b>Bubble Sort</b></a>
 │   │   ├── Merge Sort 
 │   │   ├── Quick Sort 
 │   │   ├── Radix Sort 

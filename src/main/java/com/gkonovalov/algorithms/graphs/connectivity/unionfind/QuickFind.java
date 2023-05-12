@@ -8,8 +8,7 @@ package com.gkonovalov.algorithms.graphs.connectivity.unionfind;
  * it will take N^2 time to execute.
  * </p>
  * Runtime Complexity: O(n) for {@code QuickFind}, {@code union}
- *                     O(1) for {@code find}, {@code isConnected},
- *                              {@code componentsCount}
+ *                     O(1) for {@code isConnected}, {@code componentsCount}
  * Space Complexity: O(n)
  */
 public class QuickFind {
@@ -27,11 +26,11 @@ public class QuickFind {
     }
 
     public boolean isConnected(int a, int b) {
-        if (isValid(a) && isValid(b)) {
-            return id[a] == id[b];
-        } else {
+        if (!isValid(a) || !isValid(b)) {
             return false;
         }
+
+        return id[a] == id[b];
     }
 
     public void union(int a, int b) {
@@ -49,13 +48,6 @@ public class QuickFind {
                 id[i] = valB;
             }
         }
-    }
-
-    public int find(int p) {
-        if (!isValid(p)) {
-            return -1;
-        }
-        return id[p];
     }
 
     public int count() {

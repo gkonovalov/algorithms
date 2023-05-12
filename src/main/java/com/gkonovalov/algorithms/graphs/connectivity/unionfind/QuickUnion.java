@@ -8,7 +8,7 @@ package com.gkonovalov.algorithms.graphs.connectivity.unionfind;
  * will have very skinny tree.
  * </p>
  * Runtime Complexity: O(n) for {@code QuickUnion}, {@code union}
- *                     O(n) for {@code find}, {@code isConnected},
+ *                     O(n) for {@code root}, {@code isConnected},
  *                              {@code componentsCount}
  * Space Complexity: O(n)
  */

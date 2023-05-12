@@ -10,7 +10,7 @@ package com.gkonovalov.problems.recursion.dp.medium;
  * </p>
  * Runtime Complexity: O(n)
  * Space Complexity: O(1) for {@code climbStairs}, {@code climbStairs3}
- * O(n) for {@code climbStairs2}
+ *                   O(n) for {@code climbStairs2}
  */
 public class JumpGame {
 

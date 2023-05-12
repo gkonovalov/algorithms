@@ -4,10 +4,9 @@ package com.gkonovalov.problems.arrays.binarysearch.medium;
 /**
  * Created by Georgiy Konovalov on 8/04/2023.
  * <p>
- *
  * @see <a href="https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/">
- * [Medium][1011] - Capacity To Ship Packages Within D Days
- * </a>
+ *          [Medium][1011] - Capacity To Ship Packages Within D Days
+ *      </a>
  * </p>
  * Runtime Complexity: O(n log n)
  * Space Complexity: O(1)

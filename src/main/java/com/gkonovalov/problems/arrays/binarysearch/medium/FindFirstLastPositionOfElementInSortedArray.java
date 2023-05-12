@@ -6,10 +6,9 @@ import java.util.Arrays;
 /**
  * Created by Georgiy Konovalov on 8/04/2023.
  * <p>
- *
  * @see <a href="https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/">
- * [Medium][34] - Find First and Last Position of Element in Sorted Array
- * </a>
+ *          [Medium][34] - Find First and Last Position of Element in Sorted Array
+ *      </a>
  * </p>
  * Runtime Complexity: O(log n)
  * Space Complexity: O(1)

@@ -4,10 +4,9 @@ package com.gkonovalov.problems.arrays.binarysearch.medium;
 /**
  * Created by Georgiy Konovalov on 8/04/2023.
  * <p>
- *
  * @see <a href="https://leetcode.com/problems/koko-eating-bananas/">
- * [Medium][875] - Koko Eating Bananas
- * </a>
+ *          [Medium][875] - Koko Eating Bananas
+ *      </a>
  * </p>
  * Runtime Complexity: O(n log m)
  * Space Complexity: O(1)

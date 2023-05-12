@@ -3,22 +3,24 @@ package com.gkonovalov.algorithms.graphs.connectivity.unionfind;
 /**
  * Created by Georgiy Konovalov on 12/05/2023.
  * <p>
- * Weighted Quick-Union implementation.
- * This algorithm have pretty efficient 'union' operation.
+ * Weighted Quick-Union with path compression implementation.
+ * The overall runtime complexity is considered to be nearly linear or O(m lg* n).
+ * In practice, this is considered to be very close to O(n) and very efficient solution
+ * for dynamic connectivity problems.
  * </p>
- * Runtime Complexity: O(n+m log n) - m 'union' operations for n objects;
- *                     O(log n) for {@code union}, {@code isConnected}, {@code root}
- *                     O(n) for {@code QuickUnionWeighted}
- *                     O(1) {@code componentsCount}
+ * Runtime Complexity: O(m lg* n)) ~= O(n);
+ *                     O(lg* n) for {@code union}, {@code isConnected}, {@code root};
+ *                     O(n) for {@code QuickUnionWeighted};
+ *                     O(1) {@code componentsCount};
  * Space Complexity: O(n)
  */
-public class QuickUnionWeighted {
+public class QuickUnionWeightedPathCompression {
 
     private int[] id;
     private int[] sz;
     private int components;
 
-    public QuickUnionWeighted(int size) {
+    public QuickUnionWeightedPathCompression(int size) {
         this.id = new int[size];
         this.sz = new int[size];
         this.components = size;
@@ -29,24 +31,11 @@ public class QuickUnionWeighted {
         }
     }
 
-    public int findLargerElement(int index) {
-        if (!isValid(index)) {
-            return -1;
-        }
-
-        int biggest = 0;
-        for (int i = 0; i < id.length; i++) {
-            if (id[i] == id[index]) {
-                biggest = i;
-            }
-        }
-        return biggest;
-    }
-
     public boolean isConnected(int a, int b) {
         if (!isValid(a) && !isValid(b)) {
             return false;
         }
+
         return root(a) == root(b);
     }
 
@@ -83,6 +72,7 @@ public class QuickUnionWeighted {
 
     private int root(int index) {
         while (id[index] != index) {
+            id[index] = id[id[index]]; // path compression
             index = id[index];
         }
         return index;

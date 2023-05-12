@@ -34,4 +34,13 @@ public class QuickUnionTest {
         assertFalse(quickUnion.isConnected(5, 4));
         assertFalse(quickUnion.isConnected(1, 3));
     }
+
+    @Test
+    @DisplayName("Testing QuickUnion connected components count")
+    public void testComponentsCount() {
+        quickUnion.union(3, 4);
+        quickUnion.union(2, 3);
+
+        assertEquals(quickUnion.componentsCount(), 8);
+    }
 }

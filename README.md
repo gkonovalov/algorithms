@@ -7,14 +7,14 @@ Need to prepare description.
 <a href="src/algorithms"><b>Algorithms</b></a >
 ├── <a href="src/algorithms/arrays"><b>Arrays</b></a>
 │   ├── <a href="src/algorithms/arrays/searching"><b>Searching</b></a>
-│   │   ├── <a href="src/algorithms/arrays/searching/LinearSearch.java"><b>Linear Search</b></a>
-│   │   ├── <a href="src/algorithms/arrays/searching/BinarySearch.java"><b>Binary Search</b></a> <a href="https://www.youtube.com/watch?v=P3YID7liBug">[i]</a><a href="src/problems/leetcode/arrays/binarysearch/">[p]</a>
+│   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/searching/LinearSearch.java"><b>Linear Search</b></a>
+│   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/searching/BinarySearch.java"><b>Binary Search</b></a> <a href="https://www.youtube.com/watch?v=P3YID7liBug">[i]</a><a href="src/problems/leetcode/arrays/binarysearch/">[p]</a>
 │   │   ├── Interpolation Search
 │   │   ├── Exponential Search
 │   │   ├── Jump Search 
 │   │   └── Ternary Search
 │   ├── Sorting
-│   │   ├── <a href="src/algorithms/arrays/sorting/BubbleSort.java"><b>Bubble Sort</b></a>
+│   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/BubbleSort.java"><b>Bubble Sort</b></a>
 │   │   ├── Merge Sort 
 │   │   ├── Quick Sort 
 │   │   ├── Radix Sort 
@@ -87,7 +87,7 @@ Need to prepare description.
 │   │   ├── Strongly Connected Component
 │   │   │   ├── Kusaraju
 │   │   │   └── Tarjan
-│   │   └── <a href="src/algorithms/graphs/connectivity/unionfind"><b>Union-Find</b></a>
+│   │   └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/unionfind"><b>Union-Find</b></a>
 │   ├── Cycle Detection
 │   ├── Coloring
 │   ├── Bridges 

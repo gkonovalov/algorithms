@@ -4,7 +4,7 @@ package com.gkonovalov.algorithms.graphs.connectivity.unionfind;
  * Created by Georgiy Konovalov on 11/05/2023.
  * <p>
  * Quick-Union implementation. This algorithm is not very efficient.
- * 'find' operation can be pretty slow, especially for situation where have very skinny tree.
+ * 'find' operation can be pretty slow, especially for situation where we have very skinny tree.
  * For m 'union' operations for n objects, it will take O(mn) time to execute.
  * </p>
  * Runtime Complexity: O(mn) - m 'union' operations for n objects;

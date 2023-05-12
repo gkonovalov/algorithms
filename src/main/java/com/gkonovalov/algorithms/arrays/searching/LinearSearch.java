@@ -5,8 +5,8 @@ package com.gkonovalov.algorithms.arrays.searching;
  * <p>
  * Linear search implementation.
  * </p>
- * Runtime Complexity: O(n)
- * Space Complexity: O(1)
+ * Runtime Complexity: O(n).
+ * Space Complexity: O(1).
  */
 public class LinearSearch {
 

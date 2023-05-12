@@ -6,9 +6,9 @@ package com.gkonovalov.algorithms.arrays.searching;
  * Binary Search implementation. Recursive and iterative approach.
  * </p>
  * Runtime Complexity: O(log n) for the {@code searchIterative},
- *                                      {@code searchRecursive}
+ *                                      {@code searchRecursive}.
  * Space Complexity: O(1) for {@code searchIterative},
- *                   O(log n) for {@code searchRecursive}
+ *                   O(log n) for {@code searchRecursive}.
  */
 public class BinarySearch {
 

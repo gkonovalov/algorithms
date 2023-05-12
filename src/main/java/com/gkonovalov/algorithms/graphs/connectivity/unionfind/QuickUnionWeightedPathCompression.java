@@ -11,8 +11,8 @@ package com.gkonovalov.algorithms.graphs.connectivity.unionfind;
  * Runtime Complexity: O(m lg* n)) ~= O(n);
  *                     O(lg* n) for {@code union}, {@code isConnected}, {@code root};
  *                     O(n) for {@code QuickUnionWeighted};
- *                     O(1) {@code componentsCount};
- * Space Complexity: O(n)
+ *                     O(1) {@code componentsCount}.
+ * Space Complexity: O(n).
  */
 public class QuickUnionWeightedPathCompression {
 

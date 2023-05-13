@@ -43,7 +43,6 @@ public class EdgeList {
         return edgeList;
     }
 
-
     public void printEdges(List<List<Integer>> edgeList) {
         for (List<Integer> edge : edgeList) {
             System.out.println(edge.get(0) + "->" + edge.get(1));

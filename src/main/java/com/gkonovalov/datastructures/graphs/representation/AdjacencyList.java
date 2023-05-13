@@ -31,7 +31,7 @@ public class AdjacencyList {
     }
 
     public Map<Character, List<Character>> getAdjacencyListChars() {
-        Map<Character, List<Character>> adjacencyListStrings = new HashMap<>() {{
+        Map<Character, List<Character>> adjacencyListChars = new HashMap<>() {{
             put('a', new LinkedList<>() {{
                 add('b');
                 add('c');
@@ -45,7 +45,7 @@ public class AdjacencyList {
                 add('b');
             }});
         }};
-        return adjacencyListStrings;
+        return adjacencyListChars;
     }
 
     public List<List<Integer>> getAdjacencyListDirected() {

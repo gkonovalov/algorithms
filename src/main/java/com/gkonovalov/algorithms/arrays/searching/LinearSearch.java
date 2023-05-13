@@ -3,7 +3,8 @@ package com.gkonovalov.algorithms.arrays.searching;
 /**
  * Created by Georgiy Konovalov on 5/04/2023.
  * <p>
- * Linear search implementation.
+ * Linear Search implementation.
+ * This algorithm can work with sorted and unsorted data.
  * </p>
  * Runtime Complexity: O(n).
  * Space Complexity: O(1).

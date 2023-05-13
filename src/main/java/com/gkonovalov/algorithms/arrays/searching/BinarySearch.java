@@ -4,6 +4,7 @@ package com.gkonovalov.algorithms.arrays.searching;
  * Created by Georgiy Konovalov on 5/05/2023.
  * <p>
  * Binary Search implementation. Recursive and iterative approach.
+ * This algorithm requires the data to be sorted.
  * </p>
  * Runtime Complexity: O(log n) for the {@code searchIterative},
  *                                      {@code searchRecursive}.

@@ -54,6 +54,23 @@ public class AdjacencyMatrix {
         return adjacencyMatrixUndirected;
     }
 
+    public Integer[][] getAdjacencyMatrixWeighted() {
+        Integer[][] adjacencyMatrixWeighted = {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+        };
+
+        adjacencyMatrixWeighted[0][1] = 54;
+        adjacencyMatrixWeighted[1][0] = 54;
+
+        adjacencyMatrixWeighted[0][3] = 23;
+        adjacencyMatrixWeighted[3][0] = 23;
+
+        return adjacencyMatrixWeighted;
+    }
+
     public void printRelationsDfs(int[][] adjMatrix) {
         int numVertices = adjMatrix.length;
         boolean[] visited = new boolean[numVertices];

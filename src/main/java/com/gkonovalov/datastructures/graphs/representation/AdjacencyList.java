@@ -5,15 +5,18 @@ import java.util.*;
 /**
  * Created by Georgiy Konovalov on 15/05/2023.
  * <p>
- * Examples of AdjacencyList implementation. Adjacency List is a more
- * storage-efficient method for graph representation.
+ * The Adjacency List representation is more efficient than the Adjacency Matrix,
+ * especially for sparse graphs. Traversing the graph takes O(|V| + |E|) time complexity.
+ * Also, adding or removing a Vertex or Edge is simpler and less expensive
+ * than with an Adjacency Matrix. However, checking if an Edge exists between two nodes
+ * takes O(degree(V)) time complexity which slower than with Adjacency Matrix.
  * </p>
  * Runtime Complexity: O(1) - add Edge and add Vertex;
  *                     O(|V|+|E|) - removing a Vertex;
  *                     O(|E|) - removing a Edge;
- *                     O(|V|) - finding neighbors;
+ *                     O(degree(V)) - Edge between Vertices (checking for adjacency);
  *                     O(|V| + |E|) - traversing the graph.
- * Space Complexity: O(|V|+|E|), worst case O(V^2).
+ * Space Complexity: O(|V|+|E|), worst case O(|V|^2).
  */
 public class AdjacencyList {
 
@@ -83,5 +86,73 @@ public class AdjacencyList {
         );
 
         return adjacencyListWeighted;
+    }
+
+    public void printRelationsDfs(List<List<Integer>> adjacencyList) {
+        int numVertices = adjacencyList.size();
+        boolean[] visited = new boolean[numVertices];
+
+        for (int startVertex = 0; startVertex < numVertices; startVertex++) {
+            if (!visited[startVertex]) {
+                dfs(adjacencyList, visited, startVertex);
+            }
+        }
+    }
+
+    private void dfs(List<List<Integer>> adjacencyList,
+                            boolean[] visited,
+                            int startVertex) {
+        visited[startVertex] = true;
+
+        for (Integer vertexTo : adjacencyList.get(startVertex)) {
+            System.out.println(startVertex + "->" + vertexTo);
+
+            if (!visited[vertexTo]) {
+                dfs(adjacencyList, visited, vertexTo);
+            }
+        }
+    }
+
+    public void printRelationsBfs(List<List<Integer>> adjacencyList) {
+        int numVertices = adjacencyList.size();
+        boolean[] visited = new boolean[numVertices];
+
+        for (int i = 0; i < numVertices; i++) {
+            if (!visited[i]) {
+                bfs(adjacencyList, visited, i);
+            }
+        }
+    }
+
+    public void bfs(List<List<Integer>> adjacencyList,
+                           boolean[] visited,
+                           int startVertex) {
+        Queue<Integer> queue = new ArrayDeque<>();
+        queue.add(startVertex);
+        visited[startVertex] = true;
+
+        while (!queue.isEmpty()) {
+            Integer vertexFrom = queue.poll();
+
+            for (Integer vertexTo : adjacencyList.get(vertexFrom)) {
+                System.out.println(vertexFrom + "->" + vertexTo);
+
+                if (!visited[vertexTo]) {
+                    visited[vertexTo] = true;
+                    queue.add(vertexTo);
+                }
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        AdjacencyList al = new AdjacencyList();
+        List<List<Integer>> adjacencyList = al.getAdjacencyList();
+
+        System.out.println("Example of DFS algorithm using an Adjacency List:");
+        al.printRelationsDfs(adjacencyList);
+
+        System.out.println("Example of BFS algorithm using an Adjacency List:");
+        al.printRelationsBfs(adjacencyList);
     }
 }

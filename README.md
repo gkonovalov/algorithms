@@ -259,8 +259,8 @@ Data Structures
     │   └── Union-Find
     └── Representation in memory
         ├── Edge List
-        ├── Adjacency matrix
-        ├── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/AdjacencyList.java"><b>Adjacency list</b></a>
+        ├── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/AdjacencyMatrix.java"><b>Adjacency Matrix</b></a>
+        ├── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/AdjacencyList.java"><b>Adjacency List</b></a>
         ├── Objects
         └── Pointers
 </pre>

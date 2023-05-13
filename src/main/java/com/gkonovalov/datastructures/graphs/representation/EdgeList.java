@@ -44,7 +44,7 @@ public class EdgeList {
     }
 
 
-    public void printRelations(List<List<Integer>> edgeList) {
+    public void printEdges(List<List<Integer>> edgeList) {
         for (List<Integer> edge : edgeList) {
             System.out.println(edge.get(0) + "->" + edge.get(1));
         }
@@ -55,6 +55,6 @@ public class EdgeList {
         List<List<Integer>> edgeList = el.getEdgeListDirected();
 
         System.out.println("Print all Edges from Edge List:");
-        el.printRelations(edgeList);
+        el.printEdges(edgeList);
     }
 }

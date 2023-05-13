@@ -260,7 +260,7 @@ Data Structures
     └── Representation in memory
         ├── Edge List
         ├── Adjacency matrix
-        ├── Adjacency list
+        ├── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/AdjacencyList.java"><b>Adjacency list</b></a>
         ├── Objects
         └── Pointers
 </pre>

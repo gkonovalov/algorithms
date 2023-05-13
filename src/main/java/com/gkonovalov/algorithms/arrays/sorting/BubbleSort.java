@@ -3,7 +3,11 @@ package com.gkonovalov.algorithms.arrays.sorting;
 /**
  * Created by Georgiy Konovalov on 11/05/2023.
  * <p>
- * Bubble Sort implementation.
+ * Bubble Sort is a sorting algorithm with a time complexity of O(n^2),
+ * making it inefficient for large datasets. It is not recommended for
+ * practical use due to its exponential increase in operations with input
+ * size and significant memory swaps. Quicksort, mergesort, or heapsort are
+ * more efficient and recommended for sorting large amounts of data.
  * </p>
  * Runtime Complexity: O(n^2)
  * Space Complexity: O(1)

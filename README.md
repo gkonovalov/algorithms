@@ -4,7 +4,20 @@ Need to prepare description.
 
 ## Algorithms
 <pre>
-<a href="src/algorithms"><b>Algorithms</b></a >
+<a href="src/algorithms"><b>Algorithms</b></a>
+├── Strings
+│   └── String Matching
+│       ├── Brute-force
+│       ├── Rabin-Karp
+│       ├── Knuth-Morris-Pratt
+│       ├── Boyer-Moore
+│       ├── Aho-Corasick
+│       ├── Substring Matching
+│       ├── Regular Expression Matching
+│       └── Edit Distance
+│           ├── Longest Common Subsequence 
+│           ├── Levenshtein Distance
+│           └── Hamming Distance
 ├── <a href="src/algorithms/arrays"><b>Arrays</b></a>
 │   ├── <a href="src/algorithms/arrays/searching"><b>Searching</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/searching/LinearSearch.java"><b>Linear Search</b></a>
@@ -29,30 +42,14 @@ Need to prepare description.
 ├── Linked List
 │   ├── Reversal
 │   └── Cycle Detection
-├── String
-│   ├── String Matching
-│   │   ├── Brute-force
-│   │   ├── Rabin-Karp
-│   │   ├── Knuth-Morris-Pratt
-│   │   ├── Boyer-Moore
-│   │   ├── Aho-Corasick
-│   │   ├── Substring Matching
-│   │   ├── Regular Expression Matching
-│   │   └── Edit Distance
-│   │       ├── Longest Common Subsequence 
-│   │       ├── Levenshtein Distance
-│   │       └── Hamming Distance
-│   └── Compression
-│       └── Huffman Coding
-├── Hash
+├── Hashing
 │   ├── Hash Functions
-│   ├── Universal Hash
-│   └── Bloom Filter    
+│   └── Universal Hash 
 ├── Tree
 │   └── Searching
 │       ├── DFS
-│       │   ├── Pre-order -  Root-Left-Right
-│       │   ├── In-order -   Left-Root-Right
+│       │   ├── Pre-order  - Root-Left-Right
+│       │   ├── In-order   - Left-Root-Right
 │       │   └── Post-order - Left-Right-Root
 │       ├── BFS 
 │       │   └── Level-order
@@ -74,7 +71,8 @@ Need to prepare description.
 │   │  ├── Maximum Flow
 │   │  │   ├── Push-Relabel
 │   │  │   ├── Ford-Fulkerson
-│   │  │   └── Edmonds-Karp
+│   │  │   ├── Edmonds-Karp
+│   │  │   └── Dinic's
 │   │  ├── Minimum Cut 
 │   │  │   └── Karger's
 │   │  └── Maximum Bipartite
@@ -94,91 +92,54 @@ Need to prepare description.
 │   ├── Hamiltonian Cycle
 │   └── Eulerian Path 
 ├── Recursion
-│   ├── Dynamic Programming
-│   │   ├── Fibonacci Numbers
-│   │   ├── Knapsack 0/1
-│   │   ├── Knapsack Unbounded
-│   │   ├── Traveling Salesman
-│   │   ├── Bellman-Ford  
-│   │   ├── Floyd-Warshall 
-│   │   ├── Edit distance
-│   │   ├── Regular Expression Matching
-│   │   ├── Longest Common Subsequence (LCS) 
-│   │   ├── Longest Increasing Subsequence (LIS) 
-│   │   ├── Longest Palindrome Subsequence (LPS)
-│   │   ├── Shortest Common Supersequence (SCS)
-│   │   ├── Matrix Chain Multiplication
-│   │   ├── Maximum Subarray 
-│   │   ├── Binomial coefficient
-│   │   ├── Combination Sum
-│   │   ├── Rod Cutting
-│   │   ├── Jump Game
-│   │   ├── Unique Paths
-│   │   ├── Coin change   
+│   ├── Dynamic Programming 
 │   │   └── Approaches
 │   │       ├── Bottom-Up - Tabulation
-│   │       ├── Top-Down - Memoization
+│   │       ├── Top-Down  - Memoization
 │   │       └── Half-and-Half
 │   └── Backtracking
-│       ├── N-Queens
-│       ├── Knight's Tour 
-│       ├── Sudoku Solver
-│       ├── Unique Paths
-│       ├── Rat in a Maze 
-│       ├── Subset Sum
-│       ├── Traveling Salesman 
-│       ├── Word Search
 │       └── Combinatorics
 │           ├── Permutations
 │           ├── Combinations
 │           ├── Subsets
 │           └── Partitions
 ├── Greedy
-│   ├── Huffman Coding
-│   ├── Dijkstra's
-│   ├── Prim's
-│   ├── Kruskal's
-│   ├── Coin Change
-│   ├── Interval scheduling
-│   ├── Job Scheduling 
-│   └── Knapsack Unbounded
 ├── Randomized
 │   ├── Quick Sort
 │   ├── Fisher-Yates Shuffle
 │   ├── Randomized Selection
 │   ├── Las Vegas
 │   └── Monte Carlo
+├── Compression
+│   └── Huffman Coding
 ├── Game theory
 │   ├── Prisoner's Dilemma
 │   ├── Minimax Algorithm
 │   └── Nash Equilibrium
-├── Cache
-│   ├── LFU 
-│   └── LRU 
 ├── Geometry
 │   ├── Closest Pair of Points
 │   ├── Line Intersection
+│   ├── Voronoi diagram
 │   ├── Triangulation
 │   └── Convex Hull
 │       ├── Graham Scan
 │       └── Jarvis March
-├── Bit manipulation 
 └── Math
     ├── Fibonacci Numbers
     ├── Factorial
     ├── Prime Numbers
-    │   ├── Primality Check 
-    │   │   └── Sieve of Eratosthenes
+    │   ├── Sieve of Eratosthenes
+    │   ├── Primality test 
+    │   │   └── Miller-Rabin
     │   └── Prime Factorization
     ├── Greatest Common Divisor (GCD)
     │   └── Euclidean Algorithm
     ├── Least Common Multiple (LCM)
+    ├── Chinese Remainder Theorem
     ├── Sum of Digits
     ├── Fast Powering
     ├── Fast Exponentiation
-    ├── Chinese Remainder Theorem
-    ├── Karatsuba algorithm
-    ├── Number Reverse
+    ├── Karatsuba Algorithm
     ├── Binomial Coefficient
     ├── Catalan Numbers
     ├── Pascal Triangle
@@ -219,6 +180,8 @@ Data Structures
 │   ├── HashMap
 │   ├── HashSet
 │   └── Dictionary
+├── Hash
+│   └── Bloom Filter 
 ├── Trees
 │   ├── Binary Trees
 │   ├── Binary Search Tree
@@ -262,6 +225,99 @@ Data Structures
         ├── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/AdjacencyMatrix.java"><b>Adjacency Matrix</b></a>
         └── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/AdjacencyList.java"><b>Adjacency List</b></a>
 </pre>
+
+
+## Coding Problems and Techniques
+<pre>
+Problems
+├── Arrays
+│   ├── Searching
+│   │   └── Binary Search
+│   ├── Prefix Sum
+│   ├── Sliding Window 
+│   ├── Two pointers
+│   └── Range Sum 
+├── Strings
+│   ├── Is Palindrome
+│   ├── Palindrome Substrings
+│   └── Reverse String
+├── Linked List
+│   └── Cache
+│       ├── LFU 
+│       └── LRU
+├── Stacks
+├── Queues
+├── Hash Table
+├── Tree
+├── Graphs
+├── Recursion
+│   ├── Dynamic Programming
+│   │   ├── Fibonacci Numbers
+│   │   ├── Knapsack 0/1
+│   │   ├── Knapsack Unbounded
+│   │   ├── Traveling Salesman
+│   │   ├── Dijkstra's
+│   │   ├── Bellman-Ford  
+│   │   ├── Floyd-Warshall 
+│   │   ├── Edit distance
+│   │   ├── Regular Expression Matching
+│   │   ├── Longest Common Subsequence (LCS) 
+│   │   ├── Longest Increasing Subsequence (LIS) 
+│   │   ├── Longest Palindrome Subsequence (LPS)
+│   │   ├── Shortest Common Supersequence (SCS)
+│   │   ├── Maximum sum increasing subsequence
+│   │   ├── Matrix Chain Multiplication
+│   │   ├── Maximum Subarray Sum
+│   │   ├── Binomial coefficient
+│   │   ├── Combination Sum
+│   │   ├── Rod Cutting
+│   │   ├── Jump Game
+│   │   ├── Unique paths in a grid
+│   │   ├── Partition problem
+│   │   ├── Russian dolls envelope
+│   │   ├── Dungeon game
+│   │   ├── Subset sum problem
+│   │   ├── Minimum path sum
+│   │   ├── Counting paths in a grid
+│   │   ├── Wildcard matching
+│   │   ├── Word break
+│   │   ├── Paint house
+│   │   ├── Palindrome partitioning
+│   │   ├── Maximum product subarray
+│   │   └── Coin change
+│   └── Backtracking
+│       ├── N-Queens
+│       ├── Knight's Tour 
+│       ├── Sudoku Solver
+│       ├── Unique Paths
+│       ├── Rat in a Maze 
+│       ├── Subset Sum
+│       ├── Traveling Salesman 
+│       ├── Word Search
+│       └── Combinatorics
+│           ├── Permutations
+│           ├── Combinations
+│           ├── Subsets
+│           └── Partitions
+├── Greedy
+│   ├── Huffman Coding
+│   ├── Dijkstra's
+│   ├── Prim's
+│   ├── Kruskal's
+│   ├── Knapsack Unbounded
+│   ├── Interval scheduling
+│   ├── Job Scheduling 
+│   └── Coin Change
+├── Bit manipulation
+└── NP-complete problems
+     ├── Travelling salesman
+     ├── Knapsack
+     ├── SAT
+     ├── Clique
+     ├── Factorization
+     └── Hamiltonian Cycle
+</pre>
+
 
 ## Requirements
 JDK 8.0 or later.

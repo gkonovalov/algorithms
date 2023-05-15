@@ -1,4 +1,4 @@
-## Essential Algorithms and Data Structures in Java
+## Essential Algorithms and Data Structures
 
 Need to prepare description.
 

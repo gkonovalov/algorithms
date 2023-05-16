@@ -6,16 +6,18 @@ Need to prepare description.
 <pre>
 <a href="src/algorithms"><b>Algorithms</b></a>
 ├── Strings
+│   ├── Compression
+│   │   └── Huffman Coding
 │   └── String Matching
+│       ├── Naive string search
 │       ├── Brute-force
 │       ├── Rabin-Karp
 │       ├── Knuth-Morris-Pratt
 │       ├── Boyer-Moore
 │       ├── Aho-Corasick
-│       ├── Substring Matching
-│       ├── Regular Expression Matching
+│       ├── Regular expressions
+│       │   └── Thompson NFA
 │       └── Edit Distance
-│           ├── Longest Common Subsequence 
 │           ├── Levenshtein Distance
 │           └── Hamming Distance
 ├── <a href="src/algorithms/arrays"><b>Arrays</b></a>
@@ -40,11 +42,7 @@ Need to prepare description.
 │   │   └── Quick Select
 │   └── Kadane
 ├── Linked List
-│   ├── Reversal
 │   └── Cycle Detection
-├── Hashing
-│   ├── Hash Functions
-│   └── Universal Hash 
 ├── Tree
 │   └── Searching
 │       ├── DFS
@@ -92,7 +90,11 @@ Need to prepare description.
 │   ├── Hamiltonian Cycle
 │   └── Eulerian Path 
 ├── Recursion
-│   ├── Dynamic Programming 
+│   ├── Dynamic Programming
+│   │   ├── Dijkstra's
+│   │   ├── Bellman-Ford  
+│   │   ├── Floyd-Warshall 
+│   │   ├── Levenshtein Distance
 │   │   └── Approaches
 │   │       ├── Bottom-Up - Tabulation
 │   │       ├── Top-Down  - Memoization
@@ -104,56 +106,16 @@ Need to prepare description.
 │           ├── Subsets
 │           └── Partitions
 ├── Greedy
-├── Randomized
-│   ├── Quick Sort
-│   ├── Fisher-Yates Shuffle
-│   ├── Randomized Selection
-│   ├── Las Vegas
-│   └── Monte Carlo
-├── Compression
-│   └── Huffman Coding
-├── Game theory
-│   ├── Prisoner's Dilemma
-│   ├── Minimax Algorithm
-│   └── Nash Equilibrium
-├── Geometry
-│   ├── Closest Pair of Points
-│   ├── Line Intersection
-│   ├── Voronoi diagram
-│   ├── Triangulation
-│   └── Convex Hull
-│       ├── Graham Scan
-│       └── Jarvis March
-└── Math
-    ├── Fibonacci Numbers
-    ├── Factorial
-    ├── Prime Numbers
-    │   ├── Sieve of Eratosthenes
-    │   ├── Primality test 
-    │   │   └── Miller-Rabin
-    │   └── Prime Factorization
-    ├── Greatest Common Divisor (GCD)
-    │   └── Euclidean Algorithm
-    ├── Least Common Multiple (LCM)
-    ├── Chinese Remainder Theorem
-    ├── Sum of Digits
-    ├── Fast Powering
-    ├── Fast Exponentiation
-    ├── Karatsuba Algorithm
-    ├── Binomial Coefficient
-    ├── Catalan Numbers
-    ├── Pascal Triangle
-    ├── Power of Two 
-    ├── Euclidean Distance 
-    ├── Fast Fourier Transform
-    └── Matrix
-        ├── Multiplication  
-        ├── Inversion 
-        ├── Power 
-        ├── Transposition
-        ├── Exponentiation
-        ├── Square Rotation 
-        └── Strassen's Multiplication
+│   ├── Huffman Coding
+│   ├── Dijkstra's
+│   ├── Prim's
+│   └── Kruskal's
+└── Randomized
+    ├── Quick Sort
+    ├── Fisher-Yates Shuffle
+    ├── Randomized Selection
+    ├── Las Vegas
+    └── Monte Carlo
 </pre>
 
 ## Data Structures
@@ -219,7 +181,7 @@ Data Structures
     │   ├── Bipartite Graph
     │   ├── Spanning Tree
     │   ├── Tree
-    │   └── Union-Find
+    │   └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/unionfind"><b>Union-Find</b></a>
     └── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/"><b>Representation in memory</b></a>
         ├── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/EdgeList.java"><b>Edge List</b></a>
         ├── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/AdjacencyMatrix.java"><b>Adjacency Matrix</b></a>
@@ -231,24 +193,30 @@ Data Structures
 <pre>
 Problems
 ├── Arrays
-│   ├── Searching
-│   │   └── Binary Search
 │   ├── Prefix Sum
 │   ├── Sliding Window 
 │   ├── Two pointers
+│   ├── Searching
+│   │   └── Binary Search
 │   └── Range Sum 
 ├── Strings
-│   ├── Is Palindrome
-│   ├── Palindrome Substrings
-│   └── Reverse String
+│   ├── Reverse a String
+│   ├── Anagram Checking
+│   └── Palindromes
+│       ├── Palindrome Checking
+│       ├── Palindrome Substrings
+│       └── Longest Palindromic Substring
 ├── Linked List
+│   ├── Reversal
 │   └── Cache
-│       ├── LFU 
-│       └── LRU
+│       ├── LRU
+│       └── LFU 
 ├── Stacks
 ├── Queues
 ├── Hash Table
-├── Tree
+├── Trees
+│   ├── Binary Search Tree
+│   └── Trie-trees
 ├── Graphs
 ├── Recursion
 │   ├── <a href="src/main/java/com/gkonovalov/problems/recursion/dp/"><b>Dynamic Programming</b></a>
@@ -256,10 +224,6 @@ Problems
 │   │   ├── Knapsack 0/1
 │   │   ├── Knapsack Unbounded
 │   │   ├── Traveling Salesman
-│   │   ├── Dijkstra's
-│   │   ├── Bellman-Ford  
-│   │   ├── Floyd-Warshall 
-│   │   ├── Edit distance
 │   │   ├── Regular Expression Matching
 │   │   ├── Longest Common Subsequence (LCS) 
 │   │   ├── Longest Increasing Subsequence (LIS) 
@@ -300,14 +264,48 @@ Problems
 │           ├── Subsets
 │           └── Partitions
 ├── Greedy
-│   ├── Huffman Coding
-│   ├── Dijkstra's
-│   ├── Prim's
-│   ├── Kruskal's
 │   ├── Knapsack Unbounded
 │   ├── Interval scheduling
 │   ├── Job Scheduling 
 │   └── Coin Change
+├── Game Theory
+│   └── Prisoner's Dilemma
+├── Geometry
+│   ├── Closest Pair of Points
+│   ├── Line Intersection
+│   ├── Voronoi diagram
+│   ├── Triangulation
+│   └── Convex Hull
+│       ├── Graham Scan
+│       └── Jarvis March
+├── Math
+│   ├── Fibonacci Numbers
+│   ├── Factorial
+│   ├── Prime Numbers
+│   │   ├── Sieve of Eratosthenes
+│   │   ├── Primality test 
+│   │   │   └── Miller-Rabin
+│   │   └── Prime Factorization
+│   ├── Greatest Common Divisor (GCD)
+│   │   └── Euclidean Algorithm
+│   ├── Least Common Multiple (LCM)
+│   ├── Chinese Remainder Theorem
+│   ├── Sum of Digits
+│   ├── Fast Powering
+│   ├── Fast Exponentiation
+│   ├── Binomial Coefficient
+│   ├── Catalan Numbers
+│   ├── Pascal Triangle
+│   ├── Power of Two 
+│   ├── Euclidean Distance
+│   └── Matrix
+│       ├── Multiplication  
+│       ├── Inversion 
+│       ├── Power 
+│       ├── Transposition
+│       ├── Exponentiation
+│       ├── Square Rotation 
+│       └── Strassen's Multiplication
 ├── Bit manipulation
 └── NP-complete problems
      ├── Travelling salesman

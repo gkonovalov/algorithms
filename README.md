@@ -9,13 +9,13 @@ Need to prepare description.
 │   ├── Compression
 │   │   └── Huffman Coding
 │   └── String Matching
-│       ├── Naive string search
+│       ├── Naive String Search
 │       ├── Brute-force
 │       ├── Rabin-Karp
 │       ├── Knuth-Morris-Pratt
 │       ├── Boyer-Moore
 │       ├── Aho-Corasick
-│       ├── Regular expressions
+│       ├── Regular Expressions
 │       │   └── Thompson NFA
 │       └── Edit Distance
 │           ├── Levenshtein Distance
@@ -165,8 +165,8 @@ Data Structures
 │   │   └── Treaps
 │   ├── Cartesian Tree
 │   ├── K-D Tree
-│   ├── Fenwick tree
-│   └── Segment tree
+│   ├── Fenwick Tree
+│   └── Segment Tree
 └── Graphs
     ├── Types
     │   ├── Simple Graph
@@ -195,12 +195,12 @@ Problems
 ├── Arrays
 │   ├── Prefix Sum
 │   ├── Sliding Window 
-│   ├── Two pointers
+│   ├── Two Pointers
 │   ├── Searching
 │   │   └── Binary Search
 │   └── Range Sum 
 ├── Strings
-│   ├── Reverse a String
+│   ├── Reverse String
 │   ├── Anagram Checking
 │   └── Palindromes
 │       ├── Palindrome Checking
@@ -229,26 +229,26 @@ Problems
 │   │   ├── Longest Increasing Subsequence (LIS) 
 │   │   ├── Longest Palindrome Subsequence (LPS)
 │   │   ├── Shortest Common Supersequence (SCS)
-│   │   ├── Maximum sum increasing subsequence
+│   │   ├── Maximum Sum Increasing Subsequence
 │   │   ├── Matrix Chain Multiplication
 │   │   ├── Maximum Subarray Sum
-│   │   ├── Binomial coefficient
+│   │   ├── Binomial Coefficient
 │   │   ├── Combination Sum
 │   │   ├── Rod Cutting
 │   │   ├── Jump Game
-│   │   ├── Unique paths in a grid
 │   │   ├── Partition problem
-│   │   ├── Russian dolls envelope
-│   │   ├── Dungeon game
-│   │   ├── Subset sum problem
-│   │   ├── Minimum path sum
-│   │   ├── Counting paths in a grid
-│   │   ├── Wildcard matching
-│   │   ├── Word break
-│   │   ├── Paint house
-│   │   ├── Palindrome partitioning
-│   │   ├── Maximum product subarray
-│   │   └── Coin change
+│   │   ├── Russian Dolls Envelope
+│   │   ├── Dungeon Game
+│   │   ├── Subset Sum problem
+│   │   ├── Minimum Path Sum
+│   │   ├── Unique Paths in a Grid
+│   │   ├── Counting Paths in a Grid
+│   │   ├── Wildcard Matching
+│   │   ├── Word Break
+│   │   ├── Paint House
+│   │   ├── Palindrome Partitioning
+│   │   ├── Maximum Product Subarray
+│   │   └── Coin Change
 │   └── Backtracking
 │       ├── N-Queens
 │       ├── Knight's Tour 
@@ -265,7 +265,7 @@ Problems
 │           └── Partitions
 ├── Greedy
 │   ├── Knapsack Unbounded
-│   ├── Interval scheduling
+│   ├── Interval Scheduling
 │   ├── Job Scheduling 
 │   └── Coin Change
 ├── Game Theory
@@ -273,7 +273,7 @@ Problems
 ├── Geometry
 │   ├── Closest Pair of Points
 │   ├── Line Intersection
-│   ├── Voronoi diagram
+│   ├── Voronoi Diagram
 │   ├── Triangulation
 │   └── Convex Hull
 │       ├── Graham Scan
@@ -283,7 +283,7 @@ Problems
 │   ├── Factorial
 │   ├── Prime Numbers
 │   │   ├── Sieve of Eratosthenes
-│   │   ├── Primality test 
+│   │   ├── Primality Test 
 │   │   │   └── Miller-Rabin
 │   │   └── Prime Factorization
 │   ├── Greatest Common Divisor (GCD)
@@ -306,9 +306,9 @@ Problems
 │       ├── Exponentiation
 │       ├── Square Rotation 
 │       └── Strassen's Multiplication
-├── Bit manipulation
+├── Bit Manipulation
 └── NP-complete problems
-     ├── Travelling salesman
+     ├── Travelling Salesman
      ├── Knapsack
      ├── SAT
      ├── Clique

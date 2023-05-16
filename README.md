@@ -42,7 +42,7 @@ Need to prepare description.
 │   │   └── Quick Select
 │   └── Kadane
 ├── Linked List
-│   └── Cycle Detection
+│   └── <a href="src/main/java/com/gkonovalov/algorithms/linkedlist/FloydCycleDetection.java"><b>Floyd's Cycle Detection</b></a>
 ├── Tree
 │   └── Searching
 │       ├── DFS

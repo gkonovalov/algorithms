@@ -15,13 +15,13 @@ import com.gkonovalov.datastructures.linkedlist.ListNode;
  */
 public class FloydCycleDetection {
 
-    public boolean detectCycle(ListNode node) {
+    public boolean detectCycle(ListNode<Integer> node) {
         if (node == null) {
             return false;
         }
 
-        ListNode slow = node;
-        ListNode fast = node.next;
+        ListNode<Integer> slow = node;
+        ListNode<Integer> fast = node.next;
 
         while (fast != null && fast.next != null) {
             if (fast == slow) {
@@ -34,9 +34,9 @@ public class FloydCycleDetection {
         return false;
     }
 
-    public boolean detectCycle2(ListNode node) {
-        ListNode slow = node;
-        ListNode fast = node;
+    public boolean detectCycle2(ListNode<Integer> node) {
+        ListNode<Integer> slow = node;
+        ListNode<Integer> fast = node;
 
         while (fast != null && fast.next != null) {
             slow = slow.next;

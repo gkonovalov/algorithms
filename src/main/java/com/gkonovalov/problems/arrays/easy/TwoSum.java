@@ -20,7 +20,7 @@ public class TwoSum {
     public static void main(String[] args) {
         int[] arr = {1, 3, 4, 2, 2};
 
-        System.out.println("Find duplicate:" + Arrays.toString(twoSum(arr, 3)));
+        System.out.println("Find two sum:" + Arrays.toString(twoSum(arr, 3)));
     }
 
     public static int[] twoSum(int[] nums, int target) {

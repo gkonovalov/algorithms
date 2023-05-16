@@ -12,10 +12,8 @@ import java.util.List;
  *          [Medium][15] - Three Sum
  *      </a>
  * </p>
- * Runtime Complexity: O(n) for {@code twoSum};
- *                    O(n log n) for {@code twoSum2};
- *                    O(n^2) for {@code twoSum3}.
- * Space Complexity:  O(n) for {@code twoSum}, {@code twoSum2}, @code twoSum3}.
+ * Runtime Complexity: O(todo) for {@code threeSum}.
+ * Space Complexity:  O(todo) for {@code threeSum}.
  */
 public class ThreeSum {
 

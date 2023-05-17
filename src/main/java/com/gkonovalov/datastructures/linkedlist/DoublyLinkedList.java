@@ -1,27 +1,33 @@
 package com.gkonovalov.datastructures.linkedlist;
 
-import com.gkonovalov.datastructures.etc.Node;
+
+import com.gkonovalov.datastructures.etc.DNode;
 
 /**
  * Created by Georgiy Konovalov on 17/05/2023.
  * <p>
- * Singly Linked List implementation.
+ * Doubly Linked List implementation.
  * <p>
- * Runtime Complexity: O(1) for the {@code size}, {@code add};
- *                                  {@code prepend}, {@code append};
- *                                  {@code removeFirst} and {@code removeLast}.
- *                     O(n) for the {@code get}, {@code add}, {@code indexOfs} ;
- *                                  {@code contains} and {@code remove}.
+ * Runtime Complexity: O(1) for the {@code add}, {@code prepend}, {@code append};
+ *                                  {@code size}, {@code removeFirst} and {@code removeLast}.
+ *                     O(n) for the {@code get}, {@code add}, {@code indexOf}, 
+ *                                  {@code contains}, {@code findNode}, and {@code remove}.
  * Space Complexity: O(n)
  */
 public class DoublyLinkedList<T> {
 
-    private Node<T> head;
-    private Node<T> tail;
+    private DNode<T> head;
+    private DNode<T> tail;
     private int size;
 
     public DoublyLinkedList() {
         this.size = 0;
+
+        this.head = new DNode<>();
+        this.tail = new DNode<>();
+
+        this.head.setNext(tail);
+        this.tail.setPrev(head);
     }
 
     public void add(T value) {
@@ -38,9 +44,9 @@ public class DoublyLinkedList<T> {
             return;
         }
 
-        Node<T> prevNode = findNode(position - 1);
+        DNode<T> prevNode = findNode(position - 1);
         if (prevNode != null) {
-            Node<T> newNode = new Node<>(value);
+            DNode<T> newNode = new DNode<>(value);
             newNode.setNext(prevNode.getNext());
             prevNode.setNext(newNode);
             size++;
@@ -52,7 +58,7 @@ public class DoublyLinkedList<T> {
             throw new IllegalArgumentException("Invalid position!");
         }
 
-        Node<T> currentNode = findNode(position);
+        DNode<T> currentNode = findNode(position);
 
         if (currentNode != null) {
             return currentNode.getValue();
@@ -71,7 +77,7 @@ public class DoublyLinkedList<T> {
 
         int index = 0;
 
-        Node<T> current = head;
+        DNode<T> current = head.getNext();
 
         if (value == null) {
             while (current != null) {
@@ -95,6 +101,30 @@ public class DoublyLinkedList<T> {
         return -1;
     }
 
+    public boolean removeFirst() {
+        if (size <= 0) {
+            return false;
+        }
+
+        head.getNext().getNext().setPrev(head);
+        head.setNext(head.getNext().getNext());
+
+        size--;
+        return true;
+    }
+
+    public boolean removeLast() {
+        if (size <= 0) {
+            return false;
+        }
+
+        tail.getPrev().getPrev().setNext(tail);
+        tail.setPrev(tail.getPrev().getPrev());
+
+        size--;
+        return true;
+    }
+
     public boolean remove(int position) {
         if (!isIndexValid(position)) {
             throw new IllegalArgumentException("Invalid position!");
@@ -110,18 +140,20 @@ public class DoublyLinkedList<T> {
             return true;
         }
 
-        Node<T> currentNode = findNode(position - 1);
+        DNode<T> currentNode = findNode(position - 1);
 
-        if (currentNode != null && currentNode.getNext() != null) {
-            currentNode.setNext(currentNode.getNext().getNext());
+        if (currentNode != null) {
+            currentNode.getNext().setPrev(currentNode.getPrev());
+            currentNode.getPrev().setNext(currentNode.getNext());
             size--;
+
             return true;
         }
         return false;
     }
 
     public boolean isEmpty() {
-        return size == 0 || head == null;
+        return size == 0;
     }
 
     public int size() {
@@ -129,39 +161,29 @@ public class DoublyLinkedList<T> {
     }
 
     private void append(T value) {
-        if (isEmpty()) {
-            prepend(value);
-            return;
-        }
-
-        Node<T> newNode = new Node<>(value);
-        tail.setNext(newNode);
-        tail = newNode;
+        DNode<T> newNode = new DNode<>(value);
+        newNode.setPrev(tail.getPrev());
+        newNode.getPrev().setNext(newNode);
+        newNode.setNext(tail);
+        tail.setPrev(newNode);
         size++;
     }
 
     private void prepend(T value) {
-        Node<T> newNode = new Node<>(value);
-
-        if (head != null) {
-            newNode.setNext(head);
-        }
-
-        head = newNode;
-
-        if (tail == null) {
-            tail = head;
-        }
-
+        DNode<T> newNode = new DNode<>(value);
+        newNode.setNext(head.getNext());
+        newNode.getNext().setPrev(newNode);
+        newNode.setPrev(head);
+        head.setNext(newNode);
         size++;
     }
 
-    private Node<T> findNode(int index) {
+    private DNode<T> findNode(int index) {
         if (isEmpty()) {
             return null;
         }
 
-        Node<T> current = head;
+        DNode<T> current = head.getNext();
         while (current != null) {
             if (index-- == 0) {
                 return current;

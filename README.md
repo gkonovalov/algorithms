@@ -127,11 +127,11 @@ Data Structures
 │   ├── Dynamical Array 
 │   ├── Circular Buffer
 │   └── Suffix Arrays
-├── Linked Lists
+├── <a href="src/main/java/com/gkonovalov/datastructures/linkedlist"><b>Linked Lists</b></a>
 │   ├── Singly Linked List 
 │   ├── Doubly Linked List
 │   └── Skip List
-├── Stacks
+├── <a href="src/main/java/com/gkonovalov/datastructures/stack/Stack.java"><b>Stacks</b></a>
 ├── Queues
 │   ├── Queue
 │   └── Dequeue

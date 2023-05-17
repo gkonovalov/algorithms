@@ -1,7 +1,7 @@
 package com.gkonovalov.algorithms.linkedlist;
 
 
-import com.gkonovalov.datastructures.linkedlist.ListNode;
+import com.gkonovalov.datastructures.etc.Node;
 
 /**
  * Created by Georgiy Konovalov on 15/05/2023.
@@ -15,32 +15,32 @@ import com.gkonovalov.datastructures.linkedlist.ListNode;
  */
 public class FloydCycleDetection {
 
-    public boolean detectCycle(ListNode<Integer> node) {
+    public boolean detectCycle(Node<Integer> node) {
         if (node == null) {
             return false;
         }
 
-        ListNode<Integer> slow = node;
-        ListNode<Integer> fast = node.next;
+        Node<Integer> slow = node;
+        Node<Integer> fast = node.getNext();
 
-        while (fast != null && fast.next != null) {
+        while (fast != null && fast.getNext() != null) {
             if (fast == slow) {
                 return true;
             }
 
-            slow = slow.next;
-            fast = fast.next.next;
+            slow = slow.getNext();
+            fast = fast.getNext().getNext();
         }
         return false;
     }
 
-    public boolean detectCycle2(ListNode<Integer> node) {
-        ListNode<Integer> slow = node;
-        ListNode<Integer> fast = node;
+    public boolean detectCycle2(Node<Integer> node) {
+        Node<Integer> slow = node;
+        Node<Integer> fast = node;
 
-        while (fast != null && fast.next != null) {
-            slow = slow.next;
-            fast = fast.next.next;
+        while (fast != null && fast.getValue() != null) {
+            slow = slow.getNext();
+            fast = fast.getNext().getNext();
 
             if (fast == slow) {
                 return true;

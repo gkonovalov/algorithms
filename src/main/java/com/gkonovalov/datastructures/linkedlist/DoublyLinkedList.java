@@ -7,17 +7,20 @@ import com.gkonovalov.datastructures.etc.Node;
  * <p>
  * Singly Linked List implementation.
  * <p>
- * Runtime Complexity: O(1) for the {@code size}, {@code prepend}, {@code removeFirst}.
+ * Runtime Complexity: O(1) for the {@code size}, {@code add};
+ *                                  {@code prepend}, {@code append};
+ *                                  {@code removeFirst} and {@code removeLast}.
  *                     O(n) for the {@code get}, {@code add}, {@code indexOfs} ;
- *                                  {@code contains}, {@code remove} and {@code append}.
+ *                                  {@code contains} and {@code remove}.
  * Space Complexity: O(n)
  */
-public class SinglyLinkedList<T> {
+public class DoublyLinkedList<T> {
 
     private Node<T> head;
+    private Node<T> tail;
     private int size;
 
-    public SinglyLinkedList() {
+    public DoublyLinkedList() {
         this.size = 0;
     }
 
@@ -72,7 +75,7 @@ public class SinglyLinkedList<T> {
 
         if (value == null) {
             while (current != null) {
-                if (current.getValue() == null) {
+                if (current.getValue() == null){
                     return index;
                 }
 
@@ -81,7 +84,7 @@ public class SinglyLinkedList<T> {
             }
         } else {
             while (current != null) {
-                if (value.equals(current.getValue())) {
+                if (value.equals(current.getValue())){
                     return index;
                 }
 
@@ -131,12 +134,10 @@ public class SinglyLinkedList<T> {
             return;
         }
 
-        Node<T> lastNode = findNode(size - 1);
-
-        if (lastNode != null) {
-            lastNode.setNext(new Node<>(value));
-            size++;
-        }
+        Node<T> newNode = new Node<>(value);
+        tail.setNext(newNode);
+        tail = newNode;
+        size++;
     }
 
     private void prepend(T value) {
@@ -147,6 +148,11 @@ public class SinglyLinkedList<T> {
         }
 
         head = newNode;
+
+        if (tail == null) {
+            tail = head;
+        }
+
         size++;
     }
 

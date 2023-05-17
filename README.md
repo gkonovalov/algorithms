@@ -129,7 +129,7 @@ Data Structures
 │   └── Suffix Arrays
 ├── <a href="src/main/java/com/gkonovalov/datastructures/linkedlist"><b>Linked Lists</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/datastructures/linkedlist/SinglyLinkedList.java"><b>Singly Linked List</b></a>  
-│   ├── Doubly Linked List
+│   ├── <a href="src/main/java/com/gkonovalov/datastructures/linkedlist/DoublyLinkedList.java"><b>Doubly Linked List</b></a> 
 │   └── Skip List
 ├── <a href="src/main/java/com/gkonovalov/datastructures/stack/Stack.java"><b>Stacks</b></a>
 ├── Queues

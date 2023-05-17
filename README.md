@@ -132,9 +132,9 @@ Data Structures
 │   ├── <a href="src/main/java/com/gkonovalov/datastructures/linkedlist/DoublyLinkedList.java"><b>Doubly Linked List</b></a> 
 │   └── Skip List
 ├── <a href="src/main/java/com/gkonovalov/datastructures/stack/Stack.java"><b>Stacks</b></a>
-├── Queues
-│   ├── Queue
-│   └── Dequeue
+├── <a href="src/main/java/com/gkonovalov/datastructures/queues"><b>Queues</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/datastructures/queues/Queue.java"><b>Queue</b></a>
+│   └── <a href="src/main/java/com/gkonovalov/datastructures/queues/Deque.java"><b>Deque</b></a>
 ├── Hash Tables 
 │   ├── Hash Table
 │   │   ├── Separate Chaining

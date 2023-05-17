@@ -22,7 +22,7 @@ public class SinglyLinkedListTest {
     }
 
     @Test
-    @DisplayName("Testing LinkedList.add")
+    @DisplayName("Testing SinglyLinkedList.add")
     public void testAdd() {
         assertTrue(singlyLinkedList.isEmpty());
 
@@ -35,7 +35,7 @@ public class SinglyLinkedListTest {
     }
 
     @Test
-    @DisplayName("Testing LinkedList.get")
+    @DisplayName("Testing SinglyLinkedList.get")
     public void testGet() {
         assertThrows(IllegalArgumentException.class, () -> singlyLinkedList.get(10));
 
@@ -46,7 +46,7 @@ public class SinglyLinkedListTest {
     }
 
     @Test
-    @DisplayName("Testing LinkedList.remove")
+    @DisplayName("Testing SinglyLinkedList.remove")
     public void testRemove() {
         assertEquals(singlyLinkedList.size(), 0);
 
@@ -64,7 +64,7 @@ public class SinglyLinkedListTest {
     }
 
     @Test
-    @DisplayName("Testing LinkedList.contains")
+    @DisplayName("Testing SinglyLinkedList.contains")
     public void testContains() {
         singlyLinkedList.add("a");
 
@@ -73,7 +73,7 @@ public class SinglyLinkedListTest {
     }
 
     @Test
-    @DisplayName("Testing LinkedList.size")
+    @DisplayName("Testing SinglyLinkedList.size")
     public void testSize() {
         assertEquals(singlyLinkedList.size(), 0);
 
@@ -83,7 +83,7 @@ public class SinglyLinkedListTest {
     }
 
     @Test
-    @DisplayName("Testing LinkedList.indexOf")
+    @DisplayName("Testing SinglyLinkedList.indexOf")
     public void testIndexOf() {
         singlyLinkedList.add("a");
         singlyLinkedList.add("b");

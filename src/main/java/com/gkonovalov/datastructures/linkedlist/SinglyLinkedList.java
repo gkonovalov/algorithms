@@ -7,14 +7,15 @@ import com.gkonovalov.datastructures.etc.Node;
  * <p>
  * Singly Linked List implementation.
  * <p>
- * Runtime Complexity: O(1) for the {@code size}, {@code prepend}, {@code removeFirst}.
- *                     O(n) for the {@code get}, {@code add}, {@code indexOfs} ;
- *                                  {@code contains}, {@code remove} and {@code append}.
+ * Runtime Complexity: O(1) for the {@code add}, {@code size}, {@code prepend}..
+ *                     O(n) for the {@code get}, {@code indexOfs}, {@code contains};
+ *                     {@code remove} and {@code append}.
  * Space Complexity: O(n)
  */
 public class SinglyLinkedList<T> {
 
     private Node<T> head;
+    private Node<T> tail;
     private int size;
 
     public SinglyLinkedList() {
@@ -69,25 +70,15 @@ public class SinglyLinkedList<T> {
         int index = 0;
 
         Node<T> current = head;
-
-        if (value == null) {
-            while (current != null) {
-                if (current.getValue() == null) {
-                    return index;
-                }
-
-                index++;
-                current = current.getNext();
+        while (current != null) {
+            if (value == null ?
+                    current.getValue() == null :
+                    value.equals(current.getValue())) {
+                return index;
             }
-        } else {
-            while (current != null) {
-                if (value.equals(current.getValue())) {
-                    return index;
-                }
 
-                index++;
-                current = current.getNext();
-            }
+            index++;
+            current = current.getNext();
         }
         return -1;
     }
@@ -118,7 +109,7 @@ public class SinglyLinkedList<T> {
     }
 
     public boolean isEmpty() {
-        return size == 0 || head == null;
+        return size == 0;
     }
 
     public int size() {
@@ -131,12 +122,10 @@ public class SinglyLinkedList<T> {
             return;
         }
 
-        Node<T> lastNode = findNode(size - 1);
-
-        if (lastNode != null) {
-            lastNode.setNext(new Node<>(value));
-            size++;
-        }
+        Node<T> newNode = new Node<>(value);
+        tail.setNext(newNode);
+        tail = newNode;
+        size++;
     }
 
     private void prepend(T value) {
@@ -147,6 +136,11 @@ public class SinglyLinkedList<T> {
         }
 
         head = newNode;
+
+        if (tail == null) {
+            tail = head;
+        }
+
         size++;
     }
 

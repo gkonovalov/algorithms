@@ -122,13 +122,13 @@ Need to prepare description.
 <pre>
 Data Structures
 ├── Strings
-├── Arrays
-│   ├── Array
+├── <a href="src/main/java/com/gkonovalov/datastructures/arrays"><b>Arrays</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/datastructures/arrays/Array.java"><b>Array</b></a>
 │   ├── Dynamical Array 
 │   ├── Circular Buffer
 │   └── Suffix Arrays
 ├── <a href="src/main/java/com/gkonovalov/datastructures/linkedlist"><b>Linked Lists</b></a>
-│   ├── Singly Linked List 
+│   ├── <a href="src/main/java/com/gkonovalov/datastructures/linkedlist/SinglyLinkedList.java"><b>Singly Linked List</b></a>  
 │   ├── Doubly Linked List
 │   └── Skip List
 ├── <a href="src/main/java/com/gkonovalov/datastructures/stack/Stack.java"><b>Stacks</b></a>

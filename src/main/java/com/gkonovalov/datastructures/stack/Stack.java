@@ -5,7 +5,7 @@ import com.gkonovalov.datastructures.etc.Node;
 /**
  * Created by Georgiy Konovalov on 17/05/2023.
  * <p>
- * Stack implementation. Stack is LIFO(Last in First Out) Data Structure.
+ * Stack implementation using Linked List. Stack is LIFO(Last in First Out) data structure.
  * </p>
  * Runtime Complexity: O(1) for {@code peek}, {@code pop}, {@code push}, {@code isEmpty}.
  * Space Complexity: O(n).

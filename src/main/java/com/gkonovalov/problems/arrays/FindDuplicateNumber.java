@@ -1,4 +1,4 @@
-package com.gkonovalov.problems.arrays.medium;
+package com.gkonovalov.problems.arrays;
 
 import java.util.Arrays;
 import java.util.HashSet;

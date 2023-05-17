@@ -1,4 +1,4 @@
-package com.gkonovalov.problems.recursion.dp.easy;
+package com.gkonovalov.problems.recursion.dp;
 
 
 /**

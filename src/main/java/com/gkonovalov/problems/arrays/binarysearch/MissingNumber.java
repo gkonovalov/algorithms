@@ -1,4 +1,4 @@
-package com.gkonovalov.problems.arrays.binarysearch.easy;
+package com.gkonovalov.problems.arrays.binarysearch;
 
 
 /**

@@ -1,4 +1,4 @@
-package com.gkonovalov.problems.arrays.medium;
+package com.gkonovalov.problems.arrays;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -110,12 +110,53 @@ Need to prepare description.
 │   ├── Dijkstra's
 │   ├── Prim's
 │   └── Kruskal's
-└── Randomized
-    ├── Quick Sort
-    ├── <a href="src/main/java/com/gkonovalov/algorithms/randomized/FisherYatesShuffle.java"><b>Fisher-Yates Shuffle</b></a>
-    ├── Randomized Selection
-    ├── Las Vegas
-    └── Monte Carlo
+├── Bit Manipulation
+├── Randomized
+│   ├── Quick Sort
+│   ├── <a href="src/main/java/com/gkonovalov/algorithms/randomized/FisherYatesShuffle.java"><b>Fisher-Yates Shuffle</b></a>
+│   ├── Randomized Selection
+│   ├── Las Vegas
+│   └── Monte Carlo
+├── Game Theory
+│   ├── Minimax
+│   └── Prisoner's Dilemma
+├── Geometry
+│   ├── Closest Pair of Points
+│   ├── Line Intersection
+│   ├── Voronoi Diagram
+│   ├── Triangulation
+│   └── Convex Hull
+│       ├── Graham Scan
+│       └── Jarvis March
+└── Math
+    ├── Fibonacci Numbers
+    ├── Factorial
+    ├── Prime Numbers
+    │   ├── Sieve of Eratosthenes
+    │   ├── Primality Test 
+    │   │   └── Miller-Rabin
+    │   └── Prime Factorization
+    ├── Greatest Common Divisor (GCD)
+    │   └── Euclidean Algorithm
+    ├── Least Common Multiple (LCM)
+    ├── Chinese Remainder Theorem
+    ├── Sum of Digits
+    ├── Fast Powering
+    ├── Fast Exponentiation
+    ├── Binomial Coefficient 
+    ├── Catalan Numbers
+    ├── Pascal Triangle
+    ├── Power of Two 
+    ├── Euclidean Distance
+    ├── Fast Fourier Transform
+    └── Matrix
+        ├── Multiplication  
+        ├── Inversion 
+        ├── Power 
+        ├── Transposition
+        ├── Exponentiation
+        ├── Square Rotation 
+        └── Strassen's Multiplication
 </pre>
 
 ## Data Structures
@@ -257,56 +298,12 @@ Problems
 │       ├── Rat in a Maze 
 │       ├── Subset Sum
 │       ├── Traveling Salesman 
-│       ├── Word Search
-│       └── Combinatorics
-│           ├── Permutations
-│           ├── Combinations
-│           ├── Subsets
-│           └── Partitions
+│       └── Word Search
 ├── Greedy
 │   ├── Knapsack Unbounded
 │   ├── Interval Scheduling
 │   ├── Job Scheduling 
 │   └── Coin Change
-├── Game Theory
-│   └── Prisoner's Dilemma
-├── Geometry
-│   ├── Closest Pair of Points
-│   ├── Line Intersection
-│   ├── Voronoi Diagram
-│   ├── Triangulation
-│   └── Convex Hull
-│       ├── Graham Scan
-│       └── Jarvis March
-├── Math
-│   ├── Fibonacci Numbers
-│   ├── Factorial
-│   ├── Prime Numbers
-│   │   ├── Sieve of Eratosthenes
-│   │   ├── Primality Test 
-│   │   │   └── Miller-Rabin
-│   │   └── Prime Factorization
-│   ├── Greatest Common Divisor (GCD)
-│   │   └── Euclidean Algorithm
-│   ├── Least Common Multiple (LCM)
-│   ├── Chinese Remainder Theorem
-│   ├── Sum of Digits
-│   ├── Fast Powering
-│   ├── Fast Exponentiation
-│   ├── Binomial Coefficient
-│   ├── Catalan Numbers
-│   ├── Pascal Triangle
-│   ├── Power of Two 
-│   ├── Euclidean Distance
-│   └── Matrix
-│       ├── Multiplication  
-│       ├── Inversion 
-│       ├── Power 
-│       ├── Transposition
-│       ├── Exponentiation
-│       ├── Square Rotation 
-│       └── Strassen's Multiplication
-├── Bit Manipulation
 └── NP-complete problems
      ├── Travelling Salesman
      ├── Knapsack

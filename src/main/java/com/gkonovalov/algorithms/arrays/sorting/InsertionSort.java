@@ -5,7 +5,8 @@ package com.gkonovalov.algorithms.arrays.sorting;
  * <p>
  * Insertion Sort has a time complexity of O(n^2), but it performs fewer
  * comparisons and swaps than Selection Sort on average.
- * This algorithm is less efficient compared to other
+ * For partially sorted arrays, it can run with complexity O(n).
+ * However, in general, Insertion Sort is less efficient compared to other
  * sorting algorithms like Merge Sort or Quick Sort.
  * </p>
  * Runtime Complexity: O(n^2)

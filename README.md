@@ -30,12 +30,12 @@ Need to prepare description.
 │   │   └── Ternary Search
 │   ├── Sorting
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/BubbleSort.java"><b>Bubble Sort</b></a>
+│   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/SelectionSort.java"><b>Selection Sort</b></a>
+│   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/InsertionSort.java"><b>Insertion Sort</b></a>
 │   │   ├── Merge Sort 
 │   │   ├── Quick Sort 
 │   │   ├── Radix Sort 
 │   │   ├── Heap Sort
-│   │   ├── Insertion Sort
-│   │   ├── Selection Sort
 │   │   ├── Counting Sort
 │   │   └── Bucket Sort
 │   ├── Selection

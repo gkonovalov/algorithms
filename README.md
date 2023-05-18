@@ -112,7 +112,7 @@ Need to prepare description.
 │   └── Kruskal's
 └── Randomized
     ├── Quick Sort
-    ├── Fisher-Yates Shuffle
+    ├── <a href="src/main/java/com/gkonovalov/algorithms/randomized/FisherYatesShuffle.java"><b>Fisher-Yates Shuffle</b></a>
     ├── Randomized Selection
     ├── Las Vegas
     └── Monte Carlo

@@ -1,4 +1,4 @@
-## Essential Algorithms and Data Structures
+## Algorithms and Data Structures
 
 Need to prepare description.
 

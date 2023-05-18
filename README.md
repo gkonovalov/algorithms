@@ -28,12 +28,12 @@ Need to prepare description.
 │   │   ├── Exponential Search
 │   │   ├── Jump Search 
 │   │   └── Ternary Search
-│   ├── Sorting
+│   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/"><b>Sorting</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/BubbleSort.java"><b>Bubble Sort</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/SelectionSort.java"><b>Selection Sort</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/InsertionSort.java"><b>Insertion Sort</b></a>
-│   │   ├── Merge Sort 
-│   │   ├── Quick Sort 
+│   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/MergeSort.java"><b>Merge Sort</b></a>
+│   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/QuickSort.java"><b>Quick Sort</b></a>
 │   │   ├── Radix Sort 
 │   │   ├── Heap Sort
 │   │   ├── Counting Sort

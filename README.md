@@ -165,7 +165,7 @@ Data Structures
 ├── Strings
 ├── <a href="src/main/java/com/gkonovalov/datastructures/arrays"><b>Arrays</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/datastructures/arrays/Array.java"><b>Array</b></a>
-│   ├── Dynamical Array 
+│   ├── <a href="src/main/java/com/gkonovalov/datastructures/arrays/DynamicArray.java"><b>Dynamic Array</b></a>
 │   ├── Circular Buffer
 │   └── Suffix Arrays
 ├── <a href="src/main/java/com/gkonovalov/datastructures/linkedlist"><b>Linked Lists</b></a>

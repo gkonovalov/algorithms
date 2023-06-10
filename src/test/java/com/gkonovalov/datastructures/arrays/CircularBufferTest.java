@@ -101,5 +101,8 @@ public class CircularBufferTest {
         circularBuffer.dequeue();
 
         assertEquals(2, circularBuffer.peek());
+        circularBuffer.dequeue();
+
+        assertThrows(IllegalStateException.class, () -> circularBuffer.peek());
     }
 }

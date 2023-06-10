@@ -7,7 +7,7 @@ import java.util.HashMap;
  * Created by Georgiy Konovalov on 15/04/2023.
  * <p>
  * @see <a href="https://leetcode.com/problems/two-sum/">
- *          [Easy][1] - Two Sum
+ *           [Easy][1] - Two Sum
  *      </a>
  * </p>
  * Runtime Complexity: O(n) for {@code twoSum},

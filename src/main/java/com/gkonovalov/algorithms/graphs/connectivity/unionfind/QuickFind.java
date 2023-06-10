@@ -7,10 +7,10 @@ package com.gkonovalov.algorithms.graphs.connectivity.unionfind;
  * 'union' operation can be slow, ex. if you have m 'union' operations for n objects,
  * it will take O(mn) time to execute.
  * </p>
- * Runtime Complexity: O(mn) - m 'union' operations for n objects;
- *                     O(n) for {@code QuickFind}, {@code union};
+ * Runtime Complexity: O(mn) - m 'union' operations for n objects,
+ *                     O(n) for {@code QuickFind}, {@code union},
  *                     O(1) for {@code isConnected}, {@code componentsCount}.
- * Space Complexity: O(n).
+ * Space Complexity:   O(n).
  */
 public class QuickFind {
 

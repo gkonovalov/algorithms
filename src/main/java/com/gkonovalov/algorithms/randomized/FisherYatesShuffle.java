@@ -9,8 +9,8 @@ import java.util.Random;
  * is a technique used to randomly shuffle the elements of an array.
  * It ensures that every possible permutation of the array is equally likely.
  * </p>
- * Runtime Complexity: O(n)
- * Space Complexity: O(1)
+ * Runtime Complexity: O(n).
+ * Space Complexity:   O(1).
  */
 public class FisherYatesShuffle {
 

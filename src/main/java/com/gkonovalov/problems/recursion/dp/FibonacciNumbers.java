@@ -10,12 +10,11 @@ package com.gkonovalov.problems.recursion.dp;
  * </p>
  * Runtime Complexity: O(2^n) for {@code fibRecursiveTopDown},
  *                     O(n) for {@code fibMemoizationTopDown}, {@code fibDPBottomUp},
- *                              {@code fibDPBottomUp2}, {@code fibIterativeBottomUp}
+ *                              {@code fibDPBottomUp2}, {@code fibIterativeBottomUp}.
  *
- * Space Complexity:  O(n) for {@code fibRecursiveTopDown}, {@code fibMemoizationTopDown},
- *                             {@code fibDPBottomUp}
- *                    O(1) for {@code fibDPBottomUp2},  {@code fibIterativeBottomUp}
- * O(n) for {@code findDuplicate4}
+ * Space Complexity:  O(n) for {@code fibRecursiveTopDown}, {@code fibMemoizationTopDown}, {@code fibDPBottomUp},
+ *                    O(1) for {@code fibDPBottomUp2},  {@code fibIterativeBottomUp},
+ *                    O(n) for {@code findDuplicate4}.
  */
 public class FibonacciNumbers {
 

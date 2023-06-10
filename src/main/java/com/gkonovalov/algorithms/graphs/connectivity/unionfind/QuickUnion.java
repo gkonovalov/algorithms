@@ -7,11 +7,11 @@ package com.gkonovalov.algorithms.graphs.connectivity.unionfind;
  * 'find' operation can be pretty slow, especially for situation where we have very skinny tree.
  * For m 'union' operations for n objects, it will take O(mn) time to execute.
  * </p>
- * Runtime Complexity: O(mn) - m 'union' operations for n objects;
+ * Runtime Complexity: O(mn) - m 'union' operations for n objects,
  *                     O(n) for {@code QuickUnion}, {@code union},
- *                              {@code root}, {@code isConnected};
+ *                              {@code root}, {@code isConnected},
  *                     O(1) for {@code componentsCount}.
- * Space Complexity: O(n).
+ * Space Complexity:   O(n).
  */
 public class QuickUnion {
 

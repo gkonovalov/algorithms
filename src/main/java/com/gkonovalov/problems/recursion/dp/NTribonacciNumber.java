@@ -8,9 +8,9 @@ package com.gkonovalov.problems.recursion.dp;
  *          [Easy][1137] - N-th Tribonacci Number
  *      </a>
  * </p>
- * Runtime Complexity: O(n)
- * Space Complexity: O(1) for {@code tribonnacci2}
- *                   O(n) for {@code tribonacci}
+ * Runtime Complexity: O(n).
+ * Space Complexity:   O(1) for {@code tribonnacci2},
+ *                     O(n) for {@code tribonacci}.
  */
 public class NTribonacciNumber {
 

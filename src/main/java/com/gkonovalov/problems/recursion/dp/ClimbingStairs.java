@@ -8,9 +8,9 @@ package com.gkonovalov.problems.recursion.dp;
  *          [Easy][70] - Climbing Stairs
  *      </a>
  * </p>
- * Runtime Complexity: O(n)
- * Space Complexity: O(1) for {@code climbStairs}, {@code climbStairs3}
- *                   O(n) for {@code climbStairs2}
+ * Runtime Complexity: O(n).
+ * Space Complexity:   O(1) for {@code climbStairs}, {@code climbStairs3},
+ *                     O(n) for {@code climbStairs2}.
  */
 public class ClimbingStairs {
 

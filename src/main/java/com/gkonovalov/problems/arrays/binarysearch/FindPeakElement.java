@@ -9,8 +9,8 @@ package com.gkonovalov.problems.arrays.binarysearch;
  *      </a>
  * </p>
  * Runtime Complexity: O(log n) for {@code findPeakElement},
- *                     O(n) for {@code findPeakElement2}
- * Space Complexity: O(1)
+ *                     O(n) for {@code findPeakElement2}.
+ * Space Complexity:   O(1).
  */
 public class FindPeakElement {
 

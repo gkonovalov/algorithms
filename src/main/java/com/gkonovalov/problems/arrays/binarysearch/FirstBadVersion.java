@@ -5,11 +5,11 @@ package com.gkonovalov.problems.arrays.binarysearch;
  * Created by Georgiy Konovalov on 8/04/2023.
  * <p>
  * @see <a href="https://leetcode.com/problems/first-bad-version/">
- *     [Easy][278] - First Bad Version
+ *            [Easy][278] - First Bad Version
  *      </a>
  * </p>
- * Runtime Complexity: O(log n)
- * Space Complexity: O(1)
+ * Runtime Complexity: O(log n).
+ * Space Complexity:   O(1).
  */
 public class FirstBadVersion {
 

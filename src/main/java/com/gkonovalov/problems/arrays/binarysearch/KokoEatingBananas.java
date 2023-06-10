@@ -8,8 +8,8 @@ package com.gkonovalov.problems.arrays.binarysearch;
  *          [Medium][875] - Koko Eating Bananas
  *      </a>
  * </p>
- * Runtime Complexity: O(n log m)
- * Space Complexity: O(1)
+ * Runtime Complexity: O(n log m).
+ * Space Complexity:   O(1).
  */
 public class KokoEatingBananas {
 

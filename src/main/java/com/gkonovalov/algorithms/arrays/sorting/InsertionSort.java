@@ -9,8 +9,8 @@ package com.gkonovalov.algorithms.arrays.sorting;
  * However, in general, Insertion Sort is less efficient compared to other
  * sorting algorithms like Merge Sort or Quick Sort.
  * </p>
- * Runtime Complexity: O(n^2)
- * Space Complexity: O(1)
+ * Runtime Complexity: O(n^2).
+ * Space Complexity:   O(1).
  */
 public class InsertionSort {
 

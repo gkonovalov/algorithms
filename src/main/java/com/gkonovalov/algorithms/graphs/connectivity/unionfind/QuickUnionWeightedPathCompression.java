@@ -8,11 +8,11 @@ package com.gkonovalov.algorithms.graphs.connectivity.unionfind;
  * In practice, this is considered to be very close to O(n) and very efficient solution
  * for dynamic connectivity problems.
  * </p>
- * Runtime Complexity: O(m lg* n)) ~= O(n);
- *                     O(lg* n) for {@code union}, {@code isConnected}, {@code root};
- *                     O(n) for {@code QuickUnionWeighted};
+ * Runtime Complexity: O(m lg* n)) ~= O(n),
+ *                     O(lg* n) for {@code union}, {@code isConnected}, {@code root},
+ *                     O(n) for {@code QuickUnionWeighted},
  *                     O(1) {@code componentsCount}.
- * Space Complexity: O(n).
+ * Space Complexity:   O(n).
  */
 public class QuickUnionWeightedPathCompression {
 

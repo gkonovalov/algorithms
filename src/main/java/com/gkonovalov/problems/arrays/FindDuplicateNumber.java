@@ -11,12 +11,12 @@ import java.util.HashSet;
  *      </a>
  * </p>
  * Runtime Complexity: O(n) for {@code findDuplicate}, {@code findDuplicate1},
- *                              {@code findDuplicate2} ,{@code findDuplicate4}
- *                     O(n log n) for {@code findDuplicate3}
+ *                              {@code findDuplicate2}, {@code findDuplicate4},
+ *                     O(n log n) for {@code findDuplicate3}.
  *
- * Space Complexity:  O(1) for {@code findDuplicate}, {@code findDuplicate1}
- *                             {@code findDuplicate2}, {@code findDuplicate3}
- *                    O(n) for {@code findDuplicate4}
+ * Space Complexity:  O(1) for {@code findDuplicate}, {@code findDuplicate1},
+ *                             {@code findDuplicate2}, {@code findDuplicate3},
+ *                    O(n) for {@code findDuplicate4}.
  */
 public class FindDuplicateNumber {
 

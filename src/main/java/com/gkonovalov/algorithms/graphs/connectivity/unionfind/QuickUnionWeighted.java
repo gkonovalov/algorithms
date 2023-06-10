@@ -6,11 +6,11 @@ package com.gkonovalov.algorithms.graphs.connectivity.unionfind;
  * Weighted Quick-Union implementation.
  * This algorithm have pretty efficient 'union' operation.
  * </p>
- * Runtime Complexity: O(m log n) - m 'union' operations for n objects;
- *                     O(log n) for {@code union}, {@code isConnected}, {@code root};
- *                     O(n) for {@code QuickUnionWeighted};
+ * Runtime Complexity: O(m log n) - m 'union' operations for n objects,
+ *                     O(log n) for {@code union}, {@code isConnected}, {@code root},
+ *                     O(n) for {@code QuickUnionWeighted},
  *                     O(1) {@code componentsCount}.
- * Space Complexity: O(n).
+ * Space Complexity:   O(n).
  */
 public class QuickUnionWeighted {
 

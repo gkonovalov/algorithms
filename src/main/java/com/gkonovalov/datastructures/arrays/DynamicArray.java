@@ -11,7 +11,7 @@ package com.gkonovalov.datastructures.arrays;
  * Runtime Complexity: O(1) for {@code set}, {@code get}, {@code size}, {@code isEmpty},
  *                     O(1) amortized for {@code add}, {@code remove},
  *                     O(n) worst case for {@code add}, {@code contains}, {@code remove}.
- * Space Complexity: O(n).
+ * Space Complexity:   O(n).
  */
 public class DynamicArray<T> {
 

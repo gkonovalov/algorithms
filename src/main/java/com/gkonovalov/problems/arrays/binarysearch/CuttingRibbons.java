@@ -8,8 +8,8 @@ package com.gkonovalov.problems.arrays.binarysearch;
  *          [Medium][1891] - Cutting Ribbons
  *      </a>
  * </p>
- * Runtime Complexity: O(n log n)
- * Space Complexity: O(1)
+ * Runtime Complexity: O(n log n).
+ * Space Complexity:   O(1).
  */
 public class CuttingRibbons {
 

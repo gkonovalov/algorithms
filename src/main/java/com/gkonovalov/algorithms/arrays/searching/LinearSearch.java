@@ -7,7 +7,7 @@ package com.gkonovalov.algorithms.arrays.searching;
  * This algorithm can work with sorted and unsorted data.
  * </p>
  * Runtime Complexity: O(n).
- * Space Complexity: O(1).
+ * Space Complexity:   O(1).
  */
 public class LinearSearch {
 

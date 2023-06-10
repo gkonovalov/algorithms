@@ -13,13 +13,13 @@ import java.util.Queue;
  * with few edges. Also, adding or removing a vertex or edge requires copying the entire
  * matrix, which can be expensive for large graphs.
  * </p>
- * Runtime Complexity: O(|V|^2) - and Vertex;
- *                     O(|V|^2) - removing a Vertex;
- *                     O(1) - add Edge;
- *                     O(1) - removing a Edge;
- *                     O(1) - Edge between Vertices (checking for adjacency);
+ * Runtime Complexity: O(|V|^2) - and Vertex,
+ *                     O(|V|^2) - removing a Vertex,
+ *                     O(1) - add Edge,
+ *                     O(1) - removing a Edge,
+ *                     O(1) - Edge between Vertices (checking for adjacency),
  *                     O(|V|^2) - traversing the graph.
- * Space Complexity: O(|V|^2).
+ * Space Complexity:   O(|V|^2).
  */
 public class AdjacencyMatrix {
 

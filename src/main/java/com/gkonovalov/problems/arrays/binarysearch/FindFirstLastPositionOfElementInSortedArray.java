@@ -10,8 +10,8 @@ import java.util.Arrays;
  *          [Medium][34] - Find First and Last Position of Element in Sorted Array
  *      </a>
  * </p>
- * Runtime Complexity: O(log n)
- * Space Complexity: O(1)
+ * Runtime Complexity: O(log n).
+ * Space Complexity:   O(1).
  */
 public class FindFirstLastPositionOfElementInSortedArray {
 

@@ -11,7 +11,7 @@ package com.gkonovalov.datastructures.arrays;
  * making it suitable for scenarios where elements need to be added or removed in a cyclic manner.
  * </p>
  * Runtime Complexity: O(1) for {@code enqueue}, {@code dequeue},
- *                               {@code isFull}, {@code isEmpty}, {@code size}.
+ *                              {@code isFull}, {@code isEmpty}, {@code size}.
  * Space Complexity:   O(n).
  */
 public class CircularBuffer<T> {

@@ -8,8 +8,8 @@ package com.gkonovalov.problems.arrays.binarysearch;
  *          [Easy][268] - Missing Number
  *      </a>
  * </p>
- * Runtime Complexity: O(n)
- * Space Complexity: O(1)
+ * Runtime Complexity: O(n).
+ * Space Complexity:   O(1).
  */
 public class MissingNumber {
 

@@ -13,7 +13,7 @@ import java.util.List;
  *      </a>
  * </p>
  * Runtime Complexity: O(n^2) for {@code threeSum}.
- * Space Complexity:  O(n) for {@code threeSum}.
+ * Space Complexity:   O(n) for {@code threeSum}.
  */
 public class ThreeSum {
 

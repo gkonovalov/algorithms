@@ -9,8 +9,8 @@ package com.gkonovalov.algorithms.arrays.sorting;
  * size and significant memory swaps. Quicksort, mergesort, or heapsort are
  * more efficient and recommended for sorting large amounts of data.
  * </p>
- * Runtime Complexity: O(n^2)
- * Space Complexity: O(1)
+ * Runtime Complexity: O(n^2).
+ * Space Complexity:   O(1).
  */
 public class BubbleSort {
 

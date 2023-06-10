@@ -25,9 +25,13 @@ public class SelectionSort {
                 }
             }
 
-            int temp = arr[i];
-            arr[i] = arr[minIndex];
-            arr[minIndex] = temp;
+            swap(arr, i, minIndex);
         }
+    }
+
+    private void swap(int[] arr, int a, int b) {
+        int temp = arr[a];
+        arr[a] = arr[b];
+        arr[b] = temp;
     }
 }

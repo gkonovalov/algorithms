@@ -9,8 +9,8 @@ package com.gkonovalov.problems.arrays.binarysearch;
  *     [Easy][35] - Search Insert Position
  *     </a>
  * </p>
- * Runtime Complexity: O(log n)
- * Space Complexity: O(1)
+ * Runtime Complexity: O(log n).
+ * Space Complexity:   O(1).
  */
 public class SearchInsertPosition {
 

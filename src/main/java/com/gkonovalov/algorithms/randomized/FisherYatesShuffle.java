@@ -20,9 +20,13 @@ public class FisherYatesShuffle {
         for (int i = 0; i < arr.length; i++) {
             int rndIndex = rnd.nextInt(i + 1);
 
-            int temp = arr[i];
-            arr[i] = arr[rndIndex];
-            arr[rndIndex] = temp;
+            swap(arr, i, rndIndex);
         }
+    }
+
+    private void swap(int[] arr, int a, int b) {
+        int temp = arr[a];
+        arr[a] = arr[b];
+        arr[b] = temp;
     }
 }

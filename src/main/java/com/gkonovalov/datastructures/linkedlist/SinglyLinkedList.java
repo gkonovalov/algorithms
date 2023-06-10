@@ -7,10 +7,10 @@ import com.gkonovalov.datastructures.etc.Node;
  * <p>
  * Singly Linked List implementation.
  * <p>
- * Runtime Complexity: O(1) for the {@code add}, {@code size}, {@code prepend}..
- *                     O(n) for the {@code get}, {@code indexOfs}, {@code contains};
- *                     {@code remove} and {@code append}.
- * Space Complexity: O(n)
+ * Runtime Complexity: O(1) for the {@code add}, {@code size}, {@code prepend},
+ *                     O(n) for the {@code get}, {@code indexOfs}, {@code contains},
+ *                                  {@code remove} and {@code append}.
+ * Space Complexity: O(n).
  */
 public class SinglyLinkedList<T> {
 

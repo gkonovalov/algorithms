@@ -6,11 +6,11 @@ package com.gkonovalov.problems.arrays.binarysearch;
  * <p>
  *
  * @see <a href="https://leetcode.com/problems/binary-search/">
- *     [Easy][704] - Binary Search
+ *          [Easy][704] - Binary Search
  *     </a>
  * </p>
- * Runtime Complexity: O(log n)
- * Space Complexity: O(1)
+ * Runtime Complexity: O(log n).
+ * Space Complexity:   O(1).
  */
 public class BinarySearch {
 

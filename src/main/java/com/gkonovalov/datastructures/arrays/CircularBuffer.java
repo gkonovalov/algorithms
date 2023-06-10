@@ -19,9 +19,11 @@ public class CircularBuffer<T> {
     private static final int DEFAULT_SIZE = 8;
 
     private Object[] arr;
-    private int size = 0;
+
     private int start = 0;
     private int end = 0;
+
+    private int size = 0;
 
     public CircularBuffer() {
         arr = new Object[DEFAULT_SIZE];

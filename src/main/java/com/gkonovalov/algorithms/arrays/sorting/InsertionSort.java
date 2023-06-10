@@ -18,13 +18,17 @@ public class InsertionSort {
         for (int i = 0; i < arr.length; i++) {
             for (int k = i; k > 0; k--) {
                 if (arr[k - 1] > arr[k]) {
-                    int temp = arr[k];
-                    arr[k] = arr[k - 1];
-                    arr[k - 1] = temp;
+                    swap(arr, k, k - 1);
                 } else {
                     break;
                 }
             }
         }
+    }
+
+    private void swap(int[] arr, int a, int b) {
+        int temp = arr[a];
+        arr[a] = arr[b];
+        arr[b] = temp;
     }
 }

@@ -8,8 +8,8 @@ package com.gkonovalov.problems.arrays.binarysearch;
  *          [Medium][33] - Search in Rotated Sorted Array
  *      </a>
  * </p>
- * Runtime Complexity: O(log n)
- * Space Complexity: O(1)
+ * Runtime Complexity: O(log n).
+ * Space Complexity: O(1).
  */
 public class SearchRotatedSortedArray {
 

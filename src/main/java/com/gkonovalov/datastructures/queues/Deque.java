@@ -8,11 +8,11 @@ import com.gkonovalov.datastructures.etc.DNode;
  * Deque implementation. A Deque, short for "double-ended queue," is data structure
  * where elements can be added or removed from the head or the back of the deque.
  * </p>
- * Runtime Complexity: O(1) for {@code addFirst}, {@code addLast};
- *                              {@code removeFirst}, {@code removeLast};
- *                              {@code peekFirst}, {@code peekLast};
+ * Runtime Complexity: O(1) for {@code addFirst}, {@code addLast},
+ *                              {@code removeFirst}, {@code removeLast},
+ *                              {@code peekFirst}, {@code peekLast},
  *                              {@code isEmpty}, {@code size}.
- * Space Complexity: O(n).
+ * Space Complexity:   O(n).
  */
 public class Deque<T> {
 

@@ -8,7 +8,7 @@ import com.gkonovalov.datastructures.etc.Node;
  * Queue implementation. Queue is FIFO(First in First Out) data structure.
  * </p>
  * Runtime Complexity: O(1) for {@code peek}, {@code pop}, {@code push}, {@code isEmpty}.
- * Space Complexity: O(n).
+ * Space Complexity:   O(n).
  */
 public class Queue<T> {
 

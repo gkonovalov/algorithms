@@ -11,12 +11,12 @@ import java.util.*;
  * than with an Adjacency Matrix. However, checking if an Edge exists between two nodes
  * takes O(degree(V)) time complexity which slower than with Adjacency Matrix.
  * </p>
- * Runtime Complexity: O(1) - add Edge and add Vertex;
- *                     O(|V|+|E|) - removing a Vertex;
- *                     O(|E|) - removing a Edge;
- *                     O(degree(V)) - Edge between Vertices (checking for adjacency);
+ * Runtime Complexity: O(1) - add Edge and add Vertex,
+ *                     O(|V|+|E|) - removing a Vertex,
+ *                     O(|E|) - removing a Edge,
+ *                     O(degree(V)) - Edge between Vertices (checking for adjacency),
  *                     O(|V| + |E|) - traversing the graph.
- * Space Complexity: O(|V|+|E|), worst case O(|V|^2).
+ * Space Complexity:   O(|V|+|E|), worst case O(|V|^2).
  */
 public class AdjacencyList {
 

@@ -8,7 +8,7 @@ package com.gkonovalov.datastructures.arrays;
  * elements based on their index.
  * </p>
  * Runtime Complexity: O(1) for {@code getElement}, {@code getLength}.
- * Space Complexity: O(n).
+ * Space Complexity:   O(n).
  */
 public class Array {
 

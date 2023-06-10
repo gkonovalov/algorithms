@@ -6,7 +6,7 @@ package com.gkonovalov.algorithms.arrays.sorting;
  * Bubble Sort is a sorting algorithm with a time complexity of O(n^2),
  * making it inefficient for large datasets. It is not recommended for
  * practical use due to its exponential increase in operations with input
- * size and significant memory swaps. Quicksort, mergesort, or heapsort are
+ * size and significant memory swaps. Quick Sort, Merge Sort, or Heap Sort are
  * more efficient and recommended for sorting large amounts of data.
  * </p>
  * Runtime Complexity: O(n^2).

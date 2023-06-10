@@ -10,7 +10,7 @@ package com.gkonovalov.datastructures.arrays;
  * modulo arithmetic. This enables continuous utilization of memory and avoids wastage of space,
  * making it suitable for scenarios where elements need to be added or removed in a cyclic manner.
  * </p>
- * Runtime Complexity: O(1) for {@code enqueue}, {@code dequeue},
+ * Runtime Complexity: O(1) for {@code enqueue}, {@code dequeue}, {@code peek},
  *                              {@code isFull}, {@code isEmpty}, {@code size}.
  * Space Complexity:   O(n).
  */

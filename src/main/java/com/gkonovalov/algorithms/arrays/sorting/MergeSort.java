@@ -10,8 +10,8 @@ package com.gkonovalov.algorithms.arrays.sorting;
  * maintain their relative order after sorting. However, it does require additional
  * memory for the temporary array used in the merging process.
  * </p>
- * Runtime Complexity: O(n log n)
- * Space Complexity: O(n)
+ * Runtime Complexity: O(n log n).
+ * Space Complexity:   O(n).
  */
 public class MergeSort {
 

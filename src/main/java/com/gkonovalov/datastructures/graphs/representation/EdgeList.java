@@ -10,12 +10,12 @@ import java.util.*;
  * In the Edge List each edge is a pair of vertices (u, v), indicating that there is an edge
  * from u to v in the graph.
  * </p>
- * Runtime Complexity: O(1) - add Edge and add Vertex;
- *                     O(|E|) - removing a Vertex;
- *                     O(|E|) - removing a Edge;
- *                     O(|E|) - Edge between Vertices (checking for adjacency);
+ * Runtime Complexity: O(1) - add Edge and add Vertex,
+ *                     O(|E|) - removing a Vertex,
+ *                     O(|E|) - removing a Edge,
+ *                     O(|E|) - Edge between Vertices (checking for adjacency),
  *                     O(|V| + |E|) - traversing the graph.
- * Space Complexity: O(|V|+|E|).
+ * Space Complexity:   O(|V|+|E|).
  */
 public class EdgeList {
 

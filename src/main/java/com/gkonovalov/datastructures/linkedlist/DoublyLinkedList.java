@@ -8,11 +8,11 @@ import com.gkonovalov.datastructures.etc.DNode;
  * <p>
  * Doubly Linked List implementation.
  * <p>
- * Runtime Complexity: O(1) for the {@code add}, {@code prepend}, {@code append};
- *                                  {@code size}, {@code removeFirst} and {@code removeLast}.
+ * Runtime Complexity: O(1) for the {@code add}, {@code prepend}, {@code append},
+ *                                  {@code size}, {@code removeFirst} and {@code removeLast},
  *                     O(n) for the {@code get}, {@code add}, {@code indexOf}, 
  *                                  {@code contains}, {@code findNode}, and {@code remove}.
- * Space Complexity: O(n)
+ * Space Complexity:   O(n).
  */
 public class DoublyLinkedList<T> {
 

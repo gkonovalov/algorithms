@@ -11,7 +11,7 @@ import com.gkonovalov.datastructures.etc.Node;
  * other data structure that can be traversed sequentially.
  * </p>
  * Runtime Complexity: O(n).
- * Space Complexity: O(1).
+ * Space Complexity:   O(1).
  */
 public class FloydCycleDetection {
 

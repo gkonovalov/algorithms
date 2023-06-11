@@ -11,19 +11,19 @@ import java.util.concurrent.ThreadLocalRandom;
  * sorting both halves, it selectively chooses to recurse on one side based on the position
  * of the pivot element.
  * </p>
- * Runtime Complexity: O(n) average with randomly shuffled array,
- *                     O(n^2) worst case, very unlikely if used randomly shuffled array.
+ * Runtime Complexity: O(n) average for {@code randomizedSelection} and rarely worst case can be O(n^2),
+ *                     O(n) average for {@code fixedSelection} and in certain cases O(n^2).
  * Space Complexity:   O(1).
  */
 public class QuickSelect {
 
-    public int selection(int[] nums, int k, boolean isLargest) {
+    public int randomizedSelection(int[] nums, int k, boolean isLargest) {
         int start = 0;
         int end = nums.length - 1;
         int index = isLargest ? nums.length - k : k - 1;
 
         while (start < end) {
-            int pivotIndex = partitionLomuto(nums, start, end);
+            int pivotIndex = randomizedPartitionLomuto(nums, start, end);
 
             if (pivotIndex < index) {
                 start = pivotIndex + 1;
@@ -37,19 +37,63 @@ public class QuickSelect {
         return nums[start];
     }
 
-    private int partitionLomuto(int[] arr, int start, int end) {
+    private int randomizedPartitionLomuto(int[] arr, int start, int end) {
+        int randomPivot = ThreadLocalRandom.current().nextInt(start, end + 1);
+
+        swap(arr, randomPivot, end);
+
         int pivot = arr[end];
-        int pivotPointer = start;
+        int pivotIndex = start;
 
         for (int i = start; i <= end; i++) {
             if (arr[i] < pivot) {
-                swap(arr, pivotPointer++, i);
+                swap(arr, pivotIndex++, i);
             }
         }
 
-        swap(arr, pivotPointer, end);
+        swap(arr, pivotIndex, end);
 
-        return pivotPointer;
+        return pivotIndex;
+    }
+
+    public int fixedSelection(int[] nums, int k, boolean isLargest) {
+        int start = 0;
+        int end = nums.length - 1;
+        int index = isLargest ? nums.length - k : k - 1;
+
+        while (start < end) {
+            int pivotIndex = fixedPartitionHoare(nums, start, end);
+
+            if (pivotIndex < index) {
+                start = pivotIndex + 1;
+            } else if (pivotIndex > index) {
+                end = pivotIndex - 1;
+            } else {
+                return nums[pivotIndex];
+            }
+        }
+
+        return nums[start];
+    }
+
+    private int fixedPartitionHoare(int[] arr, int start, int end) {
+        int pivot = arr[start];
+
+        while (start <= end) {
+            while (arr[start] < pivot) {
+                start++;
+            }
+
+            while (arr[end] > pivot) {
+                end--;
+            }
+
+            if (start <= end) {
+                swap(arr, start++, end--);
+            }
+        }
+
+        return start;
     }
 
     private static void swap(int[] arr, int a, int b) {

@@ -24,9 +24,16 @@ public class QuickSelectTest {
     }
 
     @Test
-    @DisplayName("Testing QuickSelect.selection")
-    public void testSelection() {
-        assertEquals(44, quickSelect.selection(arr, 2, true));
-        assertEquals(-2, quickSelect.selection(arr, 2, false));
+    @DisplayName("Testing QuickSelect.randomizedSelection")
+    public void testRandomizedSelection() {
+        assertEquals(44, quickSelect.randomizedSelection(arr, 2, true));
+        assertEquals(-2, quickSelect.randomizedSelection(arr, 2, false));
+    }
+
+    @Test
+    @DisplayName("Testing QuickSelect.fixedSelection")
+    public void testFixedSelection() {
+        assertEquals(44, quickSelect.fixedSelection(arr, 2, true));
+        assertEquals(-2, quickSelect.fixedSelection(arr, 2, false));
     }
 }

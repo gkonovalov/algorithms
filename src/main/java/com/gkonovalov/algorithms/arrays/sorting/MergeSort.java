@@ -76,14 +76,14 @@ public class MergeSort {
             aux[i] = arr[i];
         }
 
-        int i = start;
-        int j = center + 1;
+        int l = start;
+        int r = center + 1;
 
-        for (int k = start; k <= end; k++) {
-            if (i > center) arr[k] = aux[j++];
-            else if (j > end) arr[k] = aux[i++];
-            else if (aux[j] < aux[i]) arr[k] = aux[j++];
-            else arr[k] = aux[i++];
+        for (int curr = start; curr <= end; curr++) {
+            if (l > center) arr[curr] = aux[r++];
+            else if (r > end) arr[curr] = aux[l++];
+            else if (aux[r] < aux[l]) arr[curr] = aux[r++];
+            else arr[curr] = aux[l++];
         }
     }
 }

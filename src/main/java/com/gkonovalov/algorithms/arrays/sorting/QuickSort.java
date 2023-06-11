@@ -24,8 +24,8 @@ import java.util.concurrent.ThreadLocalRandom;
  * Lomuto Partition tends to perform more swaps compared to Hoare Partition, which can make it less efficient
  * in terms of runtime.
  * </p>
- * Runtime Complexity: O(n log n) average for {@code randomizedSort},
- *                     O(n^2) worst case for {@code fixedSort}.
+ * Runtime Complexity: O(n log n) average for {@code randomizedSort} and rarely worst case can be O(n^2),
+ *                     O(n log n) average for {@code fixedSort} and in certain cases O(n^2).
  * Space Complexity:   O(1).
  */
 public class QuickSort {

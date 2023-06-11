@@ -78,17 +78,17 @@ public class QuickSort {
 
     private int fixedPartitionLomuto(int[] arr, int start, int end) {
         int pivot = arr[end];
-        int pivotPointer = start;
+        int pivotIndex = start;
 
         for (int i = start; i <= end; i++) {
             if (arr[i] < pivot) {
-                swap(arr, pivotPointer++, i);
+                swap(arr, pivotIndex++, i);
             }
         }
 
-        swap(arr, pivotPointer, end);
+        swap(arr, pivotIndex, end);
 
-        return pivotPointer;
+        return pivotIndex;
     }
 
     private void swap(int[] arr, int a, int b) {

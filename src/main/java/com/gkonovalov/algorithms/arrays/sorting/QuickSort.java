@@ -71,17 +71,17 @@ public class QuickSort {
 
     private int fixedPartition(int[] arr, int start, int end) {
         int pivot = arr[end];
-        int i = start - 1;
+        int pivotPointer = start;
 
-        for (int j = start; j < end; j++) {
-            if (arr[j] <= pivot) {
-                swap(arr, ++i, j);
+        for (int j = start; j <= end; j++) {
+            if (arr[j] < pivot) {
+                swap(arr, pivotPointer++, j);
             }
         }
 
-        swap(arr, ++i, end);
+        swap(arr, pivotPointer, end);
 
-        return i;
+        return pivotPointer;
     }
 
     private void swap(int[] arr, int a, int b) {

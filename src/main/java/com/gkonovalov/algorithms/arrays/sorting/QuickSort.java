@@ -8,14 +8,18 @@ import java.util.concurrent.ThreadLocalRandom;
  * Quick Sort is a divide-and-conquer algorithm with an average case time complexity of O(n log n),
  * making it generally faster than Merge Sort, it also does not require additional memory, which is more
  * memory-efficient compared to Merge Sort.
- * Quick Sort selects a pivot element and partitions the array into two subarrays, recursively sorting each subarray.
- * It's important to note that Quick Sort is not a stable sorting algorithm, meaning that the relative order of equal
- * elements may change during the sorting process.
- * Randomized Quick Sort differs from Quick Sort in the selection of the pivot element.
- * Instead of choosing a fixed pivot, Randomized Quick Sort selects a random pivot element during each
- * partitioning step. This randomness helps to avoid worst-case scenarios and achieve an average-case time
- * complexity of O(n log n). In contrast, Quick Sort uses a fixed pivot selection, which can lead to poor performance
- * in certain cases with a time complexity of O(n^2).
+ *
+ * In Quick Sort, we select a pivot element and partition the array into two subarrays. We recursively sort
+ * each subarray using the same Quick Sort algorithm. It's important to note that Quick Sort is not a stable
+ * sorting algorithm. This means that the relative order of equal elements may change during the
+ * sorting process.
+ *
+ * Randomized Quick Sort differs from Quick Sort in the selection of the pivot element. Instead of choosing a
+ * fixed pivot, Randomized Quick Sort selects a random pivot element during each partitioning step.
+ * This randomness helps to avoid worst-case scenarios and achieve an average-case time complexity of O(n log n).
+ * In contrast, Quick Sort uses a fixed pivot selection, which can lead to poor performance in certain cases with
+ * a time complexity of O(n^2).
+ *
  * The main difference between Lomuto Partition and Hoare Partition lies in the number of swaps performed.
  * Lomuto Partition tends to perform more swaps compared to Hoare Partition, which can make it less efficient
  * in terms of runtime.

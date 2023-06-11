@@ -80,10 +80,10 @@ public class MergeSort {
         int r = center + 1;
 
         for (int curr = start; curr <= end; curr++) {
-            if (l > center) arr[curr] = aux[r++];
-            else if (r > end) arr[curr] = aux[l++];
-            else if (aux[r] < aux[l]) arr[curr] = aux[r++];
-            else arr[curr] = aux[l++];
+            if (l > center)             arr[curr] = aux[r++];
+            else if (r > end)           arr[curr] = aux[l++];
+            else if (aux[r] < aux[l])   arr[curr] = aux[r++];
+            else                        arr[curr] = aux[l++];
         }
     }
 }

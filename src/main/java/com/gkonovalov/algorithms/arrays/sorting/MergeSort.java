@@ -51,6 +51,7 @@ public class MergeSort {
             arr[curr++] = aux[l++];
         }
 
+        // Copy the rest of the right side of the array into the target array
         while (r <= end) {
             arr[curr++] = aux[r++];
         }

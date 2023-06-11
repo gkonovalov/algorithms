@@ -16,15 +16,15 @@ package com.gkonovalov.algorithms.arrays.sorting;
 public class MergeSort {
 
     public void sort(int[] arr) {
-        mergeSortHelper(arr, new int[arr.length], 0, arr.length - 1);
+        mergeSort(arr, new int[arr.length], 0, arr.length - 1);
     }
 
-    private void mergeSortHelper(int[] arr, int[] aux, int start, int end) {
+    private void mergeSort(int[] arr, int[] aux, int start, int end) {
         if (start < end) {
             int center = start + (end - start) / 2;
 
-            mergeSortHelper(arr, aux, start, center);
-            mergeSortHelper(arr, aux, center + 1, end);
+            mergeSort(arr, aux, start, center);
+            mergeSort(arr, aux, center + 1, end);
             mergeHalves(arr, aux, start, center, end);
         }
     }
@@ -49,6 +49,40 @@ public class MergeSort {
         // Copy the rest of the left side of the array into the target array
         while (l <= center) {
             arr[curr++] = aux[l++];
+        }
+
+        while (r <= end) {
+            arr[curr++] = aux[r++];
+        }
+    }
+
+    public void sort2(int[] arr) {
+        mergeSort2(arr, new int[arr.length], 0, arr.length - 1);
+    }
+
+    private void mergeSort2(int[] arr, int[] aux, int start, int end) {
+        if (start < end) {
+            int center = start + (end - start) / 2;
+
+            mergeSort2(arr, aux, start, center);
+            mergeSort2(arr, aux, center + 1, end);
+            mergeHalves2(arr, aux, start, center, end);
+        }
+    }
+
+    private void mergeHalves2(int[] arr, int[] aux, int start, int center, int end) {
+        for (int i = start; i <= end; i++) {
+            aux[i] = arr[i];
+        }
+
+        int i = start;
+        int j = center + 1;
+
+        for (int k = start; k <= end; k++) {
+            if (i > center) arr[k] = aux[j++];
+            else if (j > end) arr[k] = aux[i++];
+            else if (aux[j] < aux[i]) arr[k] = aux[j++];
+            else arr[k] = aux[i++];
         }
     }
 }

@@ -24,9 +24,19 @@ public class MergeSortTest {
     }
 
     @Test
-    @DisplayName("Testing Merge Sort")
+    @DisplayName("Testing MergeSort.sort")
     public void testSort() {
         mergeSort.sort(arr);
+
+        for (int i = 1; i < arr.length; i++) {
+            assertTrue(arr[i - 1] < arr[i]);
+        }
+    }
+
+    @Test
+    @DisplayName("Testing MergeSort.sort2")
+    public void testSort2() {
+        mergeSort.sort2(arr);
 
         for (int i = 1; i < arr.length; i++) {
             assertTrue(arr[i - 1] < arr[i]);

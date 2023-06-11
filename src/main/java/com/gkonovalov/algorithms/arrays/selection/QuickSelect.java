@@ -1,91 +1,58 @@
 package com.gkonovalov.algorithms.arrays.selection;
 
-import com.gkonovalov.algorithms.randomized.FisherYatesShuffle;
+import java.util.concurrent.ThreadLocalRandom;
 
 /**
  * Created by Georgiy Konovalov on 10/06/2023.
  * <p>
- * Quick Sort is a divide-and-conquer algorithm with an average case time complexity of O(n log n),
- * making it generally faster than Merge Sort, it also does not require additional memory, which is more
- * memory-efficient compared to Merge Sort. Quick Sort selects a pivot element and partitions the array
- * into two subarrays, recursively sorting each subarray. It's important to note that Quick Sort
- * is not a stable sorting algorithm, meaning that the relative order of equal elements may change
- * during the sorting process.
+ * Quick Select is a selection algorithm that is derived from the Quick Sort algorithm.
+ * It is used to find the k-th smallest element in an unsorted array. The main idea behind
+ * Quick Select is to partition the array similar to Quick Sort, but instead of recursively
+ * sorting both halves, it selectively chooses to recurse on one side based on the position
+ * of the pivot element.
  * </p>
- * Runtime Complexity: O(n log n) average with randomly shuffled array,
+ * Runtime Complexity: O(n) average with randomly shuffled array,
  *                     O(n^2) worst case, very unlikely if used randomly shuffled array.
  * Space Complexity:   O(1).
  */
 public class QuickSelect {
 
-    public void sort(int[] arr) {
-        FisherYatesShuffle shuffle = new FisherYatesShuffle();
-        shuffle.shuffle(arr);
+    public int selection(int[] nums, int k, boolean isLargest) {
+        int start = 0;
+        int end = nums.length - 1;
+        int index = isLargest ? nums.length - k : k - 1;
 
-        quickSort(arr, 0, arr.length - 1);
-    }
+        while (start < end) {
+            int pivotIndex = partitionLomuto(nums, start, end);
 
-    private void quickSort(int[] arr, int start, int end) {
-        if (start < end) {
-            int pivotIndex = partition(arr, start, end);
-
-            quickSort(arr, start, pivotIndex - 1);
-            quickSort(arr, pivotIndex, end);
-        }
-    }
-
-    private int partition(int[] arr, int start, int end) {
-        int pivot = arr[start + (end - start) / 2];
-
-        while (start <= end) {
-            while (arr[start] < pivot) {
-                start++;
-            }
-
-            while (arr[end] > pivot) {
-                end--;
-            }
-
-            if (start <= end) {
-                swap(arr, start++, end--);
+            if (pivotIndex < index) {
+                start = pivotIndex + 1;
+            } else if (pivotIndex > index) {
+                end = pivotIndex - 1;
+            } else {
+                return nums[pivotIndex];
             }
         }
 
-        return start;
+        return nums[start];
     }
 
-    public void sort2(int[] arr) {
-        FisherYatesShuffle shuffle = new FisherYatesShuffle();
-        shuffle.shuffle(arr);
-
-        quickSort2(arr, 0, arr.length - 1);
-    }
-
-    private void quickSort2(int[] arr, int start, int end) {
-        if (start < end) {
-            int pivotIndex = partition2(arr, start, end);
-
-            quickSort2(arr, start, pivotIndex - 1);
-            quickSort2(arr, pivotIndex + 1, end);
-        }
-    }
-
-    private int partition2(int[] arr, int start, int end) {
+    private int partitionLomuto(int[] arr, int start, int end) {
         int pivot = arr[end];
-        int i = start - 1;
+        int pivotPointer = start;
 
-        for (int j = start; j < end; j++) {
-            if (arr[j] <= pivot) {
-                swap(arr, ++i, j);
+        for (int i = start; i <= end; i++) {
+            if (arr[i] < pivot) {
+                swap(arr, pivotPointer++, i);
             }
         }
 
-        swap(arr, ++i, end);
+        swap(arr, pivotPointer, end);
 
-        return i;
+        return pivotPointer;
     }
 
-    private void swap(int[] arr, int a, int b) {
+    private static void swap(int[] arr, int a, int b) {
         int temp = arr[a];
         arr[a] = arr[b];
         arr[b] = temp;

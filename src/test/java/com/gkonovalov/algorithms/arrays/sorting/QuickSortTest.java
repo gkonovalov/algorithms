@@ -24,9 +24,9 @@ public class QuickSortTest {
     }
 
     @Test
-    @DisplayName("Testing QuickSort.sort")
+    @DisplayName("Testing QuickSort.randomizedSort")
     public void testSort() {
-        quickSort.sort(arr);
+        quickSort.randomizedSort(arr);
 
         for (int i = 1; i < arr.length; i++) {
             assertTrue(arr[i - 1] < arr[i]);
@@ -34,9 +34,9 @@ public class QuickSortTest {
     }
 
     @Test
-    @DisplayName("Testing QuickSort.sort2")
+    @DisplayName("Testing QuickSort.fixedSort")
     public void testSort2() {
-        quickSort.sort2(arr);
+        quickSort.fixedSort(arr);
 
         for (int i = 1; i < arr.length; i++) {
             assertTrue(arr[i - 1] < arr[i]);

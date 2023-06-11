@@ -38,10 +38,10 @@ Need to prepare description.
 │   │   ├── Heap Sort
 │   │   ├── Counting Sort
 │   │   └── Bucket Sort
-│   ├── Selection
-│   │   └── Quick Select
+│   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/selection/"><b>Selection</b></a>
+│   │   └── <a href="src/main/java/com/gkonovalov/algorithms/arrays/selection/QuickSelect.java"><b>Quick Select</b></a>
 │   └── Kadane
-├── Linked List
+├── <a href="src/main/java/com/gkonovalov/algorithms/linkedlist"><b>Linked List</b></a>
 │   └── <a href="src/main/java/com/gkonovalov/algorithms/linkedlist/FloydCycleDetection.java"><b>Floyd's Cycle Detection</b></a>
 ├── Tree
 │   └── Searching

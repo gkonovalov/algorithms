@@ -1,41 +1,43 @@
 package com.gkonovalov.algorithms.arrays.sorting;
 
-import com.gkonovalov.algorithms.randomized.FisherYatesShuffle;
+import java.util.concurrent.ThreadLocalRandom;
 
 /**
  * Created by Georgiy Konovalov on 10/06/2023.
  * <p>
  * Quick Sort is a divide-and-conquer algorithm with an average case time complexity of O(n log n),
  * making it generally faster than Merge Sort, it also does not require additional memory, which is more
- * memory-efficient compared to Merge Sort. Quick Sort selects a pivot element and partitions the array
- * into two subarrays, recursively sorting each subarray. It's important to note that Quick Sort
- * is not a stable sorting algorithm, meaning that the relative order of equal elements may change
- * during the sorting process.
+ * memory-efficient compared to Merge Sort.
+ * Quick Sort selects a pivot element and partitions the array into two subarrays, recursively sorting each subarray.
+ * It's important to note that Quick Sort is not a stable sorting algorithm, meaning that the relative order of equal
+ * elements may change during the sorting process.
+ * Randomized Quick Sort differs from Quick Sort in the selection of the pivot element.
+ * Instead of choosing a fixed pivot, Randomized Quick Sort selects a random pivot element during each
+ * partitioning step. This randomness helps to avoid worst-case scenarios and achieve an average-case time
+ * complexity of O(n log n). In contrast, Quick Sort uses a fixed pivot selection, which can lead to poor performance
+ * in certain cases with a time complexity of O(n^2).
  * </p>
- * Runtime Complexity: O(n log n) average with randomly shuffled array,
- *                     O(n^2) worst case, very unlikely if used randomly shuffled array.
+ * Runtime Complexity: O(n log n) average for {@code randomizedSort},
+ *                     O(n^2) worst case for {@code fixedSort}.
  * Space Complexity:   O(1).
  */
 public class QuickSort {
 
-    public void sort(int[] arr) {
-        FisherYatesShuffle shuffle = new FisherYatesShuffle();
-        shuffle.shuffle(arr);
-
-        quickSort(arr, 0, arr.length - 1);
+    public void randomizedSort(int[] arr) {
+        randomizedQuickSort(arr, 0, arr.length - 1);
     }
 
-    private void quickSort(int[] arr, int start, int end) {
+    private void randomizedQuickSort(int[] arr, int start, int end) {
         if (start < end) {
-            int pivotIndex = partition(arr, start, end);
+            int pivotIndex = randomizedPartition(arr, start, end);
 
-            quickSort(arr, start, pivotIndex - 1);
-            quickSort(arr, pivotIndex, end);
+            randomizedQuickSort(arr, start, pivotIndex - 1);
+            randomizedQuickSort(arr, pivotIndex, end);
         }
     }
 
-    private int partition(int[] arr, int start, int end) {
-        int pivot = arr[start + (end - start) / 2];
+    private int randomizedPartition(int[] arr, int start, int end) {
+        int pivot = arr[ThreadLocalRandom.current().nextInt(start, end + 1)];
 
         while (start <= end) {
             while (arr[start] < pivot) {
@@ -54,23 +56,20 @@ public class QuickSort {
         return start;
     }
 
-    public void sort2(int[] arr) {
-        FisherYatesShuffle shuffle = new FisherYatesShuffle();
-        shuffle.shuffle(arr);
-
-        quickSort2(arr, 0, arr.length - 1);
+    public void fixedSort(int[] arr) {
+        fixedQuickSort(arr, 0, arr.length - 1);
     }
 
-    private void quickSort2(int[] arr, int start, int end) {
+    private void fixedQuickSort(int[] arr, int start, int end) {
         if (start < end) {
-            int pivotIndex = partition2(arr, start, end);
+            int pivotIndex = fixedPartition(arr, start, end);
 
-            quickSort2(arr, start, pivotIndex - 1);
-            quickSort2(arr, pivotIndex + 1, end);
+            fixedQuickSort(arr, start, pivotIndex - 1);
+            fixedQuickSort(arr, pivotIndex + 1, end);
         }
     }
 
-    private int partition2(int[] arr, int start, int end) {
+    private int fixedPartition(int[] arr, int start, int end) {
         int pivot = arr[end];
         int i = start - 1;
 

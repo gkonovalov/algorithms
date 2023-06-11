@@ -29,14 +29,14 @@ public class QuickSort {
 
     private void randomizedQuickSort(int[] arr, int start, int end) {
         if (start < end) {
-            int pivotIndex = randomizedPartition(arr, start, end);
+            int pivotIndex = randomizedPartitionHoare(arr, start, end);
 
             randomizedQuickSort(arr, start, pivotIndex - 1);
             randomizedQuickSort(arr, pivotIndex, end);
         }
     }
 
-    private int randomizedPartition(int[] arr, int start, int end) {
+    private int randomizedPartitionHoare(int[] arr, int start, int end) {
         int pivot = arr[ThreadLocalRandom.current().nextInt(start, end + 1)];
 
         while (start <= end) {
@@ -62,14 +62,14 @@ public class QuickSort {
 
     private void fixedQuickSort(int[] arr, int start, int end) {
         if (start < end) {
-            int pivotIndex = fixedPartition(arr, start, end);
+            int pivotIndex = fixedPartitionLomuto(arr, start, end);
 
             fixedQuickSort(arr, start, pivotIndex - 1);
             fixedQuickSort(arr, pivotIndex + 1, end);
         }
     }
 
-    private int fixedPartition(int[] arr, int start, int end) {
+    private int fixedPartitionLomuto(int[] arr, int start, int end) {
         int pivot = arr[end];
         int pivotPointer = start;
 

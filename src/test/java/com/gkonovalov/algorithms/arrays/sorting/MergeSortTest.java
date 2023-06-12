@@ -20,7 +20,7 @@ public class MergeSortTest {
     @BeforeEach
     public void setUp() {
         this.mergeSort = new MergeSort();
-        this.arr = new int[]{40, -2, 4, 44, 5, 5, 42, 13, 20, -555, 25, 3, -1, 53};
+        this.arr = new int[]{40, -2, 4, 44, 5, 42, 5, 13, 20, -555, 25, 3, -1, 53};
     }
 
     @Test

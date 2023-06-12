@@ -34,6 +34,7 @@ Need to prepare description.
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/InsertionSort.java"><b>Insertion Sort</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/MergeSort.java"><b>Merge Sort</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/QuickSort.java"><b>Quick Sort</b></a>
+│   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/QuickSort3WayPartitioning.java"><b>Quick Sort 3</b></a>
 │   │   ├── Radix Sort 
 │   │   ├── Heap Sort
 │   │   ├── Counting Sort

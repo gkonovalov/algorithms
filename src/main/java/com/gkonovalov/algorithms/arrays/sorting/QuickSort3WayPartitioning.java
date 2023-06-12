@@ -13,7 +13,7 @@ package com.gkonovalov.algorithms.arrays.sorting;
  *                     O(n^2) worst case for {@code sort}
  * Space Complexity:   O(log n) - used in recursion stack.
  */
-public class QuickSort3Way {
+public class QuickSort3WayPartitioning {
 
     public void sort(int[] arr) {
         sort(arr, 0, arr.length - 1);

@@ -39,9 +39,8 @@ Need to prepare description.
 │   │   ├── Heap Sort
 │   │   ├── Counting Sort
 │   │   └── Bucket Sort
-│   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/selection/"><b>Selection</b></a>
-│   │   └── <a href="src/main/java/com/gkonovalov/algorithms/arrays/selection/QuickSelect.java"><b>Quick Select</b></a>
-│   └── Kadane
+│   └── <a href="src/main/java/com/gkonovalov/algorithms/arrays/selection/"><b>Selection</b></a>
+│       └── <a href="src/main/java/com/gkonovalov/algorithms/arrays/selection/QuickSelect.java"><b>Quick Select</b></a>
 ├── <a href="src/main/java/com/gkonovalov/algorithms/linkedlist"><b>Linked List</b></a>
 │   └── <a href="src/main/java/com/gkonovalov/algorithms/linkedlist/FloydCycleDetection.java"><b>Floyd's Cycle Detection</b></a>
 ├── Tree
@@ -236,6 +235,7 @@ Data Structures
 Problems
 ├── Arrays
 │   ├── Prefix Sum
+│   ├── <a href="src/main/java/com/gkonovalov/problems/arrays/MaximumSubarray.java"><b>Max Subarray Sum</b></a>
 │   ├── Sliding Window 
 │   ├── Two Pointers
 │   ├── Searching

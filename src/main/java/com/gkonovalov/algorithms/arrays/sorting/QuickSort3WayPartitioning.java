@@ -3,11 +3,12 @@ package com.gkonovalov.algorithms.arrays.sorting;
 /**
  * Created by Georgiy Konovalov on 12/06/2023.
  * <p>
- * QuickSort with 3-way partitioning extends the original QuickSort algorithm to handle arrays with
- * many duplicate elements more efficiently. It partitions the array into three regions: elements
- * less than the pivot, elements equal to the pivot, and elements greater than the pivot.
- * This modification reduces the number of recursive calls and swaps required for duplicate elements,
- * leading to improved performance in scenarios with many duplicates.
+ * QuickSort with 3-way partitioning (Dutch National Flag Algorithm) extends the original
+ * QuickSort algorithm to handle arrays with many duplicate elements more efficiently.
+ * It partitions the array into three regions: elements less than the pivot, elements equal
+ * to the pivot, and elements greater than the pivot. This modification reduces the number
+ * of recursive calls and swaps required for duplicate elements, leading to improved performance
+ * in scenarios with many duplicates.
  * </p>
  * Runtime Complexity: O(n log n) average for {@code sort},
  *                     O(n^2) worst case for {@code sort}

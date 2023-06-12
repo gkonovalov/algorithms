@@ -48,7 +48,7 @@ public class QuickSort {
     private int randomizedPartitionHoare(int[] arr, int start, int end) {
         int pivot = arr[ThreadLocalRandom.current().nextInt(start, end + 1)];
 
-        while (start < end) {
+        while (start <= end) {
             while (arr[start] < pivot) {
                 start++;
             }
@@ -57,14 +57,12 @@ public class QuickSort {
                 end--;
             }
 
-            if (start >= end) {
-                return end;
+            if (start <= end) {
+                swap(arr, start++, end--);
             }
-
-            swap(arr, start, end);
         }
 
-        return end;
+        return start;
     }
 
     public void fixedSortLomuto(int[] arr) {
@@ -84,7 +82,7 @@ public class QuickSort {
         int pivot = arr[end];
         int pivotIndex = start;
 
-        for (int i = start; i <= end; i++) {
+        for (int i = start; i < end; i++) {
             if (arr[i] < pivot) {
                 swap(arr, pivotIndex++, i);
             }
@@ -116,7 +114,7 @@ public class QuickSort {
         int pivot = arr[end];
         int pivotIndex = start;
 
-        for (int i = start; i <= end; i++) {
+        for (int i = start; i < end; i++) {
             if (arr[i] < pivot) {
                 swap(arr, pivotIndex++, i);
             }

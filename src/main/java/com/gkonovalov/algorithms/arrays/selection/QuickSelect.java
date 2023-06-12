@@ -40,7 +40,7 @@ public class QuickSelect {
     private int randomizedPartitionHoare(int[] arr, int start, int end) {
         int pivot = arr[ThreadLocalRandom.current().nextInt(start, end + 1)];
 
-        while (start < end) {
+        while (start <= end) {
             while (arr[start] < pivot) {
                 start++;
             }
@@ -49,14 +49,12 @@ public class QuickSelect {
                 end--;
             }
 
-            if (start >= end) {
-                return end;
+            if (start <= end) {
+                swap(arr, start++, end--);
             }
-
-            swap(arr, start, end);
         }
 
-        return end;
+        return start;
     }
 
     public int fixedSelectionLomuto(int[] nums, int k, boolean isLargest) {
@@ -83,7 +81,7 @@ public class QuickSelect {
         int pivot = arr[end];
         int pivotIndex = start;
 
-        for (int i = start; i <= end; i++) {
+        for (int i = start; i < end; i++) {
             if (arr[i] < pivot) {
                 swap(arr, pivotIndex++, i);
             }

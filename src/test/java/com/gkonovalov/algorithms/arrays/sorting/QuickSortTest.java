@@ -20,7 +20,7 @@ public class QuickSortTest {
     @BeforeEach
     public void setUp() {
         this.quickSort = new QuickSort();
-        this.arr = new int[]{40, -2, 4, 44, 5, 42, 13, 20, -555, 25, 3, -1, 53};
+        this.arr = new int[]{40, -2, 4, 44, 5, 5, 42, 13, 20, -555, 25, 3, -1, 53};
     }
 
     @Test
@@ -29,7 +29,7 @@ public class QuickSortTest {
         quickSort.randomizedSortHoare(arr);
 
         for (int i = 1; i < arr.length; i++) {
-            assertTrue(arr[i - 1] < arr[i]);
+            assertTrue(arr[i - 1] <= arr[i]);
         }
     }
 
@@ -39,7 +39,7 @@ public class QuickSortTest {
         quickSort.fixedSortLomuto(arr);
 
         for (int i = 1; i < arr.length; i++) {
-            assertTrue(arr[i - 1] < arr[i]);
+            assertTrue(arr[i - 1] <= arr[i]);
         }
     }
 
@@ -49,7 +49,7 @@ public class QuickSortTest {
         quickSort.randomizedSortLomuto(arr);
 
         for (int i = 1; i < arr.length; i++) {
-            assertTrue(arr[i - 1] < arr[i]);
+            assertTrue(arr[i - 1] <= arr[i]);
         }
     }
 }

@@ -17,67 +17,26 @@ import java.util.concurrent.ThreadLocalRandom;
  */
 public class QuickSelect {
 
-    public int randomizedSelection(int[] nums, int k, boolean isLargest) {
+    public int randomizedSelectionHoare(int[] nums, int k, boolean isLargest) {
         int start = 0;
         int end = nums.length - 1;
         int index = isLargest ? nums.length - k : k - 1;
 
         while (start < end) {
-            int pivotIndex = randomizedPartitionLomuto(nums, start, end);
+            int pivotIndex = randomizedPartitionHoare(nums, start, end);
 
-            if (pivotIndex < index) {
-                start = pivotIndex + 1;
-            } else if (pivotIndex > index) {
+            if (pivotIndex > index) {
                 end = pivotIndex - 1;
             } else {
-                return nums[pivotIndex];
+                start = pivotIndex;
             }
         }
 
         return nums[start];
     }
 
-    private int randomizedPartitionLomuto(int[] arr, int start, int end) {
-        int randomPivot = ThreadLocalRandom.current().nextInt(start, end + 1);
-
-        swap(arr, randomPivot, end);
-
-        int pivot = arr[end];
-        int pivotIndex = start;
-
-        for (int i = start; i <= end; i++) {
-            if (arr[i] < pivot) {
-                swap(arr, pivotIndex++, i);
-            }
-        }
-
-        swap(arr, pivotIndex, end);
-
-        return pivotIndex;
-    }
-
-    public int fixedSelection(int[] nums, int k, boolean isLargest) {
-        int start = 0;
-        int end = nums.length - 1;
-        int index = isLargest ? nums.length - k : k - 1;
-
-        while (start < end) {
-            int pivotIndex = fixedPartitionHoare(nums, start, end);
-
-            if (pivotIndex < index) {
-                start = pivotIndex + 1;
-            } else if (pivotIndex > index) {
-                end = pivotIndex - 1;
-            } else {
-                return nums[pivotIndex];
-            }
-        }
-
-        return nums[start];
-    }
-
-    private int fixedPartitionHoare(int[] arr, int start, int end) {
-        int pivot = arr[start];
+    private int randomizedPartitionHoare(int[] arr, int start, int end) {
+        int pivot = arr[ThreadLocalRandom.current().nextInt(start, end + 1)];
 
         while (start <= end) {
             while (arr[start] < pivot) {
@@ -94,6 +53,41 @@ public class QuickSelect {
         }
 
         return start;
+    }
+
+    public int fixedSelectionLomuto(int[] nums, int k, boolean isLargest) {
+        int start = 0;
+        int end = nums.length - 1;
+        int index = isLargest ? nums.length - k : k - 1;
+
+        while (start < end) {
+            int pivotIndex = fixedPartitionLomuto(nums, start, end);
+
+            if (pivotIndex < index) {
+                start = pivotIndex + 1;
+            } else if (pivotIndex > index) {
+                end = pivotIndex - 1;
+            } else {
+                return nums[pivotIndex];
+            }
+        }
+
+        return nums[start];
+    }
+
+    private int fixedPartitionLomuto(int[] arr, int start, int end) {
+        int pivot = arr[end];
+        int pivotIndex = start;
+
+        for (int i = start; i <= end; i++) {
+            if (arr[i] < pivot) {
+                swap(arr, pivotIndex++, i);
+            }
+        }
+
+        swap(arr, pivotIndex, end);
+
+        return pivotIndex;
     }
 
     private static void swap(int[] arr, int a, int b) {

@@ -18,7 +18,7 @@ import java.util.concurrent.ThreadLocalRandom;
  * choosing a fixed pivot, Randomized Quick Sort selects a random pivot element during each
  * partitioning step. This randomness helps to avoid worst-case scenarios and achieve an average-case
  * time complexity of O(n log n). In contrast, Quick Sort uses a fixed pivot selection, which can lead
- * to poor performance in certain cases with a time complexity of O(n^2).
+ * to poor performance when the input is already sorted or contains many equal elements.
  *
  * The main difference between Lomuto Partition and Hoare Partition lies in the number of swaps
  * performed. Lomuto Partition tends to perform more swaps compared to Hoare Partition, which can make

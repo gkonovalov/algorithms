@@ -11,8 +11,10 @@ import java.util.concurrent.ThreadLocalRandom;
  * sorting both halves, it selectively chooses to recurse on one side based on the position
  * of the pivot element.
  * </p>
- * Runtime Complexity: O(n) average for {@code randomizedSelectionHoare} and rarely worst case can be O(n^2),
- *                     O(n) average for {@code fixedSelectionLomuto} and in certain cases O(n^2).
+ * Runtime Complexity: O(n) average for {@code randomizedSelectionHoare},
+ *                     O(n^2) worst case for {@code randomizedSelectionHoare} - happens really rare,
+ *                     O(n) average for {@code fixedSelectionLomuto},
+ *                     O(n^2) worst case for {@code fixedSelectionLomuto} - happens in certain cases.
  * Space Complexity:   O(1).
  */
 public class QuickSelect {

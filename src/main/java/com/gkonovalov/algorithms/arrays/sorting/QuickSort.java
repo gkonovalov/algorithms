@@ -24,22 +24,22 @@ import java.util.concurrent.ThreadLocalRandom;
  * Lomuto Partition tends to perform more swaps compared to Hoare Partition, which can make it less efficient
  * in terms of runtime.
  * </p>
- * Runtime Complexity: O(n log n) average for {@code randomizedSort} and rarely worst case can be O(n^2),
- *                     O(n log n) average for {@code fixedSort} and in certain cases O(n^2).
+ * Runtime Complexity: O(n log n) average for {@code randomizedSortHoare} and rarely worst case can be O(n^2),
+ *                     O(n log n) average for {@code fixedSortLomuto} and in certain cases O(n^2).
  * Space Complexity:   O(1).
  */
 public class QuickSort {
 
-    public void randomizedSort(int[] arr) {
-        randomizedQuickSort(arr, 0, arr.length - 1);
+    public void randomizedSortHoare(int[] arr) {
+        randomizedSortHoare(arr, 0, arr.length - 1);
     }
 
-    private void randomizedQuickSort(int[] arr, int start, int end) {
+    private void randomizedSortHoare(int[] arr, int start, int end) {
         if (start < end) {
             int pivotIndex = randomizedPartitionHoare(arr, start, end);
 
-            randomizedQuickSort(arr, start, pivotIndex - 1);
-            randomizedQuickSort(arr, pivotIndex, end);
+            randomizedSortHoare(arr, start, pivotIndex - 1);
+            randomizedSortHoare(arr, pivotIndex, end);
         }
     }
 
@@ -63,20 +63,52 @@ public class QuickSort {
         return start;
     }
 
-    public void fixedSort(int[] arr) {
-        fixedQuickSort(arr, 0, arr.length - 1);
+    public void fixedSortLomuto(int[] arr) {
+        fixedSortLomuto(arr, 0, arr.length - 1);
     }
 
-    private void fixedQuickSort(int[] arr, int start, int end) {
+    private void fixedSortLomuto(int[] arr, int start, int end) {
         if (start < end) {
             int pivotIndex = fixedPartitionLomuto(arr, start, end);
 
-            fixedQuickSort(arr, start, pivotIndex - 1);
-            fixedQuickSort(arr, pivotIndex + 1, end);
+            fixedSortLomuto(arr, start, pivotIndex - 1);
+            fixedSortLomuto(arr, pivotIndex + 1, end);
         }
     }
 
     private int fixedPartitionLomuto(int[] arr, int start, int end) {
+        int pivot = arr[end];
+        int pivotIndex = start;
+
+        for (int i = start; i <= end; i++) {
+            if (arr[i] < pivot) {
+                swap(arr, pivotIndex++, i);
+            }
+        }
+
+        swap(arr, pivotIndex, end);
+
+        return pivotIndex;
+    }
+
+    public void randomizedSortLomuto(int[] arr) {
+        randomizedSortLomuto(arr, 0, arr.length - 1);
+    }
+
+    private void randomizedSortLomuto(int[] arr, int start, int end) {
+        if (start < end) {
+            int pivotIndex = randomizedPartitionLomuto(arr, start, end);
+
+            randomizedSortLomuto(arr, start, pivotIndex - 1);
+            randomizedSortLomuto(arr, pivotIndex + 1, end);
+        }
+    }
+
+    private int randomizedPartitionLomuto(int[] arr, int start, int end) {
+        int randomPivot = ThreadLocalRandom.current().nextInt(start, end + 1);
+
+        swap(arr, randomPivot, end);
+
         int pivot = arr[end];
         int pivotIndex = start;
 

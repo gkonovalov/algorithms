@@ -24,9 +24,9 @@ public class QuickSortTest {
     }
 
     @Test
-    @DisplayName("Testing QuickSort.randomizedSort")
-    public void testSort() {
-        quickSort.randomizedSort(arr);
+    @DisplayName("Testing QuickSort.randomizedSortHoare")
+    public void testRandomizedSortHoare() {
+        quickSort.randomizedSortHoare(arr);
 
         for (int i = 1; i < arr.length; i++) {
             assertTrue(arr[i - 1] < arr[i]);
@@ -34,9 +34,19 @@ public class QuickSortTest {
     }
 
     @Test
-    @DisplayName("Testing QuickSort.fixedSort")
-    public void testSort2() {
-        quickSort.fixedSort(arr);
+    @DisplayName("Testing QuickSort.fixedSortLomuto")
+    public void testFixedSortLomuto() {
+        quickSort.fixedSortLomuto(arr);
+
+        for (int i = 1; i < arr.length; i++) {
+            assertTrue(arr[i - 1] < arr[i]);
+        }
+    }
+
+    @Test
+    @DisplayName("Testing QuickSort.randomizedSortLomuto")
+    public void testRandomizedSortLomuto() {
+        quickSort.randomizedSortLomuto(arr);
 
         for (int i = 1; i < arr.length; i++) {
             assertTrue(arr[i - 1] < arr[i]);

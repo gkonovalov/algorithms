@@ -10,6 +10,10 @@ import java.util.concurrent.ThreadLocalRandom;
  * Quick Select is to partition the array similar to Quick Sort, but instead of recursively
  * sorting both halves, it selectively chooses to recurse on one side based on the position
  * of the pivot element.
+ *
+ * The main difference between Lomuto Partition and Hoare Partition lies in the number of swaps
+ * performed. Lomuto Partition tends to perform more swaps compared to Hoare Partition, which can make
+ * it less efficient in terms of runtime.
  * </p>
  * Runtime Complexity: O(n) average for {@code randomizedSelectionHoare},
  *                     O(n^2) worst case for {@code randomizedSelectionHoare} - happens really rare,

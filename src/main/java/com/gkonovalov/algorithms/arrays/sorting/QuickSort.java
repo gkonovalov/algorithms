@@ -28,7 +28,7 @@ import java.util.concurrent.ThreadLocalRandom;
  *                     O(n^2) worst case for {@code randomizedSortHoare} - happens really rare,
  *                     O(n log n) average for {@code fixedSortLomuto},
  *                     O(n^2) worst case for {@code fixedSortLomuto} - happens in certain cases.
- * Space Complexity:   O(1).
+ * Space Complexity:   O(log n) - used in recursion stack.
  */
 public class QuickSort {
 

@@ -191,10 +191,10 @@ Data Structures
 │   ├── Trie-trees
 │   │    ├── Prefix Tree
 │   │    └── Suffix Tree
-│   ├── Heaps
-│   │   ├── Binary Heap - Priority Queue 
-│   │   │   ├── Min Heap
-│   │   │   └── Max Heap
+│   ├── <a href="src/main/java/com/gkonovalov/datastructures/trees/heaps"><b>Heaps</b></a>
+│   │   ├── <a href="src/main/java/com/gkonovalov/datastructures/trees/heaps/BinaryHeap.java"><b>Binary Heap - Priority Queue</b></a>
+│   │   │   ├── <a href="src/main/java/com/gkonovalov/datastructures/trees/heaps/BinaryHeap.java"><b>Min Heap</b></a>
+│   │   │   └── <a href="src/main/java/com/gkonovalov/datastructures/trees/heaps/BinaryHeap.java"><b>Max Heap</b></a>
 │   │   └── Fibonacci Heaps
 │   ├── Self-balanced
 │   │   ├── AVL Tree

@@ -38,8 +38,8 @@ public class BinaryHeap<T extends Comparable<T>> {
     }
 
     public BinaryHeap(int capacity, Comparator<T> comparator) {
-        if (capacity < 0) {
-            throw new IllegalArgumentException("Capacity can't be < 0!");
+        if (capacity <= 0) {
+            throw new IllegalArgumentException("Capacity can't be <= 0!");
         }
 
         if (comparator == null) {

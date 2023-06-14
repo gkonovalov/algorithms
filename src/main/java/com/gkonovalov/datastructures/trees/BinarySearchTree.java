@@ -104,7 +104,7 @@ public class BinarySearchTree {
 
         if (value < root.value) {
             root.left = insertNode(root.left, value);
-        } else if (value > root.value) {
+        } else {
             root.right = insertNode(root.right, value);
         }
 

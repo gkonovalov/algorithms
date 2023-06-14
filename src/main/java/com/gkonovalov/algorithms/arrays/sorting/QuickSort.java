@@ -57,9 +57,11 @@ public class QuickSort {
                 end--;
             }
 
-            if (start <= end) {
-                swap(arr, start++, end--);
+            if (start >= end) {
+                break;
             }
+
+            swap(arr, start++, end--);
         }
 
         return start;

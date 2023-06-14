@@ -5,7 +5,7 @@ import com.gkonovalov.datastructures.etc.TreeNode;
 /**
  * Created by Georgiy Konovalov on 14/06/2023.
  * <p>
- * Binary Search Tree data structure implementation.  A binary search tree is a specific type of binary
+ * Binary Search Tree data structure implementation. A binary search tree is a specific type of binary
  * tree that follows a strict ordering property. In a BST, the left subtree of a node contains only nodes
  * with values less than the node's value, and the right subtree contains only nodes with values greater
  * than the node's value. This ordering property holds recursively for all nodes in the tree.

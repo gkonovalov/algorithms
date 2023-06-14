@@ -1,6 +1,6 @@
 package com.gkonovalov.datastructures.queues;
 
-import com.gkonovalov.datastructures.etc.Node;
+import com.gkonovalov.datastructures.etc.ListNode;
 
 /**
  * Created by Georgiy Konovalov on 17/05/2023.
@@ -12,8 +12,8 @@ import com.gkonovalov.datastructures.etc.Node;
  */
 public class Queue<T> {
 
-    private Node<T> head;
-    private Node<T> tail;
+    private ListNode<T> head;
+    private ListNode<T> tail;
     private int size;
 
     public Queue() {
@@ -25,7 +25,7 @@ public class Queue<T> {
             throw new IllegalStateException("Queue is empty!");
         }
 
-        return head.getValue();
+        return head.value;
     }
 
     public T poll() {
@@ -33,8 +33,8 @@ public class Queue<T> {
             throw new IllegalStateException("Queue is empty!");
         }
 
-        T value = head.getValue();
-        head = head.getNext();
+        T value = head.value;
+        head = head.next;
 
         if (head == null) {
             tail = null;
@@ -45,14 +45,14 @@ public class Queue<T> {
     }
 
     public void add(T value) {
-        Node<T> newNode = new Node<>(value);
+        ListNode<T> newListNode = new ListNode<>(value);
 
         if (isEmpty()) {
-            head = newNode;
+            head = newListNode;
         } else {
-            tail.setNext(newNode);
+            tail.next = newListNode;
         }
-        tail = newNode;
+        tail = newListNode;
 
         size++;
     }

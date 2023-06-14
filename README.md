@@ -185,7 +185,6 @@ Data Structures
 ├── Hash
 │   └── Bloom Filter 
 ├── Trees
-│   ├── Binary Trees
 │   ├── <a href="src/main/java/com/gkonovalov/datastructures/trees/BinarySearchTree.java"><b>Binary Search Tree</b></a>
 │   ├── Trie-trees
 │   │    ├── Prefix Tree

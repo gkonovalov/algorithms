@@ -36,7 +36,7 @@ Need to prepare description.
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/QuickSort.java"><b>Quick Sort</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/QuickSort3WayPartitioning.java"><b>3-Way Quick Sort</b></a>
 │   │   ├── Radix Sort 
-│   │   ├── Heap Sort
+│   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/HeapSort.java"><b>Heap Sort</b></a>
 │   │   ├── Counting Sort
 │   │   └── Bucket Sort
 │   └── <a href="src/main/java/com/gkonovalov/algorithms/arrays/selection/"><b>Selection</b></a>

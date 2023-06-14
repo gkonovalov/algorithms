@@ -1,6 +1,7 @@
 package com.gkonovalov.datastructures.linkedlist;
 
-import com.gkonovalov.datastructures.etc.Node;
+import com.gkonovalov.datastructures.etc.ListNode;
+import java.util.Objects;
 
 /**
  * Created by Georgiy Konovalov on 17/05/2023.
@@ -14,8 +15,8 @@ import com.gkonovalov.datastructures.etc.Node;
  */
 public class SinglyLinkedList<T> {
 
-    private Node<T> head;
-    private Node<T> tail;
+    private ListNode<T> head;
+    private ListNode<T> tail;
     private int size;
 
     public SinglyLinkedList() {
@@ -36,24 +37,28 @@ public class SinglyLinkedList<T> {
             return;
         }
 
-        Node<T> prevNode = findNode(position - 1);
-        if (prevNode != null) {
-            Node<T> newNode = new Node<>(value);
-            newNode.setNext(prevNode.getNext());
-            prevNode.setNext(newNode);
+        ListNode<T> prevListNode = findNode(position - 1);
+        if (prevListNode != null) {
+            ListNode<T> newListNode = new ListNode<>(value);
+            newListNode.next = prevListNode.next;
+            prevListNode.next = newListNode;
             size++;
         }
     }
 
     public T get(int position) {
+        if (isEmpty()) {
+            throw new IllegalStateException("Linked List is empty!");
+        }
+
         if (!isIndexValid(position)) {
             throw new IllegalArgumentException("Invalid position!");
         }
 
-        Node<T> currentNode = findNode(position);
+        ListNode<T> currentListNode = findNode(position);
 
-        if (currentNode != null) {
-            return currentNode.getValue();
+        if (currentListNode != null) {
+            return currentListNode.value;
         }
         return null;
     }
@@ -64,44 +69,42 @@ public class SinglyLinkedList<T> {
 
     public int indexOf(T value) {
         if (isEmpty()) {
-            return -1;
+            throw new IllegalStateException("Linked List is empty!");
         }
 
         int index = 0;
 
-        Node<T> current = head;
+        ListNode<T> current = head;
         while (current != null) {
-            if (value == null ?
-                    current.getValue() == null :
-                    value.equals(current.getValue())) {
+            if (Objects.equals(value, current.value)) {
                 return index;
             }
 
             index++;
-            current = current.getNext();
+            current = current.next;
         }
         return -1;
     }
 
     public boolean remove(int position) {
+        if (isEmpty()) {
+            throw new IllegalStateException("Linked List is empty!");
+        }
+
         if (!isIndexValid(position)) {
             throw new IllegalArgumentException("Invalid position!");
         }
 
-        if (isEmpty()) {
-            return false;
-        }
-
         if (position == 0) {
-            head = head.getNext();
+            head = head.next;
             size--;
             return true;
         }
 
-        Node<T> currentNode = findNode(position - 1);
+        ListNode<T> currentListNode = findNode(position - 1);
 
-        if (currentNode != null && currentNode.getNext() != null) {
-            currentNode.setNext(currentNode.getNext().getNext());
+        if (currentListNode != null && currentListNode.next != null) {
+            currentListNode.next = currentListNode.next.next;
             size--;
             return true;
         }
@@ -122,20 +125,20 @@ public class SinglyLinkedList<T> {
             return;
         }
 
-        Node<T> newNode = new Node<>(value);
-        tail.setNext(newNode);
-        tail = newNode;
+        ListNode<T> newListNode = new ListNode<>(value);
+        tail.next = newListNode;
+        tail = newListNode;
         size++;
     }
 
     private void prepend(T value) {
-        Node<T> newNode = new Node<>(value);
+        ListNode<T> newListNode = new ListNode<>(value);
 
         if (head != null) {
-            newNode.setNext(head);
+            newListNode.next = head;
         }
 
-        head = newNode;
+        head = newListNode;
 
         if (tail == null) {
             tail = head;
@@ -144,17 +147,17 @@ public class SinglyLinkedList<T> {
         size++;
     }
 
-    private Node<T> findNode(int index) {
+    private ListNode<T> findNode(int index) {
         if (isEmpty()) {
             return null;
         }
 
-        Node<T> current = head;
+        ListNode<T> current = head;
         while (current != null) {
             if (index-- == 0) {
                 return current;
             }
-            current = current.getNext();
+            current = current.next;
         }
 
         return null;

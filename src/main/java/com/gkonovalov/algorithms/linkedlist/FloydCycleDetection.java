@@ -38,7 +38,7 @@ public class FloydCycleDetection {
         Node<Integer> slow = node;
         Node<Integer> fast = node;
 
-        while (fast != null && fast.getValue() != null) {
+        while (fast != null && fast.getNext() != null) {
             slow = slow.getNext();
             fast = fast.getNext().getNext();
 

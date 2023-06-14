@@ -63,10 +63,10 @@ public class DoublyLinkedList<T> {
             throw new IllegalArgumentException("Invalid position!");
         }
 
-        DoubleListNode<T> currentNode = findNode(position);
+        DoubleListNode<T> current = findNode(position);
 
-        if (currentNode != null) {
-            return currentNode.value;
+        if (current != null) {
+            return current.value;
         }
         return null;
     }
@@ -134,11 +134,11 @@ public class DoublyLinkedList<T> {
             return true;
         }
 
-        DoubleListNode<T> currentNode = findNode(position - 1);
+        DoubleListNode<T> current = findNode(position - 1);
 
-        if (currentNode != null) {
-            currentNode.next.prev = currentNode.prev;
-            currentNode.prev.next = currentNode.next;
+        if (current != null) {
+            current.next.prev = current.prev;
+            current.prev.next = current.next;
             size--;
 
             return true;

@@ -23,8 +23,7 @@ Need to prepare description.
 ├── <a href="src/algorithms/arrays"><b>Arrays</b></a>
 │   ├── <a href="src/algorithms/arrays/searching"><b>Searching</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/searching/LinearSearch.java"><b>Linear Search</b></a>
-│   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/searching/BinarySearch.java"><b>Binary Search</b></a> <a href="https://www.youtube.com/watch?v=P3YID7liBug">[i]</a><a href="src/problems/leetcode/arrays/binarysearch/">[p]</a>
-│   │   ├── Interpolation Search
+│   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/searching/BinarySearch.java"><b>Binary Search</b></a>
 │   │   ├── Exponential Search
 │   │   ├── Jump Search 
 │   │   └── Ternary Search

@@ -37,11 +37,11 @@ public class SinglyLinkedList<T> {
             return;
         }
 
-        ListNode<T> prevListNode = findNode(position - 1);
-        if (prevListNode != null) {
-            ListNode<T> newListNode = new ListNode<>(value);
-            newListNode.next = prevListNode.next;
-            prevListNode.next = newListNode;
+        ListNode<T> prevNode = findNode(position - 1);
+        if (prevNode != null) {
+            ListNode<T> newNode = new ListNode<>(value);
+            newNode.next = prevNode.next;
+            prevNode.next = newNode;
             size++;
         }
     }
@@ -55,10 +55,10 @@ public class SinglyLinkedList<T> {
             throw new IllegalArgumentException("Invalid position!");
         }
 
-        ListNode<T> currentListNode = findNode(position);
+        ListNode<T> current = findNode(position);
 
-        if (currentListNode != null) {
-            return currentListNode.value;
+        if (current != null) {
+            return current.value;
         }
         return null;
     }
@@ -101,10 +101,10 @@ public class SinglyLinkedList<T> {
             return true;
         }
 
-        ListNode<T> currentListNode = findNode(position - 1);
+        ListNode<T> current = findNode(position - 1);
 
-        if (currentListNode != null && currentListNode.next != null) {
-            currentListNode.next = currentListNode.next.next;
+        if (current != null && current.next != null) {
+            current.next = current.next.next;
             size--;
             return true;
         }
@@ -125,20 +125,20 @@ public class SinglyLinkedList<T> {
             return;
         }
 
-        ListNode<T> newListNode = new ListNode<>(value);
-        tail.next = newListNode;
-        tail = newListNode;
+        ListNode<T> newNode = new ListNode<>(value);
+        tail.next = newNode;
+        tail = newNode;
         size++;
     }
 
     private void prepend(T value) {
-        ListNode<T> newListNode = new ListNode<>(value);
+        ListNode<T> newNode = new ListNode<>(value);
 
         if (head != null) {
-            newListNode.next = head;
+            newNode.next = head;
         }
 
-        head = newListNode;
+        head = newNode;
 
         if (tail == null) {
             tail = head;

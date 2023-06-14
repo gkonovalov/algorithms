@@ -37,7 +37,7 @@ public class SinglyLinkedListTest {
     @Test
     @DisplayName("Testing SinglyLinkedList.get")
     public void testGet() {
-        assertThrows(IllegalArgumentException.class, () -> singlyLinkedList.get(10));
+        assertThrows(IllegalStateException.class, () -> singlyLinkedList.get(10));
 
         singlyLinkedList.add("a");
 
@@ -51,16 +51,20 @@ public class SinglyLinkedListTest {
         assertEquals(singlyLinkedList.size(), 0);
 
         singlyLinkedList.add("a");
+        singlyLinkedList.add("b");
 
-        assertEquals(singlyLinkedList.size(), 1);
+        assertEquals(singlyLinkedList.size(), 2);
         assertTrue(singlyLinkedList.contains("a"));
 
         singlyLinkedList.remove(0);
 
         assertFalse(singlyLinkedList.contains("a"));
+
+        singlyLinkedList.remove(0);
+
         assertTrue(singlyLinkedList.isEmpty());
 
-        assertThrows(IllegalArgumentException.class, () -> singlyLinkedList.remove(10));
+        assertThrows(IllegalStateException.class, () -> singlyLinkedList.remove(10));
     }
 
     @Test

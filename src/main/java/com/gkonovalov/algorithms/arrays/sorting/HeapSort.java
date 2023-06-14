@@ -16,8 +16,8 @@ public class HeapSort {
     public void sort(int[] arr) {
         int n = arr.length;
 
-        for (int k = n / 2 - 1; k >= 0; k--) {
-            moveDown(arr, n, k);
+        for (int i = n / 2 - 1; i >= 0; i--) {
+            moveDown(arr, n, i);
         }
 
         for (int i = n - 1; i > 0; i--) {

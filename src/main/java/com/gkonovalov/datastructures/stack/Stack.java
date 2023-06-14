@@ -1,6 +1,6 @@
 package com.gkonovalov.datastructures.stack;
 
-import com.gkonovalov.datastructures.etc.Node;
+import com.gkonovalov.datastructures.etc.ListNode;
 
 /**
  * Created by Georgiy Konovalov on 17/05/2023.
@@ -12,7 +12,7 @@ import com.gkonovalov.datastructures.etc.Node;
  */
 public class Stack<T> {
 
-    private Node<T> root;
+    private ListNode<T> root;
     private int size;
 
     public Stack() {
@@ -20,30 +20,31 @@ public class Stack<T> {
     }
 
     public T peek() {
-        if (!isEmpty()) {
-            return root.getValue();
+        if (isEmpty()) {
+            throw new IllegalStateException("Stack is empty!");
         }
-        return null;
+
+        return root.value;
     }
 
     public T pop() {
-        if (!isEmpty()) {
-            size--;
-
-            T val = root.getValue();
-            root = root.getNext();
-            return val;
+        if (isEmpty()) {
+            throw new IllegalStateException("Stack is empty!");
         }
 
-        return null;
+        size--;
+
+        T val = root.value;
+        root = root.next;
+        return val;
     }
 
     public void push(T val) {
         size++;
 
-        Node<T> newNode = new Node<>(val);
-        newNode.setNext(root);
-        root = newNode;
+        ListNode<T> newListNode = new ListNode<>(val);
+        newListNode.next = root;
+        root = newListNode;
     }
 
     public boolean isEmpty() {

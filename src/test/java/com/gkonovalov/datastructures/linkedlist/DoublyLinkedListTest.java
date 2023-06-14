@@ -37,7 +37,7 @@ public class DoublyLinkedListTest {
     @Test
     @DisplayName("Testing DoublyLinkedList.get")
     public void testGet() {
-        assertThrows(IllegalArgumentException.class, () -> doublyLinkedList.get(10));
+        assertThrows(IllegalStateException.class, () -> doublyLinkedList.get(10));
 
         doublyLinkedList.add("a");
 
@@ -57,10 +57,9 @@ public class DoublyLinkedListTest {
 
         doublyLinkedList.remove(0);
 
-        assertFalse(doublyLinkedList.contains("a"));
         assertTrue(doublyLinkedList.isEmpty());
-
-        assertThrows(IllegalArgumentException.class, () -> doublyLinkedList.remove(10));
+        assertThrows(IllegalStateException.class, () -> doublyLinkedList.contains("a"));
+        assertThrows(IllegalStateException.class, () -> doublyLinkedList.remove(10));
     }
 
     @Test
@@ -88,8 +87,10 @@ public class DoublyLinkedListTest {
         doublyLinkedList.add("a");
         doublyLinkedList.add("b");
         doublyLinkedList.add("c");
+        doublyLinkedList.add(null);
 
         assertEquals(doublyLinkedList.indexOf("c"), 2);
+        assertEquals(doublyLinkedList.indexOf(null), 3);
     }
 
 }

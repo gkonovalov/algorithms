@@ -1,7 +1,8 @@
 package com.gkonovalov.datastructures.linkedlist;
 
 
-import com.gkonovalov.datastructures.etc.DNode;
+import com.gkonovalov.datastructures.etc.DoubleListNode;
+import java.util.Objects;
 
 /**
  * Created by Georgiy Konovalov on 17/05/2023.
@@ -16,18 +17,18 @@ import com.gkonovalov.datastructures.etc.DNode;
  */
 public class DoublyLinkedList<T> {
 
-    private DNode<T> head;
-    private DNode<T> tail;
+    private DoubleListNode<T> head;
+    private DoubleListNode<T> tail;
     private int size;
 
     public DoublyLinkedList() {
         this.size = 0;
 
-        this.head = new DNode<>();
-        this.tail = new DNode<>();
+        this.head = new DoubleListNode<>();
+        this.tail = new DoubleListNode<>();
 
-        this.head.setNext(tail);
-        this.tail.setPrev(head);
+        this.head.next = tail;
+        this.tail.prev = head;
     }
 
     public void add(T value) {
@@ -44,24 +45,28 @@ public class DoublyLinkedList<T> {
             return;
         }
 
-        DNode<T> prevNode = findNode(position - 1);
+        DoubleListNode<T> prevNode = findNode(position - 1);
         if (prevNode != null) {
-            DNode<T> newNode = new DNode<>(value);
-            newNode.setNext(prevNode.getNext());
-            prevNode.setNext(newNode);
+            DoubleListNode<T> newNode = new DoubleListNode<>(value);
+            newNode.next = prevNode.next;
+            prevNode.next = newNode;
             size++;
         }
     }
 
     public T get(int position) {
+        if (isEmpty()) {
+            throw new IllegalStateException("Double Linked List is empty!");
+        }
+
         if (!isIndexValid(position)) {
             throw new IllegalArgumentException("Invalid position!");
         }
 
-        DNode<T> currentNode = findNode(position);
+        DoubleListNode<T> currentNode = findNode(position);
 
         if (currentNode != null) {
-            return currentNode.getValue();
+            return currentNode.value;
         }
         return null;
     }
@@ -72,79 +77,68 @@ public class DoublyLinkedList<T> {
 
     public int indexOf(T value) {
         if (isEmpty()) {
-            return -1;
+            throw new IllegalStateException("Double Linked List is empty!");
         }
 
         int index = 0;
 
-        DNode<T> current = head.getNext();
+        DoubleListNode<T> current = head.next;
 
-        if (value == null) {
-            while (current != null) {
-                if (current.getValue() == null){
-                    return index;
-                }
-
-                index++;
-                current = current.getNext();
+        while (current != null) {
+            if (Objects.equals(value, current.value)) {
+                return index;
             }
-        } else {
-            while (current != null) {
-                if (value.equals(current.getValue())){
-                    return index;
-                }
 
-                index++;
-                current = current.getNext();
-            }
+            index++;
+            current = current.next;
         }
         return -1;
     }
 
     public boolean removeFirst() {
-        if (size <= 0) {
-            return false;
+        if (isEmpty()) {
+            throw new IllegalStateException("Double Linked List is empty!");
         }
 
-        head.getNext().getNext().setPrev(head);
-        head.setNext(head.getNext().getNext());
+        head.next.next.prev = head;
+        head.next = head.next.next;
 
         size--;
         return true;
     }
 
     public boolean removeLast() {
-        if (size <= 0) {
-            return false;
+        if (isEmpty()) {
+            throw new IllegalStateException("Double Linked List is empty!");
         }
 
-        tail.getPrev().getPrev().setNext(tail);
-        tail.setPrev(tail.getPrev().getPrev());
+        tail.prev.prev.next = tail;
+        tail.prev = tail.prev.prev;
 
         size--;
         return true;
     }
 
     public boolean remove(int position) {
+        if (isEmpty()) {
+            throw new IllegalStateException("Double Linked List is empty!");
+        }
+
         if (!isIndexValid(position)) {
             throw new IllegalArgumentException("Invalid position!");
         }
 
-        if (isEmpty()) {
-            return false;
-        }
-
         if (position == 0) {
-            head = head.getNext();
+            head = head.next;
             size--;
             return true;
         }
 
-        DNode<T> currentNode = findNode(position - 1);
+        DoubleListNode<T> currentNode = findNode(position - 1);
 
         if (currentNode != null) {
-            currentNode.getNext().setPrev(currentNode.getPrev());
-            currentNode.getPrev().setNext(currentNode.getNext());
+            currentNode.next.prev = currentNode.prev;
+            currentNode.prev.next = currentNode.next;
             size--;
 
             return true;
@@ -161,34 +155,34 @@ public class DoublyLinkedList<T> {
     }
 
     private void append(T value) {
-        DNode<T> newNode = new DNode<>(value);
-        newNode.setPrev(tail.getPrev());
-        newNode.getPrev().setNext(newNode);
-        newNode.setNext(tail);
-        tail.setPrev(newNode);
+        DoubleListNode<T> newNode = new DoubleListNode<>(value);
+        newNode.prev = tail.prev;
+        newNode.prev.next = newNode;
+        newNode.next = tail;
+        tail.prev = newNode;
         size++;
     }
 
     private void prepend(T value) {
-        DNode<T> newNode = new DNode<>(value);
-        newNode.setNext(head.getNext());
-        newNode.getNext().setPrev(newNode);
-        newNode.setPrev(head);
-        head.setNext(newNode);
+        DoubleListNode<T> newNode = new DoubleListNode<>(value);
+        newNode.next = head.next;
+        newNode.next.prev = newNode;
+        newNode.prev = head;
+        head.next = newNode;
         size++;
     }
 
-    private DNode<T> findNode(int index) {
+    private DoubleListNode<T> findNode(int index) {
         if (isEmpty()) {
             return null;
         }
 
-        DNode<T> current = head.getNext();
+        DoubleListNode<T> current = head.next;
         while (current != null) {
             if (index-- == 0) {
                 return current;
             }
-            current = current.getNext();
+            current = current.next;
         }
 
         return null;

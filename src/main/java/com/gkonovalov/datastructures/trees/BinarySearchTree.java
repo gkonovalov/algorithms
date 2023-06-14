@@ -17,6 +17,8 @@ import com.gkonovalov.datastructures.etc.TreeNode;
  * such cases, the time complexity of operations like search, insert, and delete can degrade to O(n)
  * instead of the expected O(log n). This typically happens when the elements are inserted in a sorted
  * or nearly sorted order, causing the tree to skew.
+ * To mitigate these performance issues, various balancing techniques and self-balancing
+ * binary search tree implementations, such as AVL trees, Red-Black trees, or B-trees, are used.
  * </p>
  * Runtime Complexity: O(log n) average case and O(n) worst case for
  *                          {@code add}, {@code get}, {@code remove},

@@ -1,6 +1,6 @@
 package com.gkonovalov.datastructures.queues;
 
-import com.gkonovalov.datastructures.etc.DNode;
+import com.gkonovalov.datastructures.etc.DoubleListNode;
 
 /**
  * Created by Georgiy Konovalov on 17/05/2023.
@@ -16,8 +16,8 @@ import com.gkonovalov.datastructures.etc.DNode;
  */
 public class Deque<T> {
 
-    private DNode<T> head;
-    private DNode<T> tail;
+    private DoubleListNode<T> head;
+    private DoubleListNode<T> tail;
     private int size;
 
     public Deque() {
@@ -25,26 +25,28 @@ public class Deque<T> {
     }
 
     public void addFirst(T value) {
-        DNode<T> newNode = new DNode<>(value);
+        DoubleListNode<T> newNode = new DoubleListNode<>(value);
+
         if (isEmpty()) {
             head = newNode;
             tail = newNode;
         } else {
-            newNode.setNext(head);
-            head.setPrev(newNode);
+            newNode.next = head;
+            head.prev = newNode;
             head = newNode;
         }
         size++;
     }
 
     public void addLast(T value) {
-        DNode<T> newNode = new DNode<>(value);
+        DoubleListNode<T> newNode = new DoubleListNode<>(value);
+
         if (isEmpty()) {
             head = newNode;
             tail = newNode;
         } else {
-            newNode.setPrev(tail);
-            tail.setNext(newNode);
+            newNode.prev = tail;
+            tail.next = newNode;
             tail = newNode;
         }
         size++;
@@ -55,12 +57,12 @@ public class Deque<T> {
             throw new IllegalStateException("Deque is empty!");
         }
 
-        T data = head.getValue();
-        head = head.getNext();
+        T data = head.value;
+        head = head.next;
         if (head == null) {
             tail = null;
         } else {
-            head.setPrev(null);
+            head.prev = null;
         }
         size--;
 
@@ -72,12 +74,12 @@ public class Deque<T> {
             throw new IllegalStateException("Deque is empty!");
         }
 
-        T data = tail.getValue();
-        tail = tail.getPrev();
+        T data = tail.value;
+        tail = tail.prev;
         if (tail == null) {
             head = null;
         } else {
-            tail.setNext(null);
+            tail.next = null;
         }
         size--;
 
@@ -88,14 +90,14 @@ public class Deque<T> {
         if (isEmpty()) {
             throw new IllegalStateException("Deque is empty!");
         }
-        return head.getValue();
+        return head.value;
     }
 
     public T peekLast() {
         if (isEmpty()) {
             throw new IllegalStateException("Deque is empty!");
         }
-        return tail.getValue();
+        return tail.value;
     }
 
     public boolean isEmpty() {

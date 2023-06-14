@@ -184,7 +184,7 @@ Data Structures
 │   └── Dictionary
 ├── Hash
 │   └── Bloom Filter 
-├── Trees
+├── <a href="src/main/java/com/gkonovalov/datastructures/trees/"><b>Trees</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/datastructures/trees/BinarySearchTree.java"><b>Binary Search Tree</b></a>
 │   ├── Trie-trees
 │   │    ├── Prefix Tree

@@ -38,7 +38,7 @@ public class BinarySearchTreeTest {
     @Test
     @DisplayName("Testing BinarySearchTree.add")
     public void testAdd() {
-        assertEquals(bst.size(), 0);
+        assertTrue(bst.isEmpty());
 
         bst.add(5);
         bst.add(1);
@@ -55,7 +55,7 @@ public class BinarySearchTreeTest {
     @Test
     @DisplayName("Testing BinarySearchTree.get")
     public void testGet() {
-        assertEquals(bst.size(), 0);
+        assertTrue(bst.isEmpty());
         assertThrows(IllegalStateException.class, () -> bst.get(0));
 
         bst.add(5);
@@ -63,16 +63,28 @@ public class BinarySearchTreeTest {
         bst.add(-2);
         bst.add(200);
 
-        assertEquals(200, bst.findMax());
-        assertEquals(-2, bst.findMin());
-
         assertEquals(200, bst.get(200).value);
+    }
+
+    @Test
+    @DisplayName("Testing BinarySearchTree.contains")
+    public void testContains() {
+        assertTrue(bst.isEmpty());
+        assertThrows(IllegalStateException.class, () -> bst.contains(20));
+
+        bst.add(5);
+        bst.add(1);
+        bst.add(-2);
+        bst.add(200);
+
+        assertTrue(bst.contains(-2));
+        assertFalse(bst.contains(-20));
     }
 
     @Test
     @DisplayName("Testing BinarySearchTree.remove")
     public void testRemove() {
-        assertEquals(bst.size(), 0);
+        assertTrue(bst.isEmpty());
         assertThrows(IllegalStateException.class, () -> bst.remove(0));
 
         bst.add(5);
@@ -86,7 +98,33 @@ public class BinarySearchTreeTest {
         bst.remove(5);
 
         assertFalse(bst.contains(5));
-        assertEquals(200, bst.findMax());
+    }
+
+    @Test
+    @DisplayName("Testing BinarySearchTree.findMin")
+    public void testFindMin() {
+        assertTrue(bst.isEmpty());
+        assertThrows(IllegalStateException.class, () -> bst.findMin());
+
+        bst.add(5);
+        bst.add(1);
+        bst.add(-2);
+        bst.add(200);
+
         assertEquals(-2, bst.findMin());
+    }
+
+    @Test
+    @DisplayName("Testing BinarySearchTree.findMax")
+    public void testFindMax() {
+        assertTrue(bst.isEmpty());
+        assertThrows(IllegalStateException.class, () -> bst.findMax());
+
+        bst.add(5);
+        bst.add(1);
+        bst.add(-2);
+        bst.add(200);
+
+        assertEquals(200, bst.findMax());
     }
 }

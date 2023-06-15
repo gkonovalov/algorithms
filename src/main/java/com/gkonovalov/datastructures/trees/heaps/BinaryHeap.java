@@ -40,7 +40,7 @@ public class BinaryHeap<T extends Comparable<T>> {
         }
 
         if (type == null) {
-            throw new IllegalArgumentException("Comparator can't be null!");
+            throw new IllegalArgumentException("Type can't be null!");
         }
 
         this.type = type;

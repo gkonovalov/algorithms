@@ -187,8 +187,8 @@ Data Structures
 │   └── Bloom Filter 
 ├── <a href="src/main/java/com/gkonovalov/datastructures/trees/"><b>Trees</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/datastructures/trees/BinarySearchTree.java"><b>Binary Search Tree</b></a>
-│   ├── Trie-trees
-│   │    ├── Prefix Tree
+│   ├── <a href="src/main/java/com/gkonovalov/datastructures/trees/trie"><b>Trie-trees</b></a>
+│   │    ├── <a href="src/main/java/com/gkonovalov/datastructures/trees/trie/Trie.java"><b>Prefix Tree - Trie</b></a>
 │   │    └── Suffix Tree
 │   ├── <a href="src/main/java/com/gkonovalov/datastructures/trees/heaps"><b>Heaps</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/datastructures/trees/heaps/BinaryHeap.java"><b>Binary Heap - Priority Queue</b></a>

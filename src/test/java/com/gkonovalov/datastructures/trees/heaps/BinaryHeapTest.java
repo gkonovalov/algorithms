@@ -4,8 +4,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.util.Comparator;
-
+import static com.gkonovalov.datastructures.trees.heaps.BinaryHeap.Type.MAX;
+import static com.gkonovalov.datastructures.trees.heaps.BinaryHeap.Type.MIN;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
@@ -21,8 +21,8 @@ public class BinaryHeapTest {
 
     @BeforeEach
     public void setUp() {
-        this.minHeap = new BinaryHeap<Integer>(Comparator.reverseOrder());
-        this.maxHeap = new BinaryHeap<>();
+        this.minHeap = new BinaryHeap<>(MIN);
+        this.maxHeap = new BinaryHeap<>(MAX);
     }
 
     @Test

@@ -1,7 +1,5 @@
 package com.gkonovalov.datastructures.trees.heaps;
 
-import java.util.Comparator;
-
 /**
  * Created by Georgiy Konovalov on 13/06/2023.
  * <p>
@@ -24,29 +22,28 @@ public class BinaryHeap<T extends Comparable<T>> {
     private static final int DEFAULT_SIZE = 8;
     private static final int ROOT = 1;
 
+    private final Type type;
     private final T[] arr;
     private int n;
 
-    private final Comparator<? super T> comparator;
-
     public BinaryHeap() {
-        this(DEFAULT_SIZE, Comparator.naturalOrder());
+        this(DEFAULT_SIZE, Type.MAX);
     }
 
-    public BinaryHeap(Comparator<T> comparator) {
-        this(DEFAULT_SIZE, comparator);
+    public BinaryHeap(Type type) {
+        this(DEFAULT_SIZE, type);
     }
 
-    public BinaryHeap(int capacity, Comparator<T> comparator) {
+    public BinaryHeap(int capacity, Type type) {
         if (capacity <= 0) {
             throw new IllegalArgumentException("Capacity can't be <= 0!");
         }
 
-        if (comparator == null) {
+        if (type == null) {
             throw new IllegalArgumentException("Comparator can't be null!");
         }
 
-        this.comparator = comparator;
+        this.type = type;
         this.arr = (T[]) new Comparable[capacity + 1];
         this.n = 0;
     }
@@ -121,12 +118,24 @@ public class BinaryHeap<T extends Comparable<T>> {
     }
 
     private boolean less(int i, int j) {
-        return comparator.compare(arr[i], arr[j]) < 0;
+        switch (type) {
+            case MAX:
+                return arr[i].compareTo(arr[j]) < 0;
+            case MIN:
+                return arr[i].compareTo(arr[j]) > 0;
+        }
+
+        return false;
     }
 
     private void swap(int i, int j) {
         T temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
+    }
+
+    enum Type {
+        MIN,
+        MAX
     }
 }

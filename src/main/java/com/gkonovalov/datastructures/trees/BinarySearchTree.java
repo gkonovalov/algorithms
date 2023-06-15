@@ -93,7 +93,7 @@ public class BinarySearchTree {
         return size == 0;
     }
 
-    public int size(){
+    public int size() {
         return size;
     }
 
@@ -104,7 +104,7 @@ public class BinarySearchTree {
 
         if (value < root.value) {
             root.left = insertNode(root.left, value);
-        } else {
+        } else if (value > root.value) {
             root.right = insertNode(root.right, value);
         }
 

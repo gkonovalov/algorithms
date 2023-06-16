@@ -3,7 +3,7 @@ package com.gkonovalov.datastructures.etc;
 /**
  * Created by Georgiy Konovalov on 15/06/2023.
  * <p>
- * Base block for construction HashMap.
+ * Base block for HashMap construction.
  * </p>
  */
 public class MapNode<Key, Value> {

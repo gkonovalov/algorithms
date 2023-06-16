@@ -162,7 +162,6 @@ Need to prepare description.
 ## Data Structures
 <pre>
 Data Structures
-├── Strings
 ├── <a href="src/main/java/com/gkonovalov/datastructures/arrays"><b>Arrays</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/datastructures/arrays/Array.java"><b>Array</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/datastructures/arrays/DynamicArray.java"><b>Dynamic Array</b></a>
@@ -176,15 +175,13 @@ Data Structures
 ├── <a href="src/main/java/com/gkonovalov/datastructures/queues"><b>Queues</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/datastructures/queues/Queue.java"><b>Queue</b></a>
 │   └── <a href="src/main/java/com/gkonovalov/datastructures/queues/Deque.java"><b>Deque</b></a>
-├── Hash Tables 
-│   ├── Hash Table
-│   │   ├── Separate Chaining
-│   │   └── Open Addressing
-│   ├── HashMap
-│   ├── HashSet
-│   └── Dictionary
-├── Hash
-│   └── Bloom Filter 
+├── <a href="src/main/java/com/gkonovalov/datastructures/hashing/hashtables"><b>Hash Tables</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/datastructures/hashtables/HashMap.java"><b>HashMap</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/datastructures/hashtables/HashSet.java"><b>HashSet</b></a>
+│   └── Collision Resolution
+│       ├── <a href="src/main/java/com/gkonovalov/datastructures/hashtables/HashMap.java"><b>Separate Chaining</b></a>
+│       └── <a href="src/main/java/com/gkonovalov/datastructures/hashtables/HashSet.java"><b>Open Addressing</b></a>
+├── Bloom Filter 
 ├── <a href="src/main/java/com/gkonovalov/datastructures/trees/"><b>Trees</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/datastructures/trees/BinarySearchTree.java"><b>Binary Search Tree</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/datastructures/trees/trie"><b>Trie-trees</b></a>

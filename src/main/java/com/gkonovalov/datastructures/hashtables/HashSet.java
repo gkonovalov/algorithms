@@ -10,7 +10,7 @@ import java.util.*;
  * It provides efficient insertion, deletion, and lookup operations for determining whether an
  * element is present in the set.
  * Current implementation support Open Addressing (Linear Probing) collision resolution strategy.
- * <p>
+ *
  * The core idea behind a HashSet is to use a hash function to compute an index, or a hash code, for each key.
  * If a collision occurs, the algorithm probes for the next available bucket until an empty slot is found.
  * This can involve Linear Probing (checking the next consecutive bucket) or other methods like

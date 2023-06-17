@@ -1,6 +1,7 @@
 package com.gkonovalov.datastructures.hashtable;
 
 import com.gkonovalov.datastructures.hashtables.HashMap;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -41,7 +42,7 @@ public class HashMapTest {
     @Test
     @DisplayName("Testing HashMap.remove")
     public void testRemove() {
-        assertEquals(hashMap.size(), 0);
+        assertEquals(0, hashMap.size());
 
         hashMap.put("a", 0);
         hashMap.put("b", 1);
@@ -94,7 +95,7 @@ public class HashMapTest {
     @Test
     @DisplayName("Testing HashMap.keys")
     public void testKeys() {
-        assertEquals(hashMap.size(), 0);
+        assertEquals(0, hashMap.size());
 
         List<String> keys = Arrays.asList("a", "b", "c");
 
@@ -102,15 +103,14 @@ public class HashMapTest {
             hashMap.put(keys.get(i), i);
         }
 
-        assertEquals(hashMap.size(), 3);
-
-        assertEquals(keys.toString(), hashMap.keys().toString());
+        assertEquals(3, hashMap.size());
+        assertIterableEquals(keys, hashMap.keys());
     }
 
     @Test
     @DisplayName("Testing HashSet.values")
     public void testValues() {
-        assertEquals(hashMap.size(), 0);
+        assertEquals(0, hashMap.size());
 
         List<String> list = Arrays.asList("a", "b", "c");
         List<Integer> values = new ArrayList<>();
@@ -120,17 +120,17 @@ public class HashMapTest {
             values.add(i);
         }
 
-        assertEquals(hashMap.size(), 3);
-        assertEquals(values.toString(), hashMap.values().toString());
+        assertEquals(3, hashMap.size());
+        assertIterableEquals(values, hashMap.values());
     }
 
     @Test
     @DisplayName("Testing HashSet.size")
     public void testSize() {
-        assertEquals(hashMap.size(), 0);
+        assertEquals(0, hashMap.size());
 
         hashMap.put("a", 1);
 
-        assertEquals(hashMap.size(), 1);
+        assertEquals(1, hashMap.size());
     }
 }

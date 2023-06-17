@@ -28,7 +28,7 @@ import com.gkonovalov.datastructures.etc.TreeNode;
  */
 public class BinarySearchTree {
 
-    private TreeNode root;
+    private TreeNode<Integer> root;
     private int size;
 
     public BinarySearchTree() {
@@ -40,7 +40,7 @@ public class BinarySearchTree {
         root = insertNode(root, val);
     }
 
-    public TreeNode get(int value) {
+    public TreeNode<Integer> get(int value) {
         if (isEmpty()) {
             throw new IllegalStateException("Binary Search Tree is empty!");
         }
@@ -70,7 +70,7 @@ public class BinarySearchTree {
             throw new IllegalStateException("Binary Search Tree is empty!");
         }
 
-        TreeNode maxNode = findMin(root);
+        TreeNode<Integer> maxNode = findMin(root);
         if (maxNode != null) {
             return maxNode.value;
         }
@@ -82,7 +82,7 @@ public class BinarySearchTree {
             throw new IllegalStateException("Binary Search Tree is empty!");
         }
 
-        TreeNode maxNode = findMax(root);
+        TreeNode<Integer> maxNode = findMax(root);
         if (maxNode != null) {
             return maxNode.value;
         }
@@ -97,9 +97,9 @@ public class BinarySearchTree {
         return size;
     }
 
-    private TreeNode insertNode(TreeNode root, int value) {
+    private TreeNode<Integer> insertNode(TreeNode<Integer> root, int value) {
         if (root == null) {
-            return new TreeNode(value);
+            return new TreeNode<>(value);
         }
 
         if (value < root.value) {
@@ -111,7 +111,7 @@ public class BinarySearchTree {
         return root;
     }
 
-    private TreeNode searchNode(TreeNode root, int value) {
+    private TreeNode<Integer> searchNode(TreeNode<Integer> root, int value) {
         if (root == null) {
             return root;
         }
@@ -127,7 +127,7 @@ public class BinarySearchTree {
         }
     }
 
-    private TreeNode deleteNode(TreeNode node, int value) {
+    private TreeNode<Integer> deleteNode(TreeNode<Integer> node, int value) {
         if (node == null) {
             return null;
         }
@@ -145,14 +145,14 @@ public class BinarySearchTree {
         return node;
     }
 
-    private TreeNode findMin(TreeNode node) {
+    private TreeNode<Integer> findMin(TreeNode<Integer> node) {
         while (node.left != null) {
             node = node.left;
         }
         return node;
     }
 
-    private TreeNode findMax(TreeNode node) {
+    private TreeNode<Integer> findMax(TreeNode<Integer> node) {
         while (node.right != null) {
             node = node.right;
         }

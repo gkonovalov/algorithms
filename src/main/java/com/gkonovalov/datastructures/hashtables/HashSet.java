@@ -48,6 +48,7 @@ public class HashSet<T> {
         }
 
         int hash = getHash(value);
+
         while (set[hash] != null) {
             if (set[hash].equals(value)) {
                 return;
@@ -69,6 +70,7 @@ public class HashSet<T> {
         }
 
         int hash = getHash(value);
+
         while (!value.equals(set[hash])) {
             hash = (hash + 1) % set.length;
         }
@@ -81,6 +83,7 @@ public class HashSet<T> {
         if (size > 0 && size <= set.length / 8) {
             resize(set.length / 2);
         }
+
         return true;
     }
 
@@ -101,6 +104,7 @@ public class HashSet<T> {
             }
             hash = (hash + 1) % set.length;
         }
+
         return false;
     }
 
@@ -112,6 +116,7 @@ public class HashSet<T> {
                 result.add(item);
             }
         }
+
         return result;
     }
 
@@ -131,6 +136,7 @@ public class HashSet<T> {
                 newSet.add(set[i]);
             }
         }
+
         set = newSet.set;
     }
 

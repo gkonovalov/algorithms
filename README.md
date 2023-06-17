@@ -178,6 +178,7 @@ Data Structures
 ├── <a href="src/main/java/com/gkonovalov/datastructures/hashing/hashtables"><b>Hash Tables</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/datastructures/hashtables/HashMap.java"><b>HashMap</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/datastructures/hashtables/HashSet.java"><b>HashSet</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/datastructures/hashtables/SparseVector.java"><b>Sparse Vector</b></a>
 │   └── Collision Resolution
 │       ├── <a href="src/main/java/com/gkonovalov/datastructures/hashtables/HashMap.java"><b>Separate Chaining</b></a>
 │       └── <a href="src/main/java/com/gkonovalov/datastructures/hashtables/HashSet.java"><b>Open Addressing</b></a>

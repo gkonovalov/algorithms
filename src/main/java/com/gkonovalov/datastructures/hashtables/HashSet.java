@@ -5,11 +5,11 @@ import java.util.*;
 /**
  * Created by Georgiy Konovalov on 15/06/2023.
  * <p>
- * HashSet data structure implementation with dynamic resizing feature.
- * HashSet is a data structure that stores a collection of unique elements in no particular order.
- * It provides efficient insertion, deletion, and lookup operations for determining whether an
- * element is present in the set.
- * Current implementation support Open Addressing (Linear Probing) collision resolution strategy.
+ * HashSet data structure implementation with dynamic resizing feature. This data structure that stores
+ * a collection of unique elements in no particular order, provides efficient insertion, deletion, and
+ * lookup operations for determining whether and element is present in the set.
+ * Current implementation support Open Addressing (Linear Probing) collision resolution strategy and
+ * dynamic resizing feature.
  *
  * The core idea behind a HashSet is to use a hash function to compute an index, or a hash code, for each key.
  * If a collision occurs, the algorithm probes for the next available bucket until an empty slot is found.
@@ -66,6 +66,8 @@ public class HashSet<T> {
             throw new IllegalStateException("Hash Set is empty!");
         }
 
+        shrinkArray();
+
         int hash = getHash(value);
 
         while (!value.equals(set[hash])) {
@@ -76,9 +78,6 @@ public class HashSet<T> {
         size--;
 
         rehashCluster(hash);
-
-        shrinkArray();
-
         return true;
     }
 
@@ -126,9 +125,9 @@ public class HashSet<T> {
     private void resize(int capacity) {
         HashSet<T> newSet = new HashSet<>(capacity);
 
-        for (int i = 0; i < set.length; i++) {
-            if (set[i] != null) {
-                newSet.add(set[i]);
+        for (T item : set) {
+            if (item != null) {
+                newSet.add(item);
             }
         }
 

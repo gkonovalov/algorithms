@@ -40,7 +40,7 @@ public class DynamicArrayTest {
 
         assertEquals(dynamicArray.size(), 1);
         assertTrue(dynamicArray.remove(0));
-        assertThrows(IndexOutOfBoundsException.class, () -> dynamicArray.remove(200));
+        assertThrows(IndexOutOfBoundsException.class, () -> dynamicArray.remove(100));
         assertEquals(dynamicArray.size(), 0);
     }
 
@@ -54,7 +54,7 @@ public class DynamicArrayTest {
 
         dynamicArray.remove(0);
 
-        assertThrows(IndexOutOfBoundsException.class, () -> dynamicArray.remove(200));
+        assertThrows(IndexOutOfBoundsException.class, () -> dynamicArray.remove(100));
     }
 
     @Test

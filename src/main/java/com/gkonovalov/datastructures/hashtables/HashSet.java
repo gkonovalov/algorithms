@@ -26,7 +26,6 @@ public class HashSet<T> {
     private static final int DEFAULT_SIZE = 8;
 
     private T[] set;
-
     private int size;
 
     public HashSet() {

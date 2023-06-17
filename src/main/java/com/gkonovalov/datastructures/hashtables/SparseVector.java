@@ -11,7 +11,7 @@ package com.gkonovalov.datastructures.hashtables;
  * </p>
  * Runtime Complexity: O(1) for {@code get}, {@code put},
  *                     O(m) for {@code dotProduct}.
- * Space Complexity:   O(n).
+ * Space Complexity:   O(m).
  */
 public class SparseVector {
 

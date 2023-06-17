@@ -11,7 +11,7 @@ import java.util.Queue;
  * HashMap data structure implementation, also known as a Hashtable.
  * This data structure provides efficient storage and retrieval of key-value pairs.
  * Current implementation support Separate Chaining collision resolution strategy.
- *
+ * <p>
  * The core idea behind a Hashtable is to use a hash function to compute an index,
  * or a hash code, for each key. This hash code is used to determine the storage location,
  * or bucket, where the corresponding value will be stored. The number of buckets determines
@@ -29,8 +29,8 @@ import java.util.Queue;
  * appropriate hash function is defined.
  * </p>
  * Runtime Complexity: O(1) for {@code put}, {@code get}, {@code remove},
- *                              {@code contains}, {@code isEmpty}, {@code size},
- *                     O(n) for {@code containsValue}, {@code keys} and {@code values}.
+ * {@code contains}, {@code isEmpty}, {@code size},
+ * O(n) for {@code containsValue}, {@code keys} and {@code values}.
  * Space Complexity:   O(n).
  */
 public class HashMap<K, V> {
@@ -111,7 +111,6 @@ public class HashMap<K, V> {
             if (node.next != null && node.next.key.equals(key)) {
                 node.next = node.next.next;
                 size--;
-
                 return true;
             }
             node = node.next;
@@ -123,9 +122,8 @@ public class HashMap<K, V> {
             data[hash] = node.next;
             size--;
             return true;
-        } else {
-            return false;
         }
+        return false;
     }
 
     public boolean containsKey(K key) {

@@ -38,7 +38,6 @@ public class HashMap<K, V> {
     private static final int DEFAULT_SIZE = 8;
 
     private MapNode<K, V>[] data;
-
     private int capacity;
     private int size;
 
@@ -123,6 +122,7 @@ public class HashMap<K, V> {
             size--;
             return true;
         }
+
         return false;
     }
 

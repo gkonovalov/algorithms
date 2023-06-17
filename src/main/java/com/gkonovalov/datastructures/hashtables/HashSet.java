@@ -14,7 +14,7 @@ import java.util.*;
  * The core idea behind a HashSet is to use a hash function to compute an index, or a hash code, for each key.
  * If a collision occurs, the algorithm probes for the next available bucket until an empty slot is found.
  * This can involve Linear Probing (checking the next consecutive bucket) or other methods like
- * Quadratic Probing or Double Hashing.
+ * Two-probe Hashing, Double Hashing or Cuckoo Hashing.
  * </p>
  * Runtime Complexity: O(1) for {@code add}, {@code remove}, {@code contains},
  *                              {@code isEmpty}, {@code size},

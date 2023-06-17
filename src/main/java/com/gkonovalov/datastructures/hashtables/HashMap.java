@@ -29,8 +29,8 @@ import java.util.Queue;
  * appropriate hash function is defined.
  * </p>
  * Runtime Complexity: O(1) for {@code put}, {@code get}, {@code remove},
- * {@code contains}, {@code isEmpty}, {@code size},
- * O(n) for {@code containsValue}, {@code keys} and {@code values}.
+ *                              {@code contains}, {@code isEmpty}, {@code size},
+ *                     O(n) for {@code containsValue}, {@code keys} and {@code values}.
  * Space Complexity:   O(n).
  */
 public class HashMap<K, V> {
@@ -38,7 +38,6 @@ public class HashMap<K, V> {
     private static final int DEFAULT_SIZE = 8;
 
     private MapNode<K, V>[] data;
-    private int capacity;
     private int size;
 
     public HashMap() {
@@ -47,7 +46,6 @@ public class HashMap<K, V> {
 
     public HashMap(int capacity) {
         this.size = 0;
-        this.capacity = capacity;
         this.data = new MapNode[capacity];
     }
 
@@ -60,15 +58,11 @@ public class HashMap<K, V> {
             throw new IllegalStateException("Hash Map is empty!");
         }
 
-        MapNode<K, V> node = data[getHash(key)];
-
-        while (node != null) {
+        for (MapNode<K, V> node = data[getHash(key)]; node != null; node = node.next) {
             if (node.key.equals(key)) {
                 return node.val;
             }
-            node = node.next;
         }
-
         return null;
     }
 
@@ -77,16 +71,15 @@ public class HashMap<K, V> {
             throw new IllegalArgumentException("Parameter key can't be null!");
         }
 
+        expandArray();
+
         int hash = getHash(key);
 
-        MapNode<K, V> node = data[hash];
-
-        while (node != null) {
+        for (MapNode<K, V> node = data[hash]; node != null; node = node.next) {
             if (node.key.equals(key)) {
                 node.val = val;
                 return;
             }
-            node = node.next;
         }
 
         data[hash] = new MapNode<>(key, val, data[hash]);
@@ -102,28 +95,26 @@ public class HashMap<K, V> {
             throw new IllegalStateException("Hash Map is empty!");
         }
 
+        shrinkArray();
+
         int hash = getHash(key);
 
-        MapNode<K, V> node = data[hash];
-
-        while (node != null) {
+        for (MapNode<K, V> node = data[hash]; node != null; node = node.next) {
             if (node.next != null && node.next.key.equals(key)) {
                 node.next = node.next.next;
                 size--;
                 return true;
             }
-            node = node.next;
         }
 
-        node = data[hash];
+        MapNode<K, V> firstNode = data[hash];
 
-        if (node != null && node.key.equals(key)) {
-            data[hash] = node.next;
+        if (firstNode != null && firstNode.key.equals(key)) {
+            data[hash] = firstNode.next;
             size--;
             return true;
         }
-
-        return false;
+        return true;
     }
 
     public boolean containsKey(K key) {
@@ -135,15 +126,11 @@ public class HashMap<K, V> {
             throw new IllegalStateException("Hash Map is empty!");
         }
 
-        MapNode<K, V> node = data[getHash(key)];
-
-        while (node != null) {
+        for (MapNode<K, V> node = data[getHash(key)]; node != null; node = node.next) {
             if (node.key.equals(key)) {
                 return true;
             }
-            node = node.next;
         }
-
         return false;
     }
 
@@ -167,7 +154,7 @@ public class HashMap<K, V> {
     public Iterable<K> keys() {
         Queue<K> queue = new ArrayDeque<>();
 
-        for (int i = 0; i < capacity; i++) {
+        for (int i = 0; i < data.length; i++) {
             MapNode<K, V> node = data[i];
 
             while (node != null) {
@@ -182,7 +169,7 @@ public class HashMap<K, V> {
     public Iterable<V> values() {
         Queue<V> queue = new ArrayDeque<>();
 
-        for (int i = 0; i < capacity; i++) {
+        for (int i = 0; i < data.length; i++) {
             MapNode<K, V> node = data[i];
 
             while (node != null) {
@@ -203,6 +190,31 @@ public class HashMap<K, V> {
     }
 
     private int getHash(K element) {
-        return (element.hashCode() & 0x7fffffff) % capacity;
+        return (element.hashCode() & 0x7fffffff) % data.length;
+    }
+
+    private void resize(int capacity) {
+        HashMap<K, V> newSet = new HashMap<>(capacity);
+
+        for (int i = 0; i < data.length; i++) {
+            MapNode<K, V> node = data[i];
+            if (node!= null) {
+                newSet.put(node.key, node.val);
+            }
+        }
+
+        data = newSet.data;
+    }
+
+    private void expandArray() {
+        if (size >= data.length / 2) {
+            resize(data.length * 2);
+        }
+    }
+
+    private void shrinkArray() {
+        if (size >= 0 && size == data.length / 4) {
+            resize(data.length / 2);
+        }
     }
 }

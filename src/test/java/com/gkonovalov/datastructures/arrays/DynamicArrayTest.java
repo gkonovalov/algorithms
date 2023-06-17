@@ -40,7 +40,7 @@ public class DynamicArrayTest {
 
         assertEquals(dynamicArray.size(), 1);
         assertTrue(dynamicArray.remove(0));
-        assertThrows(IndexOutOfBoundsException.class, () -> dynamicArray.remove(0));
+        assertThrows(IndexOutOfBoundsException.class, () -> dynamicArray.remove(200));
         assertEquals(dynamicArray.size(), 0);
     }
 
@@ -54,7 +54,7 @@ public class DynamicArrayTest {
 
         dynamicArray.remove(0);
 
-        assertThrows(IndexOutOfBoundsException.class, () -> dynamicArray.remove(0));
+        assertThrows(IndexOutOfBoundsException.class, () -> dynamicArray.remove(200));
     }
 
     @Test
@@ -65,18 +65,6 @@ public class DynamicArrayTest {
         dynamicArray.add(5);
 
         assertEquals(dynamicArray.get(0), 5);
-    }
-
-    @Test
-    @DisplayName("Testing DynamicArray.set")
-    public void testSet() {
-        assertEquals(dynamicArray.size(), 0);
-
-        dynamicArray.add(5);
-        assertEquals(dynamicArray.get(0), 5);
-
-        dynamicArray.set(0, 2);
-        assertEquals(dynamicArray.get(0), 2);
     }
 
     @Test

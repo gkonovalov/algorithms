@@ -42,9 +42,7 @@ public class HashSet<T> {
             throw new IllegalArgumentException("Parameter value can't be null!");
         }
 
-        if (size >= set.length / 2) {
-            resize(2 * set.length);
-        }
+        expandArray();
 
         int hash = getHash(value);
 
@@ -79,9 +77,7 @@ public class HashSet<T> {
 
         rehashCluster(hash);
 
-        if (size > 0 && size <= set.length / 8) {
-            resize(set.length / 2);
-        }
+        shrinkArray();
 
         return true;
     }
@@ -137,6 +133,18 @@ public class HashSet<T> {
         }
 
         set = newSet.set;
+    }
+
+    private void expandArray() {
+        if (size >= set.length / 2) {
+            resize(set.length * 2);
+        }
+    }
+
+    private void shrinkArray() {
+        if (size >= 0 && size == set.length / 4) {
+            resize(set.length / 2);
+        }
     }
 
     private void rehashCluster(int index) {

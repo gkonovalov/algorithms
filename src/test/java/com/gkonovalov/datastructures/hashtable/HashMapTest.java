@@ -1,7 +1,6 @@
 package com.gkonovalov.datastructures.hashtable;
 
 import com.gkonovalov.datastructures.hashtables.HashMap;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -42,19 +41,32 @@ public class HashMapTest {
     @Test
     @DisplayName("Testing HashMap.remove")
     public void testRemove() {
-        assertEquals(0, hashMap.size());
+        assertEquals(hashMap.size(), 0);
 
         hashMap.put("a", 0);
-        hashMap.put("b", 1);
-        hashMap.put("c", 2);
+        hashMap.put("a", 1);
 
-        assertEquals(3, hashMap.size());
-        assertTrue(hashMap.containsKey("b"));
+        hashMap.put("b", 2);
+        hashMap.put("c", 3);
+        hashMap.put("d", 4);
+        hashMap.put("e", 5);
+        hashMap.put("g", 6);
+        hashMap.put("n", 7);
+        hashMap.put("z", 6);
+        hashMap.put("p", 9);
 
+        assertEquals(hashMap.size(), 9);
+        assertTrue(hashMap.containsKey("a"));
 
         hashMap.remove("a");
         hashMap.remove("b");
         hashMap.remove("c");
+        hashMap.remove("d");
+        hashMap.remove("e");
+        hashMap.remove("g");
+        hashMap.remove("n");
+        hashMap.remove("z");
+        hashMap.remove("p");
 
         assertTrue(hashMap.isEmpty());
     }

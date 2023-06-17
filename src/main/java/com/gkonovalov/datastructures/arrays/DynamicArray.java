@@ -15,7 +15,7 @@ package com.gkonovalov.datastructures.arrays;
  */
 public class DynamicArray<T> {
 
-    private static final int DEFAULT_SIZE = 5;
+    private static final int DEFAULT_SIZE = 8;
 
     private Object[] arr;
     private int n;
@@ -29,19 +29,8 @@ public class DynamicArray<T> {
     }
 
     public void add(T item) {
-        if (n >= arr.length) {
-            resize(arr.length * 2);
-        }
-
+        expandArray();
         arr[n++] = item;
-    }
-
-    public void set(int position, T value) {
-        if (!isValid(position)) {
-            throw new IndexOutOfBoundsException("Invalid position!");
-        }
-
-        arr[position] = value;
     }
 
     public T get(int position) {
@@ -61,10 +50,7 @@ public class DynamicArray<T> {
         arr[position] = null;
 
         shiftArray(position);
-
-        if (n >= 0 && n == arr.length / 4) {
-            resize(arr.length / 2);
-        }
+        shrinkArray();
 
         return true;
     }
@@ -96,7 +82,19 @@ public class DynamicArray<T> {
         }
     }
 
-    private void resize(int size) {
+    private void expandArray() {
+        if (n >= arr.length - 1) {
+            resizeArray(arr.length * 2);
+        }
+    }
+
+    private void shrinkArray() {
+        if (n >= 0 && n == arr.length / 4) {
+            resizeArray(arr.length / 2);
+        }
+    }
+
+    private void resizeArray(int size) {
         Object[] newArr = new Object[size];
 
         for (int i = 0; i < arr.length; i++) {

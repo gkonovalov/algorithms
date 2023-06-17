@@ -1,7 +1,6 @@
 package com.gkonovalov.datastructures.linkedlist;
 
 
-import com.gkonovalov.datastructures.etc.DoubleListNode;
 import java.util.Objects;
 
 /**

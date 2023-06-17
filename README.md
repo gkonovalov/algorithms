@@ -43,14 +43,14 @@ Need to prepare description.
 │       └── Median of medians
 ├── <a href="src/main/java/com/gkonovalov/algorithms/linkedlist"><b>Linked List</b></a>
 │   └── <a href="src/main/java/com/gkonovalov/algorithms/linkedlist/FloydCycleDetection.java"><b>Floyd's Cycle Detection</b></a>
-├── Tree
-│   └── Searching
-│       ├── DFS
-│       │   ├── Pre-order  - Root-Left-Right
-│       │   ├── In-order   - Left-Root-Right
-│       │   └── Post-order - Left-Right-Root
-│       ├── BFS 
-│       │   └── Level-order
+├── <a href="src/main/java/com/gkonovalov/datastructures/trees/TreeNode.java"><b>Tree</b></a>
+│   └── <a href="src/main/java/com/gkonovalov/algorithms/tree/searching"><b>Searching</b></a>
+│       ├── <a href="src/main/java/com/gkonovalov/algorithms/tree/searching/DFS.java"><b>DFS</b></a>
+│       │   ├── <a href="src/main/java/com/gkonovalov/algorithms/tree/searching/DFS.java"><b>Pre-order traversal</b></a>
+│       │   ├── <a href="src/main/java/com/gkonovalov/algorithms/tree/searching/DFS.java"><b>In-order traversal</b></a>
+│       │   └── <a href="src/main/java/com/gkonovalov/algorithms/tree/searching/DFS.java"><b>Post-order traversal</b></a>
+│       ├── <a href="src/main/java/com/gkonovalov/algorithms/tree/searching/BFS.java"><b>BFS</b></a> 
+│       │   └── <a href="src/main/java/com/gkonovalov/algorithms/tree/searching/BFS.java"><b>Level-order traversal</b></a>
 │       └── Bidirectional Search
 ├── Graphs
 │   ├── Searching
@@ -65,15 +65,15 @@ Need to prepare description.
 │   │ 	└── Minimum Spanning Tree
 │   │ 	    ├── Prim’s 
 │   │ 	    └── Kruskal’s
-│   ├─ Network Flow
-│   │  ├── Maximum Flow
-│   │  │   ├── Push-Relabel
-│   │  │   ├── Ford-Fulkerson
-│   │  │   ├── Edmonds-Karp
-│   │  │   └── Dinic's
-│   │  ├── Minimum Cut 
-│   │  │   └── Karger's
-│   │  └── Maximum Bipartite
+│   ├── Network Flow
+│   │   ├── Maximum Flow
+│   │   │   ├── Push-Relabel
+│   │   │   ├── Ford-Fulkerson
+│   │   │   ├── Edmonds-Karp
+│   │   │   └── Dinic's
+│   │   ├── Minimum Cut 
+│   │   │   └── Karger's
+│   │   └── Maximum Bipartite
 │   ├── Sorting
 │   │ 	└── Topological Sort
 │   │       ├── Kahn
@@ -87,8 +87,8 @@ Need to prepare description.
 │   ├── Cycle Detection
 │   ├── Coloring
 │   ├── Bridges 
-│   ├── Hamiltonian Cycle
-│   └── Eulerian Path 
+│   ├── Hamilton Tour
+│   └── Euler Tour 
 ├── Recursion
 │   ├── Dynamic Programming
 │   │   ├── Dijkstra's
@@ -112,7 +112,7 @@ Need to prepare description.
 │   └── Kruskal's
 ├── Bit Manipulation
 ├── Randomized
-│   ├── Quick Sort
+│   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/QuickSort.java"><b>Quick Sort</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/randomized/FisherYatesShuffle.java"><b>Fisher-Yates Shuffle</b></a>
 │   ├── Randomized Selection
 │   ├── Las Vegas
@@ -207,7 +207,6 @@ Data Structures
 │   └── Segment Tree
 └── Graphs
     ├── Types
-    │   ├── Simple Graph
     │   ├── Directed Graph
     │   ├── Undirected Graph
     │   ├── Weighted Graph
@@ -217,8 +216,8 @@ Data Structures
     │   ├── Labeled Graph
     │   ├── Infinite Graph
     │   ├── Bipartite Graph
-    │   ├── Spanning Tree
     │   ├── Tree
+    │   ├── Spanning Tree
     │   └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/unionfind"><b>Union-Find</b></a>
     └── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/"><b>Representation in memory</b></a>
         ├── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/EdgeList.java"><b>Edge List</b></a>

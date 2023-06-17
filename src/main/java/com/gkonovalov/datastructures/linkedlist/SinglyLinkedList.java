@@ -1,6 +1,5 @@
 package com.gkonovalov.datastructures.linkedlist;
 
-import com.gkonovalov.datastructures.etc.ListNode;
 import java.util.Objects;
 
 /**

@@ -1,4 +1,4 @@
-package com.gkonovalov.datastructures.etc;
+package com.gkonovalov.datastructures.linkedlist;
 
 /**
  * Created by Georgiy Konovalov on 17/05/2023.

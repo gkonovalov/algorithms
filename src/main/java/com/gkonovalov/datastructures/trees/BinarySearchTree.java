@@ -1,7 +1,5 @@
 package com.gkonovalov.datastructures.trees;
 
-import com.gkonovalov.datastructures.etc.TreeNode;
-
 /**
  * Created by Georgiy Konovalov on 14/06/2023.
  * <p>

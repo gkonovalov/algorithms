@@ -1,7 +1,5 @@
 package com.gkonovalov.datastructures.trees.trie;
 
-import com.gkonovalov.datastructures.etc.TrieNode;
-
 import java.util.ArrayList;
 import java.util.List;
 

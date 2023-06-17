@@ -1,4 +1,4 @@
-package com.gkonovalov.datastructures.etc;
+package com.gkonovalov.datastructures.trees.trie;
 
 import java.util.HashMap;
 

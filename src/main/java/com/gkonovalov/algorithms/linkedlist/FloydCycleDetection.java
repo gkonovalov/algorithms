@@ -1,6 +1,6 @@
 package com.gkonovalov.algorithms.linkedlist;
 
-import com.gkonovalov.datastructures.etc.ListNode;
+import com.gkonovalov.datastructures.linkedlist.ListNode;
 
 /**
  * Created by Georgiy Konovalov on 15/05/2023.

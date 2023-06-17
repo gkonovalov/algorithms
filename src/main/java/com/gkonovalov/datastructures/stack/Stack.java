@@ -1,6 +1,6 @@
 package com.gkonovalov.datastructures.stack;
 
-import com.gkonovalov.datastructures.etc.ListNode;
+import com.gkonovalov.datastructures.linkedlist.ListNode;
 
 /**
  * Created by Georgiy Konovalov on 17/05/2023.

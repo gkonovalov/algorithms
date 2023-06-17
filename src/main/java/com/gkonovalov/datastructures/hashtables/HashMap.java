@@ -1,7 +1,5 @@
 package com.gkonovalov.datastructures.hashtables;
 
-import com.gkonovalov.datastructures.etc.MapNode;
-
 import java.util.ArrayDeque;
 import java.util.Queue;
 

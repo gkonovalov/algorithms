@@ -1,4 +1,4 @@
-package com.gkonovalov.datastructures.etc;
+package com.gkonovalov.datastructures.hashtables;
 
 /**
  * Created by Georgiy Konovalov on 15/06/2023.

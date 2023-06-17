@@ -1,6 +1,6 @@
 package com.gkonovalov.datastructures.queues;
 
-import com.gkonovalov.datastructures.etc.DoubleListNode;
+import com.gkonovalov.datastructures.linkedlist.DoubleListNode;
 
 /**
  * Created by Georgiy Konovalov on 17/05/2023.

@@ -75,8 +75,9 @@ public class HashSet<T> {
 
         set[hash] = null;
         rehashCluster(hash);
+        size--;
 
-        if (--size > 0 && size <= set.length / 8) {
+        if (size > 0 && size <= set.length / 8) {
             resize(set.length / 2);
         }
         return true;

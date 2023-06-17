@@ -45,6 +45,7 @@ public class HashMapTest {
 
         hashMap.put("a", 0);
         hashMap.put("a", 1);
+        assertEquals(hashMap.size(), 1);
 
         hashMap.put("b", 2);
         hashMap.put("c", 3);

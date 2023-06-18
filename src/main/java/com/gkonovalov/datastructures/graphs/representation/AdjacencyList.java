@@ -5,6 +5,12 @@ import java.util.*;
 /**
  * Created by Georgiy Konovalov on 15/05/2023.
  * <p>
+ * Examples of Adjacency List implementation.
+ * An adjacency list represents a graph as an array of lists or linked lists.
+ * Each vertex in the graph has an associated list that stores its neighboring vertices.
+ * For unweighted graphs, the lists contain the adjacent vertices. For weighted graphs,
+ * the lists may contain the adjacent vertices along with their corresponding edge weights.
+ * Sparse graphs with fewer edges are well-suited for this representation, as it saves space.
  * The Adjacency List representation is more efficient than the Adjacency Matrix,
  * especially for sparse graphs. Traversing the graph takes O(|V| + |E|) time complexity.
  * Also, adding or removing a Vertex or Edge is simpler and less expensive

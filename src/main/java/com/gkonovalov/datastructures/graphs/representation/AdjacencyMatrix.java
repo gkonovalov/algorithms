@@ -7,6 +7,10 @@ import java.util.Queue;
  * Created by Georgiy Konovalov on 15/05/2023.
  * <p>
  * Examples of Adjacency Matrix implementation.
+ * An adjacency matrix is a 2D matrix of size VxV, where V is the number of vertices in the graph.
+ * The entry at position (i, j) in the matrix indicates whether there is an edge between vertex i
+ * and vertex j. For unweighted graphs, the matrix contains 0 or 1. For weighted graphs, the matrix
+ * may contain the weight of the edge.
  * The Adjacency Matrix is more efficient and easier to implement for dense graphs
  * with many edges. Checking if an edge exists between two nodes is constant time, O(1).
  * However, the space complexity is O(n^2), which can be inefficient for sparse graphs
@@ -32,10 +36,8 @@ public class AdjacencyMatrix {
         };
 
         adjacencyMatrixDirected[0][1] = 1;
-        adjacencyMatrixDirected[1][1] = 1;
         adjacencyMatrixDirected[2][1] = 1;
         adjacencyMatrixDirected[3][2] = 1;
-
 
         return adjacencyMatrixDirected;
     }

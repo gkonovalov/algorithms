@@ -5,6 +5,11 @@ import java.util.*;
 /**
  * Created by Georgiy Konovalov on 15/05/2023.
  * <p>
+ * Examples of Edge List implementations.
+ * An edge list representation stores the edges of the graph as individual objects in a list or an array.
+ * Each edge object typically contains the source vertex, destination vertex, and possibly the weight or any
+ * other edge attributes. This representation is straightforward and efficient for certain graph algorithms,
+ * such as Kruskal's algorithm for minimum spanning trees.
  * The Edge List only stores information about the edges, while the Adjacency List
  * stores information about the vertices and their connections.
  * In the Edge List each edge is a pair of vertices (u, v), indicating that there is an edge

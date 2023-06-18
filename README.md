@@ -144,7 +144,7 @@ Need to prepare description.
 
 ## Data Structures
 <pre>
-Data Structures
+<a href="src/main/java/com/gkonovalov/datastructures/"><b>Data Structures</b></a>
 ├── <a href="src/main/java/com/gkonovalov/datastructures/arrays"><b>Arrays</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/datastructures/arrays/Array.java"><b>Array</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/datastructures/arrays/DynamicArray.java"><b>Dynamic Array</b></a>
@@ -198,7 +198,7 @@ Data Structures
 
 ## Coding Problems and Techniques
 <pre>
-Problems
+<a href="src/main/java/com/gkonovalov/problems/"><b>Problems</b></a>
 ├── Arrays
 │   ├── Prefix Sum
 │   ├── <a href="src/main/java/com/gkonovalov/problems/arrays/MaximumSubarray.java"><b>Max Subarray Sum</b></a>

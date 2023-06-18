@@ -9,10 +9,11 @@ import java.util.List;
  * Base block for the Graph construction.
  *
  * A graph is a data structure that consists of a set of vertices (also known as nodes or points)
- * connected by edges. It is a fundamental concept in computer science and mathematics, used to represent
- * relationships between objects or entities. There are several common representations of graphs, each with
- * its own advantages and disadvantages. The choice of representation depends on factors such as the size of
- * the graph, the type of operations to be performed, and the space and time complexity requirements.
+ * connected by edges. It is a fundamental concept in computer science and mathematics, used to
+ * represent relationships between objects or entities. There are several common representations
+ * of graphs, each with its own advantages and disadvantages. The choice of representation depends
+ * on factors such as the size of the graph, the type of operations to be performed, and the space
+ * and time complexity requirements.
  * Here are some commonly used representations of graphs:
  * Adjacency Matrix, Adjacency List, Edge List.
  *
@@ -21,10 +22,11 @@ import java.util.List;
  * Directed Graph, Undirected Graph, Weighted Graph, Unweighted Graph, Cyclic Graph, Acyclic Graph,
  * Labeled Graph, Infinite Graph, Bipartite Graph, Directed Acyclic Graph (DAG), Tree, Forest.
  *
- * The Graph Node based on Adjacency List representation which is more efficient than the Adjacency Matrix,
- * especially for sparse graphs. Traversing the graph takes O(|V| + |E|) time complexity. Also, adding or
- * removing a Vertex or Edge is simpler and less expensive than with an Adjacency Matrix. However, checking
- * if an Edge exists between two nodes takes O(degree(V)) time complexity which slower than with Adjacency Matrix.
+ * The Graph Node based on Adjacency List representation which is more efficient than the
+ * Adjacency Matrix, especially for sparse graphs. Traversing the graph takes O(|V| + |E|) time
+ * complexity. Also, adding or removing a Vertex or Edge is simpler and less expensive than with
+ * an Adjacency Matrix. However, checking if an Edge exists between two nodes takes O(degree(V))
+ * time complexity which slower than with Adjacency Matrix.
  * </p>
  * Runtime Complexity: O(1) - add Edge and add Vertex,
  *                     O(|V|+|E|) - removing a Vertex,

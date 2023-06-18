@@ -46,11 +46,11 @@ Need to prepare description.
 ├── <a href="src/main/java/com/gkonovalov/datastructures/trees/TreeNode.java"><b>Tree</b></a>
 │   └── <a href="src/main/java/com/gkonovalov/algorithms/tree/searching"><b>Searching</b></a>
 │       ├── <a href="src/main/java/com/gkonovalov/algorithms/tree/searching/DFS.java"><b>DFS</b></a>
-│       │   ├── <a href="src/main/java/com/gkonovalov/algorithms/tree/searching/DFS.java"><b>Pre-order traversal</b></a>
-│       │   ├── <a href="src/main/java/com/gkonovalov/algorithms/tree/searching/DFS.java"><b>In-order traversal</b></a>
-│       │   └── <a href="src/main/java/com/gkonovalov/algorithms/tree/searching/DFS.java"><b>Post-order traversal</b></a>
+│       │   ├── <a href="src/main/java/com/gkonovalov/algorithms/tree/searching/DFS.java#L28"><b>Pre-order traversal</b></a>
+│       │   ├── <a href="src/main/java/com/gkonovalov/algorithms/tree/searching/DFS.java#L57"><b>In-order traversal</b></a>
+│       │   └── <a href="src/main/java/com/gkonovalov/algorithms/tree/searching/DFS.java#L85"><b>Post-order traversal</b></a>
 │       ├── <a href="src/main/java/com/gkonovalov/algorithms/tree/searching/BFS.java"><b>BFS</b></a> 
-│       │   └── <a href="src/main/java/com/gkonovalov/algorithms/tree/searching/BFS.java"><b>Level-order traversal</b></a>
+│       │   └── <a href="src/main/java/com/gkonovalov/algorithms/tree/searching/BFS.java#L22"><b>Level-order traversal</b></a>
 │       └── Bidirectional Search
 ├── Graphs
 │   ├── Searching
@@ -88,29 +88,12 @@ Need to prepare description.
 │   ├── Coloring
 │   ├── Bridges 
 │   ├── Hamilton Tour
-│   └── Euler Tour 
-├── Recursion
-│   ├── Dynamic Programming
-│   │   ├── Dijkstra's
-│   │   ├── Bellman-Ford  
-│   │   ├── Floyd-Warshall 
-│   │   ├── Levenshtein Distance
-│   │   └── Approaches
-│   │       ├── Bottom-Up - Tabulation
-│   │       ├── Top-Down  - Memoization
-│   │       └── Half-and-Half
-│   └── Backtracking
-│       └── Combinatorics
-│           ├── Permutations
-│           ├── Combinations
-│           ├── Subsets
-│           └── Partitions
+│   └── Euler Tour
 ├── Greedy
 │   ├── Huffman Coding
 │   ├── Dijkstra's
 │   ├── Prim's
 │   └── Kruskal's
-├── Bit Manipulation
 ├── Randomized
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/QuickSort.java"><b>Quick Sort</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/randomized/FisherYatesShuffle.java"><b>Fisher-Yates Shuffle</b></a>
@@ -190,8 +173,8 @@ Data Structures
 │   │    └── Suffix Tree
 │   ├── <a href="src/main/java/com/gkonovalov/datastructures/trees/heaps"><b>Heaps</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/datastructures/trees/heaps/BinaryHeap.java"><b>Binary Heap - Priority Queue</b></a>
-│   │   │   ├── <a href="src/main/java/com/gkonovalov/datastructures/trees/heaps/BinaryHeap.java"><b>Min Heap</b></a>
-│   │   │   └── <a href="src/main/java/com/gkonovalov/datastructures/trees/heaps/BinaryHeap.java"><b>Max Heap</b></a>
+│   │   │   ├── <a href="src/main/java/com/gkonovalov/datastructures/trees/heaps/BinaryHeap.java#L124"><b>Min Heap</b></a>
+│   │   │   └── <a href="src/main/java/com/gkonovalov/datastructures/trees/heaps/BinaryHeap.java#L122"><b>Max Heap</b></a>
 │   │   └── Fibonacci Heaps
 │   ├── Self-balanced
 │   │   ├── AVL Tree
@@ -205,24 +188,11 @@ Data Structures
 │   ├── K-D Tree
 │   ├── Fenwick Tree
 │   └── Segment Tree
-└── Graphs
-    ├── Types
-    │   ├── Directed Graph
-    │   ├── Undirected Graph
-    │   ├── Weighted Graph
-    │   ├── Unweighted Graph
-    │   ├── Cyclic Graph
-    │   ├── Acyclic Graph
-    │   ├── Labeled Graph
-    │   ├── Infinite Graph
-    │   ├── Bipartite Graph
-    │   ├── Tree
-    │   ├── Spanning Tree
-    │   └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/unionfind"><b>Union-Find</b></a>
+└── <a href="src/main/java/com/gkonovalov/datastructures/graphs/GraphNode.java"><b>Graphs</b></a>
     └── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/"><b>Representation in memory</b></a>
-        ├── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/EdgeList.java"><b>Edge List</b></a>
+        ├── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/AdjacencyList.java"><b>Adjacency List</b></a>
         ├── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/AdjacencyMatrix.java"><b>Adjacency Matrix</b></a>
-        └── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/AdjacencyList.java"><b>Adjacency List</b></a>
+        └── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/EdgeList.java"><b>Edge List</b></a>
 </pre>
 
 
@@ -258,10 +228,18 @@ Problems
 ├── Graphs
 ├── Recursion
 │   ├── <a href="src/main/java/com/gkonovalov/problems/recursion/dp/"><b>Dynamic Programming</b></a>
+│   │   ├── Approaches
+│   │   │   ├── Bottom-Up - Tabulation
+│   │   │   ├── Top-Down  - Memoization
+│   │   │   └── Half-and-Half
 │   │   ├── <a href="src/main/java/com/gkonovalov/problems/recursion/dp/FibonacciNumbers.java"><b>Fibonacci Numbers</b></a>
 │   │   ├── Knapsack 0/1
 │   │   ├── Knapsack Unbounded
 │   │   ├── Traveling Salesman
+│   │   ├── Dijkstra's
+│   │   ├── Bellman-Ford  
+│   │   ├── Floyd-Warshall 
+│   │   ├── Levenshtein Distance
 │   │   ├── Regular Expression Matching
 │   │   ├── Longest Common Subsequence (LCS) 
 │   │   ├── Longest Increasing Subsequence (LIS) 
@@ -288,6 +266,11 @@ Problems
 │   │   ├── Maximum Product Subarray
 │   │   └── Coin Change
 │   └── Backtracking
+│       ├── Combinatorics
+│       │   ├── Permutations
+│       │   ├── Combinations
+│       │   ├── Subsets
+│       │   └── Partitions
 │       ├── N-Queens
 │       ├── Knight's Tour 
 │       ├── Sudoku Solver
@@ -301,6 +284,7 @@ Problems
 │   ├── Interval Scheduling
 │   ├── Job Scheduling 
 │   └── Coin Change
+├── Bit Manipulation
 └── NP-complete problems
      ├── Travelling Salesman
      ├── Knapsack

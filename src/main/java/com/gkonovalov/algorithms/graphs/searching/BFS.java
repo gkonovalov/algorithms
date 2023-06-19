@@ -1,7 +1,5 @@
 package com.gkonovalov.algorithms.graphs.searching;
 
-import com.gkonovalov.datastructures.graphs.GraphNode;
-
 import java.util.ArrayDeque;
 import java.util.List;
 import java.util.Queue;
@@ -30,17 +28,16 @@ import java.util.Queue;
  * as finding the shortest path in a maze. BFS performs better in this scenario because DFS is more likely
  * to explore a significant portion of the maze before reaching the goal, potentially wasting time.
  * </p>
- * Runtime Complexity: O(V+E) {@code searchInAdjList}, {@code searchInGraphNode}, {@code searchInMatrix}.
+ * Runtime Complexity: O(V+E) {@code search}.
  * Space Complexity: O(V).
  */
 public class BFS {
 
-    public boolean searchInAdjList(List<List<Integer>> adjacencyList, int findVertex) {
-        int numVertices = adjacencyList.size();
-        boolean[] visited = new boolean[numVertices];
+    public boolean search(List<List<Integer>> adjList, int startVertex, int findVertex) {
+        boolean[] visited = new boolean[adjList.size()];
 
         Queue<Integer> queue = new ArrayDeque<>();
-        queue.add(findVertex);
+        queue.add(startVertex);
 
         while (!queue.isEmpty()) {
             Integer fromVertex = queue.poll();
@@ -49,7 +46,7 @@ public class BFS {
                 return true;
             }
 
-            for (Integer toVertex : adjacencyList.get(findVertex)) {
+            for (Integer toVertex : adjList.get(fromVertex)) {
                 if (!visited[toVertex]) {
                     visited[toVertex] = true;
                     queue.add(toVertex);
@@ -59,30 +56,7 @@ public class BFS {
         return false;
     }
 
-    public boolean searchInGraphNode(GraphNode<Integer> node, int findVertex) {
-        node.visited = true;
-
-        Queue<GraphNode<Integer>> queue = new ArrayDeque<>();
-        queue.add(node);
-
-        while (!queue.isEmpty()) {
-            GraphNode<Integer> fromVertex = queue.poll();
-
-            if (fromVertex.value.equals(findVertex)) {
-                return true;
-            }
-
-            for (GraphNode<Integer> toVertex : fromVertex.neighbors) {
-                if (!toVertex.visited) {
-                    toVertex.visited = true;
-                    queue.add(toVertex);
-                }
-            }
-        }
-        return false;
-    }
-
-    public boolean searchInMatrix(int[][] adjMatrix, int startVertex, int findVertex) {
+    public boolean search(int[][] adjMatrix, int startVertex, int findVertex) {
         int numVertices = adjMatrix.length;
         boolean[] visited = new boolean[numVertices];
 

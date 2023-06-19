@@ -26,31 +26,24 @@ import java.util.*;
  */
 public class AdjacencyList {
 
-    public List<List<Integer>> getAdjacencyList() {
-        List<List<Integer>> adjacencyList = Arrays.asList(
-                Arrays.asList(1, 2),
-                Arrays.asList(0, 2, 3),
-                Arrays.asList(0, 1),
-                Arrays.asList(1, 3)
+    public List<List<Integer>> getAdjacencyListUndirected() {
+        List<List<Integer>> adjacencyList = List.of(
+                List.of(1, 2),
+                List.of(0, 2, 3),
+                List.of(0, 1),
+                List.of(1),
+                List.of(5),
+                List.of(4)
         );
         return adjacencyList;
     }
 
     public Map<Character, List<Character>> getAdjacencyListChars() {
-        Map<Character, List<Character>> adjacencyListChars = new HashMap<>() {{
-            put('a', new LinkedList<>() {{
-                add('b');
-                add('c');
-            }});
-            put('b', new LinkedList<>() {{
-                add('c');
-                add('e');
-            }});
-            put('c', new LinkedList<>() {{
-                add('a');
-                add('b');
-            }});
-        }};
+        Map<Character, List<Character>> adjacencyListChars = Map.of(
+                'a', List.of('b', 'c'),
+                'b', List.of('c', 'e'),
+                'c', List.of('a', 'b')
+        );
         return adjacencyListChars;
     }
 
@@ -67,28 +60,12 @@ public class AdjacencyList {
         return adjacencyListDirected;
     }
 
-    public List<List<Integer>> getAdjacencyListUndirected() {
-        List<List<Integer>> adjacencyListUndirected = new LinkedList<>();
-
-        for (int i = 0; i < 4; i++) {
-            adjacencyListUndirected.add(new LinkedList<>());
-        }
-
-        adjacencyListUndirected.get(1).add(0);
-        adjacencyListUndirected.get(0).add(1);
-
-        adjacencyListUndirected.get(2).add(3);
-        adjacencyListUndirected.get(3).add(2);
-
-        return adjacencyListUndirected;
-    }
-
-    public List<List<Integer[]>> getAdjacencyListWeighted() {
-        List<List<Integer[]>> adjacencyListWeighted = Arrays.asList(
-                Arrays.asList(new Integer[]{1, 65}, new Integer[]{1, 43}),
-                Arrays.asList(new Integer[]{0, 56}, new Integer[]{2, 22}, new Integer[]{3, 67}),
-                Arrays.asList(new Integer[]{2, 23}, new Integer[]{3, 65}),
-                Arrays.asList(new Integer[]{3, 78}, new Integer[]{3, 34})
+    public List<List<List<Integer>>> getAdjacencyListWeighted() {
+        List<List<List<Integer>>> adjacencyListWeighted = Arrays.asList(
+                List.of(List.of(1, 65), List.of(1, 43)),
+                List.of(List.of(0, 56), List.of(2, 22), List.of(3, 67)),
+                List.of(List.of(2, 23), List.of(3, 65)),
+                List.of(List.of(3, 78), List.of(3, 34))
         );
 
         return adjacencyListWeighted;
@@ -105,9 +82,7 @@ public class AdjacencyList {
         }
     }
 
-    private void dfs(List<List<Integer>> adjacencyList,
-                            boolean[] visited,
-                            int startVertex) {
+    private void dfs(List<List<Integer>> adjacencyList, boolean[] visited, int startVertex) {
         visited[startVertex] = true;
 
         for (Integer vertexTo : adjacencyList.get(startVertex)) {
@@ -130,9 +105,7 @@ public class AdjacencyList {
         }
     }
 
-    public void bfs(List<List<Integer>> adjacencyList,
-                           boolean[] visited,
-                           int startVertex) {
+    public void bfs(List<List<Integer>> adjacencyList, boolean[] visited, int startVertex) {
         Queue<Integer> queue = new ArrayDeque<>();
         queue.add(startVertex);
         visited[startVertex] = true;
@@ -153,7 +126,7 @@ public class AdjacencyList {
 
     public static void main(String[] args) {
         AdjacencyList al = new AdjacencyList();
-        List<List<Integer>> adjacencyList = al.getAdjacencyList();
+        List<List<Integer>> adjacencyList = al.getAdjacencyListUndirected();
 
         System.out.println("Example of DFS algorithm using an Adjacency List:");
         al.printRelationsDfs(adjacencyList);

@@ -43,26 +43,28 @@ public class AdjacencyMatrix {
     }
 
     public int[][] getAdjacencyMatrixUndirected() {
-        int[][] adjacencyMatrixUndirected = {
-                {0, 0, 0, 0},
-                {0, 0, 0, 0},
-                {0, 0, 0, 0},
-                {0, 0, 0, 0}
-        };
+        int[][] adjacencyMatrixUndirected = new int[6][6];
 
         adjacencyMatrixUndirected[0][1] = 1;
         adjacencyMatrixUndirected[1][0] = 1;
+
+        adjacencyMatrixUndirected[0][2] = 1;
+        adjacencyMatrixUndirected[2][0] = 1;
+
+        adjacencyMatrixUndirected[2][1] = 1;
+        adjacencyMatrixUndirected[1][2] = 1;
+
+        adjacencyMatrixUndirected[1][3] = 1;
+        adjacencyMatrixUndirected[3][1] = 1;
+
+        adjacencyMatrixUndirected[4][5] = 1;
+        adjacencyMatrixUndirected[5][4] = 1;
 
         return adjacencyMatrixUndirected;
     }
 
     public Integer[][] getAdjacencyMatrixWeighted() {
-        Integer[][] adjacencyMatrixWeighted = {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-        };
+        Integer[][] adjacencyMatrixWeighted = new Integer[4][4];
 
         adjacencyMatrixWeighted[0][1] = 54;
         adjacencyMatrixWeighted[1][0] = 54;

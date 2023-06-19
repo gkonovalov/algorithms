@@ -20,7 +20,7 @@ import java.util.*;
  *                     O(|E|) - removing a Edge,
  *                     O(|E|) - Edge between Vertices (checking for adjacency),
  *                     O(|V| + |E|) - traversing the graph.
- * Space Complexity:   O(|V|+|E|).
+ * Space Complexity:   O(|E|).
  */
 public class EdgeList {
 

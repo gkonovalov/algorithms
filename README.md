@@ -55,7 +55,7 @@ Need to prepare description.
 ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs"><b>Graphs</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching"><b>Searching</b></a>
 │   │ 	├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/DFS.java"><b>DFS</b></a> 
-│   │ 	│   └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/DFSId.java"><b>DFS-ID</b></a>
+│   │ 	│   └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/DFSID.java"><b>DFS-ID</b></a>
 │   │ 	├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/BFS.java"><b>BFS</b></a>
 │   │ 	├── Shortest Path
 │   │ 	│   ├── Dijkstra's

@@ -52,11 +52,11 @@ Need to prepare description.
 │       ├── <a href="src/main/java/com/gkonovalov/algorithms/tree/searching/BFS.java"><b>BFS</b></a> 
 │       │   └── <a href="src/main/java/com/gkonovalov/algorithms/tree/searching/BFS.java#L22"><b>Level-order traversal</b></a>
 │       └── Bidirectional Search
-├── Graphs
-│   ├── Searching
-│   │ 	├── DFS 
-│   │ 	│   └── DFS-ID
-│   │ 	├── BFS
+├── <a href="src/main/java/com/gkonovalov/algorithms/graphs"><b>Graphs</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching"><b>Searching</b></a>
+│   │ 	├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/DFS.java"><b>DFS</b></a> 
+│   │ 	│   └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/DFSId.java"><b>DFS-ID</b></a>
+│   │ 	├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/BFS.java"><b>BFS</b></a>
 │   │ 	├── Shortest Path
 │   │ 	│   ├── Dijkstra's
 │   │ 	│   ├── A-star
@@ -188,7 +188,7 @@ Need to prepare description.
 │   ├── K-D Tree
 │   ├── Fenwick Tree
 │   └── Segment Tree
-└── <a href="src/main/java/com/gkonovalov/datastructures/graphs/GraphNode.java"><b>Graphs</b></a>
+└── <a href="src/main/java/com/gkonovalov/datastructures/graphs/Graph.java"><b>Graphs</b></a>
     └── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/"><b>Representation in memory</b></a>
         ├── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/AdjacencyList.java"><b>Adjacency List</b></a>
         ├── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/AdjacencyMatrix.java"><b>Adjacency Matrix</b></a>

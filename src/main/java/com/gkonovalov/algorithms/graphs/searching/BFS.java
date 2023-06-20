@@ -25,7 +25,7 @@ import java.util.Queue;
  * It' can be less memory efficient when dealing with large trees that have a wide width. In situations
  * where the solution is likely to be near the root of the tree, a breadth-first search (BFS) may be more
  * efficient. However, if the tree is very deep and solutions are rare, a depth-first search (DFS) might
- * take an excessively long time, while BFS could provide faster results (ex. Web Crawler).
+ * take an excessively long time, while BFS could provide faster results.
  * BFS is particularly useful when the depth of the tree can vary or when a single answer is needed, such
  * as finding the shortest path in a maze. BFS performs better in this scenario because DFS is more likely
  * to explore a significant portion of the maze before reaching the goal, potentially wasting time.

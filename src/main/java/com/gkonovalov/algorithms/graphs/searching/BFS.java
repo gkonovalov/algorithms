@@ -30,7 +30,7 @@ import java.util.Queue;
  * as finding the shortest path in a maze. BFS performs better in this scenario because DFS is more likely
  * to explore a significant portion of the maze before reaching the goal, potentially wasting time.
  * </p>
- * Runtime Complexity: O(V+E) {@code search}.
+ * Runtime Complexity: O(V+E) {@code search}, {@code bfs}.
  * Space Complexity: O(V).
  */
 public class BFS {

@@ -35,7 +35,7 @@ import java.util.Queue;
  */
 public class BFS {
 
-    public void bfsExample(GraphNode<Integer> startVertex) {
+    private void bfsExample(GraphNode<Integer> startVertex) {
         Queue<GraphNode<Integer>> queue = new ArrayDeque<>();
         queue.add(startVertex);
 

@@ -1,5 +1,7 @@
 package com.gkonovalov.algorithms.graphs.searching;
 
+import com.gkonovalov.datastructures.graphs.representation.GraphNode;
+
 import java.util.ArrayDeque;
 import java.util.List;
 import java.util.Queue;
@@ -13,12 +15,12 @@ import java.util.Queue;
  * before moving to the next level.
  * BFS guarantees that all nodes reachable from the source node will be visited, and the algorithm
  * visits nodes in increasing order of their distance from the source node.
- *
+ * <p>
  * The algorithm can be used for finding the shortest path between two vertices, counting connected
  * components, checking bipartiteness, or exploring a graph level by level. It is particularly useful
  * for web crawling, as it allows indexing pages without going too deep, thereby avoiding excessive
  * resource usage.
- *
+ * <p>
  * BFS typically requires more memory compared to DFS, as it needs to maintain a queue of nodes to visit.
  * It' can be less memory efficient when dealing with large trees that have a wide width. In situations
  * where the solution is likely to be near the root of the tree, a breadth-first search (BFS) may be more
@@ -32,6 +34,22 @@ import java.util.Queue;
  * Space Complexity: O(V).
  */
 public class BFS {
+
+    public void bfs(GraphNode<Integer> startVertex) {
+        Queue<GraphNode<Integer>> queue = new ArrayDeque<>();
+        queue.add(startVertex);
+
+        while (!queue.isEmpty()) {
+            GraphNode<Integer> fromVertex = queue.poll();
+
+            for (GraphNode<Integer> toVertex : fromVertex.neighbors) {
+                if (!toVertex.visited) {
+                    toVertex.visited = true;
+                    queue.add(toVertex);
+                }
+            }
+        }
+    }
 
     public boolean search(List<List<Integer>> adjList, int startVertex, int findVertex) {
         boolean[] visited = new boolean[adjList.size()];

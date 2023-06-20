@@ -20,7 +20,7 @@ import java.util.Stack;
  * memory usage compared to BFS. Additionally, when it is known beforehand that the desired answer
  * is likely to be found deep within the tree, DFS is a better option than BFS.
  * </p>
- * Runtime Complexity: O(V+E) {@code pathRecursive}, {@code searchPreorderIterative}.
+ * Runtime Complexity: O(V+E) {@code dfs}, {@code pathRecursive}, {@code searchPreorderIterative}.
  * Space Complexity: O(V).
  */
 public class DFS {

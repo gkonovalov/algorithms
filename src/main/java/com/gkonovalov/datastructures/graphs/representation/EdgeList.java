@@ -16,35 +16,35 @@ import java.util.*;
  * from u to v in the graph.
  * </p>
  * Runtime Complexity: O(1) - add Edge and add Vertex,
- *                     O(|E|) - removing a Vertex,
- *                     O(|E|) - removing a Edge,
- *                     O(|E|) - Edge between Vertices (checking for adjacency),
- *                     O(|V| + |E|) - traversing the graph.
+ * O(|E|) - removing a Vertex,
+ * O(|E|) - removing a Edge,
+ * O(|E|) - Edge between Vertices (checking for adjacency),
+ * O(|V| + |E|) - traversing the graph.
  * Space Complexity:   O(|E|).
  */
 public class EdgeList {
 
     public List<List<Integer>> getEdgeListDirected() {
-        List<List<Integer>> edgeList = new ArrayList<>();
-        edgeList.add(Arrays.asList(0, 1));
-        edgeList.add(Arrays.asList(2, 5));
-
+        List<List<Integer>> edgeList = List.of(
+                List.of(0, 1),
+                List.of(2, 5)
+        );
         return edgeList;
     }
 
     public List<List<Integer>> getEdgeListUndirected() {
-        List<List<Integer>> edgeList = new ArrayList<>();
-        edgeList.add(Arrays.asList(0, 1));
-        edgeList.add(Arrays.asList(1, 0));
-
+        List<List<Integer>> edgeList = List.of(
+                List.of(0, 1),
+                List.of(1, 0)
+        );
         return edgeList;
     }
 
     public List<List<Integer>> getEdgeListWeighted() {
-        List<List<Integer>> edgeList = new ArrayList<>();
-        edgeList.add(Arrays.asList(0, 1, 300));
-        edgeList.add(Arrays.asList(2, 5, 150));
-
+        List<List<Integer>> edgeList = List.of(
+                List.of(0, 1, 200),
+                List.of(2, 5, 300)
+        );
         return edgeList;
     }
 

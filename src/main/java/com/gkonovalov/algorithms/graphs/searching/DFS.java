@@ -3,6 +3,7 @@ package com.gkonovalov.algorithms.graphs.searching;
 import com.gkonovalov.datastructures.graphs.representation.GraphNode;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Stack;
 
@@ -39,20 +40,25 @@ public class DFS {
 
     public List<Integer> pathRecursive(List<List<Integer>> adjList,
                                        Integer startVertex,
-                                       Integer findVertex) {
+                                       Integer endVertex) {
         List<Integer> path = new ArrayList<>();
-        boolean[] visited = new boolean[adjList.size()];
 
-        pathRecursive(adjList, path, visited, startVertex, findVertex);
+        searchRecursive(adjList, path, new boolean[adjList.size()], startVertex, endVertex);
 
         return path;
     }
 
-    private boolean pathRecursive(List<List<Integer>> adjList,
-                                  List<Integer> path,
-                                  boolean[] visited,
-                                  Integer fromVertex,
-                                  Integer findVertex) {
+    public boolean searchRecursive(List<List<Integer>> adjList,
+                                   Integer startVertex,
+                                   Integer findVertex) {
+        return searchRecursive(adjList, new ArrayList<>(), new boolean[adjList.size()], startVertex, findVertex);
+    }
+
+    private boolean searchRecursive(List<List<Integer>> adjList,
+                                    List<Integer> path,
+                                    boolean[] visited,
+                                    Integer fromVertex,
+                                    Integer findVertex) {
         path.add(fromVertex);
 
         if (fromVertex.equals(findVertex)) {
@@ -63,48 +69,19 @@ public class DFS {
 
         for (Integer toVertex : adjList.get(fromVertex)) {
             if (!visited[toVertex] &&
-                    pathRecursive(adjList, path, visited, toVertex, findVertex)) {
+                    searchRecursive(adjList, path, visited, toVertex, findVertex)) {
                 return true;
             }
         }
-
         path.remove(fromVertex);
-        return false;
-    }
 
-    public boolean searchRecursive(List<List<Integer>> adjList,
-                                   Integer startVertex,
-                                   Integer findVertex) {
-        boolean[] visited = new boolean[adjList.size()];
-
-        return searchRecursive(adjList, visited, startVertex, findVertex);
-    }
-
-    private boolean searchRecursive(List<List<Integer>> adjList,
-                                    boolean[] visited,
-                                    Integer fromVertex,
-                                    Integer findVertex) {
-        if (fromVertex.equals(findVertex)) {
-            return true;
-        }
-
-        visited[fromVertex] = true;
-
-        for (Integer toVertex : adjList.get(fromVertex)) {
-            if (!visited[toVertex] &&
-                    searchRecursive(adjList, visited, toVertex, findVertex)) {
-                return true;
-            }
-        }
         return false;
     }
 
     public boolean searchRecursive(int[][] adjMatrix,
                                    Integer startVertex,
                                    Integer findVertex) {
-        boolean[] visited = new boolean[adjMatrix.length];
-
-        return searchRecursive(adjMatrix, visited, startVertex, findVertex);
+        return searchRecursive(adjMatrix, new boolean[adjMatrix.length], startVertex, findVertex);
     }
 
     private boolean searchRecursive(int[][] adjMatrix,

@@ -78,12 +78,13 @@ Need to prepare description.
 │   │ 	└── Topological Sort
 │   │       ├── Kahn
 │   │       └── Tarjan 
-│   ├── Connectivity
-│   │   ├── Connected Components
+│   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/"><b>Connectivity</b></a>
+│   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/ConnectedComponents.java"><b>Connected Components</b></a>
 │   │   ├── Strongly Connected Component
 │   │   │   ├── Kusaraju
 │   │   │   └── Tarjan
 │   │   └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/unionfind"><b>Union-Find</b></a>
+│   ├── Is Bipartite
 │   ├── Cycle Detection
 │   ├── Coloring
 │   ├── Bridges 

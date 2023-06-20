@@ -1,5 +1,7 @@
 package com.gkonovalov.algorithms.graphs.searching;
 
+import com.gkonovalov.datastructures.graphs.representation.GraphNode;
+
 import java.util.List;
 import java.util.Stack;
 
@@ -22,6 +24,16 @@ import java.util.Stack;
  * Space Complexity: O(V).
  */
 public class DFS {
+
+    public void dfs(GraphNode<Integer> node) {
+        node.visited = true;
+
+        for (GraphNode<Integer> toVertex : node.neighbors) {
+            if (!toVertex.visited) {
+                dfs(toVertex);
+            }
+        }
+    }
 
     public boolean searchRecursive(List<List<Integer>> adjList,
                                    int startVertex,

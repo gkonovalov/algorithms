@@ -32,7 +32,11 @@ public class DFSTest {
     @Test
     @DisplayName("Testing DFS.pathRecursive with AdjacencyList")
     public void testPathRecursive() {
-        assertIterableEquals(List.of(0, 1, 3), dfs.pathRecursive(adjList.getAdjacencyListUndirected(), 0, 3));
+        List<Integer> noPath = dfs.pathRecursive(adjList.getAdjacencyListUndirected(), 0, 5);
+        List<Integer> hasPath = dfs.pathRecursive(adjList.getAdjacencyListUndirected(), 0, 3);
+
+        assertIterableEquals(List.of(), noPath);
+        assertIterableEquals(List.of(0, 1, 3), hasPath);
     }
 
     @Test

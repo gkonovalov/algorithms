@@ -38,8 +38,8 @@ public class DFS {
     }
 
     public List<Integer> pathRecursive(List<List<Integer>> adjList,
-                              int startVertex,
-                              int findVertex) {
+                                       Integer startVertex,
+                                       Integer findVertex) {
         List<Integer> path = new ArrayList<>();
         boolean[] visited = new boolean[adjList.size()];
 
@@ -51,11 +51,11 @@ public class DFS {
     private boolean pathRecursive(List<List<Integer>> adjList,
                                   List<Integer> path,
                                   boolean[] visited,
-                                  int fromVertex,
-                                  int findVertex) {
+                                  Integer fromVertex,
+                                  Integer findVertex) {
         path.add(fromVertex);
 
-        if (fromVertex == findVertex) {
+        if (fromVertex.equals(findVertex)) {
             return true;
         }
 
@@ -73,8 +73,8 @@ public class DFS {
     }
 
     public boolean searchRecursive(List<List<Integer>> adjList,
-                                   int startVertex,
-                                   int findVertex) {
+                                   Integer startVertex,
+                                   Integer findVertex) {
         boolean[] visited = new boolean[adjList.size()];
 
         return searchRecursive(adjList, visited, startVertex, findVertex);
@@ -82,9 +82,9 @@ public class DFS {
 
     private boolean searchRecursive(List<List<Integer>> adjList,
                                     boolean[] visited,
-                                    int fromVertex,
-                                    int findVertex) {
-        if (fromVertex == findVertex) {
+                                    Integer fromVertex,
+                                    Integer findVertex) {
+        if (fromVertex.equals(findVertex)) {
             return true;
         }
 
@@ -100,8 +100,8 @@ public class DFS {
     }
 
     public boolean searchRecursive(int[][] adjMatrix,
-                                   int startVertex,
-                                   int findVertex) {
+                                   Integer startVertex,
+                                   Integer findVertex) {
         boolean[] visited = new boolean[adjMatrix.length];
 
         return searchRecursive(adjMatrix, visited, startVertex, findVertex);
@@ -109,9 +109,9 @@ public class DFS {
 
     private boolean searchRecursive(int[][] adjMatrix,
                                     boolean[] visited,
-                                    int fromVertex,
-                                    int findVertex) {
-        if (fromVertex == findVertex) {
+                                    Integer fromVertex,
+                                    Integer findVertex) {
+        if (fromVertex.equals(findVertex)) {
             return true;
         }
 
@@ -129,8 +129,8 @@ public class DFS {
     }
 
     public boolean searchPreorderIterative(List<List<Integer>> adjList,
-                                           int startVertex,
-                                           int findVertex) {
+                                           Integer startVertex,
+                                           Integer findVertex) {
         boolean[] visited = new boolean[adjList.size()];
 
         Stack<Integer> stack = new Stack<>();
@@ -139,7 +139,7 @@ public class DFS {
         while (!stack.isEmpty()) {
             Integer fromVertex = stack.pop();
 
-            if (fromVertex == findVertex) {
+            if (fromVertex.equals(findVertex)) {
                 return true;
             }
 

@@ -20,15 +20,15 @@ import java.util.Stack;
  * memory usage compared to BFS. Additionally, when it is known beforehand that the desired answer
  * is likely to be found deep within the tree, DFS is a better option than BFS.
  * </p>
- * Runtime Complexity: O(V+E) {@code dfsExample}, {@code pathRecursive}, {@code searchPreorderIterative}.
+ * Runtime Complexity: O(V+E) {@code dfsExample}, {@code searchRecursive}, {@code searchPreorderIterative}.
  * Space Complexity: O(V).
  */
 public class DFS {
 
-    private void dfsExample(GraphNode<Integer> node) {
-        node.visited = true;
+    private void dfsExample(GraphNode<Integer> graphNode) {
+        graphNode.visited = true;
 
-        for (GraphNode<Integer> toVertex : node.neighbors) {
+        for (GraphNode<Integer> toVertex : graphNode.neighbors) {
             if (!toVertex.visited) {
                 dfsExample(toVertex);
             }
@@ -70,7 +70,7 @@ public class DFS {
         return searchRecursive(adjMatrix, visited, startVertex, findVertex);
     }
 
-    private boolean searchRecursive(int[][] matrix,
+    private boolean searchRecursive(int[][] adjMatrix,
                                     boolean[] visited,
                                     int fromVertex,
                                     int findVertex) {
@@ -80,10 +80,10 @@ public class DFS {
 
         visited[fromVertex] = true;
 
-        for (int toVertex = 0; toVertex < matrix[fromVertex].length; toVertex++) {
+        for (int toVertex = 0; toVertex < adjMatrix[fromVertex].length; toVertex++) {
             if (!visited[toVertex] &&
-                    matrix[fromVertex][toVertex] == 1 &&
-                    searchRecursive(matrix, visited, toVertex, findVertex)) {
+                    adjMatrix[fromVertex][toVertex] == 1 &&
+                    searchRecursive(adjMatrix, visited, toVertex, findVertex)) {
                 return true;
             }
         }

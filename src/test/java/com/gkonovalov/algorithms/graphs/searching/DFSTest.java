@@ -6,6 +6,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
@@ -25,6 +27,12 @@ public class DFSTest {
         this.dfs = new DFS();
         this.adjList = new AdjacencyList();
         this.adjMatrix = new AdjacencyMatrix();
+    }
+
+    @Test
+    @DisplayName("Testing DFS.pathRecursive with AdjacencyList")
+    public void testPathRecursive() {
+        assertIterableEquals(List.of(0, 1, 3), dfs.pathRecursive(adjList.getAdjacencyListUndirected(), 0, 3));
     }
 
     @Test

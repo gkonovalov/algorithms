@@ -2,6 +2,7 @@ package com.gkonovalov.algorithms.graphs.searching;
 
 import com.gkonovalov.datastructures.graphs.representation.GraphNode;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
@@ -20,7 +21,8 @@ import java.util.Stack;
  * memory usage compared to BFS. Additionally, when it is known beforehand that the desired answer
  * is likely to be found deep within the tree, DFS is a better option than BFS.
  * </p>
- * Runtime Complexity: O(V+E) {@code dfsExample}, {@code searchRecursive}, {@code searchPreorderIterative}.
+ * Runtime Complexity: O(V+E) {@code dfsExample}, {@code pathRecursive},
+ *                            {@code searchRecursive}, {@code searchPreorderIterative}.
  * Space Complexity: O(V).
  */
 public class DFS {
@@ -33,6 +35,41 @@ public class DFS {
                 dfsExample(toVertex);
             }
         }
+    }
+
+    public List<Integer> pathRecursive(List<List<Integer>> adjList,
+                              int startVertex,
+                              int findVertex) {
+        List<Integer> path = new ArrayList<>();
+        boolean[] visited = new boolean[adjList.size()];
+
+        pathRecursive(adjList, path, visited, startVertex, findVertex);
+
+        return path;
+    }
+
+    private boolean pathRecursive(List<List<Integer>> adjList,
+                                  List<Integer> path,
+                                  boolean[] visited,
+                                  int fromVertex,
+                                  int findVertex) {
+        path.add(fromVertex);
+
+        if (fromVertex == findVertex) {
+            return true;
+        }
+
+        visited[fromVertex] = true;
+
+        for (Integer toVertex : adjList.get(fromVertex)) {
+            if (!visited[toVertex] &&
+                    pathRecursive(adjList, path, visited, toVertex, findVertex)) {
+                return true;
+            }
+        }
+
+        path.remove(fromVertex);
+        return false;
     }
 
     public boolean searchRecursive(List<List<Integer>> adjList,

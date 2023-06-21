@@ -85,8 +85,8 @@ Need to prepare description.
 │   │   │   └── Tarjan
 │   │   └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/unionfind"><b>Union-Find</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/CycleDetection.java"><b>Cycle Detection</b></a>
-│   ├── Is Bipartite
-│   ├── Coloring
+│   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/Bipartite.java"><b>Is Bipartite</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/Coloring.java"><b>Coloring</b></a>
 │   ├── Bridges 
 │   ├── Eulerian Cycle
 │   ├── Eulerian Path

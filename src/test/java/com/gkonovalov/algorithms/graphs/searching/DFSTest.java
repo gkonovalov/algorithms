@@ -32,8 +32,8 @@ public class DFSTest {
     @Test
     @DisplayName("Testing DFS.pathRecursive with AdjacencyList")
     public void testPathRecursive() {
-        List<Integer> noPath = dfs.pathRecursive(adjList.getAdjacencyListUndirected(), 0, 5);
-        List<Integer> hasPath = dfs.pathRecursive(adjList.getAdjacencyListUndirected(), 0, 3);
+        List<Integer> noPath = dfs.pathRecursive(adjList.getAdjacencyListUndirected(true), 0, 5);
+        List<Integer> hasPath = dfs.pathRecursive(adjList.getAdjacencyListUndirected(true), 0, 3);
 
         assertIterableEquals(List.of(), noPath);
         assertIterableEquals(List.of(0, 1, 3), hasPath);
@@ -42,8 +42,8 @@ public class DFSTest {
     @Test
     @DisplayName("Testing DFS.searchRecursive with AdjacencyList")
     public void testSearchRecursive() {
-        assertTrue(dfs.searchRecursive(adjList.getAdjacencyListUndirected(), 0, 3));
-        assertFalse(dfs.searchRecursive(adjList.getAdjacencyListUndirected(), 0, 4));
+        assertTrue(dfs.searchRecursive(adjList.getAdjacencyListUndirected(true), 0, 3));
+        assertFalse(dfs.searchRecursive(adjList.getAdjacencyListUndirected(true), 0, 4));
     }
 
     @Test
@@ -56,7 +56,7 @@ public class DFSTest {
     @Test
     @DisplayName("Testing DFS.searchPreorderIterative with AdjacencyList")
     public void testSearchPreorderIterative() {
-        assertTrue(dfs.searchPreorderIterative(adjList.getAdjacencyListUndirected(), 0, 3));
-        assertFalse(dfs.searchPreorderIterative(adjList.getAdjacencyListUndirected(), 0, 4));
+        assertTrue(dfs.searchPreorderIterative(adjList.getAdjacencyListUndirected(true), 0, 3));
+        assertFalse(dfs.searchPreorderIterative(adjList.getAdjacencyListUndirected(true), 0, 4));
     }
 }

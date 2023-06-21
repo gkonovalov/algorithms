@@ -26,16 +26,50 @@ import java.util.*;
  */
 public class AdjacencyList {
 
-    public List<List<Integer>> getAdjacencyListUndirected() {
-        List<List<Integer>> adjacencyList = List.of(
-                List.of(1, 2),
-                List.of(0, 2, 3),
-                List.of(0, 1),
-                List.of(1),
-                List.of(5),
-                List.of(4)
-        );
-        return adjacencyList;
+    public List<List<Integer>> getAdjacencyListUndirected(boolean isHasCycle) {
+        List<List<Integer>> adjacencyListUndirected = new ArrayList<>();
+
+        for (int i = 0; i <= 5; i++) {
+            adjacencyListUndirected.add(new ArrayList<>());
+        }
+
+        adjacencyListUndirected.get(0).add(1);
+        adjacencyListUndirected.get(1).add(0);
+
+        adjacencyListUndirected.get(0).add(2);
+        adjacencyListUndirected.get(2).add(0);
+
+        adjacencyListUndirected.get(1).add(3);
+        adjacencyListUndirected.get(3).add(1);
+
+        adjacencyListUndirected.get(4).add(5);
+        adjacencyListUndirected.get(5).add(4);
+
+        if (isHasCycle) {
+            adjacencyListUndirected.get(0).add(3);
+            adjacencyListUndirected.get(3).add(0);//cycle
+        }
+
+        return adjacencyListUndirected;
+    }
+
+    public List<List<Integer>> getAdjacencyListDirected(boolean isHasCycle) {
+        List<List<Integer>> adjacencyListDirected = new LinkedList<>();
+
+        for (int i = 0; i <= 4; i++) {
+            adjacencyListDirected.add(new LinkedList<>());
+        }
+
+        adjacencyListDirected.get(0).add(1);
+        adjacencyListDirected.get(0).add(2);
+        adjacencyListDirected.get(1).add(4);
+        adjacencyListDirected.get(1).add(3);
+
+        if (isHasCycle) {
+            adjacencyListDirected.get(3).add(0);
+        }
+
+        return adjacencyListDirected;
     }
 
     public Map<Character, List<Character>> getAdjacencyListChars() {
@@ -45,19 +79,6 @@ public class AdjacencyList {
                 'c', List.of('a', 'b')
         );
         return adjacencyListChars;
-    }
-
-    public List<List<Integer>> getAdjacencyListDirected() {
-        List<List<Integer>> adjacencyListDirected = new LinkedList<>();
-
-        for (int i = 0; i < 4; i++) {
-            adjacencyListDirected.add(new LinkedList<>());
-        }
-
-        adjacencyListDirected.get(1).add(0);
-        adjacencyListDirected.get(2).add(3);
-
-        return adjacencyListDirected;
     }
 
     public List<List<List<Integer>>> getAdjacencyListWeighted() {
@@ -126,7 +147,7 @@ public class AdjacencyList {
 
     public static void main(String[] args) {
         AdjacencyList al = new AdjacencyList();
-        List<List<Integer>> adjacencyList = al.getAdjacencyListUndirected();
+        List<List<Integer>> adjacencyList = al.getAdjacencyListUndirected(false);
 
         System.out.println("Example of DFS algorithm using an Adjacency List:");
         al.printRelationsDfs(adjacencyList);

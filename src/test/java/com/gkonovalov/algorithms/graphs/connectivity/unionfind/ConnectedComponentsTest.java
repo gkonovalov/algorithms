@@ -31,7 +31,7 @@ public class ConnectedComponentsTest {
     @Test
     @DisplayName("Testing ConnectedComponents.countConnectedComponentsDfs with AdjacencyList")
     public void testCountConnectedComponentsDfs() {
-        assertEquals(cc.countConnectedComponentsDfs(adjList.getAdjacencyListUndirected()), 2);
+        assertEquals(cc.countConnectedComponentsDfs(adjList.getAdjacencyListUndirected(true)), 2);
     }
 
     @Test

@@ -84,12 +84,14 @@ Need to prepare description.
 │   │   │   ├── Kusaraju
 │   │   │   └── Tarjan
 │   │   └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/unionfind"><b>Union-Find</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/CycleDetection.java"><b>Cycle Detection</b></a>
 │   ├── Is Bipartite
-│   ├── Cycle Detection
 │   ├── Coloring
 │   ├── Bridges 
-│   ├── Hamilton Tour
-│   └── Euler Tour
+│   ├── Eulerian Cycle
+│   ├── Eulerian Path
+│   ├── Eulerian Tour
+│   └── Hamiltonian Cycle
 ├── Greedy
 │   ├── Huffman Coding
 │   ├── Dijkstra's

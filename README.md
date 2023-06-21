@@ -86,7 +86,7 @@ Need to prepare description.
 │   │   └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/unionfind"><b>Union-Find</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/CycleDetection.java"><b>Cycle Detection</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/Bipartite.java"><b>Is Bipartite</b></a>
-│   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/MColoring.java"><b>Coloring</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/MColoring.java"><b>Graph coloring</b></a>
 │   ├── Eulerian Cycle
 │   ├── Eulerian Path
 │   ├── Eulerian Tour

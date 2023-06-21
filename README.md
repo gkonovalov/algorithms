@@ -87,7 +87,6 @@ Need to prepare description.
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/CycleDetection.java"><b>Cycle Detection</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/Bipartite.java"><b>Is Bipartite</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/MColoring.java"><b>Coloring</b></a>
-│   ├── Bridges 
 │   ├── Eulerian Cycle
 │   ├── Eulerian Path
 │   ├── Eulerian Tour

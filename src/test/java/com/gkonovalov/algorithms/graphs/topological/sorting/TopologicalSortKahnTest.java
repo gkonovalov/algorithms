@@ -1,11 +1,10 @@
-package com.gkonovalov.algorithms.graphs.sorting;
+package com.gkonovalov.algorithms.graphs.topological.sorting;
 
+import com.gkonovalov.algorithms.graphs.topological.sorting.TopologicalSortKahn;
 import com.gkonovalov.datastructures.graphs.representation.AdjacencyList;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 

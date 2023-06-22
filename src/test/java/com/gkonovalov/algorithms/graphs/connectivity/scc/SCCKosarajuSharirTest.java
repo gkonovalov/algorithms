@@ -1,7 +1,6 @@
 package com.gkonovalov.algorithms.graphs.connectivity.scc;
 
 
-import com.gkonovalov.algorithms.graphs.connectivity.scc.SCCKosarajuSharir;
 import com.gkonovalov.datastructures.graphs.representation.AdjacencyList;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -25,7 +24,7 @@ public class SCCKosarajuSharirTest {
     @BeforeEach
     public void setUp() {
         AdjacencyList adjList = new AdjacencyList();
-        this.scc = new SCCKosarajuSharir(adjList.getAdjacencyListDirected(true));
+        this.scc = new SCCKosarajuSharir(adjList.getGraphDirected(true));
     }
 
     @Test

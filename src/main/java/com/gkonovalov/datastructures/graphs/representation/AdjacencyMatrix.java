@@ -27,7 +27,7 @@ import java.util.Queue;
  */
 public class AdjacencyMatrix {
 
-    public boolean[][] getAdjacencyMatrixDirected() {
+    public boolean[][] getGraphDirected() {
         boolean[][] adjacencyMatrixDirected = {
                 {false, false, false, false},
                 {false, false, false, false},
@@ -42,7 +42,7 @@ public class AdjacencyMatrix {
         return adjacencyMatrixDirected;
     }
 
-    public boolean[][] getAdjacencyMatrixUndirected() {
+    public boolean[][] getGraphUndirected() {
         boolean[][] adjacencyMatrixUndirected = new boolean[6][6];
 
         adjacencyMatrixUndirected[0][1] = true;
@@ -63,7 +63,7 @@ public class AdjacencyMatrix {
         return adjacencyMatrixUndirected;
     }
 
-    public Integer[][] getAdjacencyMatrixWeighted() {
+    public Integer[][] getGraphWeighted() {
         Integer[][] adjacencyMatrixWeighted = new Integer[4][4];
 
         adjacencyMatrixWeighted[0][1] = 54;
@@ -135,7 +135,7 @@ public class AdjacencyMatrix {
 
     public static void main(String[] args) {
         AdjacencyMatrix am = new AdjacencyMatrix();
-        boolean[][] adjacencyMatrix = am.getAdjacencyMatrixDirected();
+        boolean[][] adjacencyMatrix = am.getGraphDirected();
 
         System.out.println("Example of DFS algorithm using an Adjacency Matrix:");
         am.printRelationsDfs(adjacencyMatrix);

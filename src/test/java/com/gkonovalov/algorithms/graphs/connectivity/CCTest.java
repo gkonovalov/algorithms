@@ -11,36 +11,36 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * Created by Georgiy Konovalov on 18/06/2023.
  * <p>
- * Tests for {@link ConnectedComponents}.
+ * Tests for {@link CC}.
  * </p
  */
-public class ConnectedComponentsTest {
+public class CCTest {
 
-    private ConnectedComponents cc;
+    private CC cc;
     private AdjacencyList adjList;
     private AdjacencyMatrix adjMatrix;
 
     @BeforeEach
     public void setUp() {
-        this.cc = new ConnectedComponents();
+        this.cc = new CC();
         this.adjList = new AdjacencyList();
         this.adjMatrix = new AdjacencyMatrix();
     }
 
     @Test
-    @DisplayName("Testing ConnectedComponents.countConnectedComponentsDfs with AdjacencyList")
+    @DisplayName("Testing CC.countConnectedComponentsDfs with AdjacencyList")
     public void testCountConnectedComponentsDfs() {
         assertEquals(cc.countConnectedComponentsDfs(adjList.getAdjacencyListUndirected(true)), 2);
     }
 
     @Test
-    @DisplayName("Testing ConnectedComponents.countConnectedComponentsBfs with AdjacencyMatrix")
+    @DisplayName("Testing CC.countConnectedComponentsBfs with AdjacencyMatrix")
     public void testCountConnectedComponentsBFS() {
         assertEquals(cc.countConnectedComponentsBfs(adjMatrix.getAdjacencyMatrixUndirected()), 2);
     }
 
     @Test
-    @DisplayName("Testing ConnectedComponents.countConnectedComponentsDfs with AdjacencyMatrix")
+    @DisplayName("Testing CC.countConnectedComponentsDfs with AdjacencyMatrix")
     public void testCountConnectedComponentsDfs2() {
         assertEquals(cc.countConnectedComponentsDfs(adjMatrix.getAdjacencyMatrixUndirected()), 2);
     }

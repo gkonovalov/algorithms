@@ -23,7 +23,7 @@ import java.util.Queue;
  * Runtime Complexity: O(V+E) {@code countConnectedComponentsDfs}, {@code countConnectedComponentsBfs}
  * Space Complexity: O(V).
  */
-public class ConnectedComponents {
+public class CC {
 
     public int countConnectedComponentsDfs(List<List<Integer>> adjList) {
         int numVertices = adjList.size();

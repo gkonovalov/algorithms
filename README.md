@@ -57,14 +57,14 @@ Need to prepare description.
 │   │ 	├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/DFS.java"><b>DFS</b></a> 
 │   │ 	│   └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/DFSID.java"><b>DFS-ID</b></a>
 │   │ 	├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/BFS.java"><b>BFS</b></a>
-│   │ 	├── Shortest Path
-│   │ 	│   ├── Dijkstra's
+│   │ 	├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath"><b>Shortest Path</b></a>
+│   │ 	│   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath/Dijkstra.java"><b>Dijkstra's</b></a>
 │   │ 	│   ├── A-star
 │   │ 	│   ├── Bellman–Ford
 │   │ 	│   └──	Floyd-Warshall
-│   │ 	└── Minimum Spanning Tree
-│   │ 	    ├── Prim’s 
-│   │ 	    └── Kruskal’s
+│   │ 	└── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/mst"><b>Minimum Spanning Tree</b></a>
+│   │ 	    ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/mst/MSTPrim.java"><b>Prim’s </b></a>
+│   │ 	    └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/mst/MSTKruskal.java"><b>Kruskal’s</b></a>
 │   ├── Network Flow
 │   │   ├── Maximum Flow
 │   │   │   ├── Push-Relabel
@@ -79,7 +79,7 @@ Need to prepare description.
 │   │       ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/sorting/TopologicalSortKahn.java"><b>Kahn's</b></a>
 │   │       └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/sorting/TopologicalSortTarjan.java"><b>Tarjan's</b></a> 
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/"><b>Connectivity</b></a>
-│   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/ConnectedComponents.java"><b>Connected Components</b></a>
+│   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/CC.java"><b>Connected Components</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/"><b>Strongly Connected Components</b></a>
 │   │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/SCCKosarajuSharir.java"><b>Kosaraju-Sharir's</b></a>
 │   │   │   └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/SCCTarjan.java"><b>Tarjan's</b></a>

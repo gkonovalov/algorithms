@@ -49,7 +49,7 @@ public class ConnectedComponents {
         }
     }
 
-    public int countConnectedComponentsDfs(int[][] matrix) {
+    public int countConnectedComponentsDfs(boolean[][] matrix) {
         int numVertices = matrix.length;
         boolean[] visited = new boolean[numVertices];
         int components = 0;
@@ -64,16 +64,16 @@ public class ConnectedComponents {
         return components;
     }
 
-    private void dfs(int[][] matrix, boolean[] visited, int fromVertex) {
+    private void dfs(boolean[][] matrix, boolean[] visited, int fromVertex) {
         visited[fromVertex] = true;
         for (int toVertex = 0; toVertex < matrix[fromVertex].length; toVertex++) {
-            if (!visited[toVertex] && matrix[fromVertex][toVertex] == 1) {
+            if (!visited[toVertex] && matrix[fromVertex][toVertex]) {
                 dfs(matrix, visited, toVertex);
             }
         }
     }
 
-    public int countConnectedComponentsBfs(int[][] matrix) {
+    public int countConnectedComponentsBfs(boolean[][] matrix) {
         int numVertices = matrix.length;
         boolean[] visited = new boolean[numVertices];
         int components = 0;
@@ -88,7 +88,7 @@ public class ConnectedComponents {
         return components;
     }
 
-    public void bfs(int[][] matrix, boolean[] visited, int startVertex) {
+    public void bfs(boolean[][] matrix, boolean[] visited, int startVertex) {
         Queue<Integer> queue = new LinkedList<>();
         queue.add(startVertex);
 
@@ -97,7 +97,7 @@ public class ConnectedComponents {
             visited[fromVertex] = true;
 
             for (int toVertex = 0; toVertex < matrix.length; toVertex++) {
-                if (matrix[fromVertex][toVertex] == 1 && !visited[toVertex]) {
+                if (matrix[fromVertex][toVertex] && !visited[toVertex]) {
                     queue.add(toVertex);
                 }
             }

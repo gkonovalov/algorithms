@@ -78,13 +78,13 @@ public class DFS {
         return false;
     }
 
-    public boolean searchRecursive(int[][] adjMatrix,
+    public boolean searchRecursive(boolean[][] adjMatrix,
                                    Integer startVertex,
                                    Integer findVertex) {
         return searchRecursive(adjMatrix, new boolean[adjMatrix.length], startVertex, findVertex);
     }
 
-    private boolean searchRecursive(int[][] adjMatrix,
+    private boolean searchRecursive(boolean[][] adjMatrix,
                                     boolean[] visited,
                                     Integer fromVertex,
                                     Integer findVertex) {
@@ -96,7 +96,7 @@ public class DFS {
 
         for (int toVertex = 0; toVertex < adjMatrix[fromVertex].length; toVertex++) {
             if (!visited[toVertex] &&
-                    adjMatrix[fromVertex][toVertex] == 1 &&
+                    adjMatrix[fromVertex][toVertex] &&
                     searchRecursive(adjMatrix, visited, toVertex, findVertex)) {
                 return true;
             }

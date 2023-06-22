@@ -27,38 +27,38 @@ import java.util.Queue;
  */
 public class AdjacencyMatrix {
 
-    public int[][] getAdjacencyMatrixDirected() {
-        int[][] adjacencyMatrixDirected = {
-                {0, 0, 0, 0},
-                {0, 0, 0, 0},
-                {0, 0, 0, 0},
-                {0, 0, 0, 0}
+    public boolean[][] getAdjacencyMatrixDirected() {
+        boolean[][] adjacencyMatrixDirected = {
+                {false, false, false, false},
+                {false, false, false, false},
+                {false, false, false, false},
+                {false, false, false, false}
         };
 
-        adjacencyMatrixDirected[0][1] = 1;
-        adjacencyMatrixDirected[2][1] = 1;
-        adjacencyMatrixDirected[3][2] = 1;
+        adjacencyMatrixDirected[0][1] = true;
+        adjacencyMatrixDirected[2][1] = true;
+        adjacencyMatrixDirected[3][2] = true;
 
         return adjacencyMatrixDirected;
     }
 
-    public int[][] getAdjacencyMatrixUndirected() {
-        int[][] adjacencyMatrixUndirected = new int[6][6];
+    public boolean[][] getAdjacencyMatrixUndirected() {
+        boolean[][] adjacencyMatrixUndirected = new boolean[6][6];
 
-        adjacencyMatrixUndirected[0][1] = 1;
-        adjacencyMatrixUndirected[1][0] = 1;
+        adjacencyMatrixUndirected[0][1] = true;
+        adjacencyMatrixUndirected[1][0] = true;
 
-        adjacencyMatrixUndirected[0][2] = 1;
-        adjacencyMatrixUndirected[2][0] = 1;
+        adjacencyMatrixUndirected[0][2] = true;
+        adjacencyMatrixUndirected[2][0] = true;
 
-        adjacencyMatrixUndirected[2][1] = 1;
-        adjacencyMatrixUndirected[1][2] = 1;
+        adjacencyMatrixUndirected[2][1] = true;
+        adjacencyMatrixUndirected[1][2] = true;
 
-        adjacencyMatrixUndirected[1][3] = 1;
-        adjacencyMatrixUndirected[3][1] = 1;
+        adjacencyMatrixUndirected[1][3] = true;
+        adjacencyMatrixUndirected[3][1] = true;
 
-        adjacencyMatrixUndirected[4][5] = 1;
-        adjacencyMatrixUndirected[5][4] = 1;
+        adjacencyMatrixUndirected[4][5] = true;
+        adjacencyMatrixUndirected[5][4] = true;
 
         return adjacencyMatrixUndirected;
     }
@@ -75,7 +75,7 @@ public class AdjacencyMatrix {
         return adjacencyMatrixWeighted;
     }
 
-    public void printRelationsDfs(int[][] adjMatrix) {
+    public void printRelationsDfs(boolean[][] adjMatrix) {
         int numVertices = adjMatrix.length;
         boolean[] visited = new boolean[numVertices];
 
@@ -86,11 +86,11 @@ public class AdjacencyMatrix {
         }
     }
 
-    private void dfs(int[][] matrix, boolean[] visited, int startVertex) {
+    private void dfs(boolean[][] matrix, boolean[] visited, int startVertex) {
         visited[startVertex] = true;
 
         for (int toVertex = 0; toVertex < matrix[startVertex].length; toVertex++) {
-            if (matrix[startVertex][toVertex] == 1) {
+            if (matrix[startVertex][toVertex]) {
                 System.out.println(startVertex + "->" + toVertex);
 
                 if (!visited[toVertex]) {
@@ -100,7 +100,7 @@ public class AdjacencyMatrix {
         }
     }
 
-    public void printRelationsBfs(int[][] adjMatrix) {
+    public void printRelationsBfs(boolean[][] adjMatrix) {
         int numVertices = adjMatrix.length;
         boolean[] visited = new boolean[numVertices];
 
@@ -111,7 +111,7 @@ public class AdjacencyMatrix {
         }
     }
 
-    private void bfs(int[][] matrix, boolean[] visited, int startVertex) {
+    private void bfs(boolean[][] matrix, boolean[] visited, int startVertex) {
         Queue<Integer> queue = new ArrayDeque<>();
         queue.add(startVertex);
 
@@ -121,7 +121,7 @@ public class AdjacencyMatrix {
             int fromVertex = queue.poll();
 
             for (int toVertex = 0; toVertex < matrix[fromVertex].length; toVertex++) {
-                if (matrix[fromVertex][toVertex] == 1) {
+                if (matrix[fromVertex][toVertex]) {
                     System.out.println(fromVertex + "->" + toVertex);
 
                     if (!visited[fromVertex]) {
@@ -135,7 +135,7 @@ public class AdjacencyMatrix {
 
     public static void main(String[] args) {
         AdjacencyMatrix am = new AdjacencyMatrix();
-        int[][] adjacencyMatrix = am.getAdjacencyMatrixDirected();
+        boolean[][] adjacencyMatrix = am.getAdjacencyMatrixDirected();
 
         System.out.println("Example of DFS algorithm using an Adjacency Matrix:");
         am.printRelationsDfs(adjacencyMatrix);

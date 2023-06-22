@@ -74,7 +74,7 @@ public class BFS {
         return false;
     }
 
-    public boolean search(int[][] adjMatrix, int startVertex, int findVertex) {
+    public boolean search(boolean[][] adjMatrix, int startVertex, int findVertex) {
         int numVertices = adjMatrix.length;
         boolean[] visited = new boolean[numVertices];
 
@@ -91,7 +91,7 @@ public class BFS {
             }
 
             for (int toVertex = 0; toVertex < numVertices; toVertex++) {
-                if (!visited[toVertex] && adjMatrix[fromVertex][toVertex] == 1) {
+                if (!visited[toVertex] && adjMatrix[fromVertex][toVertex]) {
                     visited[toVertex] = true;
                     queue.add(toVertex);
                 }

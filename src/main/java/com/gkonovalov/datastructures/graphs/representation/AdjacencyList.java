@@ -91,7 +91,7 @@ public class AdjacencyList {
         return adjacencyListDirected;
     }
 
-    public Map<Character, List<Character>> getGraphChars() {
+    public Map<Character, List<Character>> getGraphLabeled() {
         Map<Character, List<Character>> adjacencyListChars = Map.of(
                 'a', List.of('b', 'c'),
                 'b', List.of('c', 'e'),

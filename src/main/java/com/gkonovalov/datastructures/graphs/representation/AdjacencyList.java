@@ -56,14 +56,14 @@ public class AdjacencyList {
     public List<List<Integer>> getAdjacencyListDirected(boolean isHasCycle) {
         List<List<Integer>> adjacencyListDirected = new LinkedList<>();
 
-        for (int i = 0; i <= 4; i++) {
+        for (int i = 0; i <= 5; i++) {
             adjacencyListDirected.add(new LinkedList<>());
         }
 
         adjacencyListDirected.get(0).add(1);
         adjacencyListDirected.get(0).add(2);
-        adjacencyListDirected.get(1).add(4);
         adjacencyListDirected.get(1).add(3);
+        adjacencyListDirected.get(4).add(5);
 
         if (isHasCycle) {
             adjacencyListDirected.get(3).add(0);

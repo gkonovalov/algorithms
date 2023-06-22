@@ -7,7 +7,7 @@ import java.util.Queue;
  * Created by Georgiy Konovalov on 15/06/2023.
  * <p>
  * HashMap arr structure implementation, also known as a Hashtable. This arr structure provides
- * efficient storage and retrieval of key-value pairs, it support's Separate Chaining collision
+ * efficient storage and retrieval of key-value pairs, it supports Separate Chaining collision
  * resolution strategy and dynamic resizing feature.
  * <p>
  * The core idea behind a Hashtable is to use a hash function to compute an index, or a hash code,

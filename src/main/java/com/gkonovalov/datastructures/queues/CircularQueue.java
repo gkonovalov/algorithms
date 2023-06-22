@@ -1,10 +1,10 @@
-package com.gkonovalov.datastructures.arrays;
+package com.gkonovalov.datastructures.queues;
 
 
 /**
  * Created by Georgiy Konovalov on 10/06/2023.
  * <p>
- * Circular Buffer implementation, also known as a Ring Buffer, Circular Array or Circular Queue.
+ * Circular Queue implementation, also known as a Ring Buffer, Circular Array or Circular Buffer.
  * This is a data structure that uses a fixed-size array and keeps track of two pointers: front and rear.
  * It allows efficient insertion and deletion at both ends of the array by utilizing the concept of
  * modulo arithmetic. This enables continuous utilization of memory and avoids wastage of space,
@@ -14,7 +14,7 @@ package com.gkonovalov.datastructures.arrays;
  *                              {@code isFull}, {@code isEmpty}, {@code size}.
  * Space Complexity:   O(n).
  */
-public class CircularBuffer<T> {
+public class CircularQueue<T> {
 
     private static final int DEFAULT_SIZE = 8;
 
@@ -25,11 +25,11 @@ public class CircularBuffer<T> {
 
     private int size = 0;
 
-    public CircularBuffer() {
+    public CircularQueue() {
         arr = new Object[DEFAULT_SIZE];
     }
 
-    public CircularBuffer(int size) {
+    public CircularQueue(int size) {
         arr = new Object[size];
     }
 

@@ -76,13 +76,13 @@ Need to prepare description.
 │   │   └── Maximum Bipartite
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/sorting/"><b>Sorting</b></a>
 │   │ 	└── <a href="src/main/java/com/gkonovalov/algorithms/graphs/sorting/"><b>Topological Sort</b></a>
-│   │       ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/sorting/TopologicalSortKahn.java"><b>Kahn</b></a>
-│   │       └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/sorting/TopologicalSortTarjan.java"><b>Tarjan</b></a> 
+│   │       ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/sorting/TopologicalSortKahn.java"><b>Kahn's</b></a>
+│   │       └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/sorting/TopologicalSortTarjan.java"><b>Tarjan's</b></a> 
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/"><b>Connectivity</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/ConnectedComponents.java"><b>Connected Components</b></a>
-│   │   ├── Strongly Connected Component
-│   │   │   ├── Kusaraju
-│   │   │   └── Tarjan
+│   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/"><b>Strongly Connected Components</b></a>
+│   │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/SCCKosarajuSharir.java"><b>Kosaraju-Sharir's</b></a>
+│   │   │   └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/SCCTarjan.java"><b>Tarjan's</b></a>
 │   │   └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/unionfind"><b>Union-Find</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/CycleDetection.java"><b>Cycle Detection</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/Bipartite.java"><b>Is Bipartite</b></a>
@@ -150,7 +150,6 @@ Need to prepare description.
 ├── <a href="src/main/java/com/gkonovalov/datastructures/arrays"><b>Arrays</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/datastructures/arrays/Array.java"><b>Array</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/datastructures/arrays/DynamicArray.java"><b>Dynamic Array</b></a>
-│   ├── <a href="src/main/java/com/gkonovalov/datastructures/arrays/CircularBuffer.java"><b>Circular Buffer</b></a>
 │   └── Suffix Arrays
 ├── <a href="src/main/java/com/gkonovalov/datastructures/linkedlist"><b>Linked Lists</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/datastructures/linkedlist/SinglyLinkedList.java"><b>Singly Linked List</b></a>  
@@ -159,7 +158,8 @@ Need to prepare description.
 ├── <a href="src/main/java/com/gkonovalov/datastructures/stack/Stack.java"><b>Stacks</b></a>
 ├── <a href="src/main/java/com/gkonovalov/datastructures/queues"><b>Queues</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/datastructures/queues/Queue.java"><b>Queue</b></a>
-│   └── <a href="src/main/java/com/gkonovalov/datastructures/queues/Deque.java"><b>Deque</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/datastructures/queues/Deque.java"><b>Deque</b></a>
+│   └── <a href="src/main/java/com/gkonovalov/datastructures/queues/CircularQueue.java"><b>Circular Queue</b></a>
 ├── <a href="src/main/java/com/gkonovalov/datastructures/hashing/hashtables"><b>Hash Tables</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/datastructures/hashtables/HashMap.java"><b>HashMap</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/datastructures/hashtables/HashSet.java"><b>HashSet</b></a>

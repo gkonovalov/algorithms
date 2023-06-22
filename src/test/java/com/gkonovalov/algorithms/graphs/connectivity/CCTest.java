@@ -30,18 +30,18 @@ public class CCTest {
     @Test
     @DisplayName("Testing CC.countConnectedComponentsDfs with AdjacencyList")
     public void testCountConnectedComponentsDfs() {
-        assertEquals(cc.countConnectedComponentsDfs(adjList.getAdjacencyListUndirected(true)), 2);
+        assertEquals(cc.countConnectedComponentsDfs(adjList.getGraphUndirected(true)), 2);
     }
 
     @Test
     @DisplayName("Testing CC.countConnectedComponentsBfs with AdjacencyMatrix")
     public void testCountConnectedComponentsBFS() {
-        assertEquals(cc.countConnectedComponentsBfs(adjMatrix.getAdjacencyMatrixUndirected()), 2);
+        assertEquals(cc.countConnectedComponentsBfs(adjMatrix.getGraphUndirected()), 2);
     }
 
     @Test
     @DisplayName("Testing CC.countConnectedComponentsDfs with AdjacencyMatrix")
     public void testCountConnectedComponentsDfs2() {
-        assertEquals(cc.countConnectedComponentsDfs(adjMatrix.getAdjacencyMatrixUndirected()), 2);
+        assertEquals(cc.countConnectedComponentsDfs(adjMatrix.getGraphUndirected()), 2);
     }
 }

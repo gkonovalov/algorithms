@@ -47,7 +47,7 @@ public class AdjacencyList {
 
         if (isHasCycle) {
             adjacencyListUndirected.get(0).add(3);
-            adjacencyListUndirected.get(3).add(0);//cycle
+            adjacencyListUndirected.get(3).add(0);
         }
 
         return adjacencyListUndirected;

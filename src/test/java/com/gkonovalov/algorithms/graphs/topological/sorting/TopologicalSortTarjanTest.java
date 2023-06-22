@@ -1,6 +1,5 @@
 package com.gkonovalov.algorithms.graphs.topological.sorting;
 
-import com.gkonovalov.algorithms.graphs.topological.sorting.TopologicalSortTarjan;
 import com.gkonovalov.datastructures.graphs.representation.AdjacencyList;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -30,11 +29,11 @@ public class TopologicalSortTarjanTest {
     @Test
     @DisplayName("Testing TopologicalSortTarjan.topologicalSort")
     public void testTopologicalSort() {
-        List<Integer> actualOrder = topologicalSort.topologicalSort(adjList.getAdjacencyListDirected(false));
+        List<Integer> actualOrder = topologicalSort.topologicalSort(adjList.getGraphDirected(false));
         List<Integer> expectedOrder = List.of(4, 5, 0, 2, 1, 3);
 
         assertIterableEquals(expectedOrder, actualOrder);
 
-        assertNull(topologicalSort.topologicalSort(adjList.getAdjacencyListDirected(true)));
+        assertNull(topologicalSort.topologicalSort(adjList.getGraphDirected(true)));
     }
 }

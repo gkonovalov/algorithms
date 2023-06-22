@@ -30,7 +30,7 @@ public class TopologicalSortKahnTest {
     @DisplayName("Testing TopologicalSortKahn.topologicalSort")
     public void testTopologicalSort() {
         int[] actualOrder = topologicalSort.topologicalSort(adjList.getAdjacencyListDirected(false));
-        int[] expectedOrder = new int[]{0, 1, 2, 4, 3};
+        int[] expectedOrder = new int[]{0, 4, 1, 2, 5, 3};
 
         assertArrayEquals(expectedOrder, actualOrder);
         assertNull(topologicalSort.topologicalSort(adjList.getAdjacencyListDirected(true)));

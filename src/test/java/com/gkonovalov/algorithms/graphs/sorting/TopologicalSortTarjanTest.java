@@ -30,11 +30,10 @@ public class TopologicalSortTarjanTest {
     @DisplayName("Testing TopologicalSortTarjan.topologicalSort")
     public void testTopologicalSort() {
         List<Integer> actualOrder = topologicalSort.topologicalSort(adjList.getAdjacencyListDirected(false));
-        List<Integer> expectedOrder = List.of(0, 2, 1, 3, 4);
+        List<Integer> expectedOrder = List.of(4, 5, 0, 2, 1, 3);
 
         assertIterableEquals(expectedOrder, actualOrder);
 
         assertNull(topologicalSort.topologicalSort(adjList.getAdjacencyListDirected(true)));
     }
-
 }

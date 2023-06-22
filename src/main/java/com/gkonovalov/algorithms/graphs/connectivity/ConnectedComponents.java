@@ -10,11 +10,11 @@ import java.util.Queue;
  * Connected Components implementation. In graph theory, connected components refer to subsets of
  * vertices within a graph, where each vertex in a subset is connected to every other vertex in
  * the same subset. In simpler terms, a connected component is a group of vertices that are
- * directly or indirectly connected to each other, but not connected to any vertices outside of that group.
- * In a graph, the presence of multiple connected components indicates that the graph is not fully
- * connected, meaning there are distinct subgroups of vertices that have no connection or path between
- * them. Each connected component represents a separate "island" or "cluster" within the graph.
- * There are several algorithms to determine the connected components in a graph, such as
+ * directly or indirectly connected to each other, but not connected to any vertices outside of
+ * that group. In a graph, the presence of multiple connected components indicates that the graph
+ * is not fully connected, meaning there are distinct subgroups of vertices that have no connection
+ * or path between them. Each connected component represents a separate "island" or "cluster" within
+ * the graph. There are several algorithms to determine the connected components in a graph, such as
  * depth-first search (DFS) or breadth-first search (BFS). These algorithms traverse the graph,
  * visiting all reachable vertices from a starting vertex and marking them as part of the same
  * connected component. By repeating this process for all unvisited vertices, we can identify

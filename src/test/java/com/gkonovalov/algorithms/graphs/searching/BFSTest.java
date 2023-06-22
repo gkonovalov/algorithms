@@ -30,14 +30,14 @@ public class BFSTest {
     @Test
     @DisplayName("Testing BFS.search with AdjacencyList")
     public void testSearch() {
-        assertTrue(bfs.search(adjList.getAdjacencyListUndirected(true), 0, 3));
-        assertFalse(bfs.search(adjList.getAdjacencyListUndirected(true), 0, 4));
+        assertTrue(bfs.search(adjList.getGraphUndirected(true), 0, 3));
+        assertFalse(bfs.search(adjList.getGraphUndirected(true), 0, 4));
     }
 
     @Test
     @DisplayName("Testing BFS.search with AdjacencyMatrix")
     public void testSearch2() {
-        assertTrue(bfs.search(adjMatrix.getAdjacencyMatrixUndirected(), 0, 3));
-        assertFalse(bfs.search(adjMatrix.getAdjacencyMatrixUndirected(), 0, 4));
+        assertTrue(bfs.search(adjMatrix.getGraphUndirected(), 0, 3));
+        assertFalse(bfs.search(adjMatrix.getGraphUndirected(), 0, 4));
     }
 }

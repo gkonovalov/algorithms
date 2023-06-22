@@ -30,21 +30,21 @@ public class DFSTest {
     @Test
     @DisplayName("Testing DFS.searchRecursive with AdjacencyList")
     public void testSearchRecursive() {
-        assertTrue(dfs.searchRecursive(adjList.getAdjacencyListUndirected(true), 0, 3));
-        assertFalse(dfs.searchRecursive(adjList.getAdjacencyListUndirected(true), 0, 4));
+        assertTrue(dfs.searchRecursive(adjList.getGraphUndirected(true), 0, 3));
+        assertFalse(dfs.searchRecursive(adjList.getGraphUndirected(true), 0, 4));
     }
 
     @Test
     @DisplayName("Testing DFS.searchRecursive with AdjacencyMatrix")
     public void testSearchRecursive2() {
-        assertTrue(dfs.searchRecursive(adjMatrix.getAdjacencyMatrixUndirected(), 0, 3));
-        assertFalse(dfs.searchRecursive(adjMatrix.getAdjacencyMatrixUndirected(), 0, 4));
+        assertTrue(dfs.searchRecursive(adjMatrix.getGraphUndirected(), 0, 3));
+        assertFalse(dfs.searchRecursive(adjMatrix.getGraphUndirected(), 0, 4));
     }
 
     @Test
     @DisplayName("Testing DFS.searchPreorderIterative with AdjacencyList")
     public void testSearchPreorderIterative() {
-        assertTrue(dfs.searchPreorderIterative(adjList.getAdjacencyListUndirected(true), 0, 3));
-        assertFalse(dfs.searchPreorderIterative(adjList.getAdjacencyListUndirected(true), 0, 4));
+        assertTrue(dfs.searchPreorderIterative(adjList.getGraphUndirected(true), 0, 3));
+        assertFalse(dfs.searchPreorderIterative(adjList.getGraphUndirected(true), 0, 4));
     }
 }

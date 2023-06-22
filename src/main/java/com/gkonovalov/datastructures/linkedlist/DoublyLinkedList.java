@@ -7,11 +7,21 @@ import java.util.Objects;
  * Created by Georgiy Konovalov on 17/05/2023.
  * <p>
  * Doubly Linked List implementation.
+ * A linked list is a linear data structure in which elements are stored as individual nodes,
+ * where each node contains a value and a reference (or link) to the next node in the sequence.
+ * Unlike arrays, linked lists do not require contiguous memory allocation, allowing for efficient
+ * insertion and deletion operations. In a doubly linked list, each node contains references to both
+ * the next node and the previous node in the list. This allows for traversal in both directions.
+ * Linked lists are dynamic data structures, meaning they can grow or shrink in size during program
+ * execution. They are commonly used when the number of elements is unknown or can change frequently,
+ * or when efficient insertion and deletion operations are required. However, linked lists have slower
+ * access times compared to arrays since accessing an element requires traversing the list from
+ * the beginning.
  * <p>
  * Runtime Complexity: O(1) for the {@code add}, {@code prepend}, {@code append},
  *                                  {@code size}, {@code removeFirst} and {@code removeLast},
- *                     O(n) for the {@code get}, {@code add}, {@code indexOf}, 
- *                                  {@code contains}, {@code findNode}, and {@code remove}.
+ *                     O(n) for the {@code get}, {@code indexOf}, {@code contains},
+ *                                  {@code findNode}, and {@code remove}.
  * Space Complexity:   O(n).
  */
 public class DoublyLinkedList<T> {

@@ -1,6 +1,5 @@
-package com.gkonovalov.algorithms.graphs.connectivity.unionfind;
+package com.gkonovalov.algorithms.graphs.connectivity;
 
-import com.gkonovalov.algorithms.graphs.connectivity.ConnectedComponents;
 import com.gkonovalov.datastructures.graphs.representation.AdjacencyList;
 import com.gkonovalov.datastructures.graphs.representation.AdjacencyMatrix;
 import org.junit.jupiter.api.BeforeEach;

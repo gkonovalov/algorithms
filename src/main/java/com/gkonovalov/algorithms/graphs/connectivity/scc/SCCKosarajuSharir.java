@@ -1,4 +1,4 @@
-package com.gkonovalov.algorithms.graphs.connectivity;
+package com.gkonovalov.algorithms.graphs.connectivity.scc;
 
 import java.util.LinkedList;
 import java.util.List;

@@ -22,8 +22,8 @@ import java.util.Stack;
  * usage compared to BFS. Additionally, when it is known beforehand that the desired answer is likely
  * to be found deep within the tree, DFS is a better option than BFS.
  * </p>
- * Runtime Complexity: O(V+E) {@code dfsExample}, {@code pathRecursive},
- *                            {@code searchRecursive}, {@code searchPreorderIterative}.
+ * Runtime Complexity: O(V+E) {@code dfsExample}, {@code searchRecursive},
+ *                            {@code searchPreorderIterative}.
  * Space Complexity: O(V).
  */
 public class DFS {
@@ -38,29 +38,16 @@ public class DFS {
         }
     }
 
-    public List<Integer> pathRecursive(List<List<Integer>> adjList,
-                                       Integer startVertex,
-                                       Integer endVertex) {
-        List<Integer> path = new ArrayList<>();
-
-        searchRecursive(adjList, path, new boolean[adjList.size()], startVertex, endVertex);
-
-        return path;
-    }
-
     public boolean searchRecursive(List<List<Integer>> adjList,
                                    Integer startVertex,
                                    Integer findVertex) {
-        return searchRecursive(adjList, new ArrayList<>(), new boolean[adjList.size()], startVertex, findVertex);
+        return searchRecursive(adjList, new boolean[adjList.size()], startVertex, findVertex);
     }
 
     private boolean searchRecursive(List<List<Integer>> adjList,
-                                    List<Integer> path,
                                     boolean[] visited,
                                     Integer fromVertex,
                                     Integer findVertex) {
-        path.add(fromVertex);
-
         if (fromVertex.equals(findVertex)) {
             return true;
         }
@@ -69,12 +56,10 @@ public class DFS {
 
         for (Integer toVertex : adjList.get(fromVertex)) {
             if (!visited[toVertex] &&
-                    searchRecursive(adjList, path, visited, toVertex, findVertex)) {
+                    searchRecursive(adjList, visited, toVertex, findVertex)) {
                 return true;
             }
         }
-        path.remove(fromVertex);
-
         return false;
     }
 

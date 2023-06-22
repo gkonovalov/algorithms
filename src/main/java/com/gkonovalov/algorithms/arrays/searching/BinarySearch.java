@@ -4,7 +4,10 @@ package com.gkonovalov.algorithms.arrays.searching;
  * Created by Georgiy Konovalov on 5/05/2023.
  * <p>
  * Binary Search implementation. Recursive and iterative approach.
- * This algorithm requires the data to be sorted.
+ * Binary search is an efficient search algorithm used to find the position of a target
+ * value within a sorted array or list. It follows a divide-and-conquer approach by repeatedly
+ * dividing the search space in half, narrowing down the search range until the target value is
+ * found or determined to be absent.
  * </p>
  * Runtime Complexity: O(log n) for the {@code searchIterative},
  *                                      {@code searchRecursive}.

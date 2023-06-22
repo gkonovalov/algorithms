@@ -59,9 +59,9 @@ Need to prepare description.
 │   │ 	├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/BFS.java"><b>BFS</b></a>
 │   │ 	├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath"><b>Shortest Path</b></a>
 │   │ 	│   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath/Dijkstra.java"><b>Dijkstra's</b></a>
-│   │ 	│   ├── A-star
-│   │ 	│   ├── Bellman–Ford
-│   │ 	│   └──	Floyd-Warshall
+│   │ 	│   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath/AStar.java"><b>A-star</b></a>
+│   │ 	│   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath/BellmanFord.java"><b>Bellman–Ford</b></a>
+│   │ 	│   └──	<a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath/FloydWarshall.java"><b>Floyd-Warshall</b></a>
 │   │ 	└── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/mst"><b>Minimum Spanning Tree</b></a>
 │   │ 	    ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/mst/MSTPrim.java"><b>Prim’s </b></a>
 │   │ 	    └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/mst/MSTKruskal.java"><b>Kruskal’s</b></a>
@@ -75,15 +75,19 @@ Need to prepare description.
 │   │   │   └── Karger's
 │   │   └── Maximum Bipartite
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/sorting/"><b>Sorting</b></a>
-│   │ 	└── <a href="src/main/java/com/gkonovalov/algorithms/graphs/sorting/"><b>Topological Sort</b></a>
-│   │       ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/sorting/TopologicalSortKahn.java"><b>Kahn's</b></a>
-│   │       └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/sorting/TopologicalSortTarjan.java"><b>Tarjan's</b></a> 
+│   │ 	└── <a href="src/main/java/com/gkonovalov/algorithms/graphs/topological/sorting/"><b>Topological Sort</b></a>
+│   │       ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/topological/sorting/TopologicalSortKahn.java"><b>Kahn's</b></a>
+│   │       └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/topological/sorting/TopologicalSortTarjan.java"><b>Tarjan's</b></a> 
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/"><b>Connectivity</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/CC.java"><b>Connected Components</b></a>
-│   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/"><b>Strongly Connected Components</b></a>
-│   │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/SCCKosarajuSharir.java"><b>Kosaraju-Sharir's</b></a>
-│   │   │   └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/SCCTarjan.java"><b>Tarjan's</b></a>
+│   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/scc/"><b>Strongly Connected Components</b></a>
+│   │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/scc/SCCKosarajuSharir.java"><b>Kosaraju-Sharir's</b></a>
+│   │   │   └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/scc/SCCTarjan.java"><b>Tarjan's</b></a>
 │   │   └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/unionfind"><b>Union-Find</b></a>
+│   │        ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/unionfind/QuickFind.java"><b>Quick Find</b></a>
+│   │        ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/unionfind/QuickUnion.java"><b>Quick Union</b></a>
+│   │        ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/unionfind/QuickUnionWeighted.java"><b>Quick Union Weighted</b></a>
+│   │        └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/unionfind/QuickUnionWeightedPathCompression.java"><b>Quick Union Weighted with Path Compression</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/CycleDetection.java"><b>Cycle Detection</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/Bipartite.java"><b>Is Bipartite</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/MColoring.java"><b>Graph coloring</b></a>
@@ -91,15 +95,38 @@ Need to prepare description.
 │   ├── Eulerian Path
 │   ├── Eulerian Tour
 │   └── Hamiltonian Cycle
+├── Divide and Conquer
+│   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/searching/BinarySearch.java"><b>Binary Search</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/MergeSort.java"><b>Merge Sort</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/QuickSort.java"><b>Quick Sort</b></a>
+│   └── Strassen's Matrix multiplication
+├── Recursion
+│   ├── Dynamic Programming
+│   │   ├── Approaches
+│   │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/math/FibonacciNumbers.java#L25"><b>Top-Down  - Memoization</b></a>
+│   │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/math/FibonacciNumbers.java#L45"><b>Bottom-Up - Tabulation</b></a>
+│   │   │   └── Half-and-Half
+│   │   ├── Bellman-Ford  
+│   │   ├── Floyd-Warshall 
+│   │   ├── Levenshtein Distance
+│   │   ├── Regular Expression Matching
+│   │   ├── Matrix Chain Multiplication
+│   │   └── Binomial Coefficient
+│   └── Backtracking
+│       └── Combinatorics
+│           ├── Permutations
+│           ├── Combinations
+│           ├── Subsets
+│           └── Partitions
 ├── Greedy
 │   ├── Huffman Coding
-│   ├── Dijkstra's
-│   ├── Prim's
-│   └── Kruskal's
+│   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath/Dijkstra.java"><b>Shortest Path Dijkstra's</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/mst/MSTPrim.java"><b>MST Prim’s </b></a>
+│   └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/mst/MSTKruskal.java"><b>MST Kruskal’s</b></a>
 ├── Randomized
-│   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/QuickSort.java"><b>Quick Sort</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/QuickSort.java#L46"><b>Randomized Quick Sort</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/randomized/FisherYatesShuffle.java"><b>Fisher-Yates Shuffle</b></a>
-│   ├── Randomized Selection
+│   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/selection/QuickSelect.java#L44"><b>Randomized Quick Select</b></a>
 │   ├── Las Vegas
 │   └── Monte Carlo
 ├── Game Theory
@@ -113,8 +140,8 @@ Need to prepare description.
 │   └── Convex Hull
 │       ├── Graham Scan
 │       └── Jarvis March
-└── Math
-    ├── Fibonacci Numbers
+└── <a href="src/main/java/com/gkonovalov/algorithms/math"><b>Math</b></a>
+    ├── <a href="src/main/java/com/gkonovalov/algorithms/math/FibonacciNumbers.java"><b>Fibonacci Numbers</b></a>
     ├── Factorial
     ├── Prime Numbers
     │   ├── Sieve of Eratosthenes
@@ -230,27 +257,16 @@ Need to prepare description.
 ├── Graphs
 ├── Recursion
 │   ├── <a href="src/main/java/com/gkonovalov/problems/recursion/dp/"><b>Dynamic Programming</b></a>
-│   │   ├── Approaches
-│   │   │   ├── Bottom-Up - Tabulation
-│   │   │   ├── Top-Down  - Memoization
-│   │   │   └── Half-and-Half
 │   │   ├── <a href="src/main/java/com/gkonovalov/problems/recursion/dp/FibonacciNumbers.java"><b>Fibonacci Numbers</b></a>
 │   │   ├── Knapsack 0/1
 │   │   ├── Knapsack Unbounded
 │   │   ├── Traveling Salesman
-│   │   ├── Dijkstra's
-│   │   ├── Bellman-Ford  
-│   │   ├── Floyd-Warshall 
-│   │   ├── Levenshtein Distance
-│   │   ├── Regular Expression Matching
 │   │   ├── Longest Common Subsequence (LCS) 
 │   │   ├── Longest Increasing Subsequence (LIS) 
 │   │   ├── Longest Palindrome Subsequence (LPS)
 │   │   ├── Shortest Common Supersequence (SCS)
 │   │   ├── Maximum Sum Increasing Subsequence
-│   │   ├── Matrix Chain Multiplication
 │   │   ├── Maximum Subarray Sum
-│   │   ├── Binomial Coefficient
 │   │   ├── Combination Sum
 │   │   ├── Rod Cutting
 │   │   ├── Jump Game
@@ -268,18 +284,13 @@ Need to prepare description.
 │   │   ├── Maximum Product Subarray
 │   │   └── Coin Change
 │   └── Backtracking
-│       ├── Combinatorics
-│       │   ├── Permutations
-│       │   ├── Combinations
-│       │   ├── Subsets
-│       │   └── Partitions
+│       ├── Traveling Salesman 
 │       ├── N-Queens
 │       ├── Knight's Tour 
 │       ├── Sudoku Solver
 │       ├── Unique Paths
 │       ├── Rat in a Maze 
 │       ├── Subset Sum
-│       ├── Traveling Salesman 
 │       └── Word Search
 ├── Greedy
 │   ├── Knapsack Unbounded

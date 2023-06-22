@@ -1,6 +1,7 @@
-package com.gkonovalov.algorithms.graphs.connectivity;
+package com.gkonovalov.algorithms.graphs.connectivity.scc;
 
 
+import com.gkonovalov.algorithms.graphs.connectivity.scc.SCCTarjan;
 import com.gkonovalov.datastructures.graphs.representation.AdjacencyList;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

@@ -26,7 +26,7 @@ import java.util.*;
  */
 public class AdjacencyList {
 
-    public List<List<Integer>> getAdjacencyListUndirected(boolean isHasCycle) {
+    public List<List<Integer>> getGraphUndirected(boolean isHasCycle) {
         List<List<Integer>> adjacencyListUndirected = new ArrayList<>();
 
         for (int i = 0; i <= 5; i++) {
@@ -53,7 +53,7 @@ public class AdjacencyList {
         return adjacencyListUndirected;
     }
 
-    public List<List<Integer>> getAdjacencyListDirected(boolean isHasCycle) {
+    public List<List<Integer>> getGraphDirected(boolean isHasCycle) {
         List<List<Integer>> adjacencyListDirected = new LinkedList<>();
 
         for (int i = 0; i <= 5; i++) {
@@ -72,7 +72,26 @@ public class AdjacencyList {
         return adjacencyListDirected;
     }
 
-    public Map<Character, List<Character>> getAdjacencyListChars() {
+    public List<List<Integer>> getGraphBipartiteDirected(boolean isBipartite) {
+        List<List<Integer>> adjacencyListDirected = new LinkedList<>();
+
+        for (int i = 0; i <= 3; i++) {
+            adjacencyListDirected.add(new LinkedList<>());
+        }
+
+        adjacencyListDirected.get(0).add(1);
+        adjacencyListDirected.get(1).add(2);
+        adjacencyListDirected.get(2).add(3);
+        adjacencyListDirected.get(3).add(0);
+
+        if (!isBipartite) {
+            adjacencyListDirected.get(0).add(2);
+        }
+
+        return adjacencyListDirected;
+    }
+
+    public Map<Character, List<Character>> getGraphChars() {
         Map<Character, List<Character>> adjacencyListChars = Map.of(
                 'a', List.of('b', 'c'),
                 'b', List.of('c', 'e'),
@@ -81,7 +100,7 @@ public class AdjacencyList {
         return adjacencyListChars;
     }
 
-    public List<List<List<Integer>>> getAdjacencyListWeighted() {
+    public List<List<List<Integer>>> getGraphWeighted() {
         List<List<List<Integer>>> adjacencyListWeighted = Arrays.asList(
                 List.of(List.of(1, 65), List.of(1, 43)),
                 List.of(List.of(0, 56), List.of(2, 22), List.of(3, 67)),
@@ -147,7 +166,7 @@ public class AdjacencyList {
 
     public static void main(String[] args) {
         AdjacencyList al = new AdjacencyList();
-        List<List<Integer>> adjacencyList = al.getAdjacencyListUndirected(false);
+        List<List<Integer>> adjacencyList = al.getGraphUndirected(false);
 
         System.out.println("Example of DFS algorithm using an Adjacency List:");
         al.printRelationsDfs(adjacencyList);

@@ -16,15 +16,15 @@ import java.util.*;
  * from u to v in the graph.
  * </p>
  * Runtime Complexity: O(1) - add Edge and add Vertex,
- * O(|E|) - removing a Vertex,
- * O(|E|) - removing a Edge,
- * O(|E|) - Edge between Vertices (checking for adjacency),
- * O(|V| + |E|) - traversing the graph.
+ *                     O(|E|) - removing a Vertex,
+ *                     O(|E|) - removing a Edge,
+ *                     O(|E|) - Edge between Vertices (checking for adjacency),
+ *                     O(|V| + |E|) - traversing the graph.
  * Space Complexity:   O(|E|).
  */
 public class EdgeList {
 
-    public List<List<Integer>> getEdgeListDirected() {
+    public List<List<Integer>> getGraphDirected() {
         List<List<Integer>> edgeList = List.of(
                 List.of(0, 1),
                 List.of(2, 5)
@@ -32,7 +32,7 @@ public class EdgeList {
         return edgeList;
     }
 
-    public List<List<Integer>> getEdgeListUndirected() {
+    public List<List<Integer>> getGraphUndirected() {
         List<List<Integer>> edgeList = List.of(
                 List.of(0, 1),
                 List.of(1, 0)
@@ -40,7 +40,7 @@ public class EdgeList {
         return edgeList;
     }
 
-    public List<List<Integer>> getEdgeListWeighted() {
+    public List<List<Integer>> getGraphWeighted() {
         List<List<Integer>> edgeList = List.of(
                 List.of(0, 1, 200),
                 List.of(2, 5, 300)
@@ -56,7 +56,7 @@ public class EdgeList {
 
     public static void main(String[] args) {
         EdgeList el = new EdgeList();
-        List<List<Integer>> edgeList = el.getEdgeListDirected();
+        List<List<Integer>> edgeList = el.getGraphDirected();
 
         System.out.println("Print all Edges from Edge List:");
         el.printEdges(edgeList);

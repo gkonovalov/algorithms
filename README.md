@@ -125,7 +125,7 @@ Need to prepare description.
 │   └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/mst/MSTKruskal.java"><b>MST Kruskal’s</b></a>
 ├── Randomized
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/QuickSort.java#L46"><b>Randomized Quick Sort</b></a>
-│   ├── <a href="src/main/java/com/gkonovalov/algorithms/randomized/FisherYatesShuffle.java"><b>Fisher-Yates Shuffle </b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/algorithms/randomized/FisherYatesShuffle.java"><b>Fisher-Yates Shuffle</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/selection/QuickSelect.java#L44"><b>Randomized Quick Select</b></a>
 │   ├── Las Vegas
 │   └── Monte Carlo

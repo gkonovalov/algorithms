@@ -41,7 +41,9 @@ public class DFS {
     public boolean searchRecursive(List<List<Integer>> adjList,
                                    Integer startVertex,
                                    Integer findVertex) {
-        return searchRecursive(adjList, new boolean[adjList.size()], startVertex, findVertex);
+        boolean[] visited = new boolean[adjList.size()];
+
+        return searchRecursive(adjList, visited, startVertex, findVertex);
     }
 
     private boolean searchRecursive(List<List<Integer>> adjList,
@@ -66,7 +68,9 @@ public class DFS {
     public boolean searchRecursive(boolean[][] adjMatrix,
                                    Integer startVertex,
                                    Integer findVertex) {
-        return searchRecursive(adjMatrix, new boolean[adjMatrix.length], startVertex, findVertex);
+        boolean[] visited = new boolean[adjMatrix.length];
+
+        return searchRecursive(adjMatrix, visited, startVertex, findVertex);
     }
 
     private boolean searchRecursive(boolean[][] adjMatrix,

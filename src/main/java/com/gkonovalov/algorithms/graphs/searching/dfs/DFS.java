@@ -1,4 +1,4 @@
-package com.gkonovalov.algorithms.graphs.searching;
+package com.gkonovalov.algorithms.graphs.searching.dfs;
 
 import com.gkonovalov.datastructures.graphs.representation.GraphNode;
 

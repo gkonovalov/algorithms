@@ -54,9 +54,9 @@ Need to prepare description.
 │       └── Bidirectional Search
 ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs"><b>Graphs</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching"><b>Searching</b></a>
-│   │ 	├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/DFS.java"><b>DFS</b></a> 
-│   │ 	│   └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/DFSID.java"><b>DFS-ID</b></a>
-│   │ 	├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/BFS.java"><b>BFS</b></a>
+│   │ 	├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/dfs/"><b>DFS</b></a> 
+│   │ 	│   └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/dfs/DFSID.java"><b>DFS-ID</b></a>
+│   │ 	├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/bfs/"><b>BFS</b></a>
 │   │ 	├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath"><b>Shortest Path</b></a>
 │   │ 	│   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath/Dijkstra.java"><b>Dijkstra's</b></a>
 │   │ 	│   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath/AStar.java"><b>A-star</b></a>

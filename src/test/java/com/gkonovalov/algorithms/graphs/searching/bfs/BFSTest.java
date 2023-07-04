@@ -1,5 +1,6 @@
-package com.gkonovalov.algorithms.graphs.searching;
+package com.gkonovalov.algorithms.graphs.searching.bfs;
 
+import com.gkonovalov.algorithms.graphs.searching.bfs.BFS;
 import com.gkonovalov.datastructures.graphs.representation.AdjacencyList;
 import com.gkonovalov.datastructures.graphs.representation.AdjacencyMatrix;
 import org.junit.jupiter.api.BeforeEach;

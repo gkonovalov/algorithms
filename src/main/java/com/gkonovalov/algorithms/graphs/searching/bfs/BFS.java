@@ -19,11 +19,15 @@ import java.util.Queue;
  * components, checking bipartiteness, or exploring a graph level by level. It is particularly useful
  * for web crawling, as it allows indexing pages without going too deep, thereby avoiding excessive
  * resource usage.
- * BFS typically requires more memory compared to DFS, as it needs to maintain a queue of nodes to visit.
- * It' can be less memory efficient when dealing with large trees that have a wide width. In situations
- * where the solution is likely to be near the root of the tree, a breadth-first search (BFS) may be more
- * efficient. However, if the tree is very deep and solutions are rare, a depth-first search (DFS) might
- * take an excessively long time, while BFS could provide faster results.
+ *
+ * The memory is taken by DFS or BFS heavily depends on the structure of your tree/graph. The maximum memory
+ * taken by DFS (i.e., by call stack) is equal to the depth of the tree, and the maximum memory taken by BFS
+ * is equal to the width of the tree.
+ * If our tree is wide, use DFS as BFS will take too much memory. Similarly, if our tree is very deep,
+ * choose BFS over DFS.
+ * If we know the solution lies somewhere deep in a tree or far from the source vertex in the graph, use DFS.
+ * If we know the solution is not that far from the source vertex, use BFS.
+ *
  * BFS is particularly useful when the depth of the tree can vary or when a single answer is needed, such
  * as finding the shortest path in a maze. BFS performs better in this scenario because DFS is more likely
  * to explore a significant portion of the maze before reaching the goal, potentially wasting time.

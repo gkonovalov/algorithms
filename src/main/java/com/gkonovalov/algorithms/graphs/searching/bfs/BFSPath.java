@@ -6,21 +6,23 @@ import java.util.*;
 /**
  * Created by Georgiy Konovalov on 8/10/2020.
  * <p>
- * Breadth First Search (Path and Distance) implementation. BFS stands for Breadth-First Search.
- * It is a graph traversal algorithm that explores all the vertices of a graph or all the nodes
- * of a tree in breadth-first order, i.e., it visits all the nodes at the same level
- * (Level-order traversal) before moving to the next level.
- * BFS guarantees that all nodes reachable from the source node will be visited, and the algorithm
- * visits nodes in increasing order of their distance from the source node.
- * The algorithm can be used for finding the shortest path between two vertices, counting connected
- * components, checking bipartiteness, or exploring a graph level by level. It is particularly useful
- * for web crawling, as it allows indexing pages without going too deep, thereby avoiding excessive
- * resource usage.
- * BFS typically requires more memory compared to DFS, as it needs to maintain a queue of nodes to visit.
- * It' can be less memory efficient when dealing with large trees that have a wide width. In situations
- * where the solution is likely to be near the root of the tree, a breadth-first search (BFS) may be more
- * efficient. However, if the tree is very deep and solutions are rare, a depth-first search (DFS) might
- * take an excessively long time, while BFS could provide faster results.
+ * Implementation of Breadth First Search(Path and Distance). BFS stands for Breadth-First Search.
+ * It is a graph traversal algorithm that explores all the vertices of a graph or all the nodes of a tree in
+ * breadth-first order, i.e., it visits all the nodes at the same level (Level-order traversal) before moving
+ * to the next level. BFS guarantees that all nodes reachable from the source node will be visited, and the
+ * algorithm visits nodes in increasing order of their distance from the source node. The algorithm can be
+ * used for finding the shortest path between two vertices, counting connected components, checking
+ * bipartiteness, or exploring a graph level by level. It is particularly useful for web crawling, as it allows
+ * indexing pages without going too deep, thereby avoiding excessive resource usage.
+ *
+ * The memory is taken by DFS or BFS heavily depends on the structure of your tree/graph. The maximum memory
+ * taken by DFS (i.e., by call stack) is equal to the depth of the tree, and the maximum memory taken by BFS
+ * is equal to the width of the tree.
+ * If our tree is wide, use DFS as BFS will take too much memory. Similarly, if our tree is very deep,
+ * choose BFS over DFS.
+ * If we know the solution lies somewhere deep in a tree or far from the source vertex in the graph, use DFS.
+ * If we know the solution is not that far from the source vertex, use BFS.
+ *
  * BFS is particularly useful when the depth of the tree can vary or when a single answer is needed, such
  * as finding the shortest path in a maze. BFS performs better in this scenario because DFS is more likely
  * to explore a significant portion of the maze before reaching the goal, potentially wasting time.
@@ -87,8 +89,8 @@ public class BFSPath {
         }
 
         List<Integer> path = new ArrayList<>();
-        for (int x = endV; x != sourceVertex; x = prev[x]) {
-            path.add(0, x);
+        for (int v = endV; v != sourceVertex; v = prev[v]) {
+            path.add(0, v);
         }
         path.add(0, sourceVertex);
 

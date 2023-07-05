@@ -14,7 +14,7 @@ import java.util.Stack;
  * a recursive approach or an iterative approach with the help of a stack data structure to keep
  * track of nodes to be visited. DFS search is not well-suited for computing the shortest path,
  * but it excels in aggressive exploration, similar to navigating through a maze. It can also be
- * used to count connected components and topological sorting.
+ * used to count strongly connected components, cycle detection, topological sorting and etc.
  *
  * The memory is taken by DFS or BFS heavily depends on the structure of your tree. The maximum memory
  * taken by DFS (i.e., by call stack) is equal to the depth of the tree, and the maximum memory taken by BFS

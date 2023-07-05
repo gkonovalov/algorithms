@@ -44,33 +44,31 @@ public class SCCTarjan {
         }
     }
 
-    private void dfs(List<List<Integer>> adjList, boolean[] visited, int v) {
-        visited[v] = true;
-        low[v] = pre++;
-        int min = low[v];
-        stack.push(v);
+    private void dfs(List<List<Integer>> adjList, boolean[] visited, int startV) {
+        visited[startV] = true;
+        stack.push(startV);
 
-        for (int w : adjList.get(v)) {
-            if (!visited[w]) {
-                dfs(adjList, visited, w);
-            }
+        low[startV] = pre++;
+        int min = low[startV];
 
-            if (low[w] < min) {
-                min = low[w];
+        for (int toV : adjList.get(startV)) {
+            if (!visited[toV]) {
+                dfs(adjList, visited, toV);
             }
+            min = Math.min(min, low[toV]);
         }
 
-        if (min < low[v]) {
-            low[v] = min;
+        if (min < low[startV]) {
+            low[startV] = min;
             return;
         }
 
-        while (true) {
-            int w = stack.pop();
-            id[w] = count;
-            low[w] = numVertices;
+        while (!stack.isEmpty()) {
+            int v = stack.pop();
+            id[v] = count;
+            low[v] = numVertices;
 
-            if (w == v) {
+            if (v == startV) {
                 break;
             }
         }

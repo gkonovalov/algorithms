@@ -11,7 +11,7 @@ import java.util.Stack;
  * The Strongly Connected Components (SCC) algorithm is used to identify groups of vertices in a
  * Directed Graph where each vertex in a group is reachable from every other vertex in that group.
  * In other words, it helps find clusters of closely interconnected vertices in a directed graph.
- * Basically, we need to compute the reverse post-order of the reversed graph and then traverse it in
+ * Basically, we need to compute the reverse post-order of the graph and then traverse it in
  * that order using DFS.
  * </p>
  * Runtime Complexity: O(V+E).

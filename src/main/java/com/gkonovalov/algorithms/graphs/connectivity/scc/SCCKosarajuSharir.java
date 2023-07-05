@@ -86,6 +86,10 @@ public class SCCKosarajuSharir {
         stack.push(fromV);
     }
 
+    public int stronglyConnectedComponentsCount() {
+        return count;
+    }
+
     public boolean isStronglyConnected(int v1, int v2) {
         return id[v1] == id[v2];
     }

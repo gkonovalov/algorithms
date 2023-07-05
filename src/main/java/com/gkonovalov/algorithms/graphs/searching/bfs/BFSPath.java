@@ -36,10 +36,12 @@ public class BFSPath {
     private int sourceVertex;
 
     public BFSPath(List<List<Integer>> adjList, int sourceVertex) {
+        int vertices = adjList.size();
+
         this.sourceVertex = sourceVertex;
-        this.dist = new int[adjList.size()];
-        this.prev = new int[adjList.size()];
-        this.visited = new boolean[adjList.size()];
+        this.dist = new int[vertices];
+        this.prev = new int[vertices];
+        this.visited = new boolean[vertices];
 
         Arrays.fill(dist, -1);
         Arrays.fill(prev, -1);
@@ -69,7 +71,7 @@ public class BFSPath {
     }
 
     public boolean hasPathTo(int v) {
-        return visited[v];
+        return prev[v] != -1;
     }
 
     public int distTo(int endV) {

@@ -1,4 +1,4 @@
-package com.gkonovalov.datastructures.graphs.representation;
+package com.gkonovalov.datastructures.graphs;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,12 +20,12 @@ import java.util.List;
  *                     O(|V| + |E|) - traversing the graph.
  * Space Complexity:   O(|V|+|E|), worst case O(|V|^2).
  */
-public class GraphNode<T> {
+public class Node<T> {
     public T value;
-    public List<GraphNode<T>> neighbors;
+    public List<Node<T>> neighbors;
     public boolean visited;
 
-    public GraphNode() {
+    public Node() {
         this.visited = false;
         this.neighbors = new ArrayList<>();
     }

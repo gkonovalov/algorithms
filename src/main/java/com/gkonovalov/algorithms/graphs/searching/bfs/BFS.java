@@ -1,6 +1,6 @@
 package com.gkonovalov.algorithms.graphs.searching.bfs;
 
-import com.gkonovalov.datastructures.graphs.representation.GraphNode;
+import com.gkonovalov.datastructures.graphs.Node;
 
 import java.util.ArrayDeque;
 import java.util.List;
@@ -33,14 +33,14 @@ import java.util.Queue;
  */
 public class BFS {
 
-    private void bfsExample(GraphNode<Integer> startVertex) {
-        Queue<GraphNode<Integer>> queue = new ArrayDeque<>();
+    private void bfsExample(Node<Integer> startVertex) {
+        Queue<Node<Integer>> queue = new ArrayDeque<>();
         queue.add(startVertex);
 
         while (!queue.isEmpty()) {
-            GraphNode<Integer> fromVertex = queue.poll();
+            Node<Integer> fromVertex = queue.poll();
 
-            for (GraphNode<Integer> toVertex : fromVertex.neighbors) {
+            for (Node<Integer> toVertex : fromVertex.neighbors) {
                 if (!toVertex.visited) {
                     toVertex.visited = true;
                     queue.add(toVertex);

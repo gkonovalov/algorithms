@@ -28,6 +28,12 @@ public class SCCTarjanTest {
     }
 
     @Test
+    @DisplayName("Testing SCCTarjan.stronglyConnectedComponentsCount")
+    public void testStronglyConnectedComponentsCount() {
+        assertEquals(4, scc.stronglyConnectedComponentsCount());
+    }
+
+    @Test
     @DisplayName("Testing SCCTarjan.stronglyConnectedComponents")
     public void testStronglyConnectedComponents() {
         assertEquals(List.of(

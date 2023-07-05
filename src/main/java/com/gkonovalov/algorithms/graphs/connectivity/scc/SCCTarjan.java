@@ -77,7 +77,7 @@ public class SCCTarjan {
         count++;
     }
 
-    public int count() {
+    public int stronglyConnectedComponentsCount() {
         return count;
     }
 

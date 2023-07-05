@@ -73,6 +73,37 @@ public class CC {
         }
     }
 
+    public int countConnectedComponentsBfs(List<List<Integer>> adjList) {
+        int numVertices = adjList.size();
+        boolean[] visited = new boolean[numVertices];
+        int components = 0;
+
+        for (int v = 0; v < numVertices; v++) {
+            if (!visited[v]) {
+                bfs(adjList, visited, v);
+                components++;
+            }
+        }
+
+        return components;
+    }
+
+    public void bfs(List<List<Integer>> adjList, boolean[] visited, int startVertex) {
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(startVertex);
+
+        while (!queue.isEmpty()) {
+            int fromVertex = queue.poll();
+            visited[fromVertex] = true;
+
+            for (int toVertex : adjList.get(fromVertex)) {
+                if (!visited[toVertex]) {
+                    queue.add(toVertex);
+                }
+            }
+        }
+    }
+
     public int countConnectedComponentsBfs(boolean[][] matrix) {
         int numVertices = matrix.length;
         boolean[] visited = new boolean[numVertices];

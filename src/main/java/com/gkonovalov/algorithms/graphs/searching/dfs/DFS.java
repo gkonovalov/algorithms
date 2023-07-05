@@ -1,9 +1,7 @@
 package com.gkonovalov.algorithms.graphs.searching.dfs;
 
-import com.gkonovalov.datastructures.graphs.representation.GraphNode;
+import com.gkonovalov.datastructures.graphs.Node;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Stack;
 
@@ -28,10 +26,10 @@ import java.util.Stack;
  */
 public class DFS {
 
-    private void dfsExample(GraphNode<Integer> graphNode) {
-        graphNode.visited = true;
+    private void dfsExample(Node<Integer> node) {
+        node.visited = true;
 
-        for (GraphNode<Integer> toVertex : graphNode.neighbors) {
+        for (Node<Integer> toVertex : node.neighbors) {
             if (!toVertex.visited) {
                 dfsExample(toVertex);
             }

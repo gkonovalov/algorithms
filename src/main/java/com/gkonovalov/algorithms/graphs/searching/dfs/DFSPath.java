@@ -1,6 +1,7 @@
 package com.gkonovalov.algorithms.graphs.searching.dfs;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -32,6 +33,8 @@ public class DFSPath {
         this.prev = new int[adjList.size()];
         this.visited = new boolean[adjList.size()];
 
+        Arrays.fill(prev, -1);
+
         dfs(adjList, sourceVertex);
     }
 
@@ -47,7 +50,7 @@ public class DFSPath {
     }
 
     public boolean hasPathTo(int v) {
-        return visited[v];
+        return prev[v] != -1;
     }
 
     public List<Integer> pathTo(int endV) {

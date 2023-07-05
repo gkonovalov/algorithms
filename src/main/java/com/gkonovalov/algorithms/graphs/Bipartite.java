@@ -46,7 +46,7 @@ public class Bipartite {
         return true;
     }
 
-    public boolean isBipartiteDfsColoring(int[][] adjMatrix) {
+    public boolean isBipartiteDfsColoring(boolean[][] adjMatrix) {
         int numVertices = adjMatrix.length;
         int[] colors = new int[numVertices];
 
@@ -58,7 +58,7 @@ public class Bipartite {
         return true;
     }
 
-    private boolean isBipartiteDfsColoring(int[][] adjMatrix, int[] colors, int color, int node) {
+    private boolean isBipartiteDfsColoring(boolean[][] adjMatrix, int[] colors, int color, int node) {
         if (colors[node] != 0) {
             return colors[node] == color;
         }
@@ -66,7 +66,7 @@ public class Bipartite {
         colors[node] = color;
 
         for (int next = 0; next < adjMatrix[node].length; next++) {
-            if (adjMatrix[node][next] == 1 && !isBipartiteDfsColoring(adjMatrix, colors, -color, next)) {
+            if (adjMatrix[node][next] && !isBipartiteDfsColoring(adjMatrix, colors, -color, next)) {
                 return false;
             }
         }

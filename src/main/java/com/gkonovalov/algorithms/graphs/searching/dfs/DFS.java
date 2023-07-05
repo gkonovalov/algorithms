@@ -15,10 +15,14 @@ import java.util.Stack;
  * track of nodes to be visited. DFS search is not well-suited for computing the shortest path,
  * but it excels in aggressive exploration, similar to navigating through a maze. It can also be
  * used to count connected components and topological sorting.
- * However, if the graph or tree is deep and solutions are rare, DFS might take a long time, whereas
- * BFS could be faster. On the other hand, if the tree is wide, DFS can significantly reduce memory
- * usage compared to BFS. Additionally, when it is known beforehand that the desired answer is likely
- * to be found deep within the tree, DFS is a better option than BFS.
+ *
+ * The memory is taken by DFS or BFS heavily depends on the structure of your tree/graph. The maximum memory
+ * taken by DFS (i.e., by call stack) is equal to the depth of the tree, and the maximum memory taken by BFS
+ * is equal to the width of the tree.
+ * If our tree is wide, use DFS as BFS will take too much memory. Similarly, if our tree is very deep,
+ * choose BFS over DFS.
+ * If we know the solution lies somewhere deep in a tree or far from the source vertex in the graph, use DFS.
+ * If we know the solution is not that far from the source vertex, use BFS.
  * </p>
  * Runtime Complexity: O(V+E) {@code dfsExample}, {@code searchRecursive},
  *                            {@code searchPreorderIterative}.

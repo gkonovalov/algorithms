@@ -1,4 +1,4 @@
-package com.gkonovalov.algorithms.graphs.connectivity;
+package com.gkonovalov.algorithms.graphs.connectivity.cc;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -23,7 +23,7 @@ import java.util.Queue;
  * Runtime Complexity: O(V+E) {@code countConnectedComponentsDfs}, {@code countConnectedComponentsBfs}
  * Space Complexity: O(V).
  */
-public class CC {
+public class CountCC {
 
     public int countConnectedComponentsDfs(List<List<Integer>> adjList) {
         int numVertices = adjList.size();

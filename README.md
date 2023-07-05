@@ -79,7 +79,7 @@ Need to prepare description.
 │   │       ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/topological/sorting/TopologicalSortKahn.java"><b>Kahn's</b></a>
 │   │       └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/topological/sorting/TopologicalSortTarjan.java"><b>Tarjan's</b></a> 
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/"><b>Connectivity</b></a>
-│   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/CC.java"><b>Connected Components</b></a>
+│   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/cc/"><b>Connected Components</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/scc/"><b>Strongly Connected Components</b></a>
 │   │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/scc/SCCKosarajuSharir.java"><b>Kosaraju-Sharir's</b></a>
 │   │   │   └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/scc/SCCTarjan.java"><b>Tarjan's</b></a>

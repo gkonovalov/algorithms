@@ -1,4 +1,4 @@
-package com.gkonovalov.algorithms.graphs.connectivity;
+package com.gkonovalov.algorithms.graphs.connectivity.cc;
 
 import com.gkonovalov.datastructures.graphs.representation.AdjacencyList;
 import com.gkonovalov.datastructures.graphs.representation.AdjacencyMatrix;
@@ -11,18 +11,18 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * Created by Georgiy Konovalov on 18/06/2023.
  * <p>
- * Tests for {@link CC}.
+ * Tests for {@link CountCC}.
  * </p
  */
-public class CCTest {
+public class CountCCTest {
 
-    private CC cc;
+    private CountCC cc;
     private AdjacencyList adjList;
     private AdjacencyMatrix adjMatrix;
 
     @BeforeEach
     public void setUp() {
-        this.cc = new CC();
+        this.cc = new CountCC();
         this.adjList = new AdjacencyList();
         this.adjMatrix = new AdjacencyMatrix();
     }

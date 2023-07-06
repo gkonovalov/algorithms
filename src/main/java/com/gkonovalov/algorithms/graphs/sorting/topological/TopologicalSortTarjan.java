@@ -1,4 +1,4 @@
-package com.gkonovalov.algorithms.graphs.topological.sorting;
+package com.gkonovalov.algorithms.graphs.sorting.topological;
 
 import java.util.ArrayList;
 import java.util.List;

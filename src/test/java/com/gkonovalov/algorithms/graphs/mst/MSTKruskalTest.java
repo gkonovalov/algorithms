@@ -1,6 +1,7 @@
 package com.gkonovalov.algorithms.graphs.mst;
 
 import com.gkonovalov.datastructures.graphs.EdgeWeighted;
+import com.gkonovalov.datastructures.graphs.representation.AdjacencyList;
 import com.gkonovalov.datastructures.graphs.representation.EdgeList;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -22,8 +23,8 @@ public class MSTKruskalTest {
 
     @BeforeEach
     public void setUp() {
-        EdgeList edgeList = new EdgeList();
-        this.mst = new MSTKruskal(edgeList.getGraphWeighted(), 8);
+        AdjacencyList adjacencyList = new AdjacencyList();
+        this.mst = new MSTKruskal(adjacencyList.getGraphWeightedUndirected());
     }
 
     @Test
@@ -42,7 +43,7 @@ public class MSTKruskalTest {
                 new EdgeWeighted(0, 2, 26),
                 new EdgeWeighted(5, 7, 28),
                 new EdgeWeighted(4, 5, 35),
-                new EdgeWeighted(6, 2, 40))
+                new EdgeWeighted(2, 6, 40))
         );
     }
 }

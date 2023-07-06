@@ -1,6 +1,8 @@
 package com.gkonovalov.datastructures.graphs.representation;
 
+import com.gkonovalov.datastructures.graphs.EdgeWeighted;
 import com.gkonovalov.datastructures.graphs.NodeWeighted;
+
 import java.util.*;
 
 /**
@@ -19,10 +21,10 @@ import java.util.*;
  * takes O(degree(V)) time complexity which slower than with Adjacency Matrix.
  * </p>
  * Runtime Complexity: O(1) - add Edge and add Vertex,
- *                     O(|V|+|E|) - removing a Vertex,
- *                     O(|E|) - removing a Edge,
- *                     O(degree(V)) - Edge between Vertices (checking for adjacency),
- *                     O(|V| + |E|) - traversing the graph.
+ * O(|V|+|E|) - removing a Vertex,
+ * O(|E|) - removing a Edge,
+ * O(degree(V)) - Edge between Vertices (checking for adjacency),
+ * O(|V| + |E|) - traversing the graph.
  * Space Complexity:   O(|V|+|E|), worst case O(|V|^2).
  */
 public class AdjacencyList {
@@ -101,12 +103,19 @@ public class AdjacencyList {
         return adjacencyListChars;
     }
 
-    public List<List<NodeWeighted>> getGraphDirectedWeighted(boolean isHasCycle) {
-        List<List<NodeWeighted>> adjListWeighted = List.of(
-                List.of(new NodeWeighted(1, 4), new NodeWeighted(2, 4)),
-                List.of(new NodeWeighted(0, 4), new NodeWeighted(1, 33)),
-                List.of(new NodeWeighted(1, 6))
-        );
+    public List<List<EdgeWeighted>> getGraphWeightedUndirected() {
+        List<List<EdgeWeighted>> adjListWeighted = new ArrayList<>();
+        List<EdgeWeighted> edgeList = new EdgeList().getGraphUnDirectedWeighted();
+
+        for (int i = 0; i < 8; i++) {
+            adjListWeighted.add(new ArrayList<>());
+        }
+
+        for (EdgeWeighted e : edgeList) {
+            adjListWeighted.get(e.fromV).add(new EdgeWeighted(e.fromV, e.toV, e.weight));
+            adjListWeighted.get(e.toV).add(new EdgeWeighted(e.toV, e.fromV, e.weight));
+        }
+
         return adjListWeighted;
     }
 

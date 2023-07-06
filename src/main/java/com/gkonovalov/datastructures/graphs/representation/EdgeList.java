@@ -41,7 +41,7 @@ public class EdgeList {
         return edgeList;
     }
 
-    public List<EdgeWeighted> getGraphWeighted() {
+    public List<EdgeWeighted> getGraphUnDirectedWeighted() {
         List<EdgeWeighted> edgeListWeighted = List.of(
                 new EdgeWeighted(0, 7, 16),
                 new EdgeWeighted(2, 3, 17),

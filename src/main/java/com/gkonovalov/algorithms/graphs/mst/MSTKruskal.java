@@ -9,7 +9,7 @@ import java.util.*;
 /**
  * Created by Georgiy Konovalov on 5/07/2023.
  * <p>
- * Minimum Spanning Tree - Kruskal algorithm implementation.
+ * Minimum Spanning Tree - Kruskal's algorithm implementation.
  * The Kruskal's algorithm is a greedy algorithm used to find the Minimum Spanning Tree (MST) in connected
  * undirected weighted graph (weights must be positive).The MST is a subset of the graph's edges that
  * connects all the vertices with the minimum total edge weight and doesn't have any cycles.
@@ -19,21 +19,27 @@ import java.util.*;
  * Union Find data structure.
  * </p>
  * Runtime Complexity: O(E log* E).
- * Space Complexity: O(V).
+ * Space Complexity:   O(V + E).
  */
 public class MSTKruskal {
 
     private double weight;
     private List<EdgeWeighted> mst;
 
-    public MSTKruskal(List<EdgeWeighted> edgeListWeighted, int numV) {
+    public MSTKruskal(List<List<EdgeWeighted>> adjListWeighted) {
         this.mst = new ArrayList<>();
-        kruskalMST(edgeListWeighted, numV);
+        this.weight = 0;
+
+        kruskalMST(adjListWeighted);
     }
 
-    private void kruskalMST(List<EdgeWeighted> edgeListWeighted, int numV) {
+    private void kruskalMST(List<List<EdgeWeighted>> adjListWeighted) {
+        int numV = adjListWeighted.size();
+
         PriorityQueue<EdgeWeighted> minHeap = new PriorityQueue<>((o1, o2) -> o1.weight - o2.weight);
-        minHeap.addAll(edgeListWeighted);
+        for (List<EdgeWeighted> edges : adjListWeighted) {
+            minHeap.addAll(edges);
+        }
 
         QuickUnionWeightedPathCompression uf = new QuickUnionWeightedPathCompression(numV);
         while (!minHeap.isEmpty() && mst.size() < numV - 1) {

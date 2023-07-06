@@ -1,5 +1,6 @@
 package com.gkonovalov.datastructures.graphs.representation;
 
+import com.gkonovalov.datastructures.graphs.NodeWeighted;
 import java.util.*;
 
 /**
@@ -100,15 +101,13 @@ public class AdjacencyList {
         return adjacencyListChars;
     }
 
-    public List<List<List<Integer>>> getGraphWeighted() {
-        List<List<List<Integer>>> adjacencyListWeighted = Arrays.asList(
-                List.of(List.of(1, 65), List.of(1, 43)),
-                List.of(List.of(0, 56), List.of(2, 22), List.of(3, 67)),
-                List.of(List.of(2, 23), List.of(3, 65)),
-                List.of(List.of(3, 78), List.of(3, 34))
+    public List<List<NodeWeighted>> getGraphDirectedWeighted(boolean isHasCycle) {
+        List<List<NodeWeighted>> adjListWeighted = List.of(
+                List.of(new NodeWeighted(1, 4), new NodeWeighted(2, 4)),
+                List.of(new NodeWeighted(0, 4), new NodeWeighted(1, 33)),
+                List.of(new NodeWeighted(1, 6))
         );
-
-        return adjacencyListWeighted;
+        return adjListWeighted;
     }
 
     public void printRelationsDfs(List<List<Integer>> adjacencyList) {

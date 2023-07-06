@@ -1,5 +1,6 @@
 package com.gkonovalov.datastructures.graphs.representation;
 
+import com.gkonovalov.datastructures.graphs.EdgeWeighted;
 import java.util.*;
 
 /**
@@ -40,12 +41,26 @@ public class EdgeList {
         return edgeList;
     }
 
-    public List<List<Integer>> getGraphWeighted() {
-        List<List<Integer>> edgeList = List.of(
-                List.of(0, 1, 200),
-                List.of(2, 5, 300)
+    public List<EdgeWeighted> getGraphWeighted() {
+        List<EdgeWeighted> edgeListWeighted = List.of(
+                new EdgeWeighted(0, 7, 16),
+                new EdgeWeighted(2, 3, 17),
+                new EdgeWeighted(1, 7, 19),
+                new EdgeWeighted(0, 2, 26),
+                new EdgeWeighted(5, 7, 28),
+                new EdgeWeighted(1, 3, 29),
+                new EdgeWeighted(1, 5, 32),
+                new EdgeWeighted(2, 7, 34),
+                new EdgeWeighted(4, 5, 35),
+                new EdgeWeighted(1, 2, 36),
+                new EdgeWeighted(4, 7, 37),
+                new EdgeWeighted(0, 4, 38),
+                new EdgeWeighted(6, 2, 40),
+                new EdgeWeighted(3, 6, 52),
+                new EdgeWeighted(6, 0, 58),
+                new EdgeWeighted(6, 4, 93)
         );
-        return edgeList;
+        return edgeListWeighted;
     }
 
     public void printEdges(List<List<Integer>> edgeList) {

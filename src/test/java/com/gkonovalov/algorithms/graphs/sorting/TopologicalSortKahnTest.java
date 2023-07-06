@@ -1,5 +1,6 @@
-package com.gkonovalov.algorithms.graphs.topological.sorting;
+package com.gkonovalov.algorithms.graphs.sorting;
 
+import com.gkonovalov.algorithms.graphs.sorting.topological.TopologicalSortKahn;
 import com.gkonovalov.datastructures.graphs.representation.AdjacencyList;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

@@ -13,7 +13,7 @@ import java.util.*;
  * It starts with an arbitrary vertex and repeatedly adds the minimum-weight edge that connects a vertex
  * in the MST to a vertex outside the MST. It grows the MST from a single vertex until it spans all vertices.
  * </p>
- * Runtime Complexity: O(E log V).
+ * Runtime Complexity: O(E log E).
  * Space Complexity:   O(V).
  */
 public class MSTPrim {

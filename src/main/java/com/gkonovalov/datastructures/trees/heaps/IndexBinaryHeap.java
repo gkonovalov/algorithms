@@ -5,13 +5,13 @@ import java.util.NoSuchElementException;
 /**
  * Created by Georgiy Konovalov on 13/06/2023.
  * <p>
- * Indexed Binary heap data structure implementation, also known as a Priority Queue.
+ * Indexed Binary Heap data structure implementation, also known as a Priority Queue.
  * Current implementation supports both Min Heap and Max Heap functionality, utilizing a comparator to achieve this.
- * Binary heap is a binary tree-based data structure that satisfy the heap property, which means that for every
- * node i other than the root, the key value of the parent node is either greater (in a max heap) or
- * smaller (in a min heap) than or equal to the key value of node i. This property allows quick access to the
- * maximum (or minimum) element at the root of the heap. Binary heaps are typically implemented using an array,
- * where the elements are stored in a complete binary tree fashion.
+ * Indexed Binary Heap, is a data structure that combines the properties of a binary heap and an array and satisfy
+ * the heap property, which means that for every node i other than the root, the key value of the parent node is
+ * either greater (in a max heap) or smaller (in a min heap) than or equal to the key value of node i. This property
+ * allows quick access to the maximum (or minimum) element at the root of the heap. Binary heaps are typically
+ * implemented using an array, where the elements are stored in a complete binary tree fashion.
  * The left child of a node at index i is stored at index 2i and the right child is stored at index 2i+1,
  * and parent of node at index i is stored at i/2.
  * </p>

@@ -19,10 +19,12 @@ import java.util.NoSuchElementException;
  *                     O(1) for {@code peek}, {@code isFull}, {@code isEmpty}, {@code size}.
  * Space Complexity:   O(n).
  */
-public class IndexMinBinaryHeap<T extends Comparable<T>> {
+public class IndexBinaryHeap<T extends Comparable<T>> {
 
     private static final int DEFAULT_SIZE = 8;
     private static final int ROOT = 1;
+
+    private final Type type;
 
     private T[] keys;
     private int[] pq;
@@ -30,16 +32,25 @@ public class IndexMinBinaryHeap<T extends Comparable<T>> {
     private int capacity;
     private int n;
 
-    public IndexMinBinaryHeap() {
-        this(DEFAULT_SIZE);
+    public IndexBinaryHeap() {
+        this(DEFAULT_SIZE, Type.MAX);
     }
 
-    public IndexMinBinaryHeap(int capacity) {
+    public IndexBinaryHeap(Type type) {
+        this(DEFAULT_SIZE, type);
+    }
+
+    public IndexBinaryHeap(int capacity, Type type) {
         if (capacity <= 0) {
             throw new IllegalArgumentException("Capacity can't be <= 0!");
         }
 
+        if (type == null) {
+            throw new IllegalArgumentException("Type can't be null!");
+        }
+
         this.capacity = capacity;
+        this.type = type;
         this.n = 0;
         this.keys = (T[]) new Comparable[capacity + 1];
         this.pq = new int[capacity + 1];
@@ -62,18 +73,60 @@ public class IndexMinBinaryHeap<T extends Comparable<T>> {
         moveUp(n);
     }
 
-    public int minIndex() {
+    public int topIndex() {
         if (isEmpty()) {
             throw new IllegalStateException("Binary Heap is empty!");
         }
         return pq[ROOT];
     }
 
-    public T minKey() {
+    public T topKey() {
         if (isEmpty()) {
             throw new IllegalStateException("Binary Heap is empty!");
         }
         return keys[pq[ROOT]];
+    }
+
+    public int deleteTop() {
+        if (isEmpty()) {
+            throw new IllegalStateException("Binary Heap is empty!");
+        }
+
+        int top = pq[ROOT];
+        swap(ROOT, n--);
+        moveDown(ROOT);
+
+        assert top == pq[n + 1];
+
+        qp[top] = -1;
+        keys[top] = null;
+        pq[n + 1] = -1;
+
+        return top;
+    }
+
+    public void delete(int i) {
+        if (!contains(i)) {
+            throw new NoSuchElementException("Index is not in the Binary Heap!");
+        }
+
+        int index = qp[i];
+        swap(index, n--);
+        moveUp(index);
+        moveDown(index);
+
+        keys[i] = null;
+        qp[i] = -1;
+    }
+
+    public void changeKey(int i, T key) {
+        if (!contains(i)) {
+            throw new NoSuchElementException("Index is not in the Binary Heap!");
+        }
+
+        keys[i] = key;
+        moveUp(qp[i]);
+        moveDown(qp[i]);
     }
 
     public T keyOf(int i) {
@@ -113,48 +166,6 @@ public class IndexMinBinaryHeap<T extends Comparable<T>> {
         moveDown(qp[i]);
     }
 
-    public void delete(int i) {
-        if (!contains(i)) {
-            throw new NoSuchElementException("Index is not in the Binary Heap!");
-        }
-
-        int index = qp[i];
-        swap(index, n--);
-        moveUp(index);
-        moveDown(index);
-
-        keys[i] = null;
-        qp[i] = -1;
-    }
-
-    public void changeKey(int i, T key) {
-        if (!contains(i)) {
-            throw new NoSuchElementException("Index is not in the Binary Heap!");
-        }
-
-        keys[i] = key;
-        moveUp(qp[i]);
-        moveDown(qp[i]);
-    }
-
-    public int delMin() {
-        if (isEmpty()) {
-            throw new IllegalStateException("Binary Heap is empty!");
-        }
-
-        int min = pq[ROOT];
-        swap(ROOT, n--);
-        moveDown(ROOT);
-
-        assert min == pq[n + 1];
-
-        qp[min] = -1;
-        keys[min] = null;
-        pq[n + 1] = -1;
-
-        return min;
-    }
-
     public boolean contains(int i) {
         if (i < 0 || i >= capacity) {
             throw new IllegalArgumentException("Invalid index: " + i);
@@ -170,8 +181,14 @@ public class IndexMinBinaryHeap<T extends Comparable<T>> {
         return n;
     }
 
-    private boolean less(int i, int j) {
-        return keys[pq[i]].compareTo(keys[pq[j]]) > 0;
+    private boolean compare(int i, int j) {
+        switch (type) {
+            case MAX:
+                return keys[pq[i]].compareTo(keys[pq[j]]) < 0;
+            case MIN:
+                return keys[pq[i]].compareTo(keys[pq[j]]) > 0;
+        }
+        return false;
     }
 
     private void swap(int i, int j) {
@@ -186,7 +203,7 @@ public class IndexMinBinaryHeap<T extends Comparable<T>> {
     private void moveUp(int child) {
         int parent = child / 2;
 
-        while (child > ROOT && less(parent, child)) {
+        while (child > ROOT && compare(parent, child)) {
             swap(child, parent);
             child = parent;
             parent = child / 2;
@@ -198,11 +215,11 @@ public class IndexMinBinaryHeap<T extends Comparable<T>> {
         int left = 2 * parent;
         int right = 2 * parent + 1;
 
-        if (left < n && less(largest, left)) {
+        if (left < n && compare(largest, left)) {
             largest = left;
         }
 
-        if (right < n && less(largest, right)) {
+        if (right < n && compare(largest, right)) {
             largest = right;
         }
 
@@ -210,5 +227,10 @@ public class IndexMinBinaryHeap<T extends Comparable<T>> {
             swap(parent, largest);
             moveDown(largest);
         }
+    }
+
+    public enum Type {
+        MIN,
+        MAX
     }
 }

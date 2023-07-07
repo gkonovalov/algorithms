@@ -91,7 +91,7 @@ public class BinaryHeap<T extends Comparable<T>> {
     private void moveUp(int child) {
         int parent = child / 2;
 
-        while (child > ROOT && less(parent, child)) {
+        while (child > ROOT && compare(parent, child)) {
             swap(child, parent);
             child = parent;
             parent = child / 2;
@@ -103,11 +103,11 @@ public class BinaryHeap<T extends Comparable<T>> {
         int left = 2 * parent;
         int right = 2 * parent + 1;
 
-        if (left < n && less(largest, left)) {
+        if (left < n && compare(largest, left)) {
             largest = left;
         }
 
-        if (right < n && less(largest, right)) {
+        if (right < n && compare(largest, right)) {
             largest = right;
         }
 
@@ -117,7 +117,7 @@ public class BinaryHeap<T extends Comparable<T>> {
         }
     }
 
-    private boolean less(int i, int j) {
+    private boolean compare(int i, int j) {
         switch (type) {
             case MAX:
                 return arr[i].compareTo(arr[j]) < 0;

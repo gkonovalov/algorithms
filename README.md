@@ -121,8 +121,8 @@ Need to prepare description.
 ├── Greedy
 │   ├── Huffman Coding
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath/Dijkstra.java"><b>Shortest Path Dijkstra's</b></a>
-│   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/mst/MSTPrim.java"><b>MST Prim’s </b></a>
-│   └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/mst/MSTKruskal.java"><b>MST Kruskal’s</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/mst/MSTPrim.java"><b>MST Prim’s </b></a>
+│   └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/mst/MSTKruskal.java"><b>MST Kruskal’s</b></a>
 ├── Randomized
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/QuickSort.java#L46"><b>Randomized Quick Sort</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/randomized/FisherYatesShuffle.java"><b>Fisher-Yates Shuffle</b></a>
@@ -136,7 +136,7 @@ Need to prepare description.
 │   ├── Closest Pair of Points
 │   ├── Line Intersection
 │   ├── Voronoi Diagram
-│   ├── Triangulation
+│   ├── Delaunay Triangulation
 │   └── Convex Hull
 │       ├── Graham Scan
 │       └── Jarvis March

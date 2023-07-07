@@ -119,6 +119,21 @@ public class AdjacencyList {
         return adjListWeighted;
     }
 
+    public List<List<EdgeWeighted>> getGraphWeightedDirected() {
+        List<List<EdgeWeighted>> adjListWeighted = new ArrayList<>();
+        List<EdgeWeighted> edgeList = new EdgeList().getGraphUnDirectedWeighted();
+
+        for (int i = 0; i < 8; i++) {
+            adjListWeighted.add(new ArrayList<>());
+        }
+
+        for (EdgeWeighted e : edgeList) {
+            adjListWeighted.get(e.fromV).add(e);
+        }
+
+        return adjListWeighted;
+    }
+
     public void printRelationsDfs(List<List<Integer>> adjacencyList) {
         int numVertices = adjacencyList.size();
         boolean[] visited = new boolean[numVertices];

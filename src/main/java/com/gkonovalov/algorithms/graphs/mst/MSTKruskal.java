@@ -2,8 +2,6 @@ package com.gkonovalov.algorithms.graphs.mst;
 
 import com.gkonovalov.algorithms.graphs.connectivity.unionfind.QuickUnionWeightedPathCompression;
 import com.gkonovalov.datastructures.graphs.EdgeWeighted;
-import com.gkonovalov.datastructures.graphs.NodeWeighted;
-
 import java.util.*;
 
 /**

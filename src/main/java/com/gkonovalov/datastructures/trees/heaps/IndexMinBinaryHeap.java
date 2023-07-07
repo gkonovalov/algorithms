@@ -19,12 +19,10 @@ import java.util.NoSuchElementException;
  *                     O(1) for {@code peek}, {@code isFull}, {@code isEmpty}, {@code size}.
  * Space Complexity:   O(n).
  */
-public class IndexBinaryHeap<T extends Comparable<T>> {
+public class IndexMinBinaryHeap<T extends Comparable<T>> {
 
     private static final int DEFAULT_SIZE = 8;
     private static final int ROOT = 1;
-
-    private final Type type;
 
     private T[] keys;
     private int[] pq;
@@ -32,25 +30,16 @@ public class IndexBinaryHeap<T extends Comparable<T>> {
     private int capacity;
     private int n;
 
-    public IndexBinaryHeap() {
-        this(DEFAULT_SIZE, Type.MAX);
+    public IndexMinBinaryHeap() {
+        this(DEFAULT_SIZE);
     }
 
-    public IndexBinaryHeap(Type type) {
-        this(DEFAULT_SIZE, type);
-    }
-
-    public IndexBinaryHeap(int capacity, Type type) {
+    public IndexMinBinaryHeap(int capacity) {
         if (capacity <= 0) {
             throw new IllegalArgumentException("Capacity can't be <= 0!");
         }
 
-        if (type == null) {
-            throw new IllegalArgumentException("Type can't be null!");
-        }
-
         this.capacity = capacity;
-        this.type = type;
         this.n = 0;
         this.keys = (T[]) new Comparable[capacity + 1];
         this.pq = new int[capacity + 1];
@@ -182,13 +171,7 @@ public class IndexBinaryHeap<T extends Comparable<T>> {
     }
 
     private boolean less(int i, int j) {
-        switch (type) {
-            case MAX:
-                return keys[pq[i]].compareTo(keys[pq[j]]) < 0;
-            case MIN:
-                return keys[pq[i]].compareTo(keys[pq[j]]) > 0;
-        }
-        return false;
+        return keys[pq[i]].compareTo(keys[pq[j]]) > 0;
     }
 
     private void swap(int i, int j) {
@@ -227,10 +210,5 @@ public class IndexBinaryHeap<T extends Comparable<T>> {
             swap(parent, largest);
             moveDown(largest);
         }
-    }
-
-    public enum Type {
-        MIN,
-        MAX
     }
 }

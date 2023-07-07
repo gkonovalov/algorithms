@@ -16,7 +16,7 @@ import java.util.NoSuchElementException;
  * and parent of node at index i is stored at i/2.
  * </p>
  * Runtime Complexity: O(log n) for {@code insert}, {@code poll}, {@code moveUp}, {@code moveDown},
- *                     O(1) for {@code peek}, {@code isFull}, {@code isEmpty}, {@code size}.
+ * O(1) for {@code peek}, {@code isFull}, {@code isEmpty}, {@code size}.
  * Space Complexity:   O(n).
  */
 public class IndexBinaryHeap<T extends Comparable<T>> {
@@ -148,7 +148,11 @@ public class IndexBinaryHeap<T extends Comparable<T>> {
         }
 
         keys[i] = key;
-        moveUp(qp[i]);
+        if (type.equals(Type.MIN)) {
+            moveUp(qp[i]);
+        } else {
+            moveDown(qp[i]);
+        }
     }
 
     public void increaseKey(int i, T key) {
@@ -163,7 +167,11 @@ public class IndexBinaryHeap<T extends Comparable<T>> {
         }
 
         keys[i] = key;
-        moveDown(qp[i]);
+        if (type.equals(Type.MIN)) {
+            moveDown(qp[i]);
+        } else {
+            moveUp(qp[i]);
+        }
     }
 
     public boolean contains(int i) {

@@ -1,9 +1,11 @@
 package com.gkonovalov.algorithms.graphs.mst;
 
 import com.gkonovalov.datastructures.graphs.EdgeWeighted;
-import com.gkonovalov.datastructures.trees.heaps.IndexMinBinaryHeap;
+import com.gkonovalov.datastructures.trees.heaps.IndexBinaryHeap;
 
 import java.util.*;
+
+import static com.gkonovalov.datastructures.trees.heaps.IndexBinaryHeap.Type.MIN;
 
 /**
  * Created by Georgiy Konovalov on 5/07/2023.
@@ -24,14 +26,14 @@ import java.util.*;
  */
 public class MSTPrim {
 
-    private IndexMinBinaryHeap<Double> minHeap;
+    private IndexBinaryHeap<Double> minHeap;
     private EdgeWeighted[] edgeTo;
     private double[] distTo;
     private boolean[] visited;
 
     public MSTPrim(List<List<EdgeWeighted>> adjListWithWeight) {
         int numV = adjListWithWeight.size();
-        this.minHeap = new IndexMinBinaryHeap<>(numV);
+        this.minHeap = new IndexBinaryHeap<>(numV, MIN);
         this.visited = new boolean[numV];
         this.distTo = new double[numV];
         this.edgeTo = new EdgeWeighted[numV];
@@ -46,7 +48,7 @@ public class MSTPrim {
         minHeap.insert(s, distTo[s]);
 
         while (!minHeap.isEmpty()) {
-            scan(adjListWithWeight, minHeap.delMin());
+            scan(adjListWithWeight, minHeap.deleteTop());
         }
     }
 

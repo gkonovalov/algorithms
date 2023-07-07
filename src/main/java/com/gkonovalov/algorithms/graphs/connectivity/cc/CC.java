@@ -25,12 +25,14 @@ import java.util.List;
 public class CC {
 
     private int[] id;
+    private int[] size;
     private int count;
 
     public CC(List<List<Integer>> adjList) {
         int numVertices = adjList.size();
         boolean[] visited = new boolean[numVertices];
         this.id = new int[numVertices];
+        this.size = new int[numVertices];
         this.count = 0;
 
         for (int v = 0; v < numVertices; v++) {
@@ -44,6 +46,7 @@ public class CC {
     private void dfs(List<List<Integer>> adjList, boolean[] visited, int fromV) {
         visited[fromV] = true;
         id[fromV] = count;
+        size[count]++;
 
         for (int toV : adjList.get(fromV)) {
             if (!visited[toV]) {
@@ -58,6 +61,10 @@ public class CC {
 
     public int id(int v) {
         return id[v];
+    }
+
+    public int size(int v) {
+        return size[id[v]];
     }
 
     public boolean isConnected(int a, int b) {

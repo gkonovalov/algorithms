@@ -63,7 +63,7 @@ Need to prepare description.
 │   │ 	    ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath/BellmanFord.java"><b>Bellman–Ford</b></a>
 │   │ 	    └──	<a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath/FloydWarshall.java"><b>Floyd-Warshall</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/mst"><b>Minimum Spanning Tree</b></a>
-│   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/mst/MSTPrim.java"><b>Prim’s </b></a>
+│   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/mst/MSTPrimLazy.java"><b>Prim’s </b></a>
 │   │ 	└── <a href="src/main/java/com/gkonovalov/algorithms/graphs/mst/MSTKruskal.java"><b>Kruskal’s</b></a>
 │   ├── Network Flow
 │   │   ├── Maximum Flow

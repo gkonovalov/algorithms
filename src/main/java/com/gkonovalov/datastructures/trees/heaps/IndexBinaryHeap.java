@@ -15,7 +15,7 @@ import java.util.NoSuchElementException;
  * The left child of a node at index i is stored at index 2i and the right child is stored at index 2i+1,
  * and parent of node at index i is stored at i/2.
  * </p>
- * Runtime Complexity: O(log n) for {@code add}, {@code poll}, {@code moveUp}, {@code moveDown},
+ * Runtime Complexity: O(log n) for {@code insert}, {@code poll}, {@code moveUp}, {@code moveDown},
  *                     O(1) for {@code peek}, {@code isFull}, {@code isEmpty}, {@code size}.
  * Space Complexity:   O(n).
  */

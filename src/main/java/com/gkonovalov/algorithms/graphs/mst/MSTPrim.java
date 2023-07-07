@@ -55,11 +55,7 @@ public class MSTPrim {
     private void scan(List<List<EdgeWeighted>> adjListWithWeight, int v) {
         visited[v] = true;
         for (EdgeWeighted e : adjListWithWeight.get(v)) {
-            if (visited[e.toV]) {
-                continue;
-            }
-
-            if (e.weight < distTo[e.toV]) {
+            if (!visited[e.toV] && e.weight < distTo[e.toV]) {
                 distTo[e.toV] = e.weight;
                 edgeTo[e.toV] = e;
 

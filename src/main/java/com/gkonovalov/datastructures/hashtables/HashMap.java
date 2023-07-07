@@ -116,7 +116,7 @@ public class HashMap<K, V> {
             size--;
             return true;
         }
-        return true;
+        return false;
     }
 
     public boolean containsKey(K key) {

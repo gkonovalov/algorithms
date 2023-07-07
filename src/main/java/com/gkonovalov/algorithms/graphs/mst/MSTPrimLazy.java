@@ -20,7 +20,7 @@ import java.util.PriorityQueue;
  * hence the name "lazy." It avoids unnecessary edge relaxation, improving efficiency when the graph
  * has a large number of edges.
  * </p>
- * Runtime Complexity: O(E log V).
+ * Runtime Complexity: O(E log E).
  * Space Complexity:   O(V).
  */
 public class MSTPrimLazy {

@@ -22,7 +22,7 @@ import static com.gkonovalov.datastructures.trees.heaps.IndexBinaryHeap.Type.MIN
  * is always considered first, at the cost of potential redundant edge relaxation.
  * </p>
  * Runtime Complexity: O(E log V).
- * Space Complexity:   O(V).
+ * Space Complexity:   O(E).
  */
 public class MSTPrim {
 

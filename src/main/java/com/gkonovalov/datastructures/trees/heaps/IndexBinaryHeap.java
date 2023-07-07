@@ -73,21 +73,21 @@ public class IndexBinaryHeap<T extends Comparable<T>> {
         moveUp(n);
     }
 
-    public int topIndex() {
+    public int peek() {
         if (isEmpty()) {
             throw new IllegalStateException("Binary Heap is empty!");
         }
         return pq[ROOT];
     }
 
-    public T topKey() {
+    public T peekKey() {
         if (isEmpty()) {
             throw new IllegalStateException("Binary Heap is empty!");
         }
         return keys[pq[ROOT]];
     }
 
-    public int deleteTop() {
+    public int poll() {
         if (isEmpty()) {
             throw new IllegalStateException("Binary Heap is empty!");
         }
@@ -153,7 +153,7 @@ public class IndexBinaryHeap<T extends Comparable<T>> {
 
     public void increaseKey(int i, T key) {
         if (!contains(i)) {
-            throw new NoSuchElementException("index is not in the Binary Heap");
+            throw new NoSuchElementException("Index is not in the Binary Heap!");
         }
         if (keys[i].compareTo(key) == 0) {
             throw new IllegalArgumentException("Calling increaseKey() with a key equal to the key in the Binary Heap");

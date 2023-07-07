@@ -48,7 +48,7 @@ public class MSTPrim {
         minHeap.insert(s, distTo[s]);
 
         while (!minHeap.isEmpty()) {
-            scan(adjListWithWeight, minHeap.deleteTop());
+            scan(adjListWithWeight, minHeap.poll());
         }
     }
 

@@ -43,9 +43,9 @@ public class MSTPrim {
         prim(adjListWithWeight, 0);
     }
 
-    private void prim(List<List<EdgeWeighted>> adjListWithWeight, int s) {
-        distTo[s] = 0.0;
-        minHeap.insert(s, distTo[s]);
+    private void prim(List<List<EdgeWeighted>> adjListWithWeight, int startV) {
+        distTo[startV] = 0.0;
+        minHeap.insert(startV, distTo[startV]);
 
         while (!minHeap.isEmpty()) {
             scan(adjListWithWeight, minHeap.poll());

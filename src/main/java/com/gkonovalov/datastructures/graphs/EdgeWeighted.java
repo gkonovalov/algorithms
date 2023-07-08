@@ -12,6 +12,11 @@ public class EdgeWeighted {
     public Integer toV;
     public Integer weight;
 
+    public EdgeWeighted(Integer fromV) {
+        this.fromV = fromV;
+        this.weight = 0;
+    }
+
     public EdgeWeighted(Integer fromV, Integer toV) {
         this.fromV = fromV;
         this.toV = toV;

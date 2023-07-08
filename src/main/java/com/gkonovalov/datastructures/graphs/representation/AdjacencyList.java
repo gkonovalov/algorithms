@@ -1,8 +1,6 @@
 package com.gkonovalov.datastructures.graphs.representation;
 
 import com.gkonovalov.datastructures.graphs.EdgeWeighted;
-import com.gkonovalov.datastructures.graphs.NodeWeighted;
-
 import java.util.*;
 
 /**

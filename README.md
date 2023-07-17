@@ -232,7 +232,7 @@ Need to prepare description.
     │   ├── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/AdjacencyList.java#L78"><b>Bipartite Graph</b></a>
     │   ├── <a href="src/main/java/com/gkonovalov/datastructures/trees/TreeNode.java"><b>Tree</b></a>
     │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/unionfind/"><b>Forest</b></a>
-    │   └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/mst"><b>Spanning Tree</b></a>
+    │   └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/mst"><b>Spanning Tree</b></a>
     └── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/"><b>Representation in memory</b></a>
         ├── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/AdjacencyList.java"><b>Adjacency List</b></a>
         ├── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/AdjacencyMatrix.java"><b>Adjacency Matrix</b></a>

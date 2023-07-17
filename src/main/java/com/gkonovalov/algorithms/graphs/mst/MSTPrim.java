@@ -53,7 +53,11 @@ public class MSTPrim {
             visited[fromV] = true;
 
             for (EdgeWeighted e : adjListWithWeight.get(fromV)) {
-                if (!visited[e.toV] && e.weight < dist[e.toV]) {
+                if (visited[e.toV]) {
+                    continue;
+                }
+
+                if (e.weight < dist[e.toV]) {
                     dist[e.toV] = e.weight;
                     prev[e.toV] = e;
 

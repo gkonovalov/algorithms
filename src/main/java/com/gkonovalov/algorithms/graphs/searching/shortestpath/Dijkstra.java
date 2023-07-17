@@ -64,18 +64,20 @@ public class Dijkstra {
             }
 
             for (NodeWeighted to : adjListWithWeight.get(fromV)) {
-                if (!visited[to.v]) {
-                    double newDistance = dist[fromV] + to.weight;
+                if (visited[to.v]) {
+                    continue;
+                }
 
-                    if (newDistance < dist[to.v]) {
-                        prev[to.v] = fromV;
-                        dist[to.v] = newDistance;
+                double newDistance = dist[fromV] + to.weight;
 
-                        if (minHeap.contains(to.v)) {
-                            minHeap.decreaseKey(to.v, dist[to.v]);
-                        } else {
-                            minHeap.insert(to.v, dist[to.v]);
-                        }
+                if (newDistance < dist[to.v]) {
+                    prev[to.v] = fromV;
+                    dist[to.v] = newDistance;
+
+                    if (minHeap.contains(to.v)) {
+                        minHeap.decreaseKey(to.v, dist[to.v]);
+                    } else {
+                        minHeap.insert(to.v, dist[to.v]);
                     }
                 }
             }

@@ -1,6 +1,8 @@
 package com.gkonovalov.datastructures.graphs.representation;
 
 import com.gkonovalov.datastructures.graphs.EdgeWeighted;
+import com.gkonovalov.datastructures.graphs.NodeWeighted;
+
 import java.util.*;
 
 /**
@@ -117,8 +119,8 @@ public class AdjacencyList {
         return adjListWeighted;
     }
 
-    public List<List<EdgeWeighted>> getGraphWeightedDirected() {
-        List<List<EdgeWeighted>> adjListWeighted = new ArrayList<>();
+    public List<List<NodeWeighted>> getGraphWeightedDirected() {
+        List<List<NodeWeighted>> adjListWeighted = new ArrayList<>();
         List<EdgeWeighted> edgeList = new EdgeList().getGraphUnDirectedWeighted();
 
         for (int i = 0; i < 8; i++) {
@@ -126,7 +128,7 @@ public class AdjacencyList {
         }
 
         for (EdgeWeighted e : edgeList) {
-            adjListWeighted.get(e.fromV).add(e);
+            adjListWeighted.get(e.fromV).add(new NodeWeighted(e.toV, e.weight));
         }
 
         return adjListWeighted;

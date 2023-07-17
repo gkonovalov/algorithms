@@ -1,35 +1,36 @@
 package com.gkonovalov.algorithms.graphs.searching.shortestpath;
-import com.gkonovalov.datastructures.graphs.EdgeWeighted;
+
+import com.gkonovalov.datastructures.graphs.NodeWeighted;
 
 import java.util.*;
 
 /**
  * Created by Georgiy Konovalov on 4/07/2023.
  * <p>
- * Dijkstra's lazy algorithm implementation. The algorithm maintains a set of vertices for which the
- * shortest path has been determined and gradually expands this set until all vertices have been
- * included. At each iteration, the algorithm selects the vertex with the minimum distance from
- * the source among the unvisited vertices and relaxes its neighboring vertices to potentially
- * update their distances. Dijkstra's algorithm designed to find the shortest path from a
- * source node to all other nodes in a weighted graph, however it does not provide an efficient
- * solution for finding the shortest path between any pair of nodes in the graph.
- * To find the shortest path between all pairs of nodes, a different algorithm such as the
- * Floyd-Warshall or Bellman-Ford algorithms may be more appropriate.
- * Dijkstra's algorithm uses a greedy approach and guarantees the shortest path, as long as the graph
- * satisfies next condition: all edge weights in the graph must be non-negative and the graph should be connected.
+ * Dijkstra's lazy algorithm implementation. The algorithm designed to find the shortest path
+ * from a source node to all other nodes in a weighted graph it uses a greedy approach and
+ * guarantees the shortest path, as long as the graph satisfies next condition: all edge weights
+ * in the graph must be non-negative and the graph should be connected. Dijkstra's  maintains a set
+ * of vertices for which the shortest path has been determined and gradually expands this set until
+ * all vertices have been included. At each iteration, the algorithm selects the vertex with the
+ * minimum distance from the source among the unvisited vertices and relaxes its neighboring vertices
+ * to potentially update their distances. However it does not provide an efficient solution for finding
+ * the shortest path between any pair of nodes in the graph. To find the shortest path between all pairs
+ * of nodes, a different algorithm such as the Floyd-Warshall or Bellman-Ford algorithms
+ * may be more appropriate.
  * </p>
  * Runtime Complexity: O(|V|+|E|log|V|) {@code dijkstraShortestPath}
  * Space Complexity: O(V)
  */
 public class DijkstraLazy {
 
-    private PriorityQueue<EdgeWeighted> minHeap;
+    private PriorityQueue<NodeWeighted> minHeap;
     private int[] dist;
     private int[] prev;
     private boolean[] visited;
     private int sourceVertex;
 
-    public DijkstraLazy(List<List<EdgeWeighted>> adjListWithWeight, int sourceVertex) {
+    public DijkstraLazy(List<List<NodeWeighted>> adjListWithWeight, int sourceVertex) {
         int vertices = adjListWithWeight.size();
 
         this.sourceVertex = sourceVertex;
@@ -43,31 +44,29 @@ public class DijkstraLazy {
         dijkstraShortestPath(adjListWithWeight, sourceVertex);
     }
 
-    private void dijkstraShortestPath(List<List<EdgeWeighted>> adjListWithWeight, int startV) {
+    private void dijkstraShortestPath(List<List<NodeWeighted>> adjListWithWeight, int startV) {
         dist[startV] = 0;
-        relax(adjListWithWeight, startV);
+        minHeap.add(new NodeWeighted(startV, 0));
 
         while (!minHeap.isEmpty()) {
-            EdgeWeighted e = minHeap.poll();
+            NodeWeighted from = minHeap.poll();
 
-            if (!visited[e.toV]) {
-                relax(adjListWithWeight, e.toV);
+            visited[from.v] = true;
+
+            if (dist[from.v] < from.weight) {
+                continue;
             }
-        }
-    }
 
-    private void relax(List<List<EdgeWeighted>> adjListWithWeight, int fromV) {
-        visited[fromV] = true;
+            for (NodeWeighted to : adjListWithWeight.get(from.v)) {
+                if (!visited[to.v]) {
+                    int newDistance = dist[from.v] + to.weight;
 
-        for (EdgeWeighted e : adjListWithWeight.get(fromV)) {
-            if (!visited[e.toV]) {
-                int newDistance = dist[fromV] + e.weight;
+                    if (newDistance < dist[to.v]) {
+                        prev[to.v] = from.v;
+                        dist[to.v] = newDistance;
 
-                if (newDistance < dist[e.toV]) {
-                    prev[e.toV] = fromV;
-                    dist[e.toV] = newDistance;
-
-                    minHeap.add(new EdgeWeighted(fromV, e.toV, dist[e.toV]));
+                        minHeap.add(new NodeWeighted(to.v, dist[to.v]));
+                    }
                 }
             }
         }

@@ -44,7 +44,7 @@ public class Dijkstra {
         this.prev = new int[vertices];
         this.minHeap = new IndexedBinaryHeap<>(vertices, MIN);
 
-        Arrays.fill(dist, Integer.MAX_VALUE);
+        Arrays.fill(dist, Double.POSITIVE_INFINITY);
 
         dijkstraShortestPath(adjListWithWeight, sourceVertex);
     }
@@ -89,7 +89,7 @@ public class Dijkstra {
     }
 
     public boolean hasPathTo(int v) {
-        return dist[v] != Integer.MAX_VALUE;
+        return dist[v] != Double.POSITIVE_INFINITY;
     }
 
     public List<Integer> pathTo(int endV) {

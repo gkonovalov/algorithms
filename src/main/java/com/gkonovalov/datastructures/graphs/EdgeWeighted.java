@@ -8,21 +8,21 @@ import java.util.Objects;
  * Base block for the Graph Weighted Edge construction.
  */
 public class EdgeWeighted {
-    public Integer fromV;
-    public Integer toV;
-    public Integer weight;
+    public int fromV;
+    public int toV;
+    public double weight;
 
-    public EdgeWeighted(Integer fromV) {
+    public EdgeWeighted(int fromV) {
         this.fromV = fromV;
         this.weight = 0;
     }
 
-    public EdgeWeighted(Integer toV, Integer weight) {
+    public EdgeWeighted(int toV, double weight) {
         this.toV = toV;
         this.weight = weight;
     }
 
-    public EdgeWeighted(Integer fromV, Integer toV, Integer weight) {
+    public EdgeWeighted(int fromV, int toV, double weight) {
         this.fromV = fromV;
         this.toV = toV;
         this.weight = weight;

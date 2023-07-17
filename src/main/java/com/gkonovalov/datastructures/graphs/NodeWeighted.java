@@ -7,15 +7,15 @@ package com.gkonovalov.datastructures.graphs;
  *
  */
 public class NodeWeighted {
-    public Integer v;
-    public Integer weight;
+    public int v;
+    public double weight;
 
-    public NodeWeighted(Integer v) {
+    public NodeWeighted(int v) {
         this.v = v;
         this.weight = 0;
     }
 
-    public NodeWeighted(Integer v, Integer weight) {
+    public NodeWeighted(int v, double weight) {
         this.v = v;
         this.weight = weight;
     }

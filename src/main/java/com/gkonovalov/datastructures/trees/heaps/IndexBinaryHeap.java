@@ -5,18 +5,20 @@ import java.util.NoSuchElementException;
 /**
  * Created by Georgiy Konovalov on 13/06/2023.
  * <p>
- * Indexed Binary Heap data structure implementation, also known as a Priority Queue.
+ * Indexed Binary Heap data structure implementation, also known as a Indexed Priority Queue.
  * Current implementation supports both Min Heap and Max Heap functionality, utilizing a comparator to achieve this.
- * Indexed Binary Heap, is a data structure that combines the properties of a binary heap and an array and satisfy
- * the heap property, which means that for every node i other than the root, the key value of the parent node is
- * either greater (in a max heap) or smaller (in a min heap) than or equal to the key value of node i. This property
- * allows quick access to the maximum (or minimum) element at the root of the heap. Binary heaps are typically
- * implemented using an array, where the elements are stored in a complete binary tree fashion.
+ * Indexed Binary Heap, is a data structure that combines the properties of a Binary Heap and an Array with additional
+ * indexing capabilities. It is designed to efficiently perform operations like insertion, deletion, and updating of
+ * elements, while also allowing direct access to the elements by their indices. Indexed Binary Heap satisfy the
+ * heap property, which means that for every node i other than the root, the key value of the parent node is either
+ * greater (in a max heap) or smaller (in a min heap) than or equal to the key value of node i. This property allows
+ * quick access to the maximum (or minimum) element at the root of the heap. Binary heaps are typically implemented
+ * using an array, where the elements are stored in a complete binary tree fashion.
  * The left child of a node at index i is stored at index 2i and the right child is stored at index 2i+1,
  * and parent of node at index i is stored at i/2.
  * </p>
  * Runtime Complexity: O(log n) for {@code insert}, {@code poll}, {@code moveUp}, {@code moveDown},
- * O(1) for {@code peek}, {@code isFull}, {@code isEmpty}, {@code size}.
+ *                     O(1) for {@code peek}, {@code isFull}, {@code isEmpty}, {@code size}.
  * Space Complexity:   O(n).
  */
 public class IndexBinaryHeap<T extends Comparable<T>> {
@@ -77,6 +79,7 @@ public class IndexBinaryHeap<T extends Comparable<T>> {
         if (isEmpty()) {
             throw new IllegalStateException("Binary Heap is empty!");
         }
+
         return pq[ROOT];
     }
 
@@ -84,6 +87,7 @@ public class IndexBinaryHeap<T extends Comparable<T>> {
         if (isEmpty()) {
             throw new IllegalStateException("Binary Heap is empty!");
         }
+
         return keys[pq[ROOT]];
     }
 
@@ -133,6 +137,7 @@ public class IndexBinaryHeap<T extends Comparable<T>> {
         if (!contains(i)) {
             throw new NoSuchElementException("Index is not in the Binary Heap!");
         }
+
         return keys[i];
     }
 
@@ -140,14 +145,17 @@ public class IndexBinaryHeap<T extends Comparable<T>> {
         if (!contains(i)) {
             throw new NoSuchElementException("Index is not in the Binary Heap!");
         }
+
         if (keys[i].compareTo(key) == 0) {
             throw new IllegalArgumentException("Calling decreaseKey() with a key equal to the key in the Binary Heap");
         }
+
         if (keys[i].compareTo(key) < 0) {
             throw new IllegalArgumentException("Calling decreaseKey() with a key strictly greater than the key in the Binary Heap");
         }
 
         keys[i] = key;
+
         if (type.equals(Type.MIN)) {
             moveUp(qp[i]);
         } else {
@@ -159,14 +167,17 @@ public class IndexBinaryHeap<T extends Comparable<T>> {
         if (!contains(i)) {
             throw new NoSuchElementException("Index is not in the Binary Heap!");
         }
+
         if (keys[i].compareTo(key) == 0) {
             throw new IllegalArgumentException("Calling increaseKey() with a key equal to the key in the Binary Heap");
         }
+
         if (keys[i].compareTo(key) > 0) {
             throw new IllegalArgumentException("Calling increaseKey() with a key strictly less than the key in the Binary Heap");
         }
 
         keys[i] = key;
+
         if (type.equals(Type.MIN)) {
             moveDown(qp[i]);
         } else {
@@ -178,6 +189,7 @@ public class IndexBinaryHeap<T extends Comparable<T>> {
         if (i < 0 || i >= capacity) {
             throw new IllegalArgumentException("Invalid index: " + i);
         }
+
         return qp[i] != -1;
     }
 

@@ -1,6 +1,7 @@
 package com.gkonovalov.algorithms.graphs.mst;
 
 import com.gkonovalov.datastructures.graphs.EdgeWeighted;
+import com.gkonovalov.datastructures.graphs.NodeWeighted;
 import com.gkonovalov.datastructures.trees.heaps.IndexBinaryHeap;
 
 import java.util.*;
@@ -27,42 +28,41 @@ import static com.gkonovalov.datastructures.trees.heaps.IndexBinaryHeap.Type.MIN
 public class MSTPrim {
 
     private IndexBinaryHeap<Double> minHeap;
-    private EdgeWeighted[] edgeTo;
-    private double[] distTo;
+    private EdgeWeighted[] prev;
+    private double[] dist;
     private boolean[] visited;
 
     public MSTPrim(List<List<EdgeWeighted>> adjListWithWeight) {
         int numV = adjListWithWeight.size();
         this.minHeap = new IndexBinaryHeap<>(numV, MIN);
         this.visited = new boolean[numV];
-        this.distTo = new double[numV];
-        this.edgeTo = new EdgeWeighted[numV];
+        this.dist = new double[numV];
+        this.prev = new EdgeWeighted[numV];
 
-        Arrays.fill(distTo, Double.POSITIVE_INFINITY);
+        Arrays.fill(dist, Double.POSITIVE_INFINITY);
 
         prim(adjListWithWeight, 0);
     }
 
     private void prim(List<List<EdgeWeighted>> adjListWithWeight, int startV) {
-        distTo[startV] = 0.0;
-        minHeap.insert(startV, distTo[startV]);
+        dist[startV] = 0.0;
+        minHeap.insert(startV, dist[startV]);
 
         while (!minHeap.isEmpty()) {
-            scan(adjListWithWeight, minHeap.poll());
-        }
-    }
+            int fromV = minHeap.poll();
 
-    private void scan(List<List<EdgeWeighted>> adjListWithWeight, int v) {
-        visited[v] = true;
-        for (EdgeWeighted e : adjListWithWeight.get(v)) {
-            if (!visited[e.toV] && e.weight < distTo[e.toV]) {
-                distTo[e.toV] = e.weight;
-                edgeTo[e.toV] = e;
+            visited[fromV] = true;
 
-                if (minHeap.contains(e.toV)) {
-                    minHeap.decreaseKey(e.toV, distTo[e.toV]);
-                } else {
-                    minHeap.insert(e.toV, distTo[e.toV]);
+            for (EdgeWeighted e : adjListWithWeight.get(fromV)) {
+                if (!visited[e.toV] && e.weight < dist[e.toV]) {
+                    dist[e.toV] = e.weight;
+                    prev[e.toV] = e;
+
+                    if (minHeap.contains(e.toV)) {
+                        minHeap.decreaseKey(e.toV, dist[e.toV]);
+                    } else {
+                        minHeap.insert(e.toV, dist[e.toV]);
+                    }
                 }
             }
         }
@@ -70,8 +70,8 @@ public class MSTPrim {
 
     public List<EdgeWeighted> edges() {
         List<EdgeWeighted> mst = new ArrayList<>();
-        for (int v = 0; v < edgeTo.length; v++) {
-            EdgeWeighted e = edgeTo[v];
+        for (int v = 0; v < prev.length; v++) {
+            EdgeWeighted e = prev[v];
             if (e != null) {
                 mst.add(e);
             }

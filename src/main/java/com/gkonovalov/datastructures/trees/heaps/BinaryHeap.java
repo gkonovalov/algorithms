@@ -103,11 +103,11 @@ public class BinaryHeap<T extends Comparable<T>> {
         int left = 2 * parent;
         int right = 2 * parent + 1;
 
-        if (left < n && compare(largest, left)) {
+        if (left <= n && compare(largest, left)) {
             largest = left;
         }
 
-        if (right < n && compare(largest, right)) {
+        if (right <= n && compare(largest, right)) {
             largest = right;
         }
 

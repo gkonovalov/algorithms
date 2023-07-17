@@ -25,7 +25,7 @@ import java.util.*;
 public class DijkstraLazy {
 
     private PriorityQueue<NodeWeighted> minHeap;
-    private int[] dist;
+    private double[] dist;
     private int[] prev;
     private boolean[] visited;
     private int sourceVertex;
@@ -35,11 +35,11 @@ public class DijkstraLazy {
 
         this.sourceVertex = sourceVertex;
         this.visited = new boolean[vertices];
-        this.dist = new int[vertices];
+        this.dist = new double[vertices];
         this.prev = new int[vertices];
-        this.minHeap = new PriorityQueue<>((o1, o2) -> o1.weight - o2.weight);
+        this.minHeap = new PriorityQueue<>(Comparator.comparingDouble(o -> o.weight));
 
-        Arrays.fill(dist, Integer.MAX_VALUE);
+        Arrays.fill(dist, Double.POSITIVE_INFINITY);
 
         dijkstraShortestPath(adjListWithWeight, sourceVertex);
     }
@@ -62,7 +62,7 @@ public class DijkstraLazy {
                     continue;
                 }
 
-                int newDistance = dist[from.v] + to.weight;
+                double newDistance = dist[from.v] + to.weight;
 
                 if (newDistance < dist[to.v]) {
                     prev[to.v] = from.v;
@@ -74,12 +74,12 @@ public class DijkstraLazy {
         }
     }
 
-    public int distTo(int v) {
+    public double distTo(int v) {
         return dist[v];
     }
 
     public boolean hasPathTo(int v) {
-        return dist[v] != Integer.MAX_VALUE;
+        return dist[v] != Double.POSITIVE_INFINITY;
     }
 
     public List<Integer> pathTo(int endV) {

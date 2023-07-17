@@ -1,13 +1,13 @@
 package com.gkonovalov.algorithms.graphs.searching.shortestpath;
 
 import com.gkonovalov.datastructures.graphs.NodeWeighted;
-import com.gkonovalov.datastructures.trees.heaps.IndexBinaryHeap;
+import com.gkonovalov.datastructures.trees.heaps.IndexedBinaryHeap;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.gkonovalov.datastructures.trees.heaps.IndexBinaryHeap.Type.MIN;
+import static com.gkonovalov.datastructures.trees.heaps.IndexedBinaryHeap.Type.MIN;
 
 /**
  * Created by Georgiy Konovalov on 4/07/2023.
@@ -29,7 +29,7 @@ import static com.gkonovalov.datastructures.trees.heaps.IndexBinaryHeap.Type.MIN
  */
 public class Dijkstra {
 
-    private IndexBinaryHeap<Double> minHeap;
+    private IndexedBinaryHeap<Double> minHeap;
     private double[] dist;
     private int[] prev;
     private boolean[] visited;
@@ -42,7 +42,7 @@ public class Dijkstra {
         this.visited = new boolean[vertices];
         this.dist = new double[vertices];
         this.prev = new int[vertices];
-        this.minHeap = new IndexBinaryHeap<>(vertices, MIN);
+        this.minHeap = new IndexedBinaryHeap<>(vertices, MIN);
 
         Arrays.fill(dist, Integer.MAX_VALUE);
 
@@ -55,7 +55,7 @@ public class Dijkstra {
 
         while (!minHeap.isEmpty()) {
             double weight = minHeap.peekKey();
-            int fromV = minHeap.poll();
+            int fromV = minHeap.pollIndex();
 
             visited[fromV] = true;
 

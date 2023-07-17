@@ -1,12 +1,11 @@
 package com.gkonovalov.algorithms.graphs.mst;
 
 import com.gkonovalov.datastructures.graphs.EdgeWeighted;
-import com.gkonovalov.datastructures.graphs.NodeWeighted;
-import com.gkonovalov.datastructures.trees.heaps.IndexBinaryHeap;
+import com.gkonovalov.datastructures.trees.heaps.IndexedBinaryHeap;
 
 import java.util.*;
 
-import static com.gkonovalov.datastructures.trees.heaps.IndexBinaryHeap.Type.MIN;
+import static com.gkonovalov.datastructures.trees.heaps.IndexedBinaryHeap.Type.MIN;
 
 /**
  * Created by Georgiy Konovalov on 5/07/2023.
@@ -27,14 +26,14 @@ import static com.gkonovalov.datastructures.trees.heaps.IndexBinaryHeap.Type.MIN
  */
 public class MSTPrim {
 
-    private IndexBinaryHeap<Double> minHeap;
+    private IndexedBinaryHeap<Double> minHeap;
     private EdgeWeighted[] prev;
     private double[] dist;
     private boolean[] visited;
 
     public MSTPrim(List<List<EdgeWeighted>> adjListWithWeight) {
         int numV = adjListWithWeight.size();
-        this.minHeap = new IndexBinaryHeap<>(numV, MIN);
+        this.minHeap = new IndexedBinaryHeap<>(numV, MIN);
         this.visited = new boolean[numV];
         this.dist = new double[numV];
         this.prev = new EdgeWeighted[numV];
@@ -49,7 +48,7 @@ public class MSTPrim {
         minHeap.insert(startV, dist[startV]);
 
         while (!minHeap.isEmpty()) {
-            int fromV = minHeap.poll();
+            int fromV = minHeap.pollIndex();
 
             visited[fromV] = true;
 

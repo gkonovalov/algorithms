@@ -221,15 +221,15 @@ Need to prepare description.
 │   └── Segment Tree
 └── <a href="src/main/java/com/gkonovalov/datastructures/graphs/Graph.java"><b>Graphs</b></a>
     ├── Types
-    │   ├── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/AdjacencyList.java#L56"><b>Directed Graph</b></a>
-    │   ├── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/AdjacencyList.java#L29"><b>Undirected Graph</b></a>
-    │   ├── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/AdjacencyList.java#L103"><b>Weighted Graph</b></a>
-    │   ├── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/AdjacencyList.java#L29"><b>Unweighted Graph</b></a>
-    │   ├── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/AdjacencyList.java#L48"><b>Cyclic Graph</b></a>
-    │   ├── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/AdjacencyList.java#L56"><b>Directed Acyclic Graph</b></a>
-    │   ├── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/AdjacencyList.java#L48"><b>Acyclic Graph</b></a>
-    │   ├── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/AdjacencyList.java#L94"><b>Labeled Graph</b></a>
-    │   ├── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/AdjacencyList.java#L75"><b>Bipartite Graph</b></a>
+    │   ├── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/AdjacencyList.java#L32"><b>Undirected Graph</b></a>
+    │   ├── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/AdjacencyList.java#L59"><b>Directed Graph</b></a>
+    │   ├── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/AdjacencyList.java#L106"><b>Weighted Undirected Graph</b></a>
+    │   ├── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/AdjacencyList.java#L122"><b>Weighted Directed Graph</b></a>
+    │   ├── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/AdjacencyList.java#L51"><b>Cyclic Graph</b></a>
+    │   ├── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/AdjacencyList.java#L51"><b>Acyclic Graph</b></a>
+    │   ├── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/AdjacencyList.java#L71"><b>Directed Acyclic Graph</b></a>
+    │   ├── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/AdjacencyList.java#L97"><b>Labeled Graph</b></a>
+    │   ├── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/AdjacencyList.java#L78"><b>Bipartite Graph</b></a>
     │   ├── <a href="src/main/java/com/gkonovalov/datastructures/trees/TreeNode.java"><b>Tree</b></a>
     │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/unionfind/"><b>Forest</b></a>
     │   └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/mst"><b>Spanning Tree</b></a>

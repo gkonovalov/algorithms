@@ -34,7 +34,7 @@ public class MSTKruskal {
     private void kruskalMST(List<List<EdgeWeighted>> adjListWeighted) {
         int numV = adjListWeighted.size();
 
-        PriorityQueue<EdgeWeighted> minHeap = new PriorityQueue<>((o1, o2) -> o1.weight - o2.weight);
+        PriorityQueue<EdgeWeighted> minHeap = new PriorityQueue<>(Comparator.comparingDouble(o -> o.weight));
         for (List<EdgeWeighted> edges : adjListWeighted) {
             minHeap.addAll(edges);
         }

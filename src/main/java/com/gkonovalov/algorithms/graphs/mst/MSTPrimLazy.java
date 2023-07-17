@@ -3,6 +3,7 @@ package com.gkonovalov.algorithms.graphs.mst;
 import com.gkonovalov.datastructures.graphs.EdgeWeighted;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.PriorityQueue;
 
@@ -32,7 +33,7 @@ public class MSTPrimLazy {
 
     public MSTPrimLazy(List<List<EdgeWeighted>> adjListWithWeight) {
         int numV = adjListWithWeight.size();
-        this.minHeap = new PriorityQueue<>((o1, o2) -> o1.weight - o2.weight);
+        this.minHeap = new PriorityQueue<>(Comparator.comparingDouble(o -> o.weight));
         this.visited = new boolean[numV];
         this.mst = new ArrayList<>();
         this.weight = 0;

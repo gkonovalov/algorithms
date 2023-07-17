@@ -58,15 +58,17 @@ public class DijkstraLazy {
             }
 
             for (NodeWeighted to : adjListWithWeight.get(from.v)) {
-                if (!visited[to.v]) {
-                    int newDistance = dist[from.v] + to.weight;
+                if (visited[to.v]) {
+                    continue;
+                }
 
-                    if (newDistance < dist[to.v]) {
-                        prev[to.v] = from.v;
-                        dist[to.v] = newDistance;
+                int newDistance = dist[from.v] + to.weight;
 
-                        minHeap.add(new NodeWeighted(to.v, dist[to.v]));
-                    }
+                if (newDistance < dist[to.v]) {
+                    prev[to.v] = from.v;
+                    dist[to.v] = newDistance;
+
+                    minHeap.add(new NodeWeighted(to.v, dist[to.v]));
                 }
             }
         }

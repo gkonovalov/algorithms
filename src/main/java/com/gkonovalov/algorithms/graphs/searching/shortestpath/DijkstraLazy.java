@@ -53,7 +53,7 @@ public class DijkstraLazy {
 
             visited[from.v] = true;
 
-            if (dist[from.v] < from.weight) {
+            if (from.weight > dist[from.v]) {
                 continue;
             }
 

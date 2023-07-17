@@ -59,7 +59,7 @@ public class Dijkstra {
 
             visited[fromV] = true;
 
-            if (dist[fromV] < weight) {
+            if (weight > dist[fromV]) {
                 continue;
             }
 

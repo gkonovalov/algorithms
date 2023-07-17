@@ -206,6 +206,7 @@ Need to prepare description.
 │   │   ├── <a href="src/main/java/com/gkonovalov/datastructures/trees/heaps/BinaryHeap.java"><b>Binary Heap - Priority Queue</b></a>
 │   │   │   ├── <a href="src/main/java/com/gkonovalov/datastructures/trees/heaps/BinaryHeap.java#L124"><b>Min Heap</b></a>
 │   │   │   └── <a href="src/main/java/com/gkonovalov/datastructures/trees/heaps/BinaryHeap.java#L122"><b>Max Heap</b></a>
+│   │   ├── <a href="src/main/java/com/gkonovalov/datastructures/trees/heaps/IndexedBinaryHeap.java"><b>Indexed Binary Heap</b></a>
 │   │   └── Fibonacci Heaps
 │   ├── Self-balanced
 │   │   ├── AVL Tree

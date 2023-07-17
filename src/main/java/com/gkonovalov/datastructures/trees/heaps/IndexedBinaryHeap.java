@@ -1,5 +1,6 @@
 package com.gkonovalov.datastructures.trees.heaps;
 
+import java.util.Arrays;
 import java.util.NoSuchElementException;
 
 /**
@@ -21,7 +22,7 @@ import java.util.NoSuchElementException;
  *                     O(1) for {@code peek}, {@code isFull}, {@code isEmpty}, {@code size}.
  * Space Complexity:   O(n).
  */
-public class IndexBinaryHeap<T extends Comparable<T>> {
+public class IndexedBinaryHeap<T extends Comparable<T>> {
 
     private static final int DEFAULT_SIZE = 8;
     private static final int ROOT = 1;
@@ -34,15 +35,15 @@ public class IndexBinaryHeap<T extends Comparable<T>> {
     private int capacity;
     private int n;
 
-    public IndexBinaryHeap() {
+    public IndexedBinaryHeap() {
         this(DEFAULT_SIZE, Type.MAX);
     }
 
-    public IndexBinaryHeap(Type type) {
+    public IndexedBinaryHeap(Type type) {
         this(DEFAULT_SIZE, type);
     }
 
-    public IndexBinaryHeap(int capacity, Type type) {
+    public IndexedBinaryHeap(int capacity, Type type) {
         if (capacity <= 0) {
             throw new IllegalArgumentException("Capacity can't be <= 0!");
         }
@@ -58,24 +59,22 @@ public class IndexBinaryHeap<T extends Comparable<T>> {
         this.pq = new int[capacity + 1];
         this.qp = new int[capacity + 1];
 
-        for (int i = 0; i <= capacity; i++) {
-            qp[i] = -1;
-        }
+        Arrays.fill(qp, -1);
     }
 
-    public void insert(int i, T key) {
-        if (contains(i)) {
+    public void insert(int index, T key) {
+        if (contains(index)) {
             throw new IllegalArgumentException("Index is already in the Binary Heap!");
         }
 
         n++;
-        qp[i] = n;
-        pq[n] = i;
-        keys[i] = key;
+        qp[index] = n;
+        pq[n] = index;
+        keys[index] = key;
         moveUp(n);
     }
 
-    public int peek() {
+    public int peekIndex() {
         if (isEmpty()) {
             throw new IllegalStateException("Binary Heap is empty!");
         }
@@ -91,12 +90,9 @@ public class IndexBinaryHeap<T extends Comparable<T>> {
         return keys[pq[ROOT]];
     }
 
-    public int poll() {
-        if (isEmpty()) {
-            throw new IllegalStateException("Binary Heap is empty!");
-        }
+    public int pollIndex() {
+        int top = peekIndex();
 
-        int top = pq[ROOT];
         swap(ROOT, n--);
         moveDown(ROOT);
 
@@ -109,88 +105,96 @@ public class IndexBinaryHeap<T extends Comparable<T>> {
         return top;
     }
 
-    public void delete(int i) {
-        if (!contains(i)) {
-            throw new NoSuchElementException("Index is not in the Binary Heap!");
-        }
+    public T pollKey() {
+        T key = peekKey();
 
-        int index = qp[i];
-        swap(index, n--);
-        moveUp(index);
-        moveDown(index);
+        pollIndex();
 
-        keys[i] = null;
-        qp[i] = -1;
+        return key;
     }
 
-    public void changeKey(int i, T key) {
-        if (!contains(i)) {
+    public void delete(int index) {
+        if (!contains(index)) {
             throw new NoSuchElementException("Index is not in the Binary Heap!");
         }
 
-        keys[i] = key;
-        moveUp(qp[i]);
-        moveDown(qp[i]);
+        int i = qp[index];
+        swap(i, n--);
+        moveUp(i);
+        moveDown(i);
+
+        keys[index] = null;
+        qp[index] = -1;
     }
 
-    public T keyOf(int i) {
-        if (!contains(i)) {
+    public void changeKey(int index, T key) {
+        if (!contains(index)) {
             throw new NoSuchElementException("Index is not in the Binary Heap!");
         }
 
-        return keys[i];
+        keys[index] = key;
+        moveUp(qp[index]);
+        moveDown(qp[index]);
     }
 
-    public void decreaseKey(int i, T key) {
-        if (!contains(i)) {
+    public T keyOf(int index) {
+        if (!contains(index)) {
             throw new NoSuchElementException("Index is not in the Binary Heap!");
         }
 
-        if (keys[i].compareTo(key) == 0) {
+        return keys[index];
+    }
+
+    public void decreaseKey(int index, T key) {
+        if (!contains(index)) {
+            throw new NoSuchElementException("Index is not in the Binary Heap!");
+        }
+
+        if (keys[index].compareTo(key) == 0) {
             throw new IllegalArgumentException("Calling decreaseKey() with a key equal to the key in the Binary Heap");
         }
 
-        if (keys[i].compareTo(key) < 0) {
+        if (keys[index].compareTo(key) < 0) {
             throw new IllegalArgumentException("Calling decreaseKey() with a key strictly greater than the key in the Binary Heap");
         }
 
-        keys[i] = key;
+        keys[index] = key;
 
         if (type.equals(Type.MIN)) {
-            moveUp(qp[i]);
+            moveUp(qp[index]);
         } else {
-            moveDown(qp[i]);
+            moveDown(qp[index]);
         }
     }
 
-    public void increaseKey(int i, T key) {
-        if (!contains(i)) {
+    public void increaseKey(int index, T key) {
+        if (!contains(index)) {
             throw new NoSuchElementException("Index is not in the Binary Heap!");
         }
 
-        if (keys[i].compareTo(key) == 0) {
+        if (keys[index].compareTo(key) == 0) {
             throw new IllegalArgumentException("Calling increaseKey() with a key equal to the key in the Binary Heap");
         }
 
-        if (keys[i].compareTo(key) > 0) {
+        if (keys[index].compareTo(key) > 0) {
             throw new IllegalArgumentException("Calling increaseKey() with a key strictly less than the key in the Binary Heap");
         }
 
-        keys[i] = key;
+        keys[index] = key;
 
         if (type.equals(Type.MIN)) {
-            moveDown(qp[i]);
+            moveDown(qp[index]);
         } else {
-            moveUp(qp[i]);
+            moveUp(qp[index]);
         }
     }
 
-    public boolean contains(int i) {
-        if (i < 0 || i >= capacity) {
-            throw new IllegalArgumentException("Invalid index: " + i);
+    public boolean contains(int index) {
+        if (index < 0 || index >= capacity) {
+            throw new IllegalArgumentException("Invalid index: " + index);
         }
 
-        return qp[i] != -1;
+        return qp[index] != -1;
     }
 
     public boolean isEmpty() {
@@ -201,6 +205,15 @@ public class IndexBinaryHeap<T extends Comparable<T>> {
         return n;
     }
 
+    private void swap(int i, int j) {
+        int swap = pq[i];
+        pq[i] = pq[j];
+        pq[j] = swap;
+
+        qp[pq[i]] = i;
+        qp[pq[j]] = j;
+    }
+
     private boolean compare(int i, int j) {
         switch (type) {
             case MAX:
@@ -209,15 +222,6 @@ public class IndexBinaryHeap<T extends Comparable<T>> {
                 return keys[pq[i]].compareTo(keys[pq[j]]) > 0;
         }
         return false;
-    }
-
-    private void swap(int i, int j) {
-        int swap = pq[i];
-        pq[i] = pq[j];
-        pq[j] = swap;
-
-        qp[pq[i]] = i;
-        qp[pq[j]] = j;
     }
 
     private void moveUp(int child) {
@@ -235,11 +239,11 @@ public class IndexBinaryHeap<T extends Comparable<T>> {
         int left = 2 * parent;
         int right = 2 * parent + 1;
 
-        if (left < n && compare(largest, left)) {
+        if (left <= n && compare(largest, left)) {
             largest = left;
         }
 
-        if (right < n && compare(largest, right)) {
+        if (right <= n && compare(largest, right)) {
             largest = right;
         }
 

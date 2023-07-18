@@ -24,7 +24,7 @@ import static com.gkonovalov.datastructures.trees.heaps.IndexedBinaryHeap.Type.M
  * of nodes, a different algorithm such as the Floyd-Warshall or Bellman-Ford algorithms
  * may be more appropriate.
  * </p>
- * Runtime Complexity: O(|V|+|E|log|V|) {@code dijkstraShortestPath}
+ * Runtime Complexity: O(|V|+|E|log|V|) {@code shortestPath}
  * Space Complexity: O(V)
  */
 public class Dijkstra {

@@ -46,10 +46,10 @@ public class Dijkstra {
 
         Arrays.fill(dist, Double.POSITIVE_INFINITY);
 
-        dijkstraShortestPath(adjListWithWeight, sourceVertex);
+        shortestPath(adjListWithWeight, sourceVertex);
     }
 
-    private void dijkstraShortestPath(List<List<NodeWeighted>> adjListWithWeight, int startV) {
+    private void shortestPath(List<List<NodeWeighted>> adjListWithWeight, int startV) {
         dist[startV] = 0;
         minHeap.insert(startV, dist[startV]);
 

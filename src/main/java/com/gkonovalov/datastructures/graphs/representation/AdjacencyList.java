@@ -119,7 +119,7 @@ public class AdjacencyList {
         return adjListWeighted;
     }
 
-    public List<List<NodeWeighted>> getGraphWeightedDirected() {
+    public List<List<NodeWeighted>> getGraphWeightedDirected(boolean isNegative) {
         List<List<NodeWeighted>> adjListWeighted = new ArrayList<>();
         List<EdgeWeighted> edgeList = new EdgeList().getGraphUnDirectedWeighted();
 
@@ -129,6 +129,10 @@ public class AdjacencyList {
 
         for (EdgeWeighted e : edgeList) {
             adjListWeighted.get(e.fromV).add(new NodeWeighted(e.toV, e.weight));
+        }
+
+        if(isNegative){
+            adjListWeighted.get(2).add(new NodeWeighted(6, -15));
         }
 
         return adjListWeighted;

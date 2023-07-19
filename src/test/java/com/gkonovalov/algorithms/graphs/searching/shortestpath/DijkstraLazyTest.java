@@ -22,7 +22,7 @@ public class DijkstraLazyTest {
     @BeforeEach
     public void setUp() {
         AdjacencyList adjacencyList = new AdjacencyList();
-        this.dijkstraLazy = new DijkstraLazy(adjacencyList.getGraphWeightedDirected(), 0);
+        this.dijkstraLazy = new DijkstraLazy(adjacencyList.getGraphWeightedDirected(false), 0);
     }
 
     @Test

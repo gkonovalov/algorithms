@@ -22,7 +22,7 @@ public class DijkstraTest {
     @BeforeEach
     public void setUp() {
         AdjacencyList adjacencyList = new AdjacencyList();
-        this.dijkstra = new Dijkstra(adjacencyList.getGraphWeightedDirected(), 0);
+        this.dijkstra = new Dijkstra(adjacencyList.getGraphWeightedDirected(false), 0);
     }
 
     @Test

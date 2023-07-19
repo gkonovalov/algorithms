@@ -42,7 +42,7 @@ public class BellmanFord {
         shortestPath(adjListWithWeight, vertices, startV);
     }
 
-    public void shortestPath(List<List<NodeWeighted>> adjListWithWeight, int vertices,  int startV) {
+    private void shortestPath(List<List<NodeWeighted>> adjListWithWeight, int vertices,  int startV) {
         dist[startV] = 0;
 
         for (int i = 0; i < vertices - 1; i++) {

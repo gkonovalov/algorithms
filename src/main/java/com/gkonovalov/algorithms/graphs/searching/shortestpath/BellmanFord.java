@@ -13,13 +13,13 @@ import java.util.List;
  * algorithm used to find the shortest paths from a single source vertex to all other vertices
  * in a weighted graph. Unlike Dijkstra's algorithm, the Bellman-Ford algorithm can handle
  * graphs with negative edge weights and can detect "negative cycles", making it more
- * versatile in some scenarios. It's important to note that the presence of negative cycles can
+ * versatile in some scenarios. It's important to note that the presence of "negative cycles" can
  * make the shortest paths undefined since there is no finite solution. In practice, the
  * Bellman-Ford algorithm is often used for detecting negative cycles rather than finding the
  * shortest paths in graphs with negative weights. For finding shortest paths in graphs with
  * non-negative edge weights, Dijkstra's algorithm is a more efficient choice.
  * Bellman-Ford does not work with an undirected graph with negative edges as it will be declared
- * as a negative cycle.
+ * as a "negative cycles".
  * </p>
  * Runtime Complexity: O(|V||E|) {@code shortestPath}
  * Space Complexity: O(V)

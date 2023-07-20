@@ -1,6 +1,6 @@
 package com.gkonovalov.algorithms.graphs.searching.shortestpath;
 
-import com.gkonovalov.datastructures.graphs.NodeWeighted;
+import com.gkonovalov.datastructures.graphs.EdgeWeighted;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -30,7 +30,7 @@ public class BellmanFord {
     private int[] prev;
     private int sourceVertex;
 
-    public BellmanFord(List<List<NodeWeighted>> adjListWithWeight, int startV) {
+    public BellmanFord(List<List<EdgeWeighted>> adjListWithWeight, int startV) {
         int vertices = adjListWithWeight.size();
 
         this.sourceVertex = startV;
@@ -42,28 +42,32 @@ public class BellmanFord {
         shortestPath(adjListWithWeight, vertices, startV);
     }
 
-    private void shortestPath(List<List<NodeWeighted>> adjListWithWeight, int vertices, int startV) {
+    private void shortestPath(List<List<EdgeWeighted>> adjListWithWeight, int vertices, int startV) {
         dist[startV] = 0;
 
         for (int i = 0; i < vertices - 1; i++) {
-            for (int fromV = 0; fromV < vertices; fromV++) {
-                for (NodeWeighted to : adjListWithWeight.get(fromV)) {
-                    double newDistance = dist[fromV] + to.weight;
+            for (List<EdgeWeighted> edges : adjListWithWeight) {
+                for (EdgeWeighted e : edges) {
+                    double newDistance = dist[e.fromV] + e.weight;
 
-                    if (newDistance < dist[to.v]) {
-                        dist[to.v] = newDistance;
-                        prev[to.v] = fromV;
+                    if (newDistance < dist[e.toV]) {
+                        dist[e.toV] = newDistance;
+                        prev[e.toV] = e.fromV;
                     }
                 }
             }
         }
 
-        for (int i = 0; i < vertices - 1; i++) {
-            for (int fromV = 0; fromV < vertices; fromV++) {
-                for (NodeWeighted to : adjListWithWeight.get(fromV)) {
-                    double newDistance = dist[fromV] + to.weight;
+        detectNegativeCycles(adjListWithWeight, vertices);
+    }
 
-                    if (newDistance < dist[to.v]) {
+    private void detectNegativeCycles(List<List<EdgeWeighted>> adjListWithWeight, int vertices) {
+        for (int i = 0; i < vertices - 1; i++) {
+            for (List<EdgeWeighted> edges : adjListWithWeight) {
+                for (EdgeWeighted e : edges) {
+                    double newDistance = dist[e.fromV] + e.weight;
+
+                    if (newDistance < dist[e.toV]) {
                         throw new RuntimeException("Can't compute shortest path in the Graph with negative cycle!");
                     }
                 }

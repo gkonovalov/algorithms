@@ -1,6 +1,7 @@
 package com.gkonovalov.algorithms.graphs.searching.shortestpath;
 
 import com.gkonovalov.datastructures.graphs.representation.AdjacencyList;
+import com.gkonovalov.datastructures.graphs.representation.EdgeList;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -34,6 +35,6 @@ public class BellmanFordTest {
     @Test
     @DisplayName("Testing BellmanFord.pathTo with AdjacencyList")
     public void testPathTo() {
-        assertEquals(List.of(0, 2, 6), bellmanFord.pathTo(6));
+         assertEquals(List.of(0, 2, 6), bellmanFord.pathTo(6));
     }
 }

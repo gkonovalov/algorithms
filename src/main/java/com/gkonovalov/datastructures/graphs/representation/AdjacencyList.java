@@ -1,7 +1,6 @@
 package com.gkonovalov.datastructures.graphs.representation;
 
 import com.gkonovalov.datastructures.graphs.EdgeWeighted;
-import com.gkonovalov.datastructures.graphs.NodeWeighted;
 
 import java.util.*;
 
@@ -105,7 +104,7 @@ public class AdjacencyList {
 
     public List<List<EdgeWeighted>> getGraphWeightedUndirected() {
         List<List<EdgeWeighted>> adjListWeighted = new ArrayList<>();
-        List<EdgeWeighted> edgeList = new EdgeList().getGraphUnDirectedWeighted();
+        List<EdgeWeighted> edgeList = new EdgeList().getGraphDirectedWeighted(false);
 
         for (int i = 0; i < 8; i++) {
             adjListWeighted.add(new ArrayList<>());
@@ -119,20 +118,16 @@ public class AdjacencyList {
         return adjListWeighted;
     }
 
-    public List<List<NodeWeighted>> getGraphWeightedDirected(boolean isNegative) {
-        List<List<NodeWeighted>> adjListWeighted = new ArrayList<>();
-        List<EdgeWeighted> edgeList = new EdgeList().getGraphUnDirectedWeighted();
+    public List<List<EdgeWeighted>> getGraphWeightedDirected(boolean isNegative) {
+        List<List<EdgeWeighted>> adjListWeighted = new ArrayList<>();
+        List<EdgeWeighted> edgeList = new EdgeList().getGraphDirectedWeighted(isNegative);
 
         for (int i = 0; i < 8; i++) {
             adjListWeighted.add(new ArrayList<>());
         }
 
         for (EdgeWeighted e : edgeList) {
-            adjListWeighted.get(e.fromV).add(new NodeWeighted(e.toV, e.weight));
-        }
-
-        if(isNegative){
-            adjListWeighted.get(2).add(new NodeWeighted(6, -15));
+            adjListWeighted.get(e.fromV).add(e);
         }
 
         return adjListWeighted;

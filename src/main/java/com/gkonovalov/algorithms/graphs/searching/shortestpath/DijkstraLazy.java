@@ -27,17 +27,15 @@ public class DijkstraLazy {
 
     private PriorityQueue<EdgeWeighted> minHeap;
     private double[] dist;
-    private int[] prev;
+    private Integer[] prev;
     private boolean[] visited;
-    private int sourceVertex;
 
     public DijkstraLazy(List<List<EdgeWeighted>> adjListWithWeight, int sourceVertex) {
         int vertices = adjListWithWeight.size();
 
-        this.sourceVertex = sourceVertex;
         this.visited = new boolean[vertices];
         this.dist = new double[vertices];
-        this.prev = new int[vertices];
+        this.prev = new Integer[vertices];
         this.minHeap = new PriorityQueue<>(Comparator.comparingDouble(o -> o.weight));
 
         Arrays.fill(dist, Double.POSITIVE_INFINITY);
@@ -89,10 +87,9 @@ public class DijkstraLazy {
         }
 
         List<Integer> path = new ArrayList<>();
-        for (int v = endV; v != sourceVertex; v = prev[v]) {
+        for (Integer v = endV; v != null; v = prev[v]) {
             path.add(0, v);
         }
-        path.add(0, sourceVertex);
 
         return path;
     }

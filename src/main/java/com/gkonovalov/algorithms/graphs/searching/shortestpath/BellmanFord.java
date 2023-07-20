@@ -76,7 +76,7 @@ public class BellmanFord {
     }
 
     public boolean hasPathTo(int v) {
-        return dist[v] != Double.POSITIVE_INFINITY && dist[v] != Double.NEGATIVE_INFINITY;
+        return dist[v] != Double.POSITIVE_INFINITY;
     }
 
     public List<Integer> pathTo(int endV) {

@@ -108,8 +108,8 @@ Need to prepare description.
 │   │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/math/FibonacciNumbers.java#L25"><b>Top-Down  - Memoization</b></a>
 │   │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/math/FibonacciNumbers.java#L45"><b>Bottom-Up - Tabulation</b></a>
 │   │   │   └── Half-and-Half
-│   │   ├── Bellman-Ford  
-│   │   ├── Floyd-Warshall 
+│   │ 	├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath/BellmanFord.java"><b>Bellman–Ford</b></a>
+│   │ 	├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath/FloydWarshall.java"><b>Floyd-Warshall</b></a>
 │   │   ├── Levenshtein Distance
 │   │   ├── Regular Expression Matching
 │   │   ├── Matrix Chain Multiplication

@@ -27,15 +27,13 @@ import java.util.List;
 public class BellmanFord {
 
     private double[] dist;
-    private int[] prev;
-    private int sourceVertex;
+    private Integer[] prev;
 
     public BellmanFord(List<List<EdgeWeighted>> adjListWithWeight, int startV) {
         int vertices = adjListWithWeight.size();
 
-        this.sourceVertex = startV;
         this.dist = new double[vertices];
-        this.prev = new int[vertices];
+        this.prev = new Integer[vertices];
 
         Arrays.fill(dist, Double.POSITIVE_INFINITY);
 
@@ -89,10 +87,9 @@ public class BellmanFord {
         }
 
         List<Integer> path = new ArrayList<>();
-        for (int v = endV; v != sourceVertex; v = prev[v]) {
+        for (Integer v = endV; v != null; v = prev[v]) {
             path.add(0, v);
         }
-        path.add(0, sourceVertex);
 
         return path;
     }

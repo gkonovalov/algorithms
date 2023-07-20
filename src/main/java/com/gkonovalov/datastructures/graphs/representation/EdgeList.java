@@ -1,6 +1,7 @@
 package com.gkonovalov.datastructures.graphs.representation;
 
 import com.gkonovalov.datastructures.graphs.EdgeWeighted;
+
 import java.util.*;
 
 /**
@@ -41,8 +42,8 @@ public class EdgeList {
         return edgeList;
     }
 
-    public List<EdgeWeighted> getGraphUnDirectedWeighted() {
-        List<EdgeWeighted> edgeListWeighted = List.of(
+    public List<EdgeWeighted> getGraphDirectedWeighted(boolean isNegative) {
+        List<EdgeWeighted> edgeListWeighted = new ArrayList<>(List.of(
                 new EdgeWeighted(0, 7, 16),
                 new EdgeWeighted(2, 3, 17),
                 new EdgeWeighted(1, 7, 19),
@@ -59,7 +60,12 @@ public class EdgeList {
                 new EdgeWeighted(3, 6, 52),
                 new EdgeWeighted(6, 0, 58),
                 new EdgeWeighted(6, 4, 93)
-        );
+        ));
+
+        if (isNegative) {
+            edgeListWeighted.add(new EdgeWeighted(2, 6, -15));
+        }
+
         return edgeListWeighted;
     }
 

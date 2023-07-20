@@ -29,15 +29,11 @@ import java.util.List;
 public class DFSPath {
 
     private boolean[] visited;
-    private int[] prev;
-    private final int sourceVertex;
+    private Integer[] prev;
 
     public DFSPath(List<List<Integer>> adjList, int sourceVertex) {
-        this.sourceVertex = sourceVertex;
-        this.prev = new int[adjList.size()];
+        this.prev = new Integer[adjList.size()];
         this.visited = new boolean[adjList.size()];
-
-        Arrays.fill(prev, -1);
 
         dfs(adjList, sourceVertex);
     }
@@ -54,7 +50,7 @@ public class DFSPath {
     }
 
     public boolean hasPathTo(int v) {
-        return prev[v] != -1;
+        return prev[v] != null;
     }
 
     public List<Integer> pathTo(int endV) {
@@ -63,10 +59,9 @@ public class DFSPath {
         }
 
         List<Integer> path = new ArrayList<>();
-        for (int v = endV; v != sourceVertex; v = prev[v]) {
+        for (Integer v = endV; v != null; v = prev[v]) {
             path.add(0, v);
         }
-        path.add(0, sourceVertex);
 
         return path;
     }

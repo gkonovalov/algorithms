@@ -1,5 +1,6 @@
 package com.gkonovalov.algorithms.graphs.searching.shortestpath;
 
+import com.gkonovalov.datastructures.graphs.EdgeWeighted;
 import com.gkonovalov.datastructures.graphs.NodeWeighted;
 
 import java.util.*;
@@ -24,13 +25,13 @@ import java.util.*;
  */
 public class DijkstraLazy {
 
-    private PriorityQueue<NodeWeighted> minHeap;
+    private PriorityQueue<EdgeWeighted> minHeap;
     private double[] dist;
     private int[] prev;
     private boolean[] visited;
     private int sourceVertex;
 
-    public DijkstraLazy(List<List<NodeWeighted>> adjListWithWeight, int sourceVertex) {
+    public DijkstraLazy(List<List<EdgeWeighted>> adjListWithWeight, int sourceVertex) {
         int vertices = adjListWithWeight.size();
 
         this.sourceVertex = sourceVertex;
@@ -44,31 +45,31 @@ public class DijkstraLazy {
         shortestPath(adjListWithWeight, sourceVertex);
     }
 
-    private void shortestPath(List<List<NodeWeighted>> adjListWithWeight, int startV) {
+    private void shortestPath(List<List<EdgeWeighted>> adjListWithWeight, int startV) {
         dist[startV] = 0;
-        minHeap.add(new NodeWeighted(startV, 0));
+        relax(adjListWithWeight, startV);
 
         while (!minHeap.isEmpty()) {
-            NodeWeighted from = minHeap.poll();
+            EdgeWeighted e = minHeap.poll();
 
-            visited[from.v] = true;
-
-            if (from.weight > dist[from.v]) {
-                continue;
+            if (!visited[e.toV]) {
+                relax(adjListWithWeight, e.toV);
             }
+        }
+    }
 
-            for (NodeWeighted to : adjListWithWeight.get(from.v)) {
-                if (visited[to.v]) {
-                    continue;
-                }
+    private void relax(List<List<EdgeWeighted>> adjListWithWeight, int startV) {
+        visited[startV] = true;
 
-                double newDistance = dist[from.v] + to.weight;
+        for (EdgeWeighted e : adjListWithWeight.get(startV)) {
+            if (!visited[e.toV]) {
+                double newDistance = dist[startV] + e.weight;
 
-                if (newDistance < dist[to.v]) {
-                    prev[to.v] = from.v;
-                    dist[to.v] = newDistance;
+                if (newDistance < dist[e.toV]) {
+                    prev[e.toV] = startV;
+                    dist[e.toV] = newDistance;
 
-                    minHeap.add(new NodeWeighted(to.v, dist[to.v]));
+                    minHeap.add(new EdgeWeighted(e.fromV, e.toV, dist[e.toV]));
                 }
             }
         }

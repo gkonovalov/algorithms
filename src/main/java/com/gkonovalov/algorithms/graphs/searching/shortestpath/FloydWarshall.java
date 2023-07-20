@@ -52,13 +52,11 @@ public class FloydWarshall {
     private void shortestPath(int vertices) {
         for (int i = 0; i < vertices; i++) {
             for (int v = 0; v < vertices; v++) {
-                if (prev[v][i] == null) {
-                    continue;
-                }
-
                 for (int w = 0; w < vertices; w++) {
-                    if (dist[v][w] > dist[v][i] + dist[i][w]) {
-                        dist[v][w] = dist[v][i] + dist[i][w];
+                    double newDistance = dist[v][i] + dist[i][w];
+
+                    if (newDistance < dist[v][w]) {
+                        dist[v][w] = newDistance;
                         prev[v][w] = prev[i][w];
                     }
                 }

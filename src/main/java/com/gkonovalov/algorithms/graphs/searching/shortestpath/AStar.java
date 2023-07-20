@@ -7,7 +7,7 @@ import java.util.*;
 /**
  * Created by Georgiy Konovalov on 20/07/2023.
  * <p>
- * A* algorithm implementation. A* Algorithm: A* is designed for finding the shortest path in
+ * A-Star algorithm implementation. A* is designed for finding the shortest path in
  * graphs with non-negative edge weights. It uses a heuristic function that estimates the cost
  * from each node to the goal node. The heuristic helps prioritize nodes that are more likely to
  * lead to the goal. A* is generally more efficient than Dijkstra's algorithm, especially

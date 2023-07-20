@@ -22,18 +22,18 @@ public class AStarTest {
     @BeforeEach
     public void setUp() {
         AdjacencyList adjacencyList = new AdjacencyList();
-        this.aStar = new AStar(adjacencyList.getGraphWeightedDirected(true), 0, 6);
+        this.aStar = new AStar(adjacencyList.getGraphWeightedDirected(false), 0, 6);
     }
 
     @Test
     @DisplayName("Testing AStar.dist with AdjacencyList")
     public void testDistTo() {
-        assertEquals(11, aStar.dist());
+        assertEquals(95, aStar.dist());
     }
 
     @Test
     @DisplayName("Testing AStar.path with AdjacencyList")
     public void testPathTo() {
-         assertEquals(List.of(0, 2, 6), aStar.path());
+        assertEquals(List.of(0, 2, 3, 6), aStar.path());
     }
 }

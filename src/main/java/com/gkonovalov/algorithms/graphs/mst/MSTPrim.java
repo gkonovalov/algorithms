@@ -50,22 +50,28 @@ public class MSTPrim {
         while (!minHeap.isEmpty()) {
             int fromV = minHeap.pollIndex();
 
-            visited[fromV] = true;
+            if (!visited[fromV]) {
+                scan(adjListWithWeight, fromV);
+            }
+        }
+    }
 
-            for (EdgeWeighted e : adjListWithWeight.get(fromV)) {
-                if (visited[e.toV]) {
-                    continue;
-                }
+    private void scan(List<List<EdgeWeighted>> adjListWithWeight, int startV) {
+        visited[startV] = true;
 
-                if (e.weight < dist[e.toV]) {
-                    dist[e.toV] = e.weight;
-                    prev[e.toV] = e;
+        for (EdgeWeighted e : adjListWithWeight.get(startV)) {
+            if (visited[e.toV]) {
+                continue;
+            }
 
-                    if (minHeap.contains(e.toV)) {
-                        minHeap.decreaseKey(e.toV, dist[e.toV]);
-                    } else {
-                        minHeap.insert(e.toV, dist[e.toV]);
-                    }
+            if (e.weight < dist[e.toV]) {
+                dist[e.toV] = e.weight;
+                prev[e.toV] = e;
+
+                if (minHeap.contains(e.toV)) {
+                    minHeap.decreaseKey(e.toV, dist[e.toV]);
+                } else {
+                    minHeap.insert(e.toV, dist[e.toV]);
                 }
             }
         }

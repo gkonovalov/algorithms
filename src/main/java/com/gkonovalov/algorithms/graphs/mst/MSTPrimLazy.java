@@ -50,14 +50,15 @@ public class MSTPrimLazy {
             if (!visited[e.toV]) {
                 mst.add(e);
                 weight += e.weight;
+
                 scan(adjListWithWeight, e.toV);
             }
         }
     }
 
-    private void scan(List<List<EdgeWeighted>> graph, int v) {
-        visited[v] = true;
-        for (EdgeWeighted e : graph.get(v)) {
+    private void scan(List<List<EdgeWeighted>> graph, int startV) {
+        visited[startV] = true;
+        for (EdgeWeighted e : graph.get(startV)) {
             if (!visited[e.toV]) {
                 minHeap.add(e);
             }

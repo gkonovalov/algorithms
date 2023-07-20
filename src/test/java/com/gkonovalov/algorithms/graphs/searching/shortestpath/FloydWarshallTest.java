@@ -26,13 +26,13 @@ public class FloydWarshallTest {
     }
 
     @Test
-    @DisplayName("Testing BellmanFord.distTo with AdjacencyList")
+    @DisplayName("Testing FloydWarshall.distTo with AdjacencyList")
     public void testDistTo() {
         assertEquals(11, floydWarshall.dist(0, 6));
     }
 
     @Test
-    @DisplayName("Testing BellmanFord.pathTo with AdjacencyList")
+    @DisplayName("Testing FloydWarshall.pathTo with AdjacencyList")
     public void testPathTo() {
          assertEquals(List.of(0, 2, 6), floydWarshall.pathTo(0, 6));
     }

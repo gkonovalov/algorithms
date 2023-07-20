@@ -1,6 +1,6 @@
 package com.gkonovalov.algorithms.graphs.searching.shortestpath;
 
-import com.gkonovalov.datastructures.graphs.NodeWeighted;
+import com.gkonovalov.datastructures.graphs.EdgeWeighted;
 import com.gkonovalov.datastructures.trees.heaps.IndexedBinaryHeap;
 
 import java.util.ArrayList;
@@ -35,7 +35,7 @@ public class Dijkstra {
     private boolean[] visited;
     private int sourceVertex;
 
-    public Dijkstra(List<List<NodeWeighted>> adjListWithWeight, int sourceVertex) {
+    public Dijkstra(List<List<EdgeWeighted>> adjListWithWeight, int sourceVertex) {
         int vertices = adjListWithWeight.size();
 
         this.sourceVertex = sourceVertex;
@@ -49,35 +49,34 @@ public class Dijkstra {
         shortestPath(adjListWithWeight, sourceVertex);
     }
 
-    private void shortestPath(List<List<NodeWeighted>> adjListWithWeight, int startV) {
+    private void shortestPath(List<List<EdgeWeighted>> adjListWithWeight, int startV) {
         dist[startV] = 0;
         minHeap.insert(startV, dist[startV]);
 
         while (!minHeap.isEmpty()) {
-            double weight = minHeap.peekKey();
             int fromV = minHeap.pollIndex();
 
-            visited[fromV] = true;
-
-            if (weight > dist[fromV]) {
-                continue;
+            if (!visited[fromV]) {
+                relax(adjListWithWeight, fromV);
             }
+        }
+    }
 
-            for (NodeWeighted to : adjListWithWeight.get(fromV)) {
-                if (visited[to.v]) {
-                    continue;
-                }
+    private void relax(List<List<EdgeWeighted>> adjListWithWeight, int startV) {
+        visited[startV] = true;
 
-                double newDistance = dist[fromV] + to.weight;
+        for (EdgeWeighted e : adjListWithWeight.get(startV)) {
+            if (!visited[e.toV]) {
+                double newDistance = dist[startV] + e.weight;
 
-                if (newDistance < dist[to.v]) {
-                    prev[to.v] = fromV;
-                    dist[to.v] = newDistance;
+                if (newDistance < dist[e.toV]) {
+                    prev[e.toV] = startV;
+                    dist[e.toV] = newDistance;
 
-                    if (minHeap.contains(to.v)) {
-                        minHeap.decreaseKey(to.v, dist[to.v]);
+                    if (minHeap.contains(e.toV)) {
+                        minHeap.decreaseKey(e.toV, dist[e.toV]);
                     } else {
-                        minHeap.insert(to.v, dist[to.v]);
+                        minHeap.insert(e.toV, dist[e.toV]);
                     }
                 }
             }

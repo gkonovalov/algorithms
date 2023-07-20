@@ -31,17 +31,15 @@ public class Dijkstra {
 
     private IndexedBinaryHeap<Double> minHeap;
     private double[] dist;
-    private int[] prev;
+    private Integer[] prev;
     private boolean[] visited;
-    private int sourceVertex;
 
     public Dijkstra(List<List<EdgeWeighted>> adjListWithWeight, int sourceVertex) {
         int vertices = adjListWithWeight.size();
 
-        this.sourceVertex = sourceVertex;
         this.visited = new boolean[vertices];
         this.dist = new double[vertices];
-        this.prev = new int[vertices];
+        this.prev = new Integer[vertices];
         this.minHeap = new IndexedBinaryHeap<>(vertices, MIN);
 
         Arrays.fill(dist, Double.POSITIVE_INFINITY);
@@ -97,10 +95,9 @@ public class Dijkstra {
         }
 
         List<Integer> path = new ArrayList<>();
-        for (int v = endV; v != sourceVertex; v = prev[v]) {
+        for (Integer v = endV; v != null; v = prev[v]) {
             path.add(0, v);
         }
-        path.add(0, sourceVertex);
 
         return path;
     }

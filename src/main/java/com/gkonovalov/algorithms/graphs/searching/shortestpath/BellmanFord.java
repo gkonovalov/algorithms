@@ -64,8 +64,7 @@ public class BellmanFord {
                     double newDistance = dist[fromV] + to.weight;
 
                     if (newDistance < dist[to.v]) {
-                        dist[to.v] = Double.NEGATIVE_INFINITY;
-                        prev[to.v] = -1;
+                        throw new RuntimeException("Can't compute shortest path in the Graph with negative cycle!");
                     }
                 }
             }

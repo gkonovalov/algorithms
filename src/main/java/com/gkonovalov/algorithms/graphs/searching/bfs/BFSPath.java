@@ -2,9 +2,8 @@ package com.gkonovalov.algorithms.graphs.searching.bfs;
 
 import java.util.*;
 
-
 /**
- * Created by Georgiy Konovalov on 8/10/2020.
+ * Created by Georgiy Konovalov on 17/06/2023.
  * <p>
  * Implementation of Breadth First Search(Path and Distance). BFS stands for Breadth-First Search.
  * It is a graph traversal algorithm that explores all the vertices of a graph or all the nodes of a tree in
@@ -33,20 +32,17 @@ import java.util.*;
 public class BFSPath {
     private boolean[] visited;
     private int[] dist;
-    private int[] prev;
+    private Integer[] prev;
 
-    private int sourceVertex;
 
     public BFSPath(List<List<Integer>> adjList, int sourceVertex) {
         int vertices = adjList.size();
 
-        this.sourceVertex = sourceVertex;
         this.dist = new int[vertices];
-        this.prev = new int[vertices];
+        this.prev = new Integer[vertices];
         this.visited = new boolean[vertices];
 
         Arrays.fill(dist, -1);
-        Arrays.fill(prev, -1);
 
         bfs(adjList, sourceVertex);
     }
@@ -73,7 +69,7 @@ public class BFSPath {
     }
 
     public boolean hasPathTo(int v) {
-        return prev[v] != -1;
+        return prev[v] != null;
     }
 
     public int distTo(int endV) {
@@ -89,10 +85,9 @@ public class BFSPath {
         }
 
         List<Integer> path = new ArrayList<>();
-        for (int v = endV; v != sourceVertex; v = prev[v]) {
+        for (Integer v = endV; v != null; v = prev[v]) {
             path.add(0, v);
         }
-        path.add(0, sourceVertex);
 
         return path;
     }

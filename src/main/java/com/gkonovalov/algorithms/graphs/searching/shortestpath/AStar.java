@@ -32,10 +32,10 @@ public class AStar {
     private boolean hasPath;
     private int endV;
 
-    public AStar(List<List<EdgeWeighted>> adjListWithWeight, int fromV, int toV) {
+    public AStar(List<List<EdgeWeighted>> adjListWithWeight, int startV, int endV) {
         int vertices = adjListWithWeight.size();
 
-        this.endV = toV;
+        this.endV = endV;
         this.dist = new double[vertices];
         this.prev = new Integer[vertices];
         this.visited = new boolean[vertices];
@@ -43,17 +43,17 @@ public class AStar {
 
         Arrays.fill(dist, Double.POSITIVE_INFINITY);
 
-        this.hasPath = shortestPath(adjListWithWeight, fromV, toV);
+        this.hasPath = shortestPath(adjListWithWeight, startV, endV);
     }
 
-    private boolean shortestPath(List<List<EdgeWeighted>> adjListWithWeight, int fromV, int toV) {
-        dist[fromV] = 0;
-        minHeap.add(new Node(fromV, dist[fromV], heuristicEstimate(fromV, toV)));
+    private boolean shortestPath(List<List<EdgeWeighted>> adjListWithWeight, int startV, int endV) {
+        dist[startV] = 0;
+        minHeap.add(new Node(startV, dist[startV], heuristicEstimate(startV, endV)));
 
         while (!minHeap.isEmpty()) {
             Node node = minHeap.poll();
 
-            if (node.v == toV) {
+            if (node.v == endV) {
                 return true;
             }
 
@@ -67,7 +67,7 @@ public class AStar {
                         prev[e.toV] = node.v;
                         dist[e.toV] = tentativeDistance;
 
-                        minHeap.add(new Node(e.toV, dist[e.toV], heuristicEstimate(e.toV, toV)));
+                        minHeap.add(new Node(e.toV, dist[e.toV], heuristicEstimate(e.toV, endV)));
                     }
                 }
             }

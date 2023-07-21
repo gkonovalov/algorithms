@@ -131,7 +131,7 @@ Need to prepare description.
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/selection/QuickSelect.java#L44"><b>Randomized Quick Select</b></a>
 │   ├── Las Vegas
 │   └── Monte Carlo
-├── Game Theory
+├── <a href="src/main/java/com/gkonovalov/algorithms/gametheory/"><b>Game Theory</b></a>
 │   ├── Minimax
 │   └── <a href="src/main/java/com/gkonovalov/algorithms/gametheory/prisonersdilemma/PrisonersDilemma.java"><b>Prisoner's Dilemma</b></a>
 ├── Geometry

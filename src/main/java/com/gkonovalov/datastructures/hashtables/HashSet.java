@@ -37,24 +37,20 @@ public class HashSet<T> {
         this.set = (T[]) new Object[capacity];
     }
 
-    public void add(T value) {
+    public boolean add(T value) {
         if (value == null) {
             throw new IllegalArgumentException("Parameter value can't be null!");
         }
 
         expandArray();
 
-        int hash = getHash(value);
-
-        while (set[hash] != null) {
-            if (set[hash].equals(value)) {
-                return;
-            }
-            hash = (hash + 1) % set.length;
+        Integer address = linearProbingSearch(getHash(value), value, true);
+        if (address != null) {
+            set[address] = value;
+            size++;
+            return true;
         }
-
-        set[hash] = value;
-        size++;
+        return false;
     }
 
     public boolean remove(T value) {
@@ -68,17 +64,14 @@ public class HashSet<T> {
 
         shrinkArray();
 
-        int hash = getHash(value);
-
-        while (!value.equals(set[hash])) {
-            hash = (hash + 1) % set.length;
+        Integer address = linearProbingSearch(getHash(value), value, false);
+        if (address != null) {
+            set[address] = null;
+            size--;
+            rehashCluster(address);
+            return true;
         }
-
-        set[hash] = null;
-        size--;
-
-        rehashCluster(hash);
-        return true;
+        return false;
     }
 
     public boolean contains(T value) {
@@ -89,17 +82,7 @@ public class HashSet<T> {
         if (isEmpty()) {
             throw new IllegalStateException("Hash Set is empty!");
         }
-
-        int hash = getHash(value);
-
-        while (set[hash] != null) {
-            if (set[hash].equals(value)) {
-                return true;
-            }
-            hash = (hash + 1) % set.length;
-        }
-
-        return false;
+        return linearProbingSearch(getHash(value), value, false) != null;
     }
 
     public Iterable<T> keys() {
@@ -110,7 +93,6 @@ public class HashSet<T> {
                 result.add(item);
             }
         }
-
         return result;
     }
 
@@ -122,6 +104,17 @@ public class HashSet<T> {
         return size == 0;
     }
 
+    private Integer linearProbingSearch(int hash, T value, boolean isEmptySpot) {
+        while (set[hash] != null) {
+            if (set[hash].equals(value)) {
+                return !isEmptySpot ? hash : null;
+            }
+
+            hash = (hash + 1) % set.length;
+        }
+        return isEmptySpot ? hash : null;
+    }
+
     private void resize(int capacity) {
         HashSet<T> newSet = new HashSet<>(capacity);
 
@@ -130,7 +123,6 @@ public class HashSet<T> {
                 newSet.add(item);
             }
         }
-
         set = newSet.set;
     }
 

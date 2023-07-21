@@ -6,7 +6,7 @@ import java.util.Queue;
 /**
  * Created by Georgiy Konovalov on 15/06/2023.
  * <p>
- * HashMap arr structure implementation, also known as a Hashtable. This arr structure provides
+ * HashMap data structure implementation, also known as a Hashtable. This data structure provides
  * efficient storage and retrieval of key-value pairs, it supports Separate Chaining collision
  * resolution strategy and dynamic resizing feature.
  * <p>
@@ -17,7 +17,7 @@ import java.util.Queue;
  * elements to reduce collisions. The hash function is used to compute the index in the array where
  * an element should be inserted. When two different keys produce the same hash code, the Hashtable
  * needs to resolve this collision by storing multiple values at the same index. This is typically done
- * using a technique called Separate Chaining, where a Linked Lists or another arr structure is used to
+ * using a technique called Separate Chaining, where a Linked Lists or another data structure is used to
  * store the collided values. During lookup, the Hashtable uses the hash function to calculate the index
  * and then traverses the Linked List at that index to find the desired element. Hashtable provides
  * constant-time average case complexity for insertion, deletion, and retrieval operations. The elements
@@ -55,14 +55,8 @@ public class HashMap<K, V> {
             throw new IllegalStateException("Hash Map is empty!");
         }
 
-        MapNode<K, V> node = arr[getHash(key)];
-        while (node != null) {
-            if (node.key.equals(key)) {
-                return node.val;
-            }
-            node = node.next;
-        }
-        return null;
+        MapNode<K, V> node = separateChainingSearch(getHash(key), key);
+        return node != null ? node.val : null;
     }
 
     public void put(K key, V val) {
@@ -74,17 +68,13 @@ public class HashMap<K, V> {
 
         int hash = getHash(key);
 
-        MapNode<K, V> node = arr[hash];
-        while (node != null) {
-            if (node.key.equals(key)) {
-                node.val = val;
-                return;
-            }
-            node = node.next;
+        MapNode<K, V> node = separateChainingSearch(hash, key);
+        if (node != null) {
+            node.val = val;
+        } else {
+            arr[hash] = new MapNode<>(key, val, arr[hash]);
+            size++;
         }
-
-        arr[hash] = new MapNode<>(key, val, arr[hash]);
-        size++;
     }
 
     public boolean remove(K key) {
@@ -98,21 +88,7 @@ public class HashMap<K, V> {
 
         shrinkArray();
 
-        int hash = getHash(key);
-
-        MapNode<K, V> node = arr[hash];
-        while (node != null && node.next != null) {
-            if (node.next.key.equals(key)) {
-                node.next = node.next.next;
-                size--;
-                return true;
-            }
-            node = node.next;
-        }
-
-        MapNode<K, V> firstNode = arr[hash];
-        if (firstNode != null && firstNode.key.equals(key)) {
-            arr[hash] = firstNode.next;
+        if (separateChainingDelete(getHash(key), key)) {
             size--;
             return true;
         }
@@ -127,31 +103,7 @@ public class HashMap<K, V> {
         if (isEmpty()) {
             throw new IllegalStateException("Hash Map is empty!");
         }
-
-        MapNode<K, V> node = arr[getHash(key)];
-        while (node != null) {
-            if (node.key.equals(key)) {
-                return true;
-            }
-            node = node.next;
-        }
-        return false;
-    }
-
-    public boolean containsValue(V val) {
-        if (isEmpty()) {
-            throw new IllegalStateException("Hash Map is empty!");
-        }
-
-        for (MapNode<K, V> node : arr) {
-            while (node != null) {
-                if (node.val.equals(val)) {
-                    return true;
-                }
-                node = node.next;
-            }
-        }
-        return false;
+        return separateChainingSearch(getHash(key), key) != null;
     }
 
     public Iterable<K> keys() {
@@ -184,6 +136,36 @@ public class HashMap<K, V> {
 
     public boolean isEmpty() {
         return size == 0;
+    }
+
+    private boolean separateChainingDelete(int hash, K key) {
+        MapNode<K, V> node = arr[hash];
+
+        if (node != null && node.key.equals(key)) {
+            arr[hash] = node.next;
+            return true;
+        }
+
+        while (node != null && node.next != null) {
+            if (node.next.key.equals(key)) {
+                node.next = node.next.next;
+                return true;
+            }
+            node = node.next;
+        }
+        return false;
+    }
+
+    private MapNode<K, V> separateChainingSearch(int hash, K key) {
+        MapNode<K, V> node = arr[hash];
+
+        while (node != null) {
+            if (node.key.equals(key)) {
+                return node;
+            }
+            node = node.next;
+        }
+        return null;
     }
 
     private int getHash(K element) {

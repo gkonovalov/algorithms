@@ -133,7 +133,7 @@ Need to prepare description.
 │   └── Monte Carlo
 ├── Game Theory
 │   ├── Minimax
-│   └── Prisoner's Dilemma
+│   └── <a href="src/main/java/com/gkonovalov/algorithms/gametheory/prisonersdilemma/PrisonersDilemma.java"><b>Prisoner's Dilemma</b></a>
 ├── Geometry
 │   ├── Closest Pair of Points
 │   ├── Line Intersection

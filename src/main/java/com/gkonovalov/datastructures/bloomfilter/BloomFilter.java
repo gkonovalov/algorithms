@@ -12,6 +12,18 @@ import java.util.function.Function;
  * set when it's not), but they will never produce false negatives (indicating that an element is
  * not in the set when it is). Bloom filters are particularly useful when dealing with large datasets
  * and require less memory compared to other data structures like hash tables or sets.
+ *
+ * Bloom Filter cheat sheet:
+ *  m: total bits, size of BitSet
+ *  n: expected insertions
+ *  b: m/n, bits per insertion
+ *  p: expected false positive probability
+ *  k: number of hashFunctions
+ *
+ *  1) Optimal k = b * ln2
+ *  2) p = (1 - e ^ (-kn/m))^k
+ *  3) For optimal k: p = 2 ^ (-k) ~= 0.6185^b
+ *  4) For optimal k: m = -nlnp / ((ln2) ^ 2)
  * </p>
  * Runtime Complexity: O(n * k) for {@code add} where k number of hashFunctions,
  *                     O(k) for {@code mightContain} where k number of hashFunctions.

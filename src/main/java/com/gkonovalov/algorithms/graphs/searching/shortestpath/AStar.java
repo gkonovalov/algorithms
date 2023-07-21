@@ -17,8 +17,7 @@ import java.util.*;
  *  2) Euclidean,
  *  3) Octile,
  *  4) Chebyshev.
- *
- * F = G + H (total cost = cost from start + heuristic estimate)
+ *  F = G + H (total cost = cost from start + heuristic estimate)
  * </p>
  * Runtime Complexity: O(|V|+|E|) {@code shortestPath}
  * Space Complexity: O(V)
@@ -72,6 +71,7 @@ public class AStar {
                 }
             }
         }
+
         return false;
     }
 
@@ -85,7 +85,6 @@ public class AStar {
         }
 
         List<Integer> path = new ArrayList<>();
-
         for (Integer v = endV; v != null; v = prev[v]) {
             path.add(0, v);
         }
@@ -97,6 +96,7 @@ public class AStar {
         if (!hasPath) {
             return -1;
         }
+
         return dist[endV];
     }
 

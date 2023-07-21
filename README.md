@@ -194,8 +194,8 @@ Need to prepare description.
 │   ├── <a href="src/main/java/com/gkonovalov/datastructures/hashtables/HashSet.java"><b>HashSet</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/datastructures/hashtables/SparseVector.java"><b>Sparse Vector</b></a>
 │   └── Collision Resolution
-│       ├── <a href="src/main/java/com/gkonovalov/datastructures/hashtables/HashMap.java"><b>Separate Chaining</b></a>
-│       └── <a href="src/main/java/com/gkonovalov/datastructures/hashtables/HashSet.java"><b>Open Addressing</b></a>
+│       ├── <a href="src/main/java/com/gkonovalov/datastructures/hashtables/HashMap.java#L159"><b>Separate Chaining</b></a>
+│       └── <a href="src/main/java/com/gkonovalov/datastructures/hashtables/HashSet.java#L107"><b>Open Addressing</b></a>
 ├── <a href="src/main/java/com/gkonovalov/datastructures/bloomfilter/BloomFilter.java"><b>Bloom Filter</b></a> 
 ├── <a href="src/main/java/com/gkonovalov/datastructures/trees/"><b>Trees</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/datastructures/trees/BinarySearchTree.java"><b>Binary Search Tree</b></a>

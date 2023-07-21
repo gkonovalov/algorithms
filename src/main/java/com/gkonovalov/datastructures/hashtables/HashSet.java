@@ -104,15 +104,15 @@ public class HashSet<T> {
         return size == 0;
     }
 
-    private Integer linearProbingSearch(int hash, T value, boolean isEmptySpot) {
+    private Integer linearProbingSearch(int hash, T value, boolean searchEmptySpot) {
         while (set[hash] != null) {
             if (set[hash].equals(value)) {
-                return !isEmptySpot ? hash : null;
+                return !searchEmptySpot ? hash : null;
             }
 
             hash = (hash + 1) % set.length;
         }
-        return isEmptySpot ? hash : null;
+        return searchEmptySpot ? hash : null;
     }
 
     private void resize(int capacity) {

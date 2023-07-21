@@ -13,17 +13,6 @@ import java.util.List;
  * arises from the conflict between what is best for an individual player and what is best for
  * both players collectively.
  *
- * In the context of the Prisoner's Dilemma, the payoff rules refer to the outcomes and
- * corresponding payoffs that each player receives based on their choices (cooperate or defect)
- * and the choices made by their opponent. These payoffs are typically represented in a payoff
- * matrix that shows the results for each combination of choices.
- *
- *                | B (Cooperate)  | B (Defect)
- * -------------------------------------------------------
- * A (Cooperate) | R (Reward)     |   S (Sucker's Payoff)
- * -------------------------------------------------------
- * A (Defect)   | T (Temptation) |   P (Punishment)
- *
  * In the Prisoner's Dilemma with multiple strategies, the players interact in a round-robin
  * tournament, where each player competes against all other players multiple times. The outcomes
  * of their interactions are recorded, and the scores or payoffs of each player are updated based

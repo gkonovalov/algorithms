@@ -5,7 +5,9 @@ Need to prepare description.
 ## Algorithms
 <pre>
 <a href="src/algorithms"><b>Algorithms</b></a>
-├── Strings
+├── <a href="src/main/java/com/gkonovalov/algorithms/strings/"><b>Strings</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/algorithms/strings/sorting/"><b>Sorting</b></a>
+│   │   └── LSD Radix Sort 
 │   ├── Compression
 │   │   └── Huffman Coding
 │   └── String Matching
@@ -34,7 +36,6 @@ Need to prepare description.
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/MergeSort.java"><b>Merge Sort</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/QuickSort.java"><b>Quick Sort</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/QuickSort3WayPartitioning.java"><b>3-Way Quick Sort</b></a>
-│   │   ├── Radix Sort 
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/HeapSort.java"><b>Heap Sort</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/CountingSort.java"><b>Counting Sort</b></a>
 │   │   └── Bucket Sort

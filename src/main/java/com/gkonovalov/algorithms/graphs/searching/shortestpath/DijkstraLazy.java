@@ -20,8 +20,8 @@ import java.util.*;
  * of nodes, a different algorithm such as the Floyd-Warshall or Bellman-Ford algorithms
  * may be more appropriate.
  * </p>
- * Runtime Complexity: O(|V|+|E|log|V|) {@code shortestPath}
- * Space Complexity: O(V)
+ * Runtime Complexity: O(|E|log|V|) {@code shortestPath}.
+ * Space Complexity: O(V).
  */
 public class DijkstraLazy {
 
@@ -56,18 +56,18 @@ public class DijkstraLazy {
         }
     }
 
-    private void relax(List<List<EdgeWeighted>> adjListWithWeight, int startV) {
-        visited[startV] = true;
+    private void relax(List<List<EdgeWeighted>> adjListWithWeight, int fromV) {
+        visited[fromV] = true;
 
-        for (EdgeWeighted e : adjListWithWeight.get(startV)) {
+        for (EdgeWeighted e : adjListWithWeight.get(fromV)) {
             if (!visited[e.toV]) {
-                double newDistance = dist[startV] + e.weight;
+                double newDistance = dist[fromV] + e.weight;
 
                 if (newDistance < dist[e.toV]) {
-                    prev[e.toV] = startV;
+                    prev[e.toV] = fromV;
                     dist[e.toV] = newDistance;
 
-                    minHeap.add(new EdgeWeighted(e.fromV, e.toV, dist[e.toV]));
+                    minHeap.add(new EdgeWeighted(fromV, e.toV, dist[e.toV]));
                 }
             }
         }

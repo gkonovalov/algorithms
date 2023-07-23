@@ -58,6 +58,7 @@ public class MSTPrimLazy {
 
     private void scan(List<List<EdgeWeighted>> graph, int startV) {
         visited[startV] = true;
+
         for (EdgeWeighted e : graph.get(startV)) {
             if (!visited[e.toV]) {
                 minHeap.add(e);

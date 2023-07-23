@@ -24,8 +24,8 @@ import static com.gkonovalov.datastructures.trees.heaps.IndexedBinaryHeap.Type.M
  * of nodes, a different algorithm such as the Floyd-Warshall or Bellman-Ford algorithms
  * may be more appropriate.
  * </p>
- * Runtime Complexity: O(|V|+|E|log|V|) {@code shortestPath}
- * Space Complexity: O(V)
+ * Runtime Complexity: O(|E|log|V|) {@code shortestPath}.
+ * Space Complexity: O(V).
  */
 public class Dijkstra {
 
@@ -49,7 +49,7 @@ public class Dijkstra {
 
     private void shortestPath(List<List<EdgeWeighted>> adjListWithWeight, int startV) {
         dist[startV] = 0;
-        minHeap.insert(startV, dist[startV]);
+        relax(adjListWithWeight, startV);
 
         while (!minHeap.isEmpty()) {
             int fromV = minHeap.pollIndex();
@@ -60,15 +60,15 @@ public class Dijkstra {
         }
     }
 
-    private void relax(List<List<EdgeWeighted>> adjListWithWeight, int startV) {
-        visited[startV] = true;
+    private void relax(List<List<EdgeWeighted>> adjListWithWeight, int fromV) {
+        visited[fromV] = true;
 
-        for (EdgeWeighted e : adjListWithWeight.get(startV)) {
+        for (EdgeWeighted e : adjListWithWeight.get(fromV)) {
             if (!visited[e.toV]) {
-                double newDistance = dist[startV] + e.weight;
+                double newDistance = dist[fromV] + e.weight;
 
                 if (newDistance < dist[e.toV]) {
-                    prev[e.toV] = startV;
+                    prev[e.toV] = fromV;
                     dist[e.toV] = newDistance;
 
                     if (minHeap.contains(e.toV)) {

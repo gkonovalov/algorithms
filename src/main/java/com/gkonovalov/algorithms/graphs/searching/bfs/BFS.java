@@ -1,7 +1,5 @@
 package com.gkonovalov.algorithms.graphs.searching.bfs;
 
-import com.gkonovalov.datastructures.graphs.Node;
-
 import java.util.ArrayDeque;
 import java.util.List;
 import java.util.Queue;
@@ -37,22 +35,6 @@ import java.util.Queue;
  */
 public class BFS {
 
-    private void bfsExample(Node<Integer> startVertex) {
-        Queue<Node<Integer>> queue = new ArrayDeque<>();
-        queue.add(startVertex);
-
-        while (!queue.isEmpty()) {
-            Node<Integer> fromVertex = queue.poll();
-
-            for (Node<Integer> toVertex : fromVertex.neighbors) {
-                if (!toVertex.visited) {
-                    toVertex.visited = true;
-                    queue.add(toVertex);
-                }
-            }
-        }
-    }
-
     public boolean search(List<List<Integer>> adjList, int startVertex, int findVertex) {
         boolean[] visited = new boolean[adjList.size()];
 
@@ -60,9 +42,9 @@ public class BFS {
         queue.add(startVertex);
 
         while (!queue.isEmpty()) {
-            Integer fromVertex = queue.poll();
+            int fromVertex = queue.poll();
 
-            if (fromVertex.equals(findVertex)) {
+            if (fromVertex == findVertex) {
                 return true;
             }
 

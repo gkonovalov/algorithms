@@ -19,21 +19,14 @@ import java.util.Stack;
  */
 public class DFSID {
 
-    public boolean searchRecursive(List<List<Integer>> adjList,
-                                   int maxDepth,
-                                   int startVertex,
-                                   int findVertex) {
+    public boolean searchRecursive(List<List<Integer>> adjList, int maxDepth, int startV, int findV) {
         boolean[] visited = new boolean[adjList.size()];
 
-        return searchRecursive(adjList, visited, maxDepth, startVertex, findVertex);
+        return dfsRecursive(adjList, visited, maxDepth, startV, findV);
     }
 
-    private boolean searchRecursive(List<List<Integer>> adjList,
-                                    boolean[] visited,
-                                    int maxDepth,
-                                    int fromVertex,
-                                    int findDigit) {
-        if (fromVertex == findDigit) {
+    private boolean dfsRecursive(List<List<Integer>> adjList, boolean[] visited, int maxDepth, int startV, int findV) {
+        if (startV == findV) {
             return true;
         }
 
@@ -41,11 +34,11 @@ public class DFSID {
             return false;
         }
 
-        visited[fromVertex] = true;
+        visited[startV] = true;
 
-        for (Integer toVertex : adjList.get(fromVertex)) {
+        for (Integer toVertex : adjList.get(startV)) {
             if (!visited[toVertex]) {
-                if (searchRecursive(adjList, visited, --maxDepth, toVertex, findDigit)) {
+                if (dfsRecursive(adjList, visited, --maxDepth, toVertex, findV)) {
                     return true;
                 }
             }
@@ -53,18 +46,14 @@ public class DFSID {
         return false;
     }
 
-    public boolean searchPreorderIterative(List<List<Integer>> adjList,
-                                           boolean[] visited,
-                                           int maxDepth,
-                                           int startVertex,
-                                           int findDigit) {
+    public boolean searchPreorderIterative(List<List<Integer>> adjList, boolean[] visited, int maxDepth, int startV, int findV) {
         Stack<Integer> stack = new Stack<>();
-        stack.push(startVertex);
+        stack.push(startV);
 
         while (!stack.isEmpty()) {
-            Integer fromVertex = stack.pop();
+            int fromVertex = stack.pop();
 
-            if (fromVertex.equals(findDigit)) {
+            if (fromVertex == findV) {
                 return true;
             }
 

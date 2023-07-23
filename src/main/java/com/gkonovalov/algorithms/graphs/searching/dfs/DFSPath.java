@@ -31,11 +31,11 @@ public class DFSPath {
     private boolean[] visited;
     private Integer[] prev;
 
-    public DFSPath(List<List<Integer>> adjList, int sourceVertex) {
+    public DFSPath(List<List<Integer>> adjList, int startV) {
         this.prev = new Integer[adjList.size()];
         this.visited = new boolean[adjList.size()];
 
-        dfs(adjList, sourceVertex);
+        dfs(adjList, startV);
     }
 
     private void dfs(List<List<Integer>> adjList, int fromV) {

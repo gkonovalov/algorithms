@@ -1,7 +1,5 @@
 package com.gkonovalov.algorithms.graphs.searching.dfs;
 
-import com.gkonovalov.datastructures.graphs.Node;
-
 import java.util.List;
 import java.util.Stack;
 
@@ -30,84 +28,60 @@ import java.util.Stack;
  */
 public class DFS {
 
-    private void dfsExample(Node<Integer> node) {
-        node.visited = true;
-
-        for (Node<Integer> toVertex : node.neighbors) {
-            if (!toVertex.visited) {
-                dfsExample(toVertex);
-            }
-        }
-    }
-
-    public boolean searchRecursive(List<List<Integer>> adjList,
-                                   Integer startVertex,
-                                   Integer findVertex) {
+    public boolean searchRecursive(List<List<Integer>> adjList, int startV, int findV) {
         boolean[] visited = new boolean[adjList.size()];
 
-        return searchRecursive(adjList, visited, startVertex, findVertex);
+        return dfsRecursive(adjList, visited, startV, findV);
     }
 
-    private boolean searchRecursive(List<List<Integer>> adjList,
-                                    boolean[] visited,
-                                    Integer fromVertex,
-                                    Integer findVertex) {
-        if (fromVertex.equals(findVertex)) {
+    private boolean dfsRecursive(List<List<Integer>> adjList, boolean[] visited, int startV, int findV) {
+        if (startV == findV) {
             return true;
         }
 
-        visited[fromVertex] = true;
+        visited[startV] = true;
 
-        for (Integer toVertex : adjList.get(fromVertex)) {
-            if (!visited[toVertex] &&
-                    searchRecursive(adjList, visited, toVertex, findVertex)) {
+        for (Integer toVertex : adjList.get(startV)) {
+            if (!visited[toVertex] && dfsRecursive(adjList, visited, toVertex, findV)) {
                 return true;
             }
         }
         return false;
     }
 
-    public boolean searchRecursive(boolean[][] adjMatrix,
-                                   Integer startVertex,
-                                   Integer findVertex) {
+    public boolean searchRecursive(boolean[][] adjMatrix, int startV, int findV) {
         boolean[] visited = new boolean[adjMatrix.length];
 
-        return searchRecursive(adjMatrix, visited, startVertex, findVertex);
+        return dfsRecursive(adjMatrix, visited, startV, findV);
     }
 
-    private boolean searchRecursive(boolean[][] adjMatrix,
-                                    boolean[] visited,
-                                    Integer fromVertex,
-                                    Integer findVertex) {
-        if (fromVertex.equals(findVertex)) {
+    private boolean dfsRecursive(boolean[][] adjMatrix, boolean[] visited, int startV, int findV) {
+        if (startV == findV) {
             return true;
         }
 
-        visited[fromVertex] = true;
+        visited[startV] = true;
 
-        for (int toVertex = 0; toVertex < adjMatrix[fromVertex].length; toVertex++) {
+        for (int toVertex = 0; toVertex < adjMatrix[startV].length; toVertex++) {
             if (!visited[toVertex] &&
-                    adjMatrix[fromVertex][toVertex] &&
-                    searchRecursive(adjMatrix, visited, toVertex, findVertex)) {
+                    adjMatrix[startV][toVertex] &&
+                    dfsRecursive(adjMatrix, visited, toVertex, findV)) {
                 return true;
             }
         }
-
         return false;
     }
 
-    public boolean searchPreorderIterative(List<List<Integer>> adjList,
-                                           Integer startVertex,
-                                           Integer findVertex) {
+    public boolean searchPreorderIterative(List<List<Integer>> adjList, int startV, int findV) {
         boolean[] visited = new boolean[adjList.size()];
 
         Stack<Integer> stack = new Stack<>();
-        stack.push(startVertex);
+        stack.push(startV);
 
         while (!stack.isEmpty()) {
-            Integer fromVertex = stack.pop();
+            int fromVertex = stack.pop();
 
-            if (fromVertex.equals(findVertex)) {
+            if (fromVertex == findV) {
                 return true;
             }
 

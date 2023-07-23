@@ -45,7 +45,7 @@ public class MSTPrim {
 
     private void prim(List<List<EdgeWeighted>> adjListWithWeight, int startV) {
         dist[startV] = 0.0;
-        minHeap.insert(startV, dist[startV]);
+        scan(adjListWithWeight, startV);
 
         while (!minHeap.isEmpty()) {
             int fromV = minHeap.pollIndex();
@@ -56,15 +56,11 @@ public class MSTPrim {
         }
     }
 
-    private void scan(List<List<EdgeWeighted>> adjListWithWeight, int startV) {
-        visited[startV] = true;
+    private void scan(List<List<EdgeWeighted>> adjListWithWeight, int fromV) {
+        visited[fromV] = true;
 
-        for (EdgeWeighted e : adjListWithWeight.get(startV)) {
-            if (visited[e.toV]) {
-                continue;
-            }
-
-            if (e.weight < dist[e.toV]) {
+        for (EdgeWeighted e : adjListWithWeight.get(fromV)) {
+            if (!visited[e.toV] && e.weight < dist[e.toV]) {
                 dist[e.toV] = e.weight;
                 prev[e.toV] = e;
 

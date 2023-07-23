@@ -12,14 +12,9 @@ public class EdgeWeighted {
     public int toV;
     public double weight;
 
-    public EdgeWeighted(int fromV) {
+    public EdgeWeighted(int fromV, int toV) {
         this.fromV = fromV;
-        this.weight = 0;
-    }
-
-    public EdgeWeighted(int toV, double weight) {
         this.toV = toV;
-        this.weight = weight;
     }
 
     public EdgeWeighted(int fromV, int toV, double weight) {

@@ -1,6 +1,6 @@
 package com.gkonovalov.problems.stack;
 
-import java.util.HashMap;
+import java.util.Map;
 import java.util.Stack;
 
 /**
@@ -25,11 +25,11 @@ public class ValidParentheses {
             return false;
         }
 
-        HashMap<Character, Character> map = new HashMap<>() {{
-            put(')', '(');
-            put('}', '{');
-            put(']', '[');
-        }};
+        Map<Character, Character> map = Map.of(
+                ')', '(',
+                '}', '{',
+                ']', '['
+        );
 
         Stack<Character> stack = new Stack<>();
 

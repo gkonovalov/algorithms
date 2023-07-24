@@ -50,14 +50,14 @@ Need to prepare description.
 │       │   ├── <a href="src/main/java/com/gkonovalov/algorithms/tree/searching/DFS.java#L28"><b>Pre-order traversal</b></a>
 │       │   ├── <a href="src/main/java/com/gkonovalov/algorithms/tree/searching/DFS.java#L57"><b>In-order traversal</b></a>
 │       │   └── <a href="src/main/java/com/gkonovalov/algorithms/tree/searching/DFS.java#L85"><b>Post-order traversal</b></a>
-│       ├── <a href="src/main/java/com/gkonovalov/algorithms/tree/searching/BFS.java"><b>BFS</b></a> 
-│       │   └── <a href="src/main/java/com/gkonovalov/algorithms/tree/searching/BFS.java#L22"><b>Level-order traversal</b></a>
-│       └── Bidirectional Search
+│       └── <a href="src/main/java/com/gkonovalov/algorithms/tree/searching/BFS.java"><b>BFS</b></a> 
+│           └── <a href="src/main/java/com/gkonovalov/algorithms/tree/searching/BFS.java#L22"><b>Level-order traversal</b></a>
 ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs"><b>Graphs</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching"><b>Searching</b></a>
 │   │ 	├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/dfs/"><b>DFS</b></a> 
 │   │ 	│   └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/dfs/DFSID.java"><b>DFS-ID</b></a>
 │   │ 	├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/bfs/"><b>BFS</b></a>
+│   │   │   └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/bfs/BidirectionalBFS.java"><b>Bidirectional BFS</b></a>
 │   │ 	└── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath"><b>Shortest Path</b></a>
 │   │ 	    ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath/DijkstraLazy.java"><b>Dijkstra's Lazy</b></a>
 │   │ 	    ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath/Dijkstra.java"><b>Dijkstra's Eager</b></a>

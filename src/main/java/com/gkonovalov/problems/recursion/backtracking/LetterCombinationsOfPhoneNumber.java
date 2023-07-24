@@ -8,18 +8,17 @@ import java.util.Map;
 /**
  * Created by Georgiy Konovalov on 24/07/2023.
  * <p>
- *
  * @see <a href="https://leetcode.com/problems/letter-combinations-of-a-phone-number/">
  *          [Medium][17] - Letter Combinations of a Phone Number
  *      </a>
  * </p>
- * Runtime Complexity: O(n) for {@code isValid},
+ * Runtime Complexity: O(n 4^n) for {@code isValid},
  * Space Complexity:   O(n) for {@code isValid}.
  */
 public class LetterCombinationsOfPhoneNumber {
 
     public static void main(String[] args) {
-        System.out.println("Letter Combinations:" + letterCombinations("23").toString());
+        System.out.println("Letter Combinations:" + letterCombinations("23"));
     }
 
     private static Map<Character, List<Character>> map = Map.of(

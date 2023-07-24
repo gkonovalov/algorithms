@@ -13,7 +13,7 @@ import java.util.*;
  * can be more efficient and faster, especially in scenarios where the branching factor (number of
  * possible moves from a node) is high.
  * </p>
- * Runtime Complexity: O(V+E) {@code bfsExample}, {@code search}.
+ * Runtime Complexity: O(V+E) {@code bfsSearch}, {@code search}.
  * Space Complexity: O(V).
  */
 public class BidirectionalBFS {

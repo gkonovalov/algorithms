@@ -12,7 +12,7 @@ import java.util.Map;
  *          [Easy][359] - Logger Rate Limiter
  *      </a>
  * </p>
- * Runtime Complexity: O(n) for {@code Logger}.
+ * Runtime Complexity: O(1) for {@code Logger}.
  * Space Complexity:   O(n) for {@code Logger}.
  */
 public class LoggerRateLimiter {

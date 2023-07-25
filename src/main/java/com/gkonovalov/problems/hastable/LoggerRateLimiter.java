@@ -1,8 +1,7 @@
 package com.gkonovalov.problems.hastable;
 
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by Georgiy Konovalov on 24/07/2023.
@@ -28,18 +27,75 @@ public class LoggerRateLimiter {
 
     static class Logger {
 
-        private Map<String, Integer> logs;
+        private Map<String, Integer> cache;
 
         public Logger() {
-            this.logs = new HashMap<>();
+            this.cache = new HashMap<>();
         }
 
         public boolean shouldPrintMessage(int timestamp, String message) {
-            if (logs.containsKey(message) && timestamp < logs.get(message)) {
+            if (cache.containsKey(message) && timestamp < cache.get(message)) {
                 return false;
             } else {
-                logs.put(message, timestamp + 10);
+                cache.put(message, timestamp + 10);
                 return true;
+            }
+        }
+    }
+
+    class LoggerQueue {
+
+        private Queue<String> queue;
+        private LinkedHashMap<String, Integer> cache;
+
+        public LoggerQueue() {
+            this.queue = new LinkedList<>();
+            this.cache = new LinkedHashMap<>();
+        }
+
+        public boolean shouldPrintMessage(int timestamp, String message) {
+            while (!queue.isEmpty() && timestamp >= cache.get(queue.peek())) {
+                cache.remove(queue.poll());
+            }
+
+            if (!cache.containsKey(message)) {
+                queue.add(message);
+                cache.put(message, timestamp  + 10);
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+
+    static class LoggerHashMapScale {
+
+        private LinkedHashMap<String, Integer> cache;
+
+        public LoggerHashMapScale() {
+            this.cache = new LinkedHashMap<>();
+        }
+
+        public boolean shouldPrintMessage(int timestamp, String message) {
+            cleanUpCache(timestamp);
+
+            if (cache.containsKey(message) && timestamp < cache.get(message)) {
+                return false;
+            } else {
+                cache.put(message, timestamp + 10);
+                return true;
+            }
+        }
+
+        private void cleanUpCache(int timestamp){
+            Iterator<Map.Entry<String, Integer>> iterator = cache.entrySet().iterator();
+
+            while (iterator.hasNext()) {
+                if (timestamp >= iterator.next().getValue()) {
+                    iterator.remove();
+                } else {
+                    break;
+                }
             }
         }
     }

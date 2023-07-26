@@ -26,17 +26,13 @@ import java.util.List;
  */
 public class Subsets {
 
-    public static void main(String[] args) {
-        System.out.println(generateSubsets(new int[]{1, 2, 3}));
-    }
-
-    private static List<List<Integer>> generateSubsets(int[] nums) {
+    public List<List<Integer>> generateSubsets(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
         backtracking(nums, result, new ArrayList<>(), 0);
         return result;
     }
 
-    private static void backtracking(int[] nums, List<List<Integer>> result, List<Integer> curr, int start) {
+    private void backtracking(int[] nums, List<List<Integer>> result, List<Integer> curr, int start) {
         result.add(new ArrayList<>(curr));
 
         for (int i = start; i < nums.length; i++) {

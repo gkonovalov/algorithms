@@ -103,11 +103,12 @@ Need to prepare description.
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/MergeSort.java"><b>Merge Sort</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/QuickSort.java"><b>Quick Sort</b></a>
 │   └── Strassen's Matrix multiplication
-├── Recursion
-│   ├── Dynamic Programming
+├── <a href="src/main/java/com/gkonovalov/algorithms/recursion/"><b>Recursion</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/algorithms/recursion/Factorial.java"><b>Factorial</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/algorithms/recursion/dp"><b>Dynamic Programming</b></a>
 │   │   ├── Approaches
-│   │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/math/FibonacciNumbers.java#L25"><b>Top-Down  - Memoization</b></a>
-│   │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/math/FibonacciNumbers.java#L45"><b>Bottom-Up - Tabulation</b></a>
+│   │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/recursion/dp/FibonacciNumbers.java#L25"><b>Top-Down  - Memoization</b></a>
+│   │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/recursion/dp/FibonacciNumbers.java#L45"><b>Bottom-Up - Tabulation</b></a>
 │   │   │   └── Half-and-Half
 │   │ 	├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath/BellmanFord.java"><b>Bellman–Ford</b></a>
 │   │ 	├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath/FloydWarshall.java"><b>Floyd-Warshall</b></a>
@@ -115,8 +116,8 @@ Need to prepare description.
 │   │   ├── Regular Expression Matching
 │   │   ├── Matrix Chain Multiplication
 │   │   └── Binomial Coefficient
-│   └── Backtracking
-│       └── Combinatorics
+│   └── <a href="src/main/java/com/gkonovalov/algorithms/recursion/backtracking/"><b>Backtracking</b></a>
+│       └── <a href="src/main/java/com/gkonovalov/algorithms/recursion/backtracking/combinatorics/"><b>Combinatorics</b></a>
 │           ├── <a href="src/main/java/com/gkonovalov/algorithms/recursion/backtracking/combinatorics/Permutations.java"><b>Permutations</b></a>
 │           ├── <a href="src/main/java/com/gkonovalov/algorithms/recursion/backtracking/combinatorics/Combinations.java"><b>Combinations</b></a>
 │           ├── <a href="src/main/java/com/gkonovalov/algorithms/recursion/backtracking/combinatorics/Subsets.java"><b>Subsets</b></a>
@@ -144,8 +145,8 @@ Need to prepare description.
 │       ├── Graham Scan
 │       └── Jarvis March
 └── <a href="src/main/java/com/gkonovalov/algorithms/math"><b>Math</b></a>
-    ├── <a href="src/main/java/com/gkonovalov/algorithms/math/FibonacciNumbers.java"><b>Fibonacci Numbers</b></a>
-    ├── Factorial
+    ├── <a href="src/main/java/com/gkonovalov/algorithms/recursion/dp/FibonacciNumbers.java"><b>Fibonacci Numbers</b></a>
+    ├── <a href="src/main/java/com/gkonovalov/algorithms/recursion/Factorial.java"><b>Factorial</b></a>
     ├── Prime Numbers
     │   ├── Sieve of Eratosthenes
     │   ├── Primality Test 

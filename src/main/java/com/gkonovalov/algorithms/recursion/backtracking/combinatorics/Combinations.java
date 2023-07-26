@@ -32,17 +32,13 @@ import java.util.List;
  */
 public class Combinations {
 
-    public static void main(String[] args) {
-        System.out.println(generateCombinations(4, 2));
-    }
-
-    private static List<List<Integer>> generateCombinations(int n, int k) {
+    public List<List<Integer>> generateCombinations(int n, int k) {
         List<List<Integer>> result = new ArrayList<>();
         backtracking(n, k, result, new ArrayList<>(), 1);
         return result;
     }
 
-    private static void backtracking(int n, int k, List<List<Integer>> result, List<Integer> curr, int start) {
+    private void backtracking(int n, int k, List<List<Integer>> result, List<Integer> curr, int start) {
         if (curr.size() == k) {
             result.add(new ArrayList<>(curr));
             return;

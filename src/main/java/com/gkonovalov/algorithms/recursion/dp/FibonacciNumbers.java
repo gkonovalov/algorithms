@@ -4,7 +4,7 @@ package com.gkonovalov.algorithms.recursion.dp;
 /**
  * Created by Georgiy Konovalov on 22/06/2023.
  * <p>
- * Fibonacci Numbers implementation.
+ * Fibonacci Numbers algorithm implementation.
  * The Fibonacci numbers are a sequence of numbers in which each number is the sum of the two
  * preceding ones. The sequence starts with 0 and 1, and the subsequent numbers are obtained
  * by adding the previous two numbers.

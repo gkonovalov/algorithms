@@ -27,7 +27,7 @@ import java.util.List;
  * combinations of {1, 2} are {1, 2} and {2, 1}, while the permutations are {1, 2} and {2, 1} (since the order
  * matters in permutations).
  * </p>
- * Runtime Complexity: O(n!).
+ * Runtime Complexity: O(n! / (k! * (n - k)!)).
  * Space Complexity:   O(k).
  */
 public class Combinations {

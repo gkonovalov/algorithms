@@ -117,10 +117,10 @@ Need to prepare description.
 │   │   └── Binomial Coefficient
 │   └── Backtracking
 │       └── Combinatorics
-│           ├── Permutations
-│           ├── Combinations
-│           ├── Subsets
-│           └── Partitions
+│           ├── <a href="src/main/java/com/gkonovalov/algorithms/recursion/backtracking/combinatorics/Permutations.java"><b>Permutations</b></a>
+│           ├── <a href="src/main/java/com/gkonovalov/algorithms/recursion/backtracking/combinatorics/Combinations.java"><b>Combinations</b></a>
+│           ├── <a href="src/main/java/com/gkonovalov/algorithms/recursion/backtracking/combinatorics/Subsets.java"><b>Subsets</b></a>
+│           └── <a href="src/main/java/com/gkonovalov/algorithms/recursion/backtracking/combinatorics/Partitions.java"><b>Partitions</b></a>
 ├── Greedy
 │   ├── Huffman Coding
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath/Dijkstra.java"><b>Shortest Path Dijkstra's</b></a>

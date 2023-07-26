@@ -23,17 +23,13 @@ import java.util.List;
  */
 public class Permutations {
 
-    public static void main(String[] args) {
-        System.out.println(generatePermutations(new int[]{1, 2, 3}));
-    }
-
-    private static List<List<Integer>> generatePermutations(int[] nums) {
+    public List<List<Integer>> generatePermutations(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
         backtracking(nums, result, new ArrayList<>());
         return result;
     }
 
-    private static void backtracking(int[] nums, List<List<Integer>> result, List<Integer> curr) {
+    private void backtracking(int[] nums, List<List<Integer>> result, List<Integer> curr) {
         if (curr.size() == nums.length) {
             result.add(new ArrayList<>(curr));
             return;

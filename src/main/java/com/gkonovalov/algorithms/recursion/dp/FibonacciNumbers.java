@@ -1,4 +1,4 @@
-package com.gkonovalov.algorithms.math;
+package com.gkonovalov.algorithms.recursion.dp;
 
 
 /**
@@ -21,7 +21,7 @@ package com.gkonovalov.algorithms.math;
  *                    O(n) for {@code findDuplicate4}.
  */
 public class FibonacciNumbers {
-    
+
     public int fibRecursiveTopDown(int n) {
         if (n <= 1) {
             return n;
@@ -30,7 +30,11 @@ public class FibonacciNumbers {
         return fibRecursiveTopDown(n - 1) + fibRecursiveTopDown(n - 2);
     }
 
-    public int fibMemoizationTopDown(int n, int[] memo) {
+    public int fibMemoizationTopDown(int n) {
+       return fibMemoizationTopDown(n, new int[n+1]);
+    }
+
+    private int fibMemoizationTopDown(int n, int[] memo) {
         if (n <= 1) {
             return n;
         }

@@ -24,17 +24,13 @@ import java.util.List;
  */
 public class Partitions {
 
-    public static void main(String[] args) {
-        System.out.println(generatePartitions(4, 4));
-    }
-
-    public static List<List<Integer>> generatePartitions(int n, int maxNum) {
+    public List<List<Integer>> generatePartitions(int n, int maxNum) {
         List<List<Integer>> result = new ArrayList<>();
         backtracking(n, maxNum, result, new ArrayList<>());
         return result;
     }
 
-    private static void backtracking(int n, int maxNum, List<List<Integer>> result, List<Integer> curr) {
+    private void backtracking(int n, int maxNum, List<List<Integer>> result, List<Integer> curr) {
         if (n == 0) {
             result.add(new ArrayList<>(curr));
             return;

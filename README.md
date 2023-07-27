@@ -19,9 +19,9 @@ Need to prepare description.
 │       ├── Aho-Corasick
 │       ├── Regular Expressions
 │       │   └── Thompson NFA
-│       └── Edit Distance
-│           ├── Levenshtein Distance
-│           └── Hamming Distance
+│       └── <a href="src/algorithms/strings/matching/editdistance/"><b>Edit Distance</b></a>
+│           ├── <a href="src/algorithms/strings/matching/editdistance/LevenshteinDistance.java"><b>Levenshtein Distance</b></a>
+│           └── <a href="src/algorithms/strings/matching/editdistance/HammingDistance.java"><b>Hamming Distance</b></a>
 ├── <a href="src/algorithms/arrays"><b>Arrays</b></a>
 │   ├── <a href="src/algorithms/arrays/searching"><b>Searching</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/searching/LinearSearch.java"><b>Linear Search</b></a>
@@ -113,7 +113,7 @@ Need to prepare description.
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/recursion/dp/FibonacciNumbers.java"><b>Fibonacci Numbers</b></a>
 │   │ 	├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath/BellmanFord.java"><b>Bellman–Ford</b></a>
 │   │ 	├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath/FloydWarshall.java"><b>Floyd-Warshall</b></a>
-│   │   ├── Levenshtein Distance
+│   │   ├── <a href="src/algorithms/strings/matching/editdistance/LevenshteinDistance.java"><b>Levenshtein Distance</b></a>
 │   │   ├── Regular Expression Matching
 │   │   ├── Matrix Chain Multiplication
 │   │   └── Binomial Coefficient

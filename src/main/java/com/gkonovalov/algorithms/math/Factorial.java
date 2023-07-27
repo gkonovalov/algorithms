@@ -1,4 +1,4 @@
-package com.gkonovalov.algorithms.recursion;
+package com.gkonovalov.algorithms.math;
 
 import java.math.BigInteger;
 

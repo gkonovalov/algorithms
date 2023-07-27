@@ -104,13 +104,13 @@ Need to prepare description.
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/QuickSort.java"><b>Quick Sort</b></a>
 │   └── Strassen's Matrix multiplication
 ├── <a href="src/main/java/com/gkonovalov/algorithms/recursion/"><b>Recursion</b></a>
-│   ├── <a href="src/main/java/com/gkonovalov/algorithms/recursion/Factorial.java"><b>Factorial</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/algorithms/math/Factorial.java"><b>Factorial</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/recursion/dp"><b>Dynamic Programming</b></a>
 │   │   ├── Approaches
-│   │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/recursion/dp/FibonacciNumbers.java#L25"><b>Top-Down  - Memoization</b></a>
-│   │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/recursion/dp/FibonacciNumbers.java#L45"><b>Bottom-Up - Tabulation</b></a>
+│   │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/math/FibonacciNumbers.java#L25"><b>Top-Down  - Memoization</b></a>
+│   │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/math/FibonacciNumbers.java#L45"><b>Bottom-Up - Tabulation</b></a>
 │   │   │   └── Half-and-Half
-│   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/recursion/dp/FibonacciNumbers.java"><b>Fibonacci Numbers</b></a>
+│   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/math/FibonacciNumbers.java"><b>Fibonacci Numbers</b></a>
 │   │ 	├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath/BellmanFord.java"><b>Bellman–Ford</b></a>
 │   │ 	├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath/FloydWarshall.java"><b>Floyd-Warshall</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/strings/matching/editdistance/LevenshteinDistance.java"><b>Levenshtein Distance</b></a>
@@ -146,8 +146,8 @@ Need to prepare description.
 │       ├── Graham Scan
 │       └── Jarvis March
 └── <a href="src/main/java/com/gkonovalov/algorithms/math"><b>Math</b></a>
-    ├── <a href="src/main/java/com/gkonovalov/algorithms/recursion/dp/FibonacciNumbers.java"><b>Fibonacci Numbers</b></a>
-    ├── <a href="src/main/java/com/gkonovalov/algorithms/recursion/Factorial.java"><b>Factorial</b></a>
+    ├── <a href="src/main/java/com/gkonovalov/algorithms/math/FibonacciNumbers.java"><b>Fibonacci Numbers</b></a>
+    ├── <a href="src/main/java/com/gkonovalov/algorithms/math/Factorial.java"><b>Factorial</b></a>
     ├── Prime Numbers
     │   ├── Sieve of Eratosthenes
     │   ├── Primality Test 

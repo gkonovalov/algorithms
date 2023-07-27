@@ -1,4 +1,4 @@
-package com.gkonovalov.algorithms.recursion.dp;
+package com.gkonovalov.algorithms.math;
 
 
 /**

@@ -28,9 +28,7 @@ public class MedianOfMedians {
     }
 
     private int selectBFPRT(int[] arr, int k) {
-        int n = arr.length;
-
-        if (n <= 10) {
+        if (arr.length <= 10) {
             Arrays.sort(arr);
             return arr[k];
         }

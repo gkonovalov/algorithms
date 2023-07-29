@@ -41,7 +41,7 @@ Need to prepare description.
 │   │   └── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/BucketSort.java"><b>Bucket Sort</b></a>
 │   └── <a href="src/main/java/com/gkonovalov/algorithms/arrays/selection/"><b>Selection</b></a>
 │       ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/selection/QuickSelect.java"><b>Quick Select</b></a>
-│       └── Median of medians
+│       └── <a href="src/main/java/com/gkonovalov/algorithms/arrays/selection/MedianOfMedians.java"><b>Median of medians</b></a>
 ├── <a href="src/main/java/com/gkonovalov/algorithms/linkedlist"><b>Linked List</b></a>
 │   └── <a href="src/main/java/com/gkonovalov/algorithms/linkedlist/FloydCycleDetection.java"><b>Floyd's Cycle Detection</b></a>
 ├── <a href="src/main/java/com/gkonovalov/datastructures/trees/TreeNode.java"><b>Tree</b></a>

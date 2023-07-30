@@ -26,10 +26,10 @@ Need to prepare description.
 │   ├── <a href="src/algorithms/arrays/searching"><b>Searching</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/searching/LinearSearch.java"><b>Linear Search</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/searching/BinarySearch.java"><b>Binary Search</b></a>
-│   │   ├── Exponential Search
+│   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/searching/ExponentialSearch.java"><b>Exponential Search</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/searching/JumpSearch.java"><b>Jump Search</b></a>
-│   │   ├── Interpolation Search
-│   │   └── Ternary Search
+│   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/searching/InterpolationSearch.java"><b>Interpolation Search</b></a>
+│   │   └── <a href="src/main/java/com/gkonovalov/algorithms/arrays/searching/TernarySearch.java"><b>Ternary Search</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/"><b>Sorting</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/BubbleSort.java"><b>Bubble Sort</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/SelectionSort.java"><b>Selection Sort</b></a>

@@ -30,7 +30,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
         HashSet<Character> window = new HashSet<>();
 
         while (end < s.length()) {
-            if (window.isEmpty() || !window.contains(s.charAt(end))) {
+            if (!window.contains(s.charAt(end))) {
                 window.add(s.charAt(end++));
                 max = Math.max(max, window.size());
             } else {

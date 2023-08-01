@@ -283,7 +283,7 @@ Need to prepare description.
 │   │   ├── Traveling Salesman
 │   │   ├── Longest Common Subsequence (LCS) 
 │   │   ├── Longest Increasing Subsequence (LIS) 
-│   │   ├── Longest Palindrome Subsequence (LPS)
+│   │   ├── <a href="src/main/java/com/gkonovalov/problems/recursion/dp/LongestPalindromicSubstring.java"><b>Longest Palindrome Subsequence (LPS)</b></a>
 │   │   ├── Shortest Common Supersequence (SCS)
 │   │   ├── Maximum Sum Increasing Subsequence
 │   │   ├── Maximum Subarray Sum

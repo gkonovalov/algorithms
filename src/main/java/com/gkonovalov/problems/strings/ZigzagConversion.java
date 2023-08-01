@@ -1,4 +1,4 @@
-package com.gkonovalov.problems.arrays;
+package com.gkonovalov.problems.strings;
 
 
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package com.gkonovalov.problems.heap;
+package com.gkonovalov.problems.tree.heap;
 
 import com.gkonovalov.problems.utils.ListNode;
 

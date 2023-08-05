@@ -1,4 +1,4 @@
-package com.gkonovalov.problems.tree.heap;
+package com.gkonovalov.problems.arrays.selection;
 
 import java.util.Arrays;
 import java.util.PriorityQueue;

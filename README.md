@@ -1,6 +1,16 @@
 ## Algorithms and Data Structures
 
-Need to prepare description.
+> **_Donald Knuth:_**  "An algorithm must be seen to be believed".
+
+Welcome to curated GitHub repository, featuring a comprehensive collection of fundamental Algorithms and 
+Data structures organized into various categories to cater to the needs of software engineers and 
+computer science students. Each Algorithm and Data structure is systematically classified, ensuring easy 
+navigation and efficient learning. You will find concise explanations and clear Java implementation code,
+making it easy to understand and implement the concepts in your projects.
+
+Additionally, the repository includes sample problems and solutions, designed to help practice and 
+apply the concepts learned from each Algorithm and Data structure. 
+These problems serve as valuable exercises to enhance your problem-solving skills.
 
 ## Algorithms
 <pre>
@@ -95,9 +105,11 @@ Need to prepare description.
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/CycleDetection.java"><b>Cycle Detection</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/Bipartite.java"><b>Is Bipartite</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/MColoring.java"><b>Graph coloring</b></a>
-│   ├── Eulerian Cycle
+│   ├── Connectivity
+│   ├── Bridge
 │   ├── Eulerian Path
-│   ├── Eulerian Tour
+│   ├── Eulerian Cycle
+│   ├── Hamiltonian Path
 │   └── Hamiltonian Cycle
 ├── Divide and Conquer
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/searching/BinarySearch.java"><b>Binary Search</b></a>
@@ -303,6 +315,7 @@ Need to prepare description.
 │   │   ├── Paint House
 │   │   ├── Palindrome Partitioning
 │   │   ├── Maximum Product Subarray
+│   │   ├── Staircase
 │   │   └── Coin Change
 │   └── Backtracking
 │       ├── Traveling Salesman 

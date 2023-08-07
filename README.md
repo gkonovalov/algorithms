@@ -93,8 +93,8 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │   │       ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/sorting/topological/TopologicalSortKahn.java"><b>Kahn's</b></a>
 │   │       └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/sorting/topological/TopologicalSortTarjan.java"><b>Tarjan's</b></a> 
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/"><b>Connectivity</b></a>
-│   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/Connectivity.java"><b>Connectivity</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/Bridge.java"><b>Bridge</b></a>
+│   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/Connectivity.java"><b>Connectivity</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/cc/"><b>Connected Components</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/scc/"><b>Strongly Connected Components</b></a>
 │   │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/scc/SCCKosarajuSharir.java"><b>Kosaraju-Sharir's</b></a>

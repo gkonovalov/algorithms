@@ -93,6 +93,8 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │   │       ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/sorting/topological/TopologicalSortKahn.java"><b>Kahn's</b></a>
 │   │       └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/sorting/topological/TopologicalSortTarjan.java"><b>Tarjan's</b></a> 
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/"><b>Connectivity</b></a>
+│   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/Connectivity.java"><b>Connectivity</b></a>
+│   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/Bridge.java"><b>Bridge</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/cc/"><b>Connected Components</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/scc/"><b>Strongly Connected Components</b></a>
 │   │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/scc/SCCKosarajuSharir.java"><b>Kosaraju-Sharir's</b></a>
@@ -105,8 +107,6 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/CycleDetection.java"><b>Cycle Detection</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/Bipartite.java"><b>Is Bipartite</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/MColoring.java"><b>Graph coloring</b></a>
-│   ├── Connectivity
-│   ├── Bridge
 │   ├── Eulerian Path
 │   ├── Eulerian Cycle
 │   ├── Hamiltonian Path

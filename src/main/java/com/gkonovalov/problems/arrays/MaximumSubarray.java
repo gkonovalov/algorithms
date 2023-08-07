@@ -21,15 +21,15 @@ public class MaximumSubarray {
         System.out.println("Max Subarray Sum:" + maxSubarraySum(arr));
     }
 
-    public static int maxSubarraySum(int[] arr) {
-        int maxEndingHere = arr[0];
-        int maxSoFar = arr[0];
+    public static int maxSubarraySum(int[] nums) {
+        int currentSubarray = nums[0];
+        int maxSubarray = nums[0];
 
-        for (int i = 1; i < arr.length; i++) {
-            maxEndingHere = Math.max(arr[i], maxEndingHere + arr[i]);
-            maxSoFar = Math.max(maxSoFar, maxEndingHere);
+        for(int i = 1; i < nums.length; i++){
+            currentSubarray = Math.max(nums[i], currentSubarray+nums[i]);
+            maxSubarray = Math.max(currentSubarray, maxSubarray);
         }
 
-        return maxSoFar;
+        return maxSubarray;
     }
 }

@@ -351,7 +351,7 @@ To open the project in Intellij Idea:
 
 1. Go to *File* menu or the *Welcome Screen*
 2. Click on *Open...*
-3. Navigate to `essential-algorithms` root directory.
+3. Navigate to `algorithms` root directory.
 4. Select `setting.gradle`
 
 ------------

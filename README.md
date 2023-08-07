@@ -33,6 +33,7 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │           ├── <a href="src/main/java/com/gkonovalov/algorithms/strings/matching/editdistance/LevenshteinDistance.java"><b>Levenshtein Distance</b></a>
 │           └── <a href="src/main/java/com/gkonovalov/algorithms/strings/matching/editdistance/HammingDistance.java"><b>Hamming Distance</b></a>
 ├── <a href="src/algorithms/arrays"><b>Arrays</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/Kadane.java"><b>Kadane's</b></a>
 │   ├── <a href="src/algorithms/arrays/searching"><b>Searching</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/searching/LinearSearch.java"><b>Linear Search</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/searching/BinarySearch.java"><b>Binary Search</b></a>
@@ -256,7 +257,6 @@ These problems serve as valuable exercises to enhance your problem-solving skill
         ├── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/AdjacencyMatrix.java"><b>Adjacency Matrix</b></a>
         └── <a href="src/main/java/com/gkonovalov/datastructures/graphs/representation/EdgeList.java"><b>Edge List</b></a>
 </pre>
-
 
 ## Coding Problems and Techniques
 <pre>

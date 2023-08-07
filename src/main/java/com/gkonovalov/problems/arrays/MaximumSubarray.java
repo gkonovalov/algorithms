@@ -6,7 +6,7 @@ package com.gkonovalov.problems.arrays;
  * Implementation of Kadane's Algorithm which is used to find the maximum sum of a contiguous subarray
  * within an array of numbers.
  *
- * @see <a href="https://leetcode.com/problems/3sum/">
+ * @see <a href="https://leetcode.com/problems/maximum-subarray/">
  *             [Medium][53] - Maximum Subarray
  *      </a>
  * </p>

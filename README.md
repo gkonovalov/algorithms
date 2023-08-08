@@ -81,9 +81,9 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │   │ 	└── <a href="src/main/java/com/gkonovalov/algorithms/graphs/mst/MSTKruskal.java"><b>Kruskal’s</b></a>
 │   ├── Network Flow
 │   │   ├── Maximum Flow
-│   │   │   ├── Push-Relabel
 │   │   │   ├── Ford-Fulkerson
 │   │   │   ├── Edmonds-Karp
+│   │   │   ├── Push-Relabel
 │   │   │   └── Dinic's
 │   │   ├── Minimum Cut 
 │   │   │   └── Karger's

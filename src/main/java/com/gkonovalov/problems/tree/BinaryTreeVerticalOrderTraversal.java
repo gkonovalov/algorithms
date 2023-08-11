@@ -1,6 +1,5 @@
 package com.gkonovalov.problems.tree;
 
-import com.gkonovalov.problems.utils.Node;
 import com.gkonovalov.problems.utils.TreeNode;
 
 import java.util.*;
@@ -61,6 +60,36 @@ public class BinaryTreeVerticalOrderTraversal {
         }
 
         return result;
+    }
+
+    public List<List<Integer>> verticalOrder2(TreeNode root) {
+        if (root == null) {
+            return new ArrayList<>();
+        }
+        TreeMap<Integer, List<Integer>> map = new TreeMap<>();
+
+        Queue<Pair> queue = new ArrayDeque<>();
+        queue.add(new Pair(root, 0));
+
+        while (!queue.isEmpty()) {
+            Pair p = queue.poll();
+
+            if (!map.containsKey(p.pos)) {
+                map.put(p.pos, new ArrayList<>());
+            }
+
+            map.get(p.pos).add(p.node.val);
+
+            if (p.node.left != null) {
+                queue.add(new Pair(p.node.left, p.pos - 1));
+            }
+
+            if (p.node.right != null) {
+                queue.add(new Pair(p.node.right, p.pos + 1));
+            }
+        }
+
+        return new ArrayList<>(map.values());
     }
 
     static class Pair {

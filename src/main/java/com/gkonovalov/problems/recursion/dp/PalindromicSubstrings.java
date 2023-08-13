@@ -4,7 +4,10 @@ package com.gkonovalov.problems.recursion.dp;
 /**
  * Created by Georgiy Konovalov on 10/04/2023.
  * <p>
- *
+ * length      1 2 3
+ * p         a 1 1 1
+ * o         a 1 1
+ * s         a 1
  * @see <a href="https://leetcode.com/problems/palindromic-substrings/">
  *          [Medium][647] - Palindromic Substrings
  *      </a>

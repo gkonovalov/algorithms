@@ -9,8 +9,8 @@ import java.util.*;
  *          [Hard][127] - Word Ladder
  *      </a>
  * </p>
- * Runtime Complexity: O(m^2n) for {@code ladderLength}.
- * Space Complexity:  O(m^2n) for {@code ladderLength}.
+ * Runtime Complexity: O(m^2 n) for {@code ladderLength}, where M is size of word & N is size of our word list.
+ * Space Complexity:  O(m n) for {@code ladderLength}, where M is size of word & N is size of our word list.
  */
 public class WordLadder {
 

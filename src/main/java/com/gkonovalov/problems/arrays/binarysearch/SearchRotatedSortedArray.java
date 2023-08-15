@@ -48,5 +48,45 @@ public class SearchRotatedSortedArray {
         return -1;
     }
 
+    public static int search2(int[] nums, int target) {
+        int n = nums.length - 1;
+        int start = 0;
+        int end = n;
 
+
+        while (start <= end) {
+            int center = (end - start) / 2 + start;
+
+            if (nums[n] < nums[center]) {
+                start = center + 1;
+            } else {
+                end = center - 1;
+            }
+        }
+
+        int answer = binarySearch(nums, target, 0, start - 1);
+
+        if (answer != -1) {
+            return answer;
+        }
+
+        return binarySearch(nums, target, start, n);
+    }
+
+    private static int binarySearch(int[] nums, int target, int start, int end) {
+        while (start <= end) {
+            int center = (end - start) / 2 + start;
+
+            if (nums[center] == target) {
+                return center;
+            }
+
+            if (target < nums[center]) {
+                end = center - 1;
+            } else {
+                start = center + 1;
+            }
+        }
+        return -1;
+    }
 }

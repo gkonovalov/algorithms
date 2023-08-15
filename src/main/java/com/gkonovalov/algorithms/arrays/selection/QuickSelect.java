@@ -5,11 +5,12 @@ import java.util.concurrent.ThreadLocalRandom;
 /**
  * Created by Georgiy Konovalov on 10/06/2023.
  * <p>
- * Quick Select is a selection algorithm that is derived from the Quick Sort algorithm.
- * It is used to find the k-th smallest element in an unsorted array. The main idea behind
- * Quick Select is to partition the array similar to Quick Sort, but instead of recursively
- * sorting both halves, it selectively chooses to recurse on one side based on the position
- * of the pivot element.
+ * QuickSelect is a selection algorithm that efficiently finds the kth smallest (or largest) element
+ * in an unsorted list or array. It's a variation of the QuickSort algorithm that focuses on partitioning
+ * the elements to quickly narrow down the search space for the desired element. The key idea behind
+ * QuickSelect is to choose a pivot element, partition the array around it, and then determine in which
+ * partition the desired element lies. This way, only one partition needs to be further processed, which
+ * reduces the average time complexity.
  *
  * The main difference between Lomuto Partition and Hoare Partition lies in the number of swaps
  * performed. Lomuto Partition tends to perform more swaps compared to Hoare Partition, which can make

@@ -5,8 +5,8 @@ import java.util.concurrent.ThreadLocalRandom;
 /**
  * Created by Georgiy Konovalov on 10/06/2023.
  * <p>
- * QuickSelect is a selection algorithm that efficiently finds the kth smallest (or largest) element
- * in an unsorted list or array. It's a variation of the QuickSort algorithm that focuses on partitioning
+ * Quick Select is a selection algorithm that efficiently finds the kth smallest (or largest) element
+ * in an unsorted list or array. It's a variation of the Quick Sort algorithm that focuses on partitioning
  * the elements to quickly narrow down the search space for the desired element. The key idea behind
  * QuickSelect is to choose a pivot element, partition the array around it, and then determine in which
  * partition the desired element lies. This way, only one partition needs to be further processed, which

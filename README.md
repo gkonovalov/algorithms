@@ -293,7 +293,7 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │   │   ├── Knapsack Unbounded
 │   │   ├── Traveling Salesman
 │   │   ├── Longest Common Subsequence (LCS) 
-│   │   ├── Longest Increasing Subsequence (LIS) 
+│   │   ├── <a href="src/main/java/com/gkonovalov/problems/recursion/dp/LongestIncreasingSubsequence.java"><b>Longest Increasing Subsequence (LIS)</b></a> 
 │   │   ├── <a href="src/main/java/com/gkonovalov/problems/recursion/dp/LongestPalindromicSubstring.java"><b>Longest Palindrome Subsequence (LPS)</b></a>
 │   │   ├── Shortest Common Supersequence (SCS)
 │   │   ├── Maximum Sum Increasing Subsequence

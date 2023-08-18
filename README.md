@@ -290,7 +290,7 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │   ├── <a href="src/main/java/com/gkonovalov/problems/recursion/dp/"><b>Dynamic Programming</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/problems/recursion/dp/FibonacciNumbers.java"><b>Fibonacci Numbers</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/problems/recursion/dp/Knapsack01.java"><b>Knapsack 0/1</b></a>
-│   │   ├── Knapsack Unbounded
+│   │   ├── <a href="src/main/java/com/gkonovalov/problems/recursion/dp/KnapsackUnbounded.java"><b>Knapsack Unbounded</b></a>
 │   │   ├── Traveling Salesman
 │   │   ├── <a href="src/main/java/com/gkonovalov/problems/recursion/dp/LongestCommonSubsequence.java"><b>Longest Common Subsequence (LCS)</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/problems/recursion/dp/LongestIncreasingSubsequence.java"><b>Longest Increasing Subsequence (LIS)</b></a> 

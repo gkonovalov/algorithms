@@ -21,7 +21,7 @@ package com.gkonovalov.problems.recursion.dp;
  * The most valuable combination of items that can be placed in the knapsack without exceeding its
  * weight capacity.
  * </p>
- * Runtime Complexity: O(n^w) for {@code knapsackDPUnbounded},
+ * Runtime Complexity: O(n w) for {@code knapsackDPUnbounded},
  *                     O(2^n) for {@code knapsackRecursiveUnbounded}.
  * Space Complexity:   O(w) for {@code knapsackDPUnbounded},
  *                     O(n) for {@code knapsackRecursiveUnbounded}.

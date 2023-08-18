@@ -24,9 +24,9 @@ package com.gkonovalov.problems.recursion.dp;
  * it in pseudo-polynomial time, especially when the number of items and the knapsack capacity are
  * not too large.
  * </p>
- * Runtime Complexity: O(n^w) for {@code knapsack}, {@code knapsack2},
+ * Runtime Complexity: O(n w) for {@code knapsack}, {@code knapsack2},
  *                     O(2^n) for {@code knapsackRecursive}.
- * Space Complexity:   O(n^w) for {@code knapsack},
+ * Space Complexity:   O(n w) for {@code knapsack},
  *                     O(w) for {@code knapsack2},
  *                     O(n) for {@code knapsackRecursive}.
  */

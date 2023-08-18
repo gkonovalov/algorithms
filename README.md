@@ -289,7 +289,7 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 ├── Recursion
 │   ├── <a href="src/main/java/com/gkonovalov/problems/recursion/dp/"><b>Dynamic Programming</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/problems/recursion/dp/FibonacciNumbers.java"><b>Fibonacci Numbers</b></a>
-│   │   ├── Knapsack 0/1
+│   │   ├── <a href="src/main/java/com/gkonovalov/problems/recursion/dp/Knapsack01.java"><b>Knapsack 0/1</b></a>
 │   │   ├── Knapsack Unbounded
 │   │   ├── Traveling Salesman
 │   │   ├── <a href="src/main/java/com/gkonovalov/problems/recursion/dp/LongestCommonSubsequence.java"><b>Longest Common Subsequence (LCS)</b></a>
@@ -300,7 +300,7 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │   │   ├── Maximum Subarray Sum
 │   │   ├── Combination Sum
 │   │   ├── Rod Cutting
-│   │   ├── Jump Game
+│   │   ├── <a href="src/main/java/com/gkonovalov/problems/recursion/dp/JumpGame.java"><b>Jump Game</b></a>
 │   │   ├── Partition problem
 │   │   ├── Russian Dolls Envelope
 │   │   ├── Dungeon Game
@@ -315,9 +315,9 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │   │   ├── Maximum Product Subarray
 │   │   ├── Staircase
 │   │   └── Coin Change
-│   └── Backtracking
+│   └── <a href="src/main/java/com/gkonovalov/problems/recursion/backtracking/"><b>Backtracking</b></a>
 │       ├── Traveling Salesman 
-│       ├── N-Queens
+│       ├── <a href="src/main/java/com/gkonovalov/problems/recursion/backtracking/NQueens.java"><b>N-Queens</b></a>
 │       ├── Knight's Tour 
 │       ├── Sudoku Solver
 │       ├── Unique Paths

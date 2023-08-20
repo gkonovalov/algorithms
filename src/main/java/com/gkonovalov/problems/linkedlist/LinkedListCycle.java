@@ -1,7 +1,8 @@
 package com.gkonovalov.problems.linkedlist;
 
-
 import com.gkonovalov.problems.utils.ListNode;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created by Georgiy Konovalov on 24/07/2023.
@@ -37,7 +38,40 @@ public class LinkedListCycle {
                 return true;
             }
         }
+        return false;
+    }
 
+    public static boolean hasCycle2(ListNode node) {
+        if (node == null) {
+            return false;
+        }
+
+        ListNode slow = node;
+        ListNode fast = node.next;
+
+        while (fast != null && fast.next != null) {
+            if (slow == fast) {
+                return true;
+            }
+
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return false;
+    }
+
+    public static boolean hasCycle3(ListNode head) {
+        Set<ListNode> history = new HashSet<>();
+
+        while (head != null) {
+            if (history.contains(head)) {
+                return true;
+            } else {
+                history.add(head);
+            }
+
+            head = head.next;
+        }
         return false;
     }
 }

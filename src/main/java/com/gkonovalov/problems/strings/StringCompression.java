@@ -5,7 +5,7 @@ package com.gkonovalov.problems.strings;
  * Created by Georgiy Konovalov on 22/08/2023.
  * <p>
  * @see <a href="https://leetcode.com/problems/string-compression/">
- *             [Medium][443] - String Compression
+ *            [Medium][443] - String Compression
  *      </a>
  * </p>
  * Runtime Complexity: O(n) for {@code compress}.

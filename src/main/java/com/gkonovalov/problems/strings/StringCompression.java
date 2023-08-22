@@ -9,7 +9,7 @@ package com.gkonovalov.problems.strings;
  *      </a>
  * </p>
  * Runtime Complexity: O(n) for {@code compress}.
- * Space Complexity:   O(n) for {@code compress}.
+ * Space Complexity:   O(1) for {@code compress}.
  */
 public class StringCompression {
 

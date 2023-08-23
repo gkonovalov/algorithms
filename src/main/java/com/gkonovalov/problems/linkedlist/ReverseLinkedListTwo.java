@@ -7,7 +7,7 @@ import com.gkonovalov.problems.utils.ListNode;
  * Created by Georgiy Konovalov on 22/08/2023.
  * <p>
  * @see <a href="https://leetcode.com/problems/reverse-linked-list-ii/">
- *          [Medium][92] - Reverse Linked List II
+ *              [Medium][92] - Reverse Linked List II
  *      </a>
  * </p>
  * Runtime Complexity: O(n) for {@code reverseBetween}.

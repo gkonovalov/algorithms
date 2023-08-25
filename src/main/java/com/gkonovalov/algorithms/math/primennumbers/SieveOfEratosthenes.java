@@ -24,7 +24,7 @@ public class SieveOfEratosthenes {
 
         boolean[] notPrime = new boolean[n + 1];
 
-        for (int i = 2; i * i <= n; i++) {
+        for (int i = 2; i <= Math.sqrt(n); i++) {
             if (!notPrime[i]) {
                 for (int k = i * i; k <= n; k += i) {
                     notPrime[k] = true;

@@ -2,6 +2,11 @@ package com.gkonovalov.problems.tree;
 
 import com.gkonovalov.problems.utils.TreeNode;
 
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.Stack;
+
 /**
  * Created by Georgiy Konovalov on 7/08/2023.
  * <p>
@@ -40,5 +45,39 @@ public class LowestCommonAncestorOfBinaryTree {
         } else {
             return right;
         }
+    }
+
+    public TreeNode lowestCommonAncestorIteration(TreeNode root, TreeNode p, TreeNode q) {
+        HashMap<TreeNode, TreeNode> parent = new HashMap<>();
+        Stack<TreeNode> stack = new Stack<>();
+
+        parent.put(root, null);
+        stack.add(root);
+
+        while (!parent.containsKey(p) && !parent.containsKey(q)) {
+            TreeNode curr = stack.pop();
+
+            if (curr.left != null) {
+                parent.put(curr.left, curr);
+                stack.add(curr.left);
+            }
+
+            if (curr.right != null) {
+                parent.put(curr.right, curr);
+                stack.add(curr.right);
+            }
+        }
+
+        Set<TreeNode> anc = new HashSet<>();
+
+        while (p != null) {
+            anc.add(p);
+            p = parent.get(p);
+        }
+
+        while (!anc.contains(q)) {
+            q = parent.get(q);
+        }
+        return q;
     }
 }

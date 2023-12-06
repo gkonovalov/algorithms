@@ -7,16 +7,17 @@ import java.util.*;
 /**
  * Created by Georgiy Konovalov on 20/07/2023.
  * <p>
- * A-Star algorithm implementation. A* is designed for finding the shortest path in
- * graphs with non-negative edge weights. It uses a heuristic function that estimates the cost
- * from each node to the goal node. The heuristic helps prioritize nodes that are more likely to
- * lead to the goal. A* is generally more efficient than Dijkstra's algorithm, especially
- * for large graphs.
+ * A-Star algorithm implementation. A* is designed to find the shortest path from a single source
+ * node to a specific target node in graphs with non-negative edge weights. It uses a heuristic
+ * function that estimates the cost from each node to the goal node. The heuristic helps prioritize
+ * nodes that are more likely to lead to the goal. A* is generally more efficient than Dijkstra's
+ * algorithm, especially for large graphs.
  * Heuristic distance calculation:
  *  1) Manhattan,
  *  2) Euclidean,
  *  3) Octile,
  *  4) Chebyshev.
+ *
  *  F = G + H (total cost = cost from start + heuristic estimate)
  * </p>
  * Runtime Complexity: O(|V|+|E|) {@code shortestPath}

@@ -262,10 +262,10 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 ├── Arrays
 │   ├── Prefix Sum
 │   ├── <a href="src/main/java/com/gkonovalov/problems/arrays/MaximumSubarray.java"><b>Maximum Sum Subarray - Kadane's </b></a>
-│   ├── Sliding Window 
-│   ├── Two Pointers
+│   ├── Sliding Window
+│   ├── <a href="src/main/java/com/gkonovalov/problems/arrays/twopointers/"><b>Two Pointers</b></a>
 │   ├── Searching
-│   │   └── Binary Search
+│   │   └── <a href="src/main/java/com/gkonovalov/problems/arrays/searching/binarysearch/"><b>Binary Search</b></a>
 │   └── Range Sum 
 ├── Strings
 │   ├── Reverse String
@@ -274,10 +274,10 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │       ├── Palindrome Checking
 │       ├── Palindrome Substrings
 │       └── Longest Palindromic Substring
-├── Linked List
-│   ├── Reversal
-│   └── Cache
-│       ├── LRU
+├── <a href="src/main/java/com/gkonovalov/problems/linkedlist/"><b>Linked List</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/problems/linkedlist/reversal/"><b>Reversal</b></a>
+│   └── <a href="src/main/java/com/gkonovalov/problems/linkedlist/cache/"><b>Cache</b></a>
+│       ├── <a href="src/main/java/com/gkonovalov/problems/linkedlist/cache/LRUCache.java"><b>LRU</b></a>
 │       └── LFU 
 ├── Stacks
 ├── Queues
@@ -285,7 +285,10 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 ├── Trees
 │   ├── Binary Search Tree
 │   └── Trie-trees
-├── Graphs
+├── <a href="src/main/java/com/gkonovalov/problems/graph/"><b>Graphs</b></a>
+│   └── <a href="src/main/java/com/gkonovalov/problems/graph/searching"><b>Searching</b></a>
+│       ├── <a href="src/main/java/com/gkonovalov/problems/graph/searching/bfs"><b>BFS</b></a>
+│       └── <a href="src/main/java/com/gkonovalov/problems/graph/searching/dfs"><b>DFS</b></a>
 ├── Recursion
 │   ├── <a href="src/main/java/com/gkonovalov/problems/recursion/dp/"><b>Dynamic Programming</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/problems/recursion/dp/FibonacciNumbers.java"><b>Fibonacci Numbers</b></a>

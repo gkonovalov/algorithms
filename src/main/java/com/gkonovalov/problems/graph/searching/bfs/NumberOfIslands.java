@@ -1,4 +1,4 @@
-package com.gkonovalov.problems.graph;
+package com.gkonovalov.problems.graph.searching.bfs;
 
 import java.util.ArrayDeque;
 import java.util.Queue;

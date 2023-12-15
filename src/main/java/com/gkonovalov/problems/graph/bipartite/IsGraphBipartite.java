@@ -1,4 +1,4 @@
-package com.gkonovalov.problems.graph;
+package com.gkonovalov.problems.graph.bipartite;
 
 
 /**

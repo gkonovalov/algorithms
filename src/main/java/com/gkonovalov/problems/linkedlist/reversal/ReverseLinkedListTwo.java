@@ -1,4 +1,4 @@
-package com.gkonovalov.problems.linkedlist;
+package com.gkonovalov.problems.linkedlist.reversal;
 
 
 import com.gkonovalov.problems.utils.ListNode;

@@ -53,10 +53,10 @@ public class WordBreak {
         boolean[] dp = new boolean[s.length() + 1];
         dp[0] = true;
 
-        for (int n = 1; n <= s.length(); n++) {
-            for (int k = 0; k < n; k++) {
-                if (dp[k] && words.contains(s.substring(k, n))) {
-                    dp[n] = true;
+        for (int end = 1; end <= s.length(); end++) {
+            for (int start = 0; start < end; start++) {
+                if (dp[start] && words.contains(s.substring(start, end))) {
+                    dp[end] = true;
                     break;
                 }
             }

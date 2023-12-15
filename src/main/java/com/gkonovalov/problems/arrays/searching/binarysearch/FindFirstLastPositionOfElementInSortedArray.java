@@ -1,4 +1,4 @@
-package com.gkonovalov.problems.arrays.binarysearch;
+package com.gkonovalov.problems.arrays.searching.binarysearch;
 
 
 import java.util.Arrays;

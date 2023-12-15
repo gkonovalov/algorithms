@@ -1,4 +1,4 @@
-package com.gkonovalov.problems.arrays.binarysearch;
+package com.gkonovalov.problems.arrays.searching.binarysearch;
 
 
 /**
@@ -6,7 +6,7 @@ package com.gkonovalov.problems.arrays.binarysearch;
  * <p>
  *
  * @see <a href="https://leetcode.com/problems/search-insert-position/">
- *     [Easy][35] - Search Insert Position
+ *         [Easy][35] - Search Insert Position
  *     </a>
  * </p>
  * Runtime Complexity: O(log n).

@@ -1,4 +1,4 @@
-package com.gkonovalov.problems.graph;
+package com.gkonovalov.problems.graph.searching.dfs;
 
 /**
  * Created by Georgiy Konovalov on 7/08/2023.

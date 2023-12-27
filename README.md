@@ -14,9 +14,9 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 
 ## Algorithms
 <pre>
-<a href="src/main/java/com/gkonovalov/algorithms"><b>Algorithms</b></a>
-├── <a href="src/main/java/com/gkonovalov/algorithms/strings"><b>Strings</b></a>
-│   ├── <a href="src/main/java/com/gkonovalov/algorithms/strings/sorting"><b>Sorting</b></a>
+<a href="src/main/java/com/gkonovalov/algorithms/"><b>Algorithms</b></a>
+├── <a href="src/main/java/com/gkonovalov/algorithms/strings/"><b>Strings</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/algorithms/strings/sorting/"><b>Sorting</b></a>
 │   │   └── LSD Radix Sort 
 │   ├── Compression
 │   │   └── Huffman Coding
@@ -29,13 +29,13 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │       ├── Aho-Corasick
 │       ├── Regular Expressions
 │       │   └── Thompson NFA
-│       └── <a href="src/algorithms/strings/matching/editdistance"><b>Edit Distance</b></a>
+│       └── <a href="src/algorithms/strings/matching/editdistance/"><b>Edit Distance</b></a>
 │           ├── <a href="src/main/java/com/gkonovalov/algorithms/strings/matching/editdistance/LevenshteinDistance.java"><b>Levenshtein Distance</b></a>
 │           └── <a href="src/main/java/com/gkonovalov/algorithms/strings/matching/editdistance/HammingDistance.java"><b>Hamming Distance</b></a>
-├── <a href="src/algorithms/arrays"><b>Arrays</b></a>
-│   ├── <a href="src/algorithms/arrays/searching"><b>Searching</b></a>
+├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/"><b>Arrays</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/searching/"><b>Searching</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/searching/LinearSearch.java"><b>Linear Search</b></a>
-│   │   ├── <a href="src/algorithms/arrays/searching/binarysearch"><b>Binary Search</b></a>
+│   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/searching/binarysearch"><b>Binary Search</b></a>
 │   │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/searching/binarysearch/BinarySearchIterative.java"><b>Iterative</b></a>
 │   │   │   └── <a href="src/main/java/com/gkonovalov/algorithms/arrays/searching/binarysearch/BinarySearchRecursive.java"><b>Recursive</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/searching/ExponentialSearch.java"><b>Exponential Search</b></a>

@@ -1,6 +1,5 @@
 package com.gkonovalov.algorithms.strings.matching.editdistance;
 
-import com.gkonovalov.algorithms.arrays.searching.BinarySearch;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

@@ -14,7 +14,7 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 
 ## Algorithms
 <pre>
-<a href="src/algorithms"><b>Algorithms</b></a>
+<a href="src/main/java/com/gkonovalov/algorithms"><b>Algorithms</b></a>
 ├── <a href="src/main/java/com/gkonovalov/algorithms/strings"><b>Strings</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/strings/sorting"><b>Sorting</b></a>
 │   │   └── LSD Radix Sort 

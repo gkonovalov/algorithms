@@ -29,7 +29,7 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │       ├── Aho-Corasick
 │       ├── Regular Expressions
 │       │   └── Thompson NFA
-│       └── <a href="src/algorithms/strings/matching/editdistance/"><b>Edit Distance</b></a>
+│       └── <a href="src/main/java/com/gkonovalov/algorithms/strings/matching/editdistance/"><b>Edit Distance</b></a>
 │           ├── <a href="src/main/java/com/gkonovalov/algorithms/strings/matching/editdistance/LevenshteinDistance.java"><b>Levenshtein Distance</b></a>
 │           └── <a href="src/main/java/com/gkonovalov/algorithms/strings/matching/editdistance/HammingDistance.java"><b>Hamming Distance</b></a>
 ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/"><b>Arrays</b></a>

@@ -14,9 +14,9 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 
 ## Algorithms
 <pre>
-<a href="/src/algorithms"><b>Algorithms</b></a>
-├── <a href="https://github.com/gkonovalov/algorithms/tree/main/src/main/java/com/gkonovalov/algorithms/strings/"><b>Strings</b></a>
-│   ├── <a href="https://github.com/gkonovalov/algorithms/tree/main/src/main/java/com/gkonovalov/algorithms/strings/sorting/"><b>Sorting</b></a>
+<a href="src/algorithms"><b>Algorithms</b></a>
+├── <a href="src/main/java/com/gkonovalov/algorithms/strings"><b>Strings</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/algorithms/strings/sorting"><b>Sorting</b></a>
 │   │   └── LSD Radix Sort 
 │   ├── Compression
 │   │   └── Huffman Coding
@@ -29,7 +29,7 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │       ├── Aho-Corasick
 │       ├── Regular Expressions
 │       │   └── Thompson NFA
-│       └── <a href="/tree/main/src/algorithms/strings/matching/editdistance/"><b>Edit Distance</b></a>
+│       └── <a href="src/algorithms/strings/matching/editdistance"><b>Edit Distance</b></a>
 │           ├── <a href="src/main/java/com/gkonovalov/algorithms/strings/matching/editdistance/LevenshteinDistance.java"><b>Levenshtein Distance</b></a>
 │           └── <a href="src/main/java/com/gkonovalov/algorithms/strings/matching/editdistance/HammingDistance.java"><b>Hamming Distance</b></a>
 ├── <a href="src/algorithms/arrays"><b>Arrays</b></a>

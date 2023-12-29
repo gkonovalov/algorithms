@@ -48,8 +48,8 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/InsertionSort.java"><b>Insertion Sort</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/MergeSort.java"><b>Merge Sort</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/quicksort"><b>Quick Sort</b></a>
-│   │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/quicksort/QuickSortPartitionLomuto.java"><b>Partition Lomuto</b></a>
 │   │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/quicksort/QuickSortPartitionHoare.java"><b>Partition Hoare</b></a>
+│   │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/quicksort/QuickSortPartitionLomuto.java"><b>Partition Lomuto</b></a>
 │   │   │   └── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/quicksort/QuickSort3WayPartitioning.java"><b>3-Way Partitioning</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/HeapSort.java"><b>Heap Sort</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/CountingSort.java"><b>Counting Sort</b></a>

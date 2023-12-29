@@ -1,4 +1,4 @@
-package com.gkonovalov.algorithms.arrays.sorting;
+package com.gkonovalov.algorithms.arrays.sorting.quicksort;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

@@ -1,4 +1,4 @@
-package com.gkonovalov.algorithms.arrays.sorting;
+package com.gkonovalov.algorithms.arrays.sorting.quicksort;
 
 /**
  * Created by Georgiy Konovalov on 12/06/2023.

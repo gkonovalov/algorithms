@@ -53,7 +53,9 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/CountingSort.java"><b>Counting Sort</b></a>
 │   │   └── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/BucketSort.java"><b>Bucket Sort</b></a>
 │   └── <a href="src/main/java/com/gkonovalov/algorithms/arrays/selection/"><b>Selection</b></a>
-│       ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/selection/QuickSelect.java"><b>Quick Select</b></a>
+│       ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/selection/quickselect/"><b>Quick Select</b></a>
+│       │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/selection/quickselect/QuickSelectPartitionHoare.java"><b>Partition Hoare</b></a>
+│       │   └── <a href="src/main/java/com/gkonovalov/algorithms/arrays/selection/quickselect/QuickSelectPartitionHoare.java"><b>Partition Lomuto</b></a>
 │       └── <a href="src/main/java/com/gkonovalov/algorithms/arrays/selection/MedianOfMedians.java"><b>Median of medians</b></a>
 ├── <a href="src/main/java/com/gkonovalov/algorithms/linkedlist"><b>Linked List</b></a>
 │   └── <a href="src/main/java/com/gkonovalov/algorithms/linkedlist/FloydCycleDetection.java"><b>Floyd's Cycle Detection</b></a>

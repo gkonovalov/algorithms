@@ -49,11 +49,11 @@ public class QuickSelectPartitionLomuto {
     }
 
     private int randomizedPartitionLomuto(int[] arr, int start, int end) {
-        int pivotIndex = ThreadLocalRandom.current().nextInt(start, end + 1);
-        int pivot = arr[pivotIndex];
+        int randomPivot = ThreadLocalRandom.current().nextInt(start, end + 1);
 
-        swap(arr, pivotIndex, end);
+        swap(arr, randomPivot, end);
 
+        int pivot = arr[end];
         int storeIndex = start;
 
         for (int i = start; i < end; i++) {

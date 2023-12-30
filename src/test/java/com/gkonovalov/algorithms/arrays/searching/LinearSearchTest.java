@@ -26,7 +26,7 @@ public class LinearSearchTest {
     @Test
     @DisplayName("Testing Linear Search Iteratively")
     public void testSearchIteratively() {
-        assertEquals(linearSearch.searchIteratively(arr, 13), 6);
-        assertEquals(linearSearch.searchIteratively(arr, 9999), -1);
+        assertEquals(linearSearch.search(arr, 13), 6);
+        assertEquals(linearSearch.search(arr, 9999), -1);
     }
 }

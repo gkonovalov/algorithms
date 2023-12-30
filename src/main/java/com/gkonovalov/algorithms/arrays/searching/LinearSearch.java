@@ -11,7 +11,7 @@ package com.gkonovalov.algorithms.arrays.searching;
  */
 public class LinearSearch {
 
-    public int searchIteratively(int[] arr, int num) {
+    public int search(int[] arr, int num) {
         for (int i = 0; i < arr.length; i++) {
             if (num == arr[i]) {
                 return i;

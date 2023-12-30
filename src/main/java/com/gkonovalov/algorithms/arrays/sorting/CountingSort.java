@@ -37,8 +37,8 @@ public class CountingSort {
         int[] sorted = new int[arr.length];
 
         for (int i = arr.length - 1; i >= 0; i--) {
-            sorted[count[arr[i]] - 1] = arr[i];
             count[arr[i]]--;
+            sorted[count[arr[i]]] = arr[i];
         }
 
         return sorted;
@@ -66,8 +66,8 @@ public class CountingSort {
         int[] sorted = new int[arr.length];
 
         for (int i = arr.length - 1; i >= 0; i--) {
-            sorted[count[arr[i] - min] - 1] = arr[i];
             count[arr[i] - min]--;
+            sorted[count[arr[i] - min]] = arr[i];
         }
 
         return sorted;

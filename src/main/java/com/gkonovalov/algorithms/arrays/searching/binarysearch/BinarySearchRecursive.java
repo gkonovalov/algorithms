@@ -9,8 +9,8 @@ package com.gkonovalov.algorithms.arrays.searching.binarysearch;
  * dividing the search space in half, narrowing down the search range until the target value is
  * found or determined to be absent.
  * </p>
- * Runtime Complexity: O(log n) for the {@code searchRecursive}.
- * Space Complexity:   O(log n) for {@code searchRecursive}.
+ * Runtime Complexity: O(log n) for the {@code search}.
+ * Space Complexity:   O(log n) for {@code search}.
  */
 public class BinarySearchRecursive {
 

@@ -1,4 +1,4 @@
-package com.gkonovalov.algorithms.graphs.mst;
+package com.gkonovalov.algorithms.graphs.mst.prim;
 
 import com.gkonovalov.datastructures.graphs.EdgeWeighted;
 import com.gkonovalov.datastructures.graphs.representation.AdjacencyList;
@@ -18,6 +18,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * </p
  */
 public class MSTPrimLazyTest {
+
     private MSTPrimLazy mst;
 
     @BeforeEach

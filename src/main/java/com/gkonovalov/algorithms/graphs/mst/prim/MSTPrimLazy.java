@@ -1,4 +1,4 @@
-package com.gkonovalov.algorithms.graphs.mst;
+package com.gkonovalov.algorithms.graphs.mst.prim;
 
 import com.gkonovalov.datastructures.graphs.EdgeWeighted;
 

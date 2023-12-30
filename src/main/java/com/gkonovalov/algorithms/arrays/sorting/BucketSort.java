@@ -24,7 +24,7 @@ import java.util.Collections;
  * distributed over a small range.
  * </p>
  * Runtime Complexity: O(n^2).
- * Space Complexity:   O(n).
+ * Space Complexity:   O(n+k).
  */
 public class BucketSort {
 

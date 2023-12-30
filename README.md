@@ -80,8 +80,9 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │   │ 	    ├──	<a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath/FloydWarshall.java"><b>Floyd-Warshall</b></a>
 │   │ 	    └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath/AStar.java"><b>A-star</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/mst"><b>Minimum Spanning Tree</b></a>
-│   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/mst/MSTPrimLazy.java"><b>Prim’s Lazy</b></a>
-│   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/mst/MSTPrim.java"><b>Prim’s Eager</b></a>
+│   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/mst/prim/"><b>Prim’s</b></a>
+│   │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/mst/prim/MSTPrimEager.java"><b>Eager</b></a>
+│   │   │   └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/mst/prim/MSTPrimLazy.java"><b>Lazy</b></a>
 │   │ 	└── <a href="src/main/java/com/gkonovalov/algorithms/graphs/mst/MSTKruskal.java"><b>Kruskal’s</b></a>
 │   ├── Network Flow
 │   │   ├── Maximum Flow

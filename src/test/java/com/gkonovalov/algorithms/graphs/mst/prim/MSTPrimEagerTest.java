@@ -1,8 +1,7 @@
-package com.gkonovalov.algorithms.graphs.mst;
+package com.gkonovalov.algorithms.graphs.mst.prim;
 
 import com.gkonovalov.datastructures.graphs.EdgeWeighted;
 import com.gkonovalov.datastructures.graphs.representation.AdjacencyList;
-import com.gkonovalov.datastructures.graphs.representation.EdgeList;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -15,26 +14,26 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 /**
  * Created by Georgiy Konovalov on 21/06/2023.
  * <p>
- * Tests for {@link MSTPrim}.
+ * Tests for {@link MSTPrimEager}.
  * </p
  */
-public class MSTPrimTest {
-    private MSTPrim mst;
+public class MSTPrimEagerTest {
+    private MSTPrimEager mst;
 
     @BeforeEach
     public void setUp() {
         AdjacencyList adjacencyList = new AdjacencyList();
-        this.mst = new MSTPrim(adjacencyList.getGraphWeightedUndirected());
+        this.mst = new MSTPrimEager(adjacencyList.getGraphWeightedUndirected());
     }
 
     @Test
-    @DisplayName("Testing MSTPrim.weight")
+    @DisplayName("Testing MSTPrimEager.weight")
     public void testWeight() {
         assertEquals(181, mst.weight());
     }
 
     @Test
-    @DisplayName("Testing MSTPrim.edges")
+    @DisplayName("Testing MSTPrimEager.edges")
     public void testEdges() {
         assertEquals(mst.edges(), List.of(
                 new EdgeWeighted(7, 1, 19),

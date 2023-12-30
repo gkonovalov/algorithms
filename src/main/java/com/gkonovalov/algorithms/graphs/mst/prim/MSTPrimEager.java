@@ -1,4 +1,4 @@
-package com.gkonovalov.algorithms.graphs.mst;
+package com.gkonovalov.algorithms.graphs.mst.prim;
 
 import com.gkonovalov.datastructures.graphs.EdgeWeighted;
 import com.gkonovalov.datastructures.trees.heaps.IndexedBinaryHeap;
@@ -24,14 +24,14 @@ import static com.gkonovalov.datastructures.trees.heaps.IndexedBinaryHeap.Type.M
  * Runtime Complexity: O(E log V).
  * Space Complexity:   O(E).
  */
-public class MSTPrim {
+public class MSTPrimEager {
 
     private IndexedBinaryHeap<Double> minHeap;
     private EdgeWeighted[] prev;
     private double[] dist;
     private boolean[] visited;
 
-    public MSTPrim(List<List<EdgeWeighted>> adjListWithWeight) {
+    public MSTPrimEager(List<List<EdgeWeighted>> adjListWithWeight) {
         int numV = adjListWithWeight.size();
         this.minHeap = new IndexedBinaryHeap<>(numV, MIN);
         this.visited = new boolean[numV];

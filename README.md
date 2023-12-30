@@ -120,7 +120,7 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 ├── Divide and Conquer
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/searching/BinarySearch.java"><b>Binary Search</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/MergeSort.java"><b>Merge Sort</b></a>
-│   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/QuickSort.java"><b>Quick Sort</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/quicksort/"><b>Quick Sort</b></a>
 │   └── Strassen's Matrix multiplication
 ├── <a href="src/main/java/com/gkonovalov/algorithms/recursion/"><b>Recursion</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/math/Factorial.java"><b>Factorial</b></a>
@@ -143,13 +143,13 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │           └── <a href="src/main/java/com/gkonovalov/algorithms/recursion/backtracking/combinatorics/Partitions.java"><b>Partitions</b></a>
 ├── Greedy
 │   ├── Huffman Coding
-│   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath/Dijkstra.java"><b>Shortest Path Dijkstra's</b></a>
-│   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/mst/MSTPrim.java"><b>MST Prim’s </b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath/dijkstra/DijkstraLazy.java"><b>Dijkstra's Lazy</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/mst/prim/MSTPrimLazy.java"><b>MST Prim’s Lazy</b></a>
 │   └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/mst/MSTKruskal.java"><b>MST Kruskal’s</b></a>
 ├── Randomized
-│   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/QuickSort.java#L46"><b>Randomized Quick Sort</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/quicksort/QuickSortPartitionLomuto.java#L47"><b>Randomized Quick Sort</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/randomized/FisherYatesShuffle.java"><b>Fisher-Yates Shuffle</b></a>
-│   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/selection/QuickSelect.java#L44"><b>Randomized Quick Select</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/selection/quickselect/QuickSelectPartitionLomuto.java#L52"><b>Randomized Quick Select</b></a>
 │   ├── Las Vegas
 │   └── Monte Carlo
 ├── <a href="src/main/java/com/gkonovalov/algorithms/gametheory/"><b>Game Theory</b></a>

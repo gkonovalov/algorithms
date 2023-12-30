@@ -1,7 +1,6 @@
-package com.gkonovalov.algorithms.graphs.searching.shortestpath;
+package com.gkonovalov.algorithms.graphs.searching.shortestpath.dijkstra;
 
 import com.gkonovalov.datastructures.graphs.EdgeWeighted;
-import com.gkonovalov.datastructures.graphs.NodeWeighted;
 
 import java.util.*;
 

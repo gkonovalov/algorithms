@@ -1,4 +1,4 @@
-package com.gkonovalov.algorithms.graphs.searching.shortestpath;
+package com.gkonovalov.algorithms.graphs.searching.shortestpath.dijkstra;
 
 import com.gkonovalov.datastructures.graphs.representation.AdjacencyList;
 import org.junit.jupiter.api.BeforeEach;

@@ -15,17 +15,17 @@ package com.gkonovalov.algorithms.arrays.searching.binarysearch;
 public class BinarySearchRecursive {
 
     public int search(int[] arr, int num) {
-        return searchRecursivelyHelper(arr, 0, arr.length - 1, num);
+        return search(arr, 0, arr.length - 1, num);
     }
 
-    private int searchRecursivelyHelper(int[] arr, int start, int end, int num) {
+    private int search(int[] arr, int start, int end, int num) {
         if (start <= end) {
             int center = (end - start) / 2 + start;
 
             if (num < arr[center]) {
-                return searchRecursivelyHelper(arr, start, center - 1, num);
+                return search(arr, start, center - 1, num);
             } else if (num > arr[center]) {
-                return searchRecursivelyHelper(arr, center + 1, end, num);
+                return search(arr, center + 1, end, num);
             } else {
                 return center;
             }

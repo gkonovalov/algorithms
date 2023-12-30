@@ -1,4 +1,4 @@
-package com.gkonovalov.algorithms.graphs.searching.shortestpath;
+package com.gkonovalov.algorithms.graphs.searching.shortestpath.dijkstra;
 
 import com.gkonovalov.datastructures.graphs.EdgeWeighted;
 import com.gkonovalov.datastructures.trees.heaps.IndexedBinaryHeap;
@@ -27,14 +27,14 @@ import static com.gkonovalov.datastructures.trees.heaps.IndexedBinaryHeap.Type.M
  * Runtime Complexity: O(|E|log|V|) {@code shortestPath}.
  * Space Complexity: O(V).
  */
-public class Dijkstra {
+public class DijkstraEager {
 
     private IndexedBinaryHeap<Double> minHeap;
     private double[] dist;
     private Integer[] prev;
     private boolean[] visited;
 
-    public Dijkstra(List<List<EdgeWeighted>> adjListWithWeight, int sourceVertex) {
+    public DijkstraEager(List<List<EdgeWeighted>> adjListWithWeight, int sourceVertex) {
         int vertices = adjListWithWeight.size();
 
         this.visited = new boolean[vertices];

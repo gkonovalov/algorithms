@@ -13,7 +13,7 @@ package com.gkonovalov.algorithms.arrays.sorting;
  * range of input values.
  * </p>
  * Runtime Complexity: O(n+k).
- * Space Complexity:   O(k).
+ * Space Complexity:   O(n+k).
  */
 public class CountingSort {
 

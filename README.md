@@ -155,13 +155,13 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 ├── <a href="src/main/java/com/gkonovalov/algorithms/gametheory/"><b>Game Theory</b></a>
 │   ├── Minimax
 │   └── <a href="src/main/java/com/gkonovalov/algorithms/gametheory/prisonersdilemma/PrisonersDilemma.java"><b>Prisoner's Dilemma</b></a>
-├── Geometry
+├── <a href="src/main/java/com/gkonovalov/algorithms/geometry/"><b>Geometry</b></a>
 │   ├── Closest Pair of Points
 │   ├── Line Intersection
 │   ├── Voronoi Diagram
 │   ├── Delaunay Triangulation
-│   └── Convex Hull
-│       ├── Graham Scan
+│   └── <a href="src/main/java/com/gkonovalov/algorithms/geometry/convexhull/"><b>Convex Hull</b></a>
+│       ├── <a href="src/main/java/com/gkonovalov/algorithms/geometry/convexhull/GrahamScan.java"><b>Graham Scan</b></a>
 │       └── Jarvis March
 └── <a href="src/main/java/com/gkonovalov/algorithms/math"><b>Math</b></a>
     ├── <a href="src/main/java/com/gkonovalov/algorithms/math/FibonacciNumbers.java"><b>Fibonacci Numbers</b></a>

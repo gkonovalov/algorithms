@@ -17,7 +17,7 @@ import java.util.List;
  */
 public class SieveOfEratosthenes {
 
-    public static List<Integer> findPrimeNumbers(int n) {
+    public List<Integer> findPrimeNumbers(int n) {
         if (n <= 1) {
             return List.of(0);
         }

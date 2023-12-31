@@ -69,11 +69,14 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │           └── <a href="src/main/java/com/gkonovalov/algorithms/tree/searching/BFS.java#L22"><b>Level-order traversal</b></a>
 ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs"><b>Graphs</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching"><b>Searching</b></a>
-│   │ 	├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/dfs/"><b>DFS</b></a> 
+│   │ 	├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/dfs/DFS.java"><b>DFS</b></a> 
+│   │ 	│   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/dfs/DFSPath.java"><b>Path</b></a> 
 │   │ 	│   └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/dfs/DFSID.java"><b>DFS-ID</b></a>
-│   │ 	├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/bfs/"><b>BFS</b></a>
+│   │ 	├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/bfs/BFS.java"><b>BFS</b></a>
+│   │ 	│   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/bfs/BFSPath.java"><b>Path</b></a> 
 │   │   │   └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/bfs/BidirectionalBFS.java"><b>Bidirectional BFS</b></a>
 │   │ 	└── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath"><b>Shortest Path</b></a>
+│   │ 	    ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/bfs/BFS.java"><b>BFS</b></a>
 │   │ 	    ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath/dijkstra/"><b>Dijkstra's</b></a>
 │   │ 	    │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath/dijkstra/DijkstraEager.java"><b>Eager</b></a>
 │   │ 	    │   └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath/dijkstra/DijkstraLazy.java"><b>Lazy</b></a>

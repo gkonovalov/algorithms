@@ -1,5 +1,11 @@
 package com.gkonovalov.algorithms.geometry.convexhull;
 
+/**
+ * Created by Georgiy Konovalov on 1/1/2024.
+ * <p>
+ * Paint class used in Convex Hull computation.
+ * </p>
+ */
 public class Point {
 
     public int x;

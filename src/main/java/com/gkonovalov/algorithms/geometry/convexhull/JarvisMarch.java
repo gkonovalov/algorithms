@@ -23,7 +23,7 @@ import static com.gkonovalov.algorithms.geometry.convexhull.Orientation.*;
  *                      O(n^2) - worst case.
  * Space Complexity:    O(n).
  */
-public class JarvisScan {
+public class JarvisMarch {
 
 
     public List<Point> getConvexHull(Point[] points) throws IllegalArgumentException {

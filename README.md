@@ -164,7 +164,7 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │   ├── Delaunay Triangulation
 │   └── <a href="src/main/java/com/gkonovalov/algorithms/geometry/convexhull/"><b>Convex Hull</b></a>
 │       ├── <a href="src/main/java/com/gkonovalov/algorithms/geometry/convexhull/GrahamScan.java"><b>Graham Scan</b></a>
-│       └── Jarvis March
+│       └── <a href="src/main/java/com/gkonovalov/algorithms/geometry/convexhull/JarvisMarch.java"><b>Jarvis March</b></a>
 └── <a href="src/main/java/com/gkonovalov/algorithms/math"><b>Math</b></a>
     ├── <a href="src/main/java/com/gkonovalov/algorithms/math/FibonacciNumbers.java"><b>Fibonacci Numbers</b></a>
     ├── <a href="src/main/java/com/gkonovalov/algorithms/math/Factorial.java"><b>Factorial</b></a>

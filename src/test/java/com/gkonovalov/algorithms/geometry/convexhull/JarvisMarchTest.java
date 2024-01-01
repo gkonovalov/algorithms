@@ -10,20 +10,20 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 /**
  * Created by Georgiy Konovalov on 1/1/2024.
  * <p>
- * Tests for {@link JarvisScan}.
+ * Tests for {@link JarvisMarch}.
  * </p
  */
-public class JarvisScanTest {
+public class JarvisMarchTest {
 
-    private JarvisScan jarvisScan;
+    private JarvisMarch jarvisMarch;
 
     @BeforeEach
     public void setUp() {
-        this.jarvisScan = new JarvisScan();
+        this.jarvisMarch = new JarvisMarch();
     }
 
     @Test
-    @DisplayName("Testing JarvisScan.getConvexHull")
+    @DisplayName("Testing JarvisMarch.getConvexHull")
     public void testGetConvexHull() {
         Point[] points = {
                 new Point(0, 3),
@@ -44,7 +44,7 @@ public class JarvisScanTest {
 
         };
 
-        List<Point> actual = jarvisScan.getConvexHull(points);
+        List<Point> actual = jarvisMarch.getConvexHull(points);
 
         for (int i = 0; i < expected.length; i++) {
             assertEquals(expected[i].getX(), actual.get(i).getX());

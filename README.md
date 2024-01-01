@@ -146,8 +146,9 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 ├── Greedy
 │   ├── Huffman Coding
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath/dijkstra/DijkstraLazy.java"><b>Dijkstra's Lazy</b></a>
-│   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/mst/prim/MSTPrimLazy.java"><b>MST Prim’s Lazy</b></a>
-│   └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/mst/MSTKruskal.java"><b>MST Kruskal’s</b></a>
+│   └── Minimum Spanning Tree
+│       ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/mst/prim/MSTPrimLazy.java"><b>Prim’s Lazy</b></a>
+│       └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/mst/MSTKruskal.java"><b>Kruskal’s</b></a>
 ├── Randomized
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/quicksort/QuickSortPartitionLomuto.java#L47"><b>Randomized Quick Sort</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/randomized/FisherYatesShuffle.java"><b>Fisher-Yates Shuffle</b></a>

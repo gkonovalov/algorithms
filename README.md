@@ -109,9 +109,9 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │   │   │   └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/scc/SCCTarjan.java"><b>Tarjan's</b></a>
 │   │   └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/unionfind"><b>Union-Find</b></a>
 │   │        ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/unionfind/QuickFind.java"><b>Quick Find</b></a>
-│   │        ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/unionfind/QuickUnion.java"><b>Quick Union</b></a>
-│   │        ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/unionfind/QuickUnionWeighted.java"><b>Quick Union Weighted</b></a>
-│   │        └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/unionfind/QuickUnionWeightedPathCompression.java"><b>Quick Union Weighted with Path Compression</b></a>
+│   │        └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/unionfind/quickunion/QuickUnion.java"><b>Quick Union</b></a>
+│   │            ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/unionfind/quickunion/QuickUnionWeighted.java"><b>Weighted</b></a>
+│   │            └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/connectivity/unionfind/quickunion/QuickUnionWeightedPathCompression.java"><b>Weighted with Path Compression</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/CycleDetection.java"><b>Cycle Detection</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/Bipartite.java"><b>Is Bipartite</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/MColoring.java"><b>Graph coloring</b></a>
@@ -166,11 +166,12 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │   └── <a href="src/main/java/com/gkonovalov/algorithms/geometry/convexhull/"><b>Convex Hull</b></a>
 │       ├── <a href="src/main/java/com/gkonovalov/algorithms/geometry/convexhull/GrahamScan.java"><b>Graham Scan</b></a>
 │       └── <a href="src/main/java/com/gkonovalov/algorithms/geometry/convexhull/JarvisMarch.java"><b>Jarvis March</b></a>
+├── <a href="src/main/java/com/gkonovalov/algorithms/bits/BitsOperations.java"><b>Bits Operations</b></a>
 └── <a href="src/main/java/com/gkonovalov/algorithms/math"><b>Math</b></a>
     ├── <a href="src/main/java/com/gkonovalov/algorithms/math/FibonacciNumbers.java"><b>Fibonacci Numbers</b></a>
     ├── <a href="src/main/java/com/gkonovalov/algorithms/math/Factorial.java"><b>Factorial</b></a>
-    ├── Prime Numbers
-    │   ├── <a href="src/main/java/com/gkonovalov/algorithms/math/primennumbers/SieveOfEratosthenes.java"><b>Sieve of Eratosthenes</b></a>
+    ├── <a href="src/main/java/com/gkonovalov/algorithms/math/primenumbers"><b>Prime Numbers</b></a>
+    │   ├── <a href="src/main/java/com/gkonovalov/algorithms/math/primenumbers/SieveOfEratosthenes.java"><b>Sieve of Eratosthenes</b></a>
     │   ├── Primality Test 
     │   │   └── Miller-Rabin
     │   └── Prime Factorization
@@ -187,8 +188,9 @@ These problems serve as valuable exercises to enhance your problem-solving skill
     ├── Power of Two 
     ├── Euclidean Distance
     ├── Fast Fourier Transform
-    └── Matrix
-        ├── Multiplication  
+    └── <a href="src/main/java/com/gkonovalov/algorithms/math/matrix"><b>Matrix</b></a>
+        ├── <a href="src/main/java/com/gkonovalov/algorithms/math/matrix/MatrixMultiplication.java"><b>Multiplication</b></a>  
+        ├── <a href="src/main/java/com/gkonovalov/algorithms/math/matrix/MatrixRotation.java"><b>Rotation</b></a>  
         ├── Inversion 
         ├── Power 
         ├── Transposition

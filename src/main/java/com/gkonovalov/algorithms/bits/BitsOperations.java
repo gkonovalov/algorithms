@@ -142,7 +142,8 @@ public class BitsOperations {
 
     private void masksChangeMinusSignToPlus() {
         System.out.println();
-        System.out.println("Change minus to plus: " + (Integer.toBinaryString(-5)) + " -> " + (Integer.toBinaryString(((~-5) | (1)))));
+        System.out.println("Change minus to plus: " +
+                (Integer.toBinaryString(-5)) + " -> " + (Integer.toBinaryString(((~-5) | (1)))));
         System.out.println("Mask with all bits set to 1: " + Integer.toBinaryString(0xFFFFFFFF));
         System.out.println("Set only first bit of Integer to 1: " + Integer.toBinaryString(1 << 31));
         System.out.println("Integer 5: " + Integer.toBinaryString(5));

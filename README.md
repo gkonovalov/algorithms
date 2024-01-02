@@ -277,6 +277,7 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │   │   └── <a href="src/main/java/com/gkonovalov/problems/arrays/searching/binarysearch/"><b>Binary Search</b></a>
 │   └── Range Sum 
 ├── Strings
+│   ├── <a href="src/main/java/com/gkonovalov/problems/strings/SpellingCorrection.java"><b>Spelling Correction</b></a>
 │   ├── Reverse String
 │   ├── Anagram Checking
 │   └── Palindromes

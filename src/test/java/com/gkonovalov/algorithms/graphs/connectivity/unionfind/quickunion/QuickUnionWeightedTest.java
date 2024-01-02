@@ -1,4 +1,4 @@
-package com.gkonovalov.algorithms.graphs.connectivity.unionfind;
+package com.gkonovalov.algorithms.graphs.connectivity.unionfind.quickunion;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

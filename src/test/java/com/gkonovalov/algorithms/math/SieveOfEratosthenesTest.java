@@ -1,6 +1,6 @@
 package com.gkonovalov.algorithms.math;
 
-import com.gkonovalov.algorithms.math.primennumbers.SieveOfEratosthenes;
+import com.gkonovalov.algorithms.math.primenumbers.SieveOfEratosthenes;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

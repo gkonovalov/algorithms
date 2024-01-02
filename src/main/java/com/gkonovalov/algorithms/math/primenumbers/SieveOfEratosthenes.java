@@ -1,4 +1,4 @@
-package com.gkonovalov.algorithms.math.primennumbers;
+package com.gkonovalov.algorithms.math.primenumbers;
 
 import java.util.ArrayList;
 import java.util.List;

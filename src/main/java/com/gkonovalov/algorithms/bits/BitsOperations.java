@@ -3,10 +3,10 @@ package com.gkonovalov.algorithms.bits;
 /**
  * Created by Georgiy Konovalov on 1/2/2024.
  * <p>
- * The Bits Operations class provides examples of bitwise operations in Java, including logical AND, OR, XOR,
- * bitwise NOT, left shift, right shift, right zero-fill shift, and various bit manipulation techniques.
- * Bitwise operations are performed on binary representations of integers and can be used for efficient
- * manipulation of individual bits within an integer.
+ * The Bits Operations class provides examples of bitwise operations in Java, including
+ * logical AND, OR, XOR, bitwise NOT, left shift, right shift, right zero-fill shift, and
+ * various bit manipulation techniques. Bitwise operations are performed on binary representations
+ * of integers and can be used for efficient manipulation of individual bits within an integer.
  * Java primitive data types:
  *  boolean  - 1 bit
  *  byte     - 1 byte  - 8 bits
@@ -57,8 +57,8 @@ public class BitsOperations {
     }
 
     private void logicNot() {
-        System.out.println("~7" + " -> " + (~7) + ", " + Integer.toBinaryString(7) + "->" + Integer.toString(~7));
-        System.out.println("~5" + " -> " + (~5) + ", " + Integer.toBinaryString(5) + "->" + Integer.toString(~5));
+        System.out.println("~7" + " -> " + (~7) + ", " + Integer.toBinaryString(7) + "->" + ~7);
+        System.out.println("~5" + " -> " + (~5) + ", " + Integer.toBinaryString(5) + "->" + ~5);
         System.out.println();
     }
 

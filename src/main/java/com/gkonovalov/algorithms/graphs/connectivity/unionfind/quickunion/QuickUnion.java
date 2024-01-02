@@ -1,4 +1,4 @@
-package com.gkonovalov.algorithms.graphs.connectivity.unionfind;
+package com.gkonovalov.algorithms.graphs.connectivity.unionfind.quickunion;
 
 /**
  * Created by Georgiy Konovalov on 11/05/2023.

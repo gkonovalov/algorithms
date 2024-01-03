@@ -1,4 +1,4 @@
-package com.gkonovalov.algorithms.math.matrix;
+package com.gkonovalov.algorithms.math.matrix.multiplication;
 
 /**
  * Created by Georgiy Konovalov on 1/2/2024.

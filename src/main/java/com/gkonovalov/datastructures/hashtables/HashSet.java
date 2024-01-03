@@ -3,7 +3,7 @@ package com.gkonovalov.datastructures.hashtables;
 import java.util.*;
 
 /**
- * Created by Georgiy Konovalov on 15/06/2023.
+ * Created by Georgiy Konovalov on 06/15/2023.
  * <p>
  * HashSet data structure implementation with dynamic resizing feature. This data structure that stores
  * a collection of unique elements in no particular order, provides efficient insertion, deletion, and

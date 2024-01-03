@@ -75,7 +75,8 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │   │ 	├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/bfs/BFS.java"><b>BFS</b></a>
 │   │ 	│   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/bfs/BFSPath.java"><b>Path</b></a> 
 │   │   │   └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/bfs/BidirectionalBFS.java"><b>Bidirectional BFS</b></a>
-│   │ 	└── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath"><b>Shortest Path (weighted graph)</b></a>
+│   │ 	└── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath"><b>Shortest Path</b></a>
+│   │ 	    ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/bfs/BFS.java"><b>BFS</b></a>
 │   │ 	    ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath/dijkstra/"><b>Dijkstra's</b></a>
 │   │ 	    │   ├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath/dijkstra/DijkstraEager.java"><b>Eager</b></a>
 │   │ 	    │   └── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath/dijkstra/DijkstraLazy.java"><b>Lazy</b></a>
@@ -189,14 +190,15 @@ These problems serve as valuable exercises to enhance your problem-solving skill
     ├── Euclidean Distance
     ├── Fast Fourier Transform
     └── <a href="src/main/java/com/gkonovalov/algorithms/math/matrix"><b>Matrix</b></a>
-        ├── <a href="src/main/java/com/gkonovalov/algorithms/math/matrix/MatrixMultiplication.java"><b>Multiplication</b></a>  
         ├── <a href="src/main/java/com/gkonovalov/algorithms/math/matrix/MatrixRotation.java"><b>Rotation</b></a>  
         ├── Inversion 
         ├── Power 
         ├── Transposition
         ├── Exponentiation
         ├── Square Rotation 
-        └── Strassen's Multiplication
+        └── <a href="src/main/java/com/gkonovalov/algorithms/math/matrix/multiplication/MatrixMultiplication.java"><b>Multiplication</b></a>  
+            ├── <a href="src/main/java/com/gkonovalov/algorithms/math/matrix/multiplication/MatrixChainMultiplication.java"><b>Chain Multiplication</b></a>
+            └── <a href="src/main/java/com/gkonovalov/algorithms/math/matrix/multiplication/MatrixStrassenMultiplication.java"><b>Strassen's Multiplication</b></a>
 </pre>
 
 ## Data Structures

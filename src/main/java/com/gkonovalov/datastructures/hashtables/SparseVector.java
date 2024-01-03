@@ -59,9 +59,21 @@ public class SparseVector {
         }
 
         double sum = 0.0;
+
         for (int i : indices()) {
             sum += that[i] * this.get(i);
         }
+
+        return sum;
+    }
+
+    public double dotProduct(SparseVector row) {
+        double sum = 0.0;
+
+        for (int i : indices()) {
+            sum += row.get(i) * this.get(i);
+        }
+
         return sum;
     }
 

@@ -5,8 +5,9 @@ package com.gkonovalov.algorithms.math.matrix;
  * <p>
  * The Matrix Transposition algorithm implementation.
  * </p>
- * Runtime Complexity: O(n m).
- * Space Complexity:   O(n m).
+ * Runtime Complexity: O(n m) for {@code transpose} and {@code transposeSquare}.
+ * Space Complexity:   O(1) for {@code transposeSquare},
+ *                     O(n m) for {@code transpose}.
  */
 public class MatrixTransposition {
 
@@ -23,5 +24,22 @@ public class MatrixTransposition {
         }
 
         return transposedMatrix;
+    }
+
+    public void transposeSquare(int[][] matrix) {
+        int rows = matrix.length;
+        int cols = matrix[0].length;
+
+        if (rows != cols) {
+            throw new IllegalArgumentException("Invalid matrix dimensions for transposition!");
+        }
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = i + 1; j < cols; j++) {
+                int temp = matrix[i][j];
+                matrix[i][j] = matrix[j][i];
+                matrix[j][i] = temp;
+            }
+        }
     }
 }

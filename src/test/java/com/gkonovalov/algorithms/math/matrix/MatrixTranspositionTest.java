@@ -26,6 +26,23 @@ public class MatrixTranspositionTest {
     public void testTranspose() {
         int[][] matrix = {
                 {1, 2, 3},
+                {4, 5, 6}
+        };
+
+        int[][] expected = {
+                {1, 4},
+                {2, 5},
+                {3, 6}
+        };
+
+        assertArrayEquals(expected, matrixTransposition.transpose(matrix));
+    }
+
+    @Test
+    @DisplayName("Testing MatrixTransposition.transposeSquare")
+    public void testTransposeSquare() {
+        int[][] matrix = {
+                {1, 2, 3},
                 {4, 5, 6},
                 {7, 8, 9}
         };
@@ -33,10 +50,11 @@ public class MatrixTranspositionTest {
         int[][] expected = {
                 {1, 4, 7},
                 {2, 5, 8},
-                {3, 6, 9},
+                {3, 6, 9}
         };
 
+        matrixTransposition.transposeSquare(matrix);
 
-        assertArrayEquals(expected, matrixTransposition.transpose(matrix));
+        assertArrayEquals(expected, matrix);
     }
 }

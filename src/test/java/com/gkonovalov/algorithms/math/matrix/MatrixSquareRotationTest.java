@@ -9,16 +9,16 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 /**
  * Created by Georgiy Konovalov on 1/2/2024.
  * <p>
- * Tests for {@link MatrixRotation}.
+ * Tests for {@link MatrixSquareRotation}.
  * </p
  */
-public class MatrixRotationTest {
+public class MatrixSquareRotationTest {
 
-    private MatrixRotation matrixRotation;
+    private MatrixSquareRotation matrixRotation;
 
     @BeforeEach
     public void setUp() {
-        this.matrixRotation = new MatrixRotation();
+        this.matrixRotation = new MatrixSquareRotation();
     }
 
     @Test

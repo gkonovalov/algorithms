@@ -32,4 +32,10 @@ public class GreatestCommonDivisorEuclideanTest {
     public void testGcdIterative() {
         assertEquals(3, gcd.gcdIterative(27, 6));
     }
+
+    @Test
+    @DisplayName("Testing GreatestCommonDivisorEuclidean.gcdExtended")
+    public void testGcdExtended() {
+        assertEquals(3, gcd.gcdExtended(27, 6));
+    }
 }

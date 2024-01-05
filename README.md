@@ -178,6 +178,7 @@ These problems serve as valuable exercises to enhance your problem-solving skill
     │   └── Prime Factorization
     ├── <a href="src/main/java/com/gkonovalov/algorithms/math/gcd/"><b>Greatest Common Divisor (GCD)</b></a>
     │   └── <a href="src/main/java/com/gkonovalov/algorithms/math/gcd/GreatestCommonDivisorEuclidean.java"><b>Euclidean Algorithm</b></a>
+    ├── Binary Exponentiation
     ├── Least Common Multiple (LCM)
     ├── Chinese Remainder Theorem
     ├── Sum of Digits

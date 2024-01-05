@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Georgiy Konovalov on 24/08/2023.
+ * Created by Georgiy Konovalov on 8/24/2023.
  * <p>
  * The Sieve of Eratosthenes algorithm implementation. The Sieve of Eratosthenes is an
  * ancient and efficient algorithm for finding all prime numbers up to a given limit.

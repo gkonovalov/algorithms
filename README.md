@@ -176,8 +176,8 @@ These problems serve as valuable exercises to enhance your problem-solving skill
     │   ├── Primality Test 
     │   │   └── Miller-Rabin
     │   └── Prime Factorization
-    ├── Greatest Common Divisor (GCD)
-    │   └── Euclidean Algorithm
+    ├── <a href="src/main/java/com/gkonovalov/algorithms/math/gcd/"><b>Greatest Common Divisor (GCD)</b></a>
+    │   └── <a href="src/main/java/com/gkonovalov/algorithms/math/gcd/GreatestCommonDivisorEuclidean.java"><b>Euclidean Algorithm</b></a>
     ├── Least Common Multiple (LCM)
     ├── Chinese Remainder Theorem
     ├── Sum of Digits

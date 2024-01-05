@@ -9,8 +9,10 @@ package com.gkonovalov.algorithms.math.matrix.multiplication;
  * is (arr[i-1] * arr[i]), the task is to find the most efficient way to multiply these matrices together
  * such that the total number of element multiplications is minimum.
  * </p>
- * Runtime Complexity: O(n^3).
- * Space Complexity:   O(n^2).
+ * Runtime Complexity: O(n^3) for {@code matrixChainOrderDP} and {@code matrixChainOrderMemoization},
+ *                     O(2^n) for {@code matrixChainOrderRecursive}.
+ * Space Complexity:   O(n^2) for {@code matrixChainOrderDP} and {@code matrixChainOrderMemoization},
+ *                     O(n) for {@code matrixChainOrderRecursive}.
  */
 public class MatrixChainMultiplication {
 

@@ -1,7 +1,7 @@
 package com.gkonovalov.datastructures.hashtables;
 
 /**
- * Created by Georgiy Konovalov on 16/06/2023.
+ * Created by Georgiy Konovalov on 6/16/2023.
  * <p>
  * Sparse Vector implementation. Sparse vectors are specifically optimized for efficient storage
  * and manipulation of vectors with a large number of elements, where the majority of elements
@@ -26,11 +26,7 @@ public class SparseVector {
             throw new IllegalArgumentException("Parameter key can't be null!");
         }
 
-        if (vector.isEmpty()) {
-            throw new IllegalStateException("Sparse Vector is empty!");
-        }
-
-        if (vector.containsKey(key)) {
+        if (!vector.isEmpty() && vector.containsKey(key)) {
             return vector.get(key);
         } else {
             return 0.0;
@@ -54,10 +50,6 @@ public class SparseVector {
             throw new IllegalArgumentException("Parameter that can't be null!");
         }
 
-        if (vector.isEmpty()) {
-            throw new IllegalStateException("Sparse Vector is empty!");
-        }
-
         double sum = 0.0;
 
         for (int i : indices()) {
@@ -68,6 +60,10 @@ public class SparseVector {
     }
 
     public double dotProduct(SparseVector row) {
+        if (row == null) {
+            throw new IllegalArgumentException("Parameter that can't be null!");
+        }
+
         double sum = 0.0;
 
         for (int i : indices()) {
@@ -81,7 +77,7 @@ public class SparseVector {
         return vector.keys();
     }
 
-    public int size(){
+    public int size() {
         return vector.size();
     }
 }

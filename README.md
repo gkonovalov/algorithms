@@ -196,9 +196,9 @@ These problems serve as valuable exercises to enhance your problem-solving skill
         ├── Exponentiation
         ├── <a href="src/main/java/com/gkonovalov/algorithms/math/matrix/MatrixSquareRotation.java"><b>Square Rotation</b></a>
         └── <a href="src/main/java/com/gkonovalov/algorithms/math/matrix/multiplication/MatrixMultiplication.java"><b>Multiplication</b></a>  
-            ├── <a href="src/main/java/com/gkonovalov/algorithms/math/matrix/multiplication/SparseMatrixMultiplication.java"><b>Sparse Matrix Multiplication</b></a>
-            ├── <a href="src/main/java/com/gkonovalov/algorithms/math/matrix/multiplication/MatrixChainMultiplication.java"><b>Chain Multiplication</b></a>
-            └── <a href="src/main/java/com/gkonovalov/algorithms/math/matrix/multiplication/MatrixStrassenMultiplication.java"><b>Strassen's Multiplication</b></a>
+            ├── <a href="src/main/java/com/gkonovalov/algorithms/math/matrix/multiplication/SparseMatrixMultiplication.java"><b>Sparse Matrix</b></a>
+            ├── <a href="src/main/java/com/gkonovalov/algorithms/math/matrix/multiplication/MatrixChainMultiplication.java"><b>Chain</b></a>
+            └── <a href="src/main/java/com/gkonovalov/algorithms/math/matrix/multiplication/MatrixStrassenMultiplication.java"><b>Strassen's</b></a>
 </pre>
 
 ## Data Structures

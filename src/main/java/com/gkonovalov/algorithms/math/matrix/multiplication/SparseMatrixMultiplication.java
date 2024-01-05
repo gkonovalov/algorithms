@@ -1,5 +1,7 @@
 package com.gkonovalov.algorithms.math.matrix.multiplication;
 
+import com.gkonovalov.datastructures.hashtables.SparseVector;
+import java.util.Arrays;
 
 /**
  * Created by Georgiy Konovalov on 1/4/2024.
@@ -20,7 +22,7 @@ package com.gkonovalov.algorithms.math.matrix.multiplication;
  */
 public class SparseMatrixMultiplication {
 
-    public int[][] multiply(int[][] a, int[][] b) throws IllegalArgumentException {
+    public double[][] multiply(double[][] a, double[][] b) throws IllegalArgumentException {
         int rowsA = a.length;
         int rowsB = b.length;
         int colsA = a[0].length;
@@ -30,7 +32,7 @@ public class SparseMatrixMultiplication {
             throw new IllegalArgumentException("Invalid matrix dimensions for multiplication!");
         }
 
-        int[][] result = new int[rowsA][colsB];
+        double[][] result = new double[rowsA][colsB];
 
         for (int row = 0; row < rowsA; row++) {
             for (int element = 0; element < colsA; element++) {
@@ -45,5 +47,51 @@ public class SparseMatrixMultiplication {
         }
 
         return result;
+    }
+
+    public double[][] multiply2(double[][] a, double[][] b) throws IllegalArgumentException {
+        int rowsA = a.length;
+        int colsA = a[0].length;
+        int rowsB = b.length;
+        int colsB = b[0].length;
+
+        if (colsA != rowsB) {
+            throw new IllegalArgumentException("Invalid matrix dimensions for multiplication!");
+        }
+
+        SparseVector[] matrixA = asSparseVectors(a, false);
+        SparseVector[] matrixB = asSparseVectors(b, true);
+
+        double[][] result = new double[rowsA][colsB];
+
+        for (int i = 0; i < rowsA; i++) {
+            for (int k = 0; k < colsB; k++) {
+                result[i][k] = matrixA[i].dotProduct(matrixB[k]);
+            }
+        }
+
+        return result;
+    }
+
+    private SparseVector[] asSparseVectors(double[][] a, boolean flipRowsAndCols) {
+        int rows = a.length;
+        int cols = a[0].length;
+
+        SparseVector[] sparseVectors = new SparseVector[flipRowsAndCols ? cols : rows];
+
+        Arrays.setAll(sparseVectors, value -> new SparseVector());
+
+        for (int i = 0; i < rows; i++) {
+            for (int k = 0; k < cols; k++) {
+                int row = flipRowsAndCols ? k : i;
+                int col = flipRowsAndCols ? i : k;
+
+                if (a[i][k] != 0) {
+                    sparseVectors[row].put(col, a[i][k]);
+                }
+            }
+        }
+
+        return sparseVectors;
     }
 }

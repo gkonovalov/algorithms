@@ -15,7 +15,7 @@ package com.gkonovalov.algorithms.math.matrix.multiplication;
  */
 public class MatrixExponentiation {
 
-    public int[][] power(int[][] matrix, int p) {
+    public int[][] power(int[][] matrix, int p) throws IllegalArgumentException {
         int rowsA = matrix.length;
         int colsA = matrix[0].length;
 

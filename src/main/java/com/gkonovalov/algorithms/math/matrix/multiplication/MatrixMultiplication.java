@@ -19,7 +19,7 @@ package com.gkonovalov.algorithms.math.matrix.multiplication;
  */
 public class MatrixMultiplication {
 
-    public int[][] multiply(int[][] a, int[][] b) {
+    public int[][] multiply(int[][] a, int[][] b) throws IllegalArgumentException {
         int rowsA = a.length;
         int colsA = a[0].length;
         int rowsB = b.length;

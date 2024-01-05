@@ -26,7 +26,7 @@ public class MatrixTransposition {
         return transposedMatrix;
     }
 
-    public void transposeSquare(int[][] matrix) {
+    public void transposeSquare(int[][] matrix) throws IllegalArgumentException {
         int rows = matrix.length;
         int cols = matrix[0].length;
 

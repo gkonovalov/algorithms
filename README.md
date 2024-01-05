@@ -136,7 +136,7 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │   │ 	├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath/FloydWarshall.java"><b>Floyd-Warshall</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/strings/matching/editdistance/LevenshteinDistance.java"><b>Levenshtein Distance</b></a>
 │   │   ├── Regular Expression Matching
-│   │   ├── Matrix Chain Multiplication
+│   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/math/matrix/multiplication/MatrixChainMultiplication.java"><b>Matrix Chain Multiplication</b></a>
 │   │   └── Binomial Coefficient
 │   └── <a href="src/main/java/com/gkonovalov/algorithms/recursion/backtracking/"><b>Backtracking</b></a>
 │       └── <a href="src/main/java/com/gkonovalov/algorithms/recursion/backtracking/combinatorics/"><b>Combinatorics</b></a>
@@ -190,12 +190,11 @@ These problems serve as valuable exercises to enhance your problem-solving skill
     ├── Euclidean Distance
     ├── Fast Fourier Transform
     └── <a href="src/main/java/com/gkonovalov/algorithms/math/matrix"><b>Matrix</b></a>
-        ├── Inversion 
-        ├── Power 
+        ├── <a href="src/main/java/com/gkonovalov/algorithms/math/matrix/MatrixInversion.java"><b>Inversion</b></a>
         ├── <a href="src/main/java/com/gkonovalov/algorithms/math/matrix/MatrixTransposition.java"><b>Transposition</b></a>
-        ├── Exponentiation
         ├── <a href="src/main/java/com/gkonovalov/algorithms/math/matrix/MatrixSquareRotation.java"><b>Square Rotation</b></a>
         └── <a href="src/main/java/com/gkonovalov/algorithms/math/matrix/multiplication/MatrixMultiplication.java"><b>Multiplication</b></a>  
+            ├── <a href="src/main/java/com/gkonovalov/algorithms/math/matrix/multiplication/MatrixExponentiation.java"><b>Exponentiation</b></a> 
             ├── <a href="src/main/java/com/gkonovalov/algorithms/math/matrix/multiplication/SparseMatrixMultiplication.java"><b>Sparse Matrix</b></a>
             ├── <a href="src/main/java/com/gkonovalov/algorithms/math/matrix/multiplication/MatrixChainMultiplication.java"><b>Chain</b></a>
             └── <a href="src/main/java/com/gkonovalov/algorithms/math/matrix/multiplication/MatrixStrassenMultiplication.java"><b>Strassen's</b></a>

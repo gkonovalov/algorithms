@@ -173,20 +173,22 @@ These problems serve as valuable exercises to enhance your problem-solving skill
     ├── <a href="src/main/java/com/gkonovalov/algorithms/math/Factorial.java"><b>Factorial</b></a>
     ├── <a href="src/main/java/com/gkonovalov/algorithms/math/primenumbers"><b>Prime Numbers</b></a>
     │   ├── <a href="src/main/java/com/gkonovalov/algorithms/math/primenumbers/SieveOfEratosthenes.java"><b>Sieve of Eratosthenes</b></a>
-    │   ├── Primality Test 
-    │   │   └── Miller-Rabin
-    │   └── Prime Factorization
+    │   ├── <a href="src/main/java/com/gkonovalov/algorithms/math/primenumbers/primalitytest/"><b>Primality Test</b></a>
+    │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/math/primenumbers/primalitytest/TrialDivisionPrimalityTest.java"><b>Trial Division</b></a>
+    │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/math/primenumbers/primalitytest/FermatPrimalityTest.java"><b>Fermat Test</b></a>
+    │   │   └── <a href="src/main/java/com/gkonovalov/algorithms/math/primenumbers/primalitytest/MillerRabinPrimalityTest.java"><b>Miller-Rabin</b></a>
+    │   └── <a href="src/main/java/com/gkonovalov/algorithms/math/primenumbers/factorization"><b>Prime Factorization</b></a>
+    │       ├── <a href="src/main/java/com/gkonovalov/algorithms/math/primenumbers/factorization/TrialDivisionPrimeFactorization.java"><b>Trial Division</b></a>
+    │       └── <a href="src/main/java/com/gkonovalov/algorithms/math/primenumbers/factorization/WheelPrimeFactorization.java"><b>Wheel Factorization</b></a>
     ├── <a href="src/main/java/com/gkonovalov/algorithms/math/gcd/"><b>Greatest Common Divisor (GCD)</b></a>
     │   └── <a href="src/main/java/com/gkonovalov/algorithms/math/gcd/GreatestCommonDivisorEuclidean.java"><b>Euclidean Algorithm</b></a>
-    ├── Binary Exponentiation
+    ├── <a href="src/main/java/com/gkonovalov/algorithms/math/BinaryExponentiation.java"><b>Binary Exponentiation</b></a>
+    ├── Catalan Numbers
+    ├── Binomial Coefficient 
+    ├── Pascal Triangle
     ├── Least Common Multiple (LCM)
     ├── Chinese Remainder Theorem
     ├── Sum of Digits
-    ├── Fast Powering
-    ├── Fast Exponentiation
-    ├── Binomial Coefficient 
-    ├── Catalan Numbers
-    ├── Pascal Triangle
     ├── Power of Two 
     ├── Euclidean Distance
     ├── Fast Fourier Transform

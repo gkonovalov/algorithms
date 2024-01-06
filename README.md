@@ -173,11 +173,11 @@ These problems serve as valuable exercises to enhance your problem-solving skill
     ├── <a href="src/main/java/com/gkonovalov/algorithms/math/Factorial.java"><b>Factorial</b></a>
     ├── <a href="src/main/java/com/gkonovalov/algorithms/math/primenumbers"><b>Prime Numbers</b></a>
     │   ├── <a href="src/main/java/com/gkonovalov/algorithms/math/primenumbers/SieveOfEratosthenes.java"><b>Sieve of Eratosthenes</b></a>
-    │   ├── <a href="src/main/java/com/gkonovalov/algorithms/math/primenumbers/primalitytest/"><b>Primality Testing</b></a>
+    │   ├── <a href="src/main/java/com/gkonovalov/algorithms/math/primenumbers/primalitytest/"><b>Primality Tests</b></a>
     │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/math/primenumbers/primalitytest/TrialDivisionPrimalityTest.java"><b>Trial Division</b></a>
-    │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/math/primenumbers/primalitytest/FermatPrimalityTest.java"><b>Fermat Testing</b></a>
+    │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/math/primenumbers/primalitytest/FermatPrimalityTest.java"><b>Fermat</b></a>
     │   │   └── <a href="src/main/java/com/gkonovalov/algorithms/math/primenumbers/primalitytest/MillerRabinPrimalityTest.java"><b>Miller-Rabin</b></a>
-    │   └── <a href="src/main/java/com/gkonovalov/algorithms/math/primenumbers/factorization"><b>Prime Factorization</b></a>
+    │   └── <a href="src/main/java/com/gkonovalov/algorithms/math/primenumbers/factorization"><b>Prime Factorizations</b></a>
     │       ├── <a href="src/main/java/com/gkonovalov/algorithms/math/primenumbers/factorization/TrialDivisionPrimeFactorization.java"><b>Trial Division</b></a>
     │       └── <a href="src/main/java/com/gkonovalov/algorithms/math/primenumbers/factorization/WheelPrimeFactorization.java"><b>Wheel Factorization</b></a>
     ├── <a href="src/main/java/com/gkonovalov/algorithms/math/GreatestCommonDivisorEuclidean.java"><b>GCD Euclidean Algorithm</b></a>

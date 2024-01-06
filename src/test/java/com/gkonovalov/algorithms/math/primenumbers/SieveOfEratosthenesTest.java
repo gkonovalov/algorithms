@@ -1,10 +1,8 @@
-package com.gkonovalov.algorithms.math;
+package com.gkonovalov.algorithms.math.primenumbers;
 
-import com.gkonovalov.algorithms.math.primenumbers.SieveOfEratosthenes;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

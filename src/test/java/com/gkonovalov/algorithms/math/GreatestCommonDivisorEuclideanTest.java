@@ -1,4 +1,4 @@
-package com.gkonovalov.algorithms.math.gcd;
+package com.gkonovalov.algorithms.math;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

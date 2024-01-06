@@ -180,8 +180,7 @@ These problems serve as valuable exercises to enhance your problem-solving skill
     │   └── <a href="src/main/java/com/gkonovalov/algorithms/math/primenumbers/factorization"><b>Prime Factorization</b></a>
     │       ├── <a href="src/main/java/com/gkonovalov/algorithms/math/primenumbers/factorization/TrialDivisionPrimeFactorization.java"><b>Trial Division</b></a>
     │       └── <a href="src/main/java/com/gkonovalov/algorithms/math/primenumbers/factorization/WheelPrimeFactorization.java"><b>Wheel Factorization</b></a>
-    ├── <a href="src/main/java/com/gkonovalov/algorithms/math/gcd/"><b>Greatest Common Divisor (GCD)</b></a>
-    │   └── <a href="src/main/java/com/gkonovalov/algorithms/math/gcd/GreatestCommonDivisorEuclidean.java"><b>Euclidean Algorithm</b></a>
+    ├── <a href="src/main/java/com/gkonovalov/algorithms/math/gcd/GreatestCommonDivisorEuclidean.java"><b>GCD Euclidean Algorithm</b></a>
     ├── <a href="src/main/java/com/gkonovalov/algorithms/math/FastExponentiation.java"><b>Fast Exponentiation</b></a>
     ├── Catalan Numbers
     ├── Binomial Coefficient 

@@ -1,4 +1,4 @@
-package com.gkonovalov.algorithms.math.gcd;
+package com.gkonovalov.algorithms.math;
 
 /**
  * Created by Georgiy Konovalov on 1/05/2024.

@@ -4,7 +4,7 @@ package com.gkonovalov.algorithms.math;
 /**
  * Created by Georgiy Konovalov on 5/01/2024.
  * <p>
- * Binary Exponentiation algorithm implementation. Also known as exponentiation by squaring, is an
+ * Fast/Binary Exponentiation algorithm implementation. Also known as exponentiation by squaring, is an
  * algorithm for efficiently calculating the power of a number to integer exponent. The key idea behind
  * binary exponentiation is to use the binary representation of the exponent to reduce the number of
  * multiplications needed.
@@ -13,9 +13,9 @@ package com.gkonovalov.algorithms.math;
  * Space Complexity:   O(1) for {@code powerIterative},
  *                     O(log n) for {@code powerRecursive}.
  */
-public class BinaryExponentiation {
+public class FastExponentiation {
 
-    private double powerIterative(long a, long n) {
+    public double powerIterative(long a, long n) {
         double result = 1;
 
         while (n > 0) {

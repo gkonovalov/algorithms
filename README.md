@@ -173,16 +173,16 @@ These problems serve as valuable exercises to enhance your problem-solving skill
     ├── <a href="src/main/java/com/gkonovalov/algorithms/math/Factorial.java"><b>Factorial</b></a>
     ├── <a href="src/main/java/com/gkonovalov/algorithms/math/primenumbers"><b>Prime Numbers</b></a>
     │   ├── <a href="src/main/java/com/gkonovalov/algorithms/math/primenumbers/SieveOfEratosthenes.java"><b>Sieve of Eratosthenes</b></a>
-    │   ├── <a href="src/main/java/com/gkonovalov/algorithms/math/primenumbers/primalitytest/"><b>Primality Test</b></a>
+    │   ├── <a href="src/main/java/com/gkonovalov/algorithms/math/primenumbers/primalitytest/"><b>Primality Testing</b></a>
     │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/math/primenumbers/primalitytest/TrialDivisionPrimalityTest.java"><b>Trial Division</b></a>
-    │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/math/primenumbers/primalitytest/FermatPrimalityTest.java"><b>Fermat Test</b></a>
+    │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/math/primenumbers/primalitytest/FermatPrimalityTest.java"><b>Fermat Testing</b></a>
     │   │   └── <a href="src/main/java/com/gkonovalov/algorithms/math/primenumbers/primalitytest/MillerRabinPrimalityTest.java"><b>Miller-Rabin</b></a>
     │   └── <a href="src/main/java/com/gkonovalov/algorithms/math/primenumbers/factorization"><b>Prime Factorization</b></a>
     │       ├── <a href="src/main/java/com/gkonovalov/algorithms/math/primenumbers/factorization/TrialDivisionPrimeFactorization.java"><b>Trial Division</b></a>
     │       └── <a href="src/main/java/com/gkonovalov/algorithms/math/primenumbers/factorization/WheelPrimeFactorization.java"><b>Wheel Factorization</b></a>
     ├── <a href="src/main/java/com/gkonovalov/algorithms/math/gcd/"><b>Greatest Common Divisor (GCD)</b></a>
     │   └── <a href="src/main/java/com/gkonovalov/algorithms/math/gcd/GreatestCommonDivisorEuclidean.java"><b>Euclidean Algorithm</b></a>
-    ├── <a href="src/main/java/com/gkonovalov/algorithms/math/BinaryExponentiation.java"><b>Binary Exponentiation</b></a>
+    ├── <a href="src/main/java/com/gkonovalov/algorithms/math/FastExponentiation.java"><b>Fast Exponentiation</b></a>
     ├── Catalan Numbers
     ├── Binomial Coefficient 
     ├── Pascal Triangle

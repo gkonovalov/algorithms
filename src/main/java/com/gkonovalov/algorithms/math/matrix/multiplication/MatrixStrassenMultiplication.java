@@ -117,7 +117,7 @@ public class MatrixStrassenMultiplication {
         }
     }
 
-    private static int[][] addMatrices(int[][] A, int[][] B) {
+    private int[][] addMatrices(int[][] A, int[][] B) {
         int n = A.length;
         int[][] result = new int[n][n];
 

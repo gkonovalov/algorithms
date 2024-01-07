@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Queue;
 
 /**
- * Created by Georgiy Konovalov on 21/06/2023.
+ * Created by Georgiy Konovalov on 6/21/2023.
  * <p>
  * Kahn's topological sorting implementation.
  * Topological sorting is an algorithmic technique used to order the vertices of a directed acyclic graph (DAG)
@@ -42,12 +42,12 @@ public class TopologicalSortKahn {
             }
         }
 
-        int count = 0;
+        int index = 0;
         int[] order = new int[numVertices];
 
         while (!queue.isEmpty()) {
             int v = queue.poll();
-            order[count++] = v;
+            order[index++] = v;
 
             for (int w : adjList.get(v)) {
                 indegree[w]--;
@@ -58,9 +58,10 @@ public class TopologicalSortKahn {
             }
         }
 
-        if (count == numVertices) {
+        if (index == numVertices) {
             return order;
+        } else {
+            return null;
         }
-        return null;
     }
 }

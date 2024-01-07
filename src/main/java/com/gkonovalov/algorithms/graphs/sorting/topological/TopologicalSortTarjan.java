@@ -1,11 +1,10 @@
 package com.gkonovalov.algorithms.graphs.sorting.topological;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
 /**
- * Created by Georgiy Konovalov on 21/06/2023.
+ * Created by Georgiy Konovalov on 6/21/2023.
  * <p>
  * Tarjan's topological sorting implementation. The algorithm utilizes reverse DFS postorder.
  * Topological sorting is an algorithmic technique used to order the vertices of a directed acyclic graph (DAG)
@@ -23,7 +22,7 @@ import java.util.Stack;
  */
 public class TopologicalSortTarjan {
 
-    public List<Integer> topologicalSort(List<List<Integer>> adjList) {
+    public int[] topologicalSort(List<List<Integer>> adjList) {
         int numVertices = adjList.size();
 
         Stack<Integer> sorted = new Stack<>();
@@ -31,26 +30,25 @@ public class TopologicalSortTarjan {
         boolean[] visitedOnStack = new boolean[numVertices];
 
         for (int fromV = 0; fromV < numVertices; fromV++) {
-            if (!visited[fromV]) {
-                if (!isValidDFS(adjList, sorted, visited, visitedOnStack, fromV)) {
-                    return null;
-                }
+            if (!visited[fromV] && !isValidDFS(adjList, sorted, visited, visitedOnStack, fromV)) {
+                return null;
             }
         }
 
-        List<Integer> reversed = new ArrayList<>();
-        while (!sorted.isEmpty()) {
-            reversed.add(sorted.pop());
+        int[] reversed = new int[sorted.size()];
+
+        for (int i = 0; i < reversed.length; i++) {
+            reversed[i] = sorted.pop();
         }
 
         return reversed;
     }
 
     private boolean isValidDFS(List<List<Integer>> adjList,
-                             Stack<Integer> sorted,
-                             boolean[] visited,
-                             boolean[] visitedOnStack,
-                             int fromV) {
+                               Stack<Integer> sorted,
+                               boolean[] visited,
+                               boolean[] visitedOnStack,
+                               int fromV) {
         if (visitedOnStack[fromV]) {
             return false; //has cycle
         }

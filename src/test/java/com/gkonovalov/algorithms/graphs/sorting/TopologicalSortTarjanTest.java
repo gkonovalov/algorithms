@@ -6,8 +6,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
@@ -30,11 +28,10 @@ public class TopologicalSortTarjanTest {
     @Test
     @DisplayName("Testing TopologicalSortTarjan.topologicalSort")
     public void testTopologicalSort() {
-        List<Integer> actualOrder = topologicalSort.topologicalSort(adjList.getGraphDirected(false));
-        List<Integer> expectedOrder = List.of(4, 5, 0, 2, 1, 3);
+        int[] actualOrder = topologicalSort.topologicalSort(adjList.getGraphDirected(false));
+        int[] expectedOrder = new int[]{4, 5, 0, 2, 1, 3};
 
-        assertIterableEquals(expectedOrder, actualOrder);
-
+        assertArrayEquals(expectedOrder, actualOrder);
         assertNull(topologicalSort.topologicalSort(adjList.getGraphDirected(true)));
     }
 }

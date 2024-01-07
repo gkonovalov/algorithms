@@ -31,7 +31,7 @@ public class WheelPrimeFactorization {
             }
         }
 
-        if (num > 1) {//2
+        if (num > 1) {
             primeFactors.add(num);
         }
 

@@ -44,6 +44,9 @@ public class Bridge {
         this.visited = new boolean[vertices];
         this.bridges = new ArrayList<>();
 
+        Arrays.fill(low, -1);
+        Arrays.fill(pre, -1);
+
         for (int v = 0; v < vertices; v++) {
             if (!visited[v]) {
                 dfs(adjList, v, v);

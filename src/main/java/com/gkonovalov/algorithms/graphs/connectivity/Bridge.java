@@ -28,43 +28,49 @@ import java.util.List;
  * Space Complexity:   O(|V|).
  */
 public class Bridge {
+
     private List<List<Integer>> bridges;
-    private int count;
+    private boolean[] visited;
     private int[] pre;
     private int[] low;
+
+    private int count;
 
     public Bridge(List<List<Integer>> adjList) {
         int vertices = adjList.size();
 
         this.low = new int[vertices];
         this.pre = new int[vertices];
+        this.visited = new boolean[vertices];
         this.bridges = new ArrayList<>();
 
-        Arrays.fill(low, -1);
-        Arrays.fill(pre, -1);
-
         for (int v = 0; v < vertices; v++) {
-            if (pre[v] == -1) {
+            if (!visited[v]) {
                 dfs(adjList, v, v);
             }
         }
     }
 
-    private void dfs(List<List<Integer>> adjList, int u, int v) {
-        pre[v] = count++;
-        low[v] = pre[v];
+    private void dfs(List<List<Integer>> adjList, int prevV, int fromV) {
+        visited[fromV] = true;
+        pre[fromV] = count++;
+        low[fromV] = pre[fromV];
 
-        for (int w : adjList.get(v)) {
-            if (pre[w] == -1) {
-                dfs(adjList, v, w);
+        for (int toV : adjList.get(fromV)) {
+            if (prevV == toV) {
+                continue;
+            }
 
-                low[v] = Math.min(low[v], low[w]);
+            if (!visited[toV]) {
+                dfs(adjList, fromV, toV);
 
-                if (low[w] == pre[w]) {
-                    bridges.add(Arrays.asList(v, w));
+                low[fromV] = Math.min(low[fromV], low[toV]);
+
+                if (low[toV] > pre[prevV]) {
+                    bridges.add(Arrays.asList(prevV, toV));
                 }
-            } else if (w != u) {
-                low[v] = Math.min(low[v], pre[w]);
+            } else {
+                low[fromV] = Math.min(low[fromV], pre[toV]);
             }
         }
     }

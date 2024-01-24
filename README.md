@@ -189,7 +189,7 @@ These problems serve as valuable exercises to enhance your problem-solving skill
     ├── Chinese Remainder Theorem
     ├── <a href="src/main/java/com/gkonovalov/algorithms/math/SumOfDigits.java"><b>Sum of Digits</b></a>
     ├── <a href="src/main/java/com/gkonovalov/algorithms/math/PowerOfTwo.java"><b>Power of Two</b></a>
-    ├── Euclidean Distance
+    ├── <a href="src/main/java/com/gkonovalov/algorithms/math/EuclideanDistance.java"><b>Euclidean Distance</b></a>
     ├── Fast Fourier Transform
     └── <a href="src/main/java/com/gkonovalov/algorithms/math/matrix"><b>Matrix</b></a>
         ├── <a href="src/main/java/com/gkonovalov/algorithms/math/matrix/MatrixInversion.java"><b>Inversion</b></a>

@@ -43,7 +43,7 @@ public class GrahamScan {
 
         for (int i = 2; i < points.length; i++) {
             while (getOrientation(
-                    convexHull.elementAt(convexHull.size() - 2),
+                    convexHull.get(convexHull.size() - 2),
                     convexHull.peek(),
                     points[i]
             ) != COUNTER_CLOCKWISE) {

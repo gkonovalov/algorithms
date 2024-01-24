@@ -184,8 +184,8 @@ These problems serve as valuable exercises to enhance your problem-solving skill
     ├── <a href="src/main/java/com/gkonovalov/algorithms/math/FastExponentiation.java"><b>Fast Exponentiation</b></a>
     ├── <a href="src/main/java/com/gkonovalov/algorithms/math/CatalanNumbers.java"><b>Catalan Numbers</b></a>
     ├── <a href="src/main/java/com/gkonovalov/algorithms/math/BinomialCoefficient.java"><b>Binomial Coefficient</b></a>
-    ├── Pascal Triangle
-    ├── Least Common Multiple (LCM)
+    ├── <a href="src/main/java/com/gkonovalov/algorithms/math/PascalTriangle.java"><b>Pascal Triangle</b></a>
+    ├── <a href="src/main/java/com/gkonovalov/algorithms/math/LeastCommonMultiple.java"><b>Least Common Multiple (LCM)</b></a>
     ├── Chinese Remainder Theorem
     ├── Sum of Digits
     ├── Power of Two 

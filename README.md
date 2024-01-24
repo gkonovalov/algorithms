@@ -186,11 +186,9 @@ These problems serve as valuable exercises to enhance your problem-solving skill
     ├── <a href="src/main/java/com/gkonovalov/algorithms/math/BinomialCoefficient.java"><b>Binomial Coefficient</b></a>
     ├── <a href="src/main/java/com/gkonovalov/algorithms/math/PascalTriangle.java"><b>Pascal Triangle</b></a>
     ├── <a href="src/main/java/com/gkonovalov/algorithms/math/LeastCommonMultiple.java"><b>Least Common Multiple (LCM)</b></a>
-    ├── Chinese Remainder Theorem
     ├── <a href="src/main/java/com/gkonovalov/algorithms/math/SumOfDigits.java"><b>Sum of Digits</b></a>
     ├── <a href="src/main/java/com/gkonovalov/algorithms/math/PowerOfTwo.java"><b>Power of Two</b></a>
     ├── <a href="src/main/java/com/gkonovalov/algorithms/math/EuclideanDistance.java"><b>Euclidean Distance</b></a>
-    ├── Fast Fourier Transform
     └── <a href="src/main/java/com/gkonovalov/algorithms/math/matrix"><b>Matrix</b></a>
         ├── <a href="src/main/java/com/gkonovalov/algorithms/math/matrix/MatrixInversion.java"><b>Inversion</b></a>
         ├── <a href="src/main/java/com/gkonovalov/algorithms/math/matrix/MatrixTransposition.java"><b>Transposition</b></a>

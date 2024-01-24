@@ -7,6 +7,7 @@ package com.gkonovalov.algorithms.math;
  * Catalan Numbers algorithm implementation.
  * Catalan numbers is a number sequence, which is found useful in a number of combinatorial problems,
  * often involving recursively-defined objects.
+ * Ex. 1, 1, 2, 5, 14, 42, 132, 429, 1430
  * </p>
  * Runtime Complexity: O(n^2) for {@code catalanNumberDp},
  *                     O(3^n) for {@code catalanNumberRecursive}.

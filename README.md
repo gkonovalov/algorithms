@@ -124,7 +124,7 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/searching/BinarySearch.java"><b>Binary Search</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/MergeSort.java"><b>Merge Sort</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/sorting/quicksort/"><b>Quick Sort</b></a>
-│   └── Strassen's Matrix multiplication
+│   └── <a href="src/main/java/com/gkonovalov/algorithms/math/matrix/multiplication/MatrixStrassenMultiplication.java"><b>Strassen's Matrix multiplication</b></a>
 ├── <a href="src/main/java/com/gkonovalov/algorithms/recursion/"><b>Recursion</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/math/Factorial.java"><b>Factorial</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/recursion/dp"><b>Dynamic Programming</b></a>
@@ -137,7 +137,7 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/strings/matching/editdistance/LevenshteinDistance.java"><b>Levenshtein Distance</b></a>
 │   │   ├── Regular Expression Matching
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/math/matrix/multiplication/MatrixChainMultiplication.java"><b>Matrix Chain Multiplication</b></a>
-│   │   └── Binomial Coefficient
+│   │   └── <a href="src/main/java/com/gkonovalov/algorithms/math/BinomialCoefficient.java"><b>Binomial Coefficient</b></a>
 │   └── <a href="src/main/java/com/gkonovalov/algorithms/recursion/backtracking/"><b>Backtracking</b></a>
 │       └── <a href="src/main/java/com/gkonovalov/algorithms/recursion/backtracking/combinatorics/"><b>Combinatorics</b></a>
 │           ├── <a href="src/main/java/com/gkonovalov/algorithms/recursion/backtracking/combinatorics/Permutations.java"><b>Permutations</b></a>
@@ -182,8 +182,8 @@ These problems serve as valuable exercises to enhance your problem-solving skill
     │       └── <a href="src/main/java/com/gkonovalov/algorithms/math/primenumbers/factorization/WheelPrimeFactorization.java"><b>Wheel Factorization</b></a>
     ├── <a href="src/main/java/com/gkonovalov/algorithms/math/GreatestCommonDivisorEuclidean.java"><b>GCD Euclidean Algorithm</b></a>
     ├── <a href="src/main/java/com/gkonovalov/algorithms/math/FastExponentiation.java"><b>Fast Exponentiation</b></a>
-    ├── Catalan Numbers
-    ├── Binomial Coefficient 
+    ├── <a href="src/main/java/com/gkonovalov/algorithms/math/CatalanNumbers.java"><b>Catalan Numbers</b></a>
+    ├── <a href="src/main/java/com/gkonovalov/algorithms/math/BinomialCoefficient.java"><b>Binomial Coefficient</b></a>
     ├── Pascal Triangle
     ├── Least Common Multiple (LCM)
     ├── Chinese Remainder Theorem
@@ -211,8 +211,8 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │   ├── <a href="src/main/java/com/gkonovalov/datastructures/arrays/DynamicArray.java"><b>Dynamic Array</b></a>
 │   └── Suffix Arrays
 ├── <a href="src/main/java/com/gkonovalov/datastructures/linkedlist"><b>Linked Lists</b></a>
-│   ├── <a href="src/main/java/com/gkonovalov/datastructures/linkedlist/SinglyLinkedList.java"><b>Singly Linked List</b></a>  
-│   ├── <a href="src/main/java/com/gkonovalov/datastructures/linkedlist/DoublyLinkedList.java"><b>Doubly Linked List</b></a> 
+│   ├── <a href="src/main/java/com/gkonovalov/datastructures/linkedlist/SinglyLinkedList.java"><b>Singly</b></a>  
+│   ├── <a href="src/main/java/com/gkonovalov/datastructures/linkedlist/DoublyLinkedList.java"><b>Doubly</b></a> 
 │   └── Skip List
 ├── <a href="src/main/java/com/gkonovalov/datastructures/stack/Stack.java"><b>Stacks</b></a>
 ├── <a href="src/main/java/com/gkonovalov/datastructures/queues"><b>Queues</b></a>

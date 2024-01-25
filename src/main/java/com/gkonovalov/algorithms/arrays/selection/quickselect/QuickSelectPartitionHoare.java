@@ -10,10 +10,9 @@ package com.gkonovalov.algorithms.arrays.selection.quickselect;
  * partition the desired element lies. This way, only one partition needs to be further processed, which
  * reduces the average time complexity.
  *
- * Like Lomuto's partition scheme, Hoare's partitioning also would cause Quicksort to degrade to O(n^2)
+ * Like Lomuto's partition scheme, Hoare's partitioning also would cause Quick Select to degrade to O(n^2)
  * for already sorted input, if the pivot was chosen as the first or the last element. With the middle
- * element as the pivot, however, sorted data results with (almost) no swaps in equally sized partitions
- * leading to best case behavior of Quicksort, i.e. O(n log(n)).
+ * element as the pivot, however, sorted data results with (almost) no swaps in equally sized partitions.
  *
  * Hoare's scheme is more efficient than Lomuto's partition scheme because it does three times
  * fewer swaps on average. Also Lomuto preforms relatively poorly when there is a high percentage

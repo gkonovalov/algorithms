@@ -12,7 +12,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertIterableEquals;
 
 /**
- * Created by Georgiy Konovalov on 17/06/2023.
+ * Created by Georgiy Konovalov on 6/17/2023.
  * <p>
  * Tests for {@link BFS}.
  * </p

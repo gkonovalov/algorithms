@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 /**
- * Created by Georgiy Konovalov on 27/07/2023.
+ * Created by Georgiy Konovalov on 7/27/2023.
  * <p>
  * Bucket Sort implementation. Bucket Sort is a sorting algorithm that works by distributing the
  * elements of an array into a fixed number of buckets and then sorting each bucket individually.
@@ -28,17 +28,17 @@ import java.util.Collections;
  */
 public class BucketSort {
 
-    public void sort(double[] arr) {
-        double min = Double.POSITIVE_INFINITY;
-        double max = Double.NEGATIVE_INFINITY;
+    public void sort(int[] arr) {
+        double min = Integer.MAX_VALUE;
+        double max = Integer.MIN_VALUE;
         int n = arr.length - 1;
 
-        for (double num : arr) {
+        for (int num : arr) {
             min = Math.min(min, num);
             max = Math.max(max, num);
         }
 
-        ArrayList<ArrayList<Double>> buckets = new ArrayList<>(n);
+        ArrayList<ArrayList<Integer>> buckets = new ArrayList<>(n);
         for (int i = 0; i <= n; i++) {
             buckets.add(new ArrayList<>());
         }
@@ -54,7 +54,7 @@ public class BucketSort {
 
         int index = 0;
         for (int i = 0; i <= n; i++) {
-            for (double num : buckets.get(i)) {
+            for (int num : buckets.get(i)) {
                 arr[index++] = num;
             }
         }

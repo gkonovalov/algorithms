@@ -44,29 +44,27 @@ public class BFSTest {
     @DisplayName("Testing BFS.levelOrderIterative")
     public void testLevelOrderIterative() {
         LinkedList<List<Integer>> result = new LinkedList<>();
-        List<List<Integer>> expected = new ArrayList<>() {{
-            add(List.of(1));
-            add(List.of(2, 3));
-            add(List.of(4, 5, 6));
-        }};
 
         bfs.levelOrderIterative(tree, result);
 
-        assertIterableEquals(expected, result);
+        assertIterableEquals(List.of(
+                List.of(1),
+                List.of(2, 3),
+                List.of(4, 5, 6)
+        ), result);
     }
 
     @Test
     @DisplayName("Testing BFS.levelOrderRecursive")
     public void testLevelOrderRecursive() {
         List<List<Integer>> result = new ArrayList<>();
-        List<List<Integer>> expected = new ArrayList<>() {{
-            add(List.of(1));
-            add(List.of(2, 3));
-            add(List.of(4, 5, 6));
-        }};
 
         bfs.levelOrderRecursive(tree, result);
 
-        assertIterableEquals(expected, result);
+        assertIterableEquals(List.of(
+                List.of(1),
+                List.of(2, 3),
+                List.of(4, 5, 6)
+        ), result);
     }
 }

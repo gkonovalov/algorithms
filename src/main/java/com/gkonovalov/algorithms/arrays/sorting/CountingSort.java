@@ -2,7 +2,7 @@ package com.gkonovalov.algorithms.arrays.sorting;
 
 
 /**
- * Created by Georgiy Konovalov on 14/06/2023.
+ * Created by Georgiy Konovalov on 6/24/2023.
  * <p>
  * Counting Sort algorithm works by counting the occurrences of each distinct element
  * in the input array and then using those counts to determine the sorted order.

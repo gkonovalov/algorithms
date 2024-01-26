@@ -4,7 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 /**
  * Created by Georgiy Konovalov on 12/05/2023.
@@ -15,33 +15,27 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class CountingSortTest {
 
     private CountingSort countingSort;
-    private int[] arrNegative;
-    private int[] arrPositive;
 
     @BeforeEach
     public void setUp() {
         this.countingSort = new CountingSort();
-        this.arrNegative = new int[]{40, -2, 4, 44, 5, 42, 13, 20, -555, 25, 3, -1, 53};
-        this.arrPositive = new int[]{40, 2, 4, 44, 5, 42, 13, 20, 555, 25, 3, 1, 53};
     }
 
     @Test
     @DisplayName("Testing CountingSort.sortPositive")
     public void testSortPositive() {
-        arrPositive = countingSort.sortPositive(arrPositive);
+        int[] arr = {40, 2, 4, 44, 5, 42, 13, 20, 555, 25, 3, 1, 53};
+        int[] expected = {1, 2, 3, 4, 5, 13, 20, 25, 40, 42, 44, 53, 555};
 
-        for (int i = 1; i < arrPositive.length; i++) {
-            assertTrue(arrPositive[i - 1] < arrPositive[i]);
-        }
+        assertArrayEquals(expected, countingSort.sortPositive(arr));
     }
 
     @Test
-    @DisplayName("Testing sortPositive.sortNegative")
+    @DisplayName("Testing CountingSort.sortNegative")
     public void testSortNegative() {
-        arrNegative = countingSort.sortNegative(arrNegative);
+        int[] arr = {40, -2, 4, 44, 5, 42, 13, 20, -555, 25, 3, -1, 53};
+        int[] expected = {-555, -2, -1, 3, 4, 5, 13, 20, 25, 40, 42, 44, 53};
 
-        for (int i = 1; i < arrNegative.length; i++) {
-            assertTrue(arrNegative[i - 1] < arrNegative[i]);
-        }
+        assertArrayEquals(expected, countingSort.sortNegative(arr));
     }
 }

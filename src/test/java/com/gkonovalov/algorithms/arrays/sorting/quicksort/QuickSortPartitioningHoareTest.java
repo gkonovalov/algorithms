@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
- * Created by Georgiy Konovalov on 18/05/2023.
+ * Created by Georgiy Konovalov on 5/18/2023.
  * <p>
  * Tests for {@link QuickSortPartitionHoare}.
  * </p

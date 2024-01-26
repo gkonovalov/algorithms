@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
- * Created by Georgiy Konovalov on 12/05/2023.
+ * Created by Georgiy Konovalov on 5/12/2023.
  * <p>
  * Tests for {@link LinearSearch}.
  * </p
@@ -15,17 +15,17 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class LinearSearchTest {
 
     private LinearSearch linearSearch;
-    private int[] arr;
 
     @BeforeEach
     public void setUp() {
         this.linearSearch = new LinearSearch();
-        this.arr = new int[]{40, -2, 4, 44, 5, 42, 13, 20, -555, 25, 3, -1, 53};
     }
 
     @Test
-    @DisplayName("Testing Linear Search Iteratively")
+    @DisplayName("Testing LinearSearch.search")
     public void testSearchIteratively() {
+        int[] arr = {40, -2, 4, 44, 5, 42, 13, 20, -555, 25, 3, -1, 53};
+
         assertEquals(linearSearch.search(arr, 13), 6);
         assertEquals(linearSearch.search(arr, 9999), -1);
     }

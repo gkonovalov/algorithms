@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
@@ -15,21 +16,20 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class QuickSortPartitioningHoareTest {
 
     private QuickSortPartitionHoare quickSort;
-    private int[] arr;
 
     @BeforeEach
     public void setUp() {
         this.quickSort = new QuickSortPartitionHoare();
-        this.arr = new int[]{40, -2, 4, 44, 5, 5, 42, 13, 20, -555, 25, 3, -1, 53};
     }
 
     @Test
     @DisplayName("Testing QuickSortPartitionHoare.sort")
     public void testRandomizedSortHoare() {
+        int[] arr = {40, -2, 4, 44, 5, 5, 42, 13, 20, -555, 25, 3, -1, 53};
+        int[] expected = {-555, -2, -1, 3, 4, 5, 5, 13, 20, 25, 40, 42, 44, 53};
+
         quickSort.sort(arr);
 
-        for (int i = 1; i < arr.length; i++) {
-            assertTrue(arr[i - 1] <= arr[i]);
-        }
+        assertArrayEquals(expected, arr);
     }
 }

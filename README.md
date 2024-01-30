@@ -17,7 +17,7 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 <a href="src/main/java/com/gkonovalov/algorithms/"><b>Algorithms</b></a>
 ├── <a href="src/main/java/com/gkonovalov/algorithms/strings/"><b>Strings</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/strings/sorting/"><b>Sorting</b></a>
-│   │   └── LSD Radix Sort 
+│   │   └── <a href="src/main/java/com/gkonovalov/algorithms/strings/sorting/LSDSort.java"><b>LSD Radix Sort </b></a>
 │   ├── Compression
 │   │   └── Huffman Coding
 │   └── String Matching
@@ -27,7 +27,8 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │       ├── Knuth-Morris-Pratt
 │       ├── Boyer-Moore
 │       ├── Aho-Corasick
-│       ├── Regular Expressions
+│       ├── <a href="src/main/java/com/gkonovalov/algorithms/strings/matching/regularexpressions/"><b>Regular Expressions</b></a>
+│       │   ├── <a href="src/main/java/com/gkonovalov/algorithms/strings/matching/regularexpressions/RegularExpressionMatching.java"><b>Regular Expression Matching</b></a>
 │       │   └── Thompson NFA
 │       └── <a href="src/main/java/com/gkonovalov/algorithms/strings/matching/editdistance/"><b>Edit Distance</b></a>
 │           ├── <a href="src/main/java/com/gkonovalov/algorithms/strings/matching/editdistance/LevenshteinDistance.java"><b>Levenshtein Distance</b></a>
@@ -135,7 +136,7 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │   │ 	├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath/BellmanFord.java"><b>Bellman–Ford</b></a>
 │   │ 	├── <a href="src/main/java/com/gkonovalov/algorithms/graphs/searching/shortestpath/FloydWarshall.java"><b>Floyd-Warshall</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/strings/matching/editdistance/LevenshteinDistance.java"><b>Levenshtein Distance</b></a>
-│   │   ├── Regular Expression Matching
+│   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/strings/matching/regularexpressions/RegularExpressionMatching.java"><b>Regular Expression Matching</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/math/matrix/multiplication/MatrixChainMultiplication.java"><b>Matrix Chain Multiplication</b></a>
 │   │   └── <a href="src/main/java/com/gkonovalov/algorithms/math/BinomialCoefficient.java"><b>Binomial Coefficient</b></a>
 │   └── <a href="src/main/java/com/gkonovalov/algorithms/recursion/backtracking/"><b>Backtracking</b></a>

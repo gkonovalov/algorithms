@@ -9,7 +9,7 @@ package com.gkonovalov.algorithms.strings.matching.regularexpressions;
  * regular expression. Regular expressions are powerful and flexible patterns that describe
  * sets of strings. They are commonly used for tasks such as text search, text validation,
  * and data extraction.
- * <p>
+ *
  * In the context of Regular Expression Matching, a regular expression (regex) is a sequence
  * of characters that defines a search pattern. The pattern may include various components,
  * such as literal characters, metacharacters, and quantifiers. Some common metacharacters

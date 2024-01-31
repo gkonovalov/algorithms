@@ -27,11 +27,11 @@ public class LSDSort {
 
     public void sort(String[] arr, int w) {
         for (int i = w - 1; i >= 0; i--) {
-            countingSort(arr, i);
+            keyIndexedCountingSort(arr, i);
         }
     }
 
-    private void countingSort(String[] arr, int pos){
+    private void keyIndexedCountingSort(String[] arr, int pos){
         int n = arr.length;
         int[] count = new int[R + 1];
 

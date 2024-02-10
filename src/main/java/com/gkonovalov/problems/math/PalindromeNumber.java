@@ -1,6 +1,9 @@
 package com.gkonovalov.problems.math;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by Georgiy Konovalov on 12/16/2023.
  * <p>
@@ -22,14 +25,46 @@ public class PalindromeNumber {
             return false;
         }
 
+        if (x <= 9) {
+            return true;
+        }
+
+
         int original = x;
-        int reverted = 0;
+        int reversed = 0;
 
         while (x > 0) {
-            reverted = reverted * 10 + x % 10;
+            reversed = reversed * 10 + (x % 10);
             x = x / 10;
         }
 
-        return original == reverted;
+        return original == reversed;
+    }
+
+    public static boolean isPalindrome2(int x) {
+        if (x < 0) {
+            return false;
+        }
+
+        if (x <= 9) {
+            return true;
+        }
+
+        List<Integer> num = new ArrayList<>();
+
+        while (x != 0) {
+            num.add(x % 10);
+            x = x / 10;
+        }
+
+        int left = 0;
+        int right = num.size() - 1;
+
+        while (left <= right) {
+            if (num.get(left++) != num.get(right--)) {
+                return false;
+            }
+        }
+        return true;
     }
 }

@@ -57,7 +57,7 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │       ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/selection/quickselect/"><b>Quick Select</b></a>
 │       │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/selection/quickselect/QuickSelectPartitionHoare.java"><b>Partition Hoare</b></a>
 │       │   └── <a href="src/main/java/com/gkonovalov/algorithms/arrays/selection/quickselect/QuickSelectPartitionHoare.java"><b>Partition Lomuto</b></a>
-│       └── <a href="src/main/java/com/gkonovalov/algorithms/arrays/selection/MedianOfMedians.java"><b>Median of medians</b></a>
+│       └── Median of medians
 ├── <a href="src/main/java/com/gkonovalov/algorithms/linkedlist"><b>Linked List</b></a>
 │   └── <a href="src/main/java/com/gkonovalov/algorithms/linkedlist/FloydCycleDetection.java"><b>Floyd's Cycle Detection</b></a>
 ├── <a href="src/main/java/com/gkonovalov/datastructures/trees/TreeNode.java"><b>Tree</b></a>
@@ -277,8 +277,22 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │   ├── <a href="src/main/java/com/gkonovalov/problems/arrays/MaximumSubarray.java"><b>Maximum Sum Subarray - Kadane's </b></a>
 │   ├── Sliding Window
 │   ├── <a href="src/main/java/com/gkonovalov/problems/arrays/twopointers/"><b>Two Pointers</b></a>
+│   │   └── <a href="src/main/java/com/gkonovalov/problems/arrays/twopointers/ContainerWithMostWater.java"><b>Container With Most Water</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/problems/arrays/matrix"><b>Matrix</b></a>
+│   │   ├── <a href="src/main/java/com/gkonovalov/problems/arrays/matrix/GameOfLife.java"><b>Game of Life</b></a>
+│   │   ├── <a href="src/main/java/com/gkonovalov/problems/arrays/matrix/RotateImage.java"><b>Rotate Image</b></a>
+│   │   ├── <a href="src/main/java/com/gkonovalov/problems/arrays/matrix/Search2DMatrix.java"><b>Search in 2D Matrix</b></a>
+│   │   └── <a href="src/main/java/com/gkonovalov/problems/arrays/matrix/SetMatrixZeroes.java"><b>Set Matrix Zeroes</b></a>
 │   ├── Searching
+│   │   ├── Range Sum
 │   │   └── <a href="src/main/java/com/gkonovalov/problems/arrays/searching/binarysearch/"><b>Binary Search</b></a>
+│   │       ├── <a href="src/main/java/com/gkonovalov/problems/arrays/searching/binarysearch/CuttingRibbons.java"><b>Cutting Ribbons</b></a>
+│   │       ├── <a href="src/main/java/com/gkonovalov/problems/arrays/searching/binarysearch/KokoEatingBananas.java"><b>Koko Eating Bananas</b></a>
+│   │       ├── <a href="src/main/java/com/gkonovalov/problems/arrays/searching/binarysearch/MissingNumber.java"><b>Missing Number</b></a>
+│   │       ├── <a href="src/main/java/com/gkonovalov/problems/arrays/searching/binarysearch/SearchInsertPosition.java"><b>Search Insert Position</b></a>
+│   │       ├── <a href="src/main/java/com/gkonovalov/problems/arrays/searching/binarysearch/FirstBadVersion.java"><b>First Bad Version</b></a>
+│   │       ├── <a href="src/main/java/com/gkonovalov/problems/arrays/searching/binarysearch/FindPeakElement.java"><b>Find Peak Element</b></a>
+│   │       └── <a href="src/main/java/com/gkonovalov/problems/arrays/searching/binarysearch/CapacityToShipPackagesWithinDDays.java"><b>Capacity to Ship Packages Within N Days</b></a>
 │   └── Range Sum 
 ├── Strings
 │   ├── <a href="src/main/java/com/gkonovalov/problems/strings/SpellingCorrection.java"><b>Spelling Correction</b></a>
@@ -370,4 +384,4 @@ To open the project in Intellij Idea:
 4. Select `setting.gradle`
 
 ------------
-Georgiy Konovalov 2023 (c) [MIT License](LICENSE)
+Georgiy Konovalov 2024 (c) [MIT License](LICENSE)

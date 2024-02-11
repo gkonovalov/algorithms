@@ -288,9 +288,6 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │   │       ├── <a href="src/main/java/com/gkonovalov/problems/arrays/searching/binarysearch/MissingNumber.java"><b>Missing Number</b></a>
 │   │       ├── <a href="src/main/java/com/gkonovalov/problems/arrays/searching/binarysearch/SearchInsertPosition.java"><b>Search Insert Position</b></a>
 │   │       └── <a href="src/main/java/com/gkonovalov/problems/arrays/searching/binarysearch/SearchRotatedSortedArray.java"><b>Search Rotated Sorted Array</b></a>
-│   ├── <a href="src/main/java/com/gkonovalov/problems/arrays/sorting/"><b>Sorting</b></a>
-│   │   ├── <a href="src/main/java/com/gkonovalov/problems/arrays/sorting/MergeIntervals.java"><b>Merge Intervals</b></a>
-│   │   └── <a href="src/main/java/com/gkonovalov/problems/arrays/sorting/MergeSortedArray.java"><b>Merge Sorted Array</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/problems/arrays/selection/"><b>Selection</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/problems/arrays/selection/KClosestPointsToOrigin.java"><b>Kth Closest Points to Origin</b></a>
 │   │   └── <a href="src/main/java/com/gkonovalov/problems/arrays/selection/KthLargestElementArray.java"><b>Kth Largest Element in Array</b></a>

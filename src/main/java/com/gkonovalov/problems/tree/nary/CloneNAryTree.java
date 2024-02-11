@@ -1,4 +1,4 @@
-package com.gkonovalov.problems.tree;
+package com.gkonovalov.problems.tree.nary;
 
 import com.gkonovalov.problems.utils.Node;
 

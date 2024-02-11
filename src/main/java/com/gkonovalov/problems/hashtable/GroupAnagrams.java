@@ -1,4 +1,4 @@
-package com.gkonovalov.problems.hastable;
+package com.gkonovalov.problems.hashtable;
 
 
 import java.util.*;

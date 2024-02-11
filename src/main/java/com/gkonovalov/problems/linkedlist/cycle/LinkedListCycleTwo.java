@@ -1,4 +1,4 @@
-package com.gkonovalov.problems.linkedlist;
+package com.gkonovalov.problems.linkedlist.cycle;
 
 import com.gkonovalov.problems.utils.ListNode;
 

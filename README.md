@@ -327,14 +327,30 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │       └── LFU 
 ├── Stacks
 ├── Queues
-├── Hash Table
+├── <a href="src/main/java/com/gkonovalov/problems/hashtable/"><b>Hash Table</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/problems/hashtable/GroupAnagrams.java"><b>Group Anagrams</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/problems/hashtable/LoggerRateLimiter.java"><b>Logger Rate Limiter</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/problems/hashtable/RomanToInteger.java"><b>Roman to Integer</b></a>
+│   └── <a href="src/main/java/com/gkonovalov/problems/hashtable/VerifyingAnAlienDictionary.java"><b>Verifying an Alien Dictionary</b></a>
 ├── Trees
 │   ├── Binary Search Tree
 │   └── Trie-trees
 ├── <a href="src/main/java/com/gkonovalov/problems/graph/"><b>Graphs</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/problems/graph/bipartite/IsGraphBipartite.java"><b>Is Graph Bipartite</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/problems/graph/sorting"><b>Sorting</b></a>
+│   │   └── <a href="src/main/java/com/gkonovalov/problems/graph/sorting"><b>Topological Sort</b></a>
+│   │       └── <a href="src/main/java/com/gkonovalov/problems/graph/sorting/topologicalsort/AlienDictionary.java"><b>Alien Dictionary</b></a>
 │   └── <a href="src/main/java/com/gkonovalov/problems/graph/searching"><b>Searching</b></a>
 │       ├── <a href="src/main/java/com/gkonovalov/problems/graph/searching/bfs"><b>BFS</b></a>
+│       │   ├── <a href="src/main/java/com/gkonovalov/problems/graph/searching/bfs/NumberOfIslands.java"><b>Number of Islands</b></a>
+│       │   ├── <a href="src/main/java/com/gkonovalov/problems/graph/searching/bfs/WordBreak.java"><b>Word Break</b></a>
+│       │   └── <a href="src/main/java/com/gkonovalov/problems/graph/searching/bfs/WordLadder.java"><b>Word Ladder</b></a>
 │       └── <a href="src/main/java/com/gkonovalov/problems/graph/searching/dfs"><b>DFS</b></a>
+│           ├── <a href="src/main/java/com/gkonovalov/problems/graph/searching/dfs/CloneGraph.java"><b>Clone Graph</b></a>
+│           ├── <a href="src/main/java/com/gkonovalov/problems/graph/searching/dfs/IslandPerimeter.java"><b>Island Perimeter</b></a>
+│           ├── <a href="src/main/java/com/gkonovalov/problems/graph/searching/dfs/WallsAndGates.java"><b>Walls and Gates</b></a>
+│           ├── <a href="src/main/java/com/gkonovalov/problems/graph/searching/dfs/SpiralMatrix.java"><b>Spiral Matrix</b></a>
+│           └── <a href="src/main/java/com/gkonovalov/problems/graph/searching/dfs/WordSearch.java"><b>Word Search</b></a>
 ├── Recursion
 │   ├── <a href="src/main/java/com/gkonovalov/problems/recursion/dp/"><b>Dynamic Programming</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/problems/recursion/dp/FibonacciNumbers.java"><b>Fibonacci Numbers</b></a>

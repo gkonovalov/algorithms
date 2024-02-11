@@ -277,7 +277,6 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │   │   ├── <a href="src/main/java/com/gkonovalov/problems/arrays/sorting/MergeIntervals.java"><b>Merge Intervals</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/problems/arrays/sorting/MergeSortedArray.java"><b>Merge Sorted Array</b></a>
 │   ├── Searching
-│   │   ├── Range Sum
 │   │   └── <a href="src/main/java/com/gkonovalov/problems/arrays/searching/binarysearch/"><b>Binary Search</b></a>
 │   │       ├── <a href="src/main/java/com/gkonovalov/problems/arrays/searching/binarysearch/CapacityToShipPackagesWithinDDays.java"><b>Capacity to Ship Packages Within N Days</b></a>
 │   │       ├── <a href="src/main/java/com/gkonovalov/problems/arrays/searching/binarysearch/CuttingRibbons.java"><b>Cutting Ribbons</b></a>
@@ -291,8 +290,6 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │   ├── <a href="src/main/java/com/gkonovalov/problems/arrays/selection/"><b>Selection</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/problems/arrays/selection/KClosestPointsToOrigin.java"><b>Kth Closest Points to Origin</b></a>
 │   │   └── <a href="src/main/java/com/gkonovalov/problems/arrays/selection/KthLargestElementArray.java"><b>Kth Largest Element in Array</b></a>
-│   ├── Prefix Sum
-│   ├── <a href="src/main/java/com/gkonovalov/problems/arrays/MaximumSubarray.java"><b>Maximum Sum Subarray - Kadane's </b></a>
 │   ├── Sliding Window
 │   ├── <a href="src/main/java/com/gkonovalov/problems/arrays/twopointers/"><b>Two Pointers</b></a>
 │   │   └── <a href="src/main/java/com/gkonovalov/problems/arrays/twopointers/ContainerWithMostWater.java"><b>Container With Most Water</b></a>
@@ -301,6 +298,8 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │   │   ├── <a href="src/main/java/com/gkonovalov/problems/arrays/matrix/RotateImage.java"><b>Rotate Image</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/problems/arrays/matrix/Search2DMatrix.java"><b>Search in 2D Matrix</b></a>
 │   │   └── <a href="src/main/java/com/gkonovalov/problems/arrays/matrix/SetMatrixZeroes.java"><b>Set Matrix Zeroes</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/problems/arrays/MaximumSubarray.java"><b>Maximum Sum Subarray - Kadane's </b></a>
+│   ├── Prefix Sum
 │   └── Range Sum 
 ├── Strings
 │   ├── <a href="src/main/java/com/gkonovalov/problems/strings/SpellingCorrection.java"><b>Spelling Correction</b></a>

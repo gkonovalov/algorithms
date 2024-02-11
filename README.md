@@ -15,24 +15,6 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 ## Algorithms
 <pre>
 <a href="src/main/java/com/gkonovalov/algorithms/"><b>Algorithms</b></a>
-├── <a href="src/main/java/com/gkonovalov/algorithms/strings/"><b>Strings</b></a>
-│   ├── <a href="src/main/java/com/gkonovalov/algorithms/strings/sorting/"><b>Sorting</b></a>
-│   │   └── <a href="src/main/java/com/gkonovalov/algorithms/strings/sorting/LSDSort.java"><b>LSD Radix Sort</b></a>
-│   ├── Compression
-│   │   └── Huffman Coding
-│   └── String Matching
-│       ├── Naive String Search
-│       ├── Brute-force
-│       ├── Rabin-Karp
-│       ├── Knuth-Morris-Pratt
-│       ├── Boyer-Moore
-│       ├── Aho-Corasick
-│       ├── <a href="src/main/java/com/gkonovalov/algorithms/strings/matching/regularexpressions/"><b>Regular Expressions</b></a>
-│       │   ├── <a href="src/main/java/com/gkonovalov/algorithms/strings/matching/regularexpressions/RegularExpressionMatching.java"><b>Regular Expression Matching</b></a>
-│       │   └── Thompson NFA
-│       └── <a href="src/main/java/com/gkonovalov/algorithms/strings/matching/editdistance/"><b>Edit Distance</b></a>
-│           ├── <a href="src/main/java/com/gkonovalov/algorithms/strings/matching/editdistance/LevenshteinDistance.java"><b>Levenshtein Distance</b></a>
-│           └── <a href="src/main/java/com/gkonovalov/algorithms/strings/matching/editdistance/HammingDistance.java"><b>Hamming Distance</b></a>
 ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/"><b>Arrays</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/searching/"><b>Searching</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/searching/LinearSearch.java"><b>Linear Search</b></a>
@@ -58,6 +40,24 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │       │   ├── <a href="src/main/java/com/gkonovalov/algorithms/arrays/selection/quickselect/QuickSelectPartitionHoare.java"><b>Partition Hoare</b></a>
 │       │   └── <a href="src/main/java/com/gkonovalov/algorithms/arrays/selection/quickselect/QuickSelectPartitionHoare.java"><b>Partition Lomuto</b></a>
 │       └── Median of medians
+├── <a href="src/main/java/com/gkonovalov/algorithms/strings/"><b>Strings</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/algorithms/strings/sorting/"><b>Sorting</b></a>
+│   │   └── <a href="src/main/java/com/gkonovalov/algorithms/strings/sorting/LSDSort.java"><b>LSD Radix Sort</b></a>
+│   ├── Compression
+│   │   └── Huffman Coding
+│   └── String Matching
+│       ├── Naive String Search
+│       ├── Brute-force
+│       ├── Rabin-Karp
+│       ├── Knuth-Morris-Pratt
+│       ├── Boyer-Moore
+│       ├── Aho-Corasick
+│       ├── <a href="src/main/java/com/gkonovalov/algorithms/strings/matching/regularexpressions/"><b>Regular Expressions</b></a>
+│       │   ├── <a href="src/main/java/com/gkonovalov/algorithms/strings/matching/regularexpressions/RegularExpressionMatching.java"><b>Regular Expression Matching</b></a>
+│       │   └── Thompson NFA
+│       └── <a href="src/main/java/com/gkonovalov/algorithms/strings/matching/editdistance/"><b>Edit Distance</b></a>
+│           ├── <a href="src/main/java/com/gkonovalov/algorithms/strings/matching/editdistance/LevenshteinDistance.java"><b>Levenshtein Distance</b></a>
+│           └── <a href="src/main/java/com/gkonovalov/algorithms/strings/matching/editdistance/HammingDistance.java"><b>Hamming Distance</b></a>
 ├── <a href="src/main/java/com/gkonovalov/algorithms/linkedlist"><b>Linked List</b></a>
 │   └── <a href="src/main/java/com/gkonovalov/algorithms/linkedlist/FloydCycleDetection.java"><b>Floyd's Cycle Detection</b></a>
 ├── <a href="src/main/java/com/gkonovalov/datastructures/trees/TreeNode.java"><b>Tree</b></a>
@@ -329,16 +329,37 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │   └── <a href="src/main/java/com/gkonovalov/problems/linkedlist/cache/"><b>Cache</b></a>
 │       ├── <a href="src/main/java/com/gkonovalov/problems/linkedlist/cache/LRUCache.java"><b>LRU</b></a>
 │       └── LFU 
-├── Stacks
+├── <a href="src/main/java/com/gkonovalov/problems/stack/"><b>Stacks</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/problems/stack/SimplifyPath.java"><b>Simplify Path</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/problems/stack/ValidParentheses.java"><b>Valid Parentheses</b></a>
+│   └── <a href="src/main/java/com/gkonovalov/problems/stack/BasicCalculatorII.java"><b>Basic Calculator II</b></a>
 ├── Queues
 ├── <a href="src/main/java/com/gkonovalov/problems/hashtable/"><b>Hash Table</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/problems/hashtable/GroupAnagrams.java"><b>Group Anagrams</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/problems/hashtable/LoggerRateLimiter.java"><b>Logger Rate Limiter</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/problems/hashtable/RomanToInteger.java"><b>Roman to Integer</b></a>
 │   └── <a href="src/main/java/com/gkonovalov/problems/hashtable/VerifyingAnAlienDictionary.java"><b>Verifying an Alien Dictionary</b></a>
-├── Trees
-│   ├── Binary Search Tree
-│   └── Trie-trees
+├── <a href="src/main/java/com/gkonovalov/problems/tree/"><b>Trees</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/problems/tree/MaximumDepthOfBinaryTree.java"><b>Maximum Depth of Binary Tree</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/problems/tree/BinaryTreeInorderTraversal.java"><b>Binary Tree Inorder Traversal</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/problems/tree/BinaryTreeMaximumPathSum.java"><b>Binary Tree Maximum Path Sum</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/problems/tree/BinaryTreeRightSideView.java"><b>Binary Tree Right Side View</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/problems/tree/BinaryTreeVerticalOrderTraversal.java"><b>Binary Tree Vertical Order Traversal</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/problems/tree/BoundaryOfBinaryTree.java"><b>Boundary of Binary Tree</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/problems/tree/LowestCommonAncestorOfBinaryTree.java"><b>Lowest Common Ancestor of a Binary Tree</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/problems/tree/DiameterOfBinaryTree.java"><b>Diameter of Binary Tree</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/problems/tree/InvertBinaryTree.java"><b>Invert Binary Tree</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/problems/tree/RecoverBinarySearchTree.java"><b>Recover Binary Search Tree</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/problems/tree/SameTree.java"><b>Same Tree</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/problems/tree/ValidateBinarySearchTree.java"><b>Validate Binary Search Tree</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/problems/tree/heap/"><b>Heap</b></a>
+│   │   └── <a href="src/main/java/com/gkonovalov/problems/tree/heap/MergeKSortedLists.java"><b>Merge k Sorted Lists</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/problems/tree/trie/"><b>Trie</b></a>
+│   │   └── <a href="src/main/java/com/gkonovalov/problems/tree/trie/LongestCommonPrefix.java"><b>Longest Common Prefix</b></a>
+│   └── <a href="src/main/java/com/gkonovalov/problems/tree/nary/"><b>N-ary Tree</b></a>
+│       ├── <a href="src/main/java/com/gkonovalov/problems/tree/nary/CloneNAryTree.java"><b>Clone N-ary Tree</b></a>
+│       ├── <a href="src/main/java/com/gkonovalov/problems/tree/nary/DiameterNAryTree.java"><b>Diameter of N-Ary Tree</b></a>
+│       └── <a href="src/main/java/com/gkonovalov/problems/tree/nary/MaximumDepthOfNAryTree.java"><b>Maximum Depth of N-ary Tree</b></a>
 ├── <a href="src/main/java/com/gkonovalov/problems/graph/"><b>Graphs</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/problems/graph/bipartite/IsGraphBipartite.java"><b>Is Graph Bipartite</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/problems/graph/sorting"><b>Sorting</b></a>
@@ -398,6 +419,8 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │   ├── Interval Scheduling
 │   ├── Job Scheduling 
 │   └── Coin Change
+├── <a href="src/main/java/com/gkonovalov/problems/gametheory/"><b>Game Theory</b></a>
+│   └── <a href="src/main/java/com/gkonovalov/problems/gametheory/GuessTheWord.java"><b>Guess The Word</b></a>
 ├── Bit Manipulation
 └── NP-complete problems
      ├── Travelling Salesman

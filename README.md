@@ -279,14 +279,18 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │   ├── Searching
 │   │   ├── Range Sum
 │   │   └── <a href="src/main/java/com/gkonovalov/problems/arrays/searching/binarysearch/"><b>Binary Search</b></a>
+│   │       ├── <a href="src/main/java/com/gkonovalov/problems/arrays/searching/binarysearch/CapacityToShipPackagesWithinDDays.java"><b>Capacity to Ship Packages Within N Days</b></a>
 │   │       ├── <a href="src/main/java/com/gkonovalov/problems/arrays/searching/binarysearch/CuttingRibbons.java"><b>Cutting Ribbons</b></a>
+│   │       ├── <a href="src/main/java/com/gkonovalov/problems/arrays/searching/binarysearch/FindFirstLastPositionOfElementInSortedArray.java"><b>Find First and Last Position of Element in Sorted Array</b></a>
+│   │       ├── <a href="src/main/java/com/gkonovalov/problems/arrays/searching/binarysearch/FindPeakElement.java"><b>Find Peak Element</b></a>
+│   │       ├── <a href="src/main/java/com/gkonovalov/problems/arrays/searching/binarysearch/FirstBadVersion.java"><b>First Bad Version</b></a>
 │   │       ├── <a href="src/main/java/com/gkonovalov/problems/arrays/searching/binarysearch/KokoEatingBananas.java"><b>Koko Eating Bananas</b></a>
 │   │       ├── <a href="src/main/java/com/gkonovalov/problems/arrays/searching/binarysearch/MissingNumber.java"><b>Missing Number</b></a>
 │   │       ├── <a href="src/main/java/com/gkonovalov/problems/arrays/searching/binarysearch/SearchInsertPosition.java"><b>Search Insert Position</b></a>
-│   │       ├── <a href="src/main/java/com/gkonovalov/problems/arrays/searching/binarysearch/SearchRotatedSortedArray.java"><b>Search Rotated Sorted Array</b></a>
-│   │       ├── <a href="src/main/java/com/gkonovalov/problems/arrays/searching/binarysearch/FirstBadVersion.java"><b>First Bad Version</b></a>
-│   │       ├── <a href="src/main/java/com/gkonovalov/problems/arrays/searching/binarysearch/FindPeakElement.java"><b>Find Peak Element</b></a>
-│   │       └── <a href="src/main/java/com/gkonovalov/problems/arrays/searching/binarysearch/CapacityToShipPackagesWithinDDays.java"><b>Capacity to Ship Packages Within N Days</b></a>
+│   │       └── <a href="src/main/java/com/gkonovalov/problems/arrays/searching/binarysearch/SearchRotatedSortedArray.java"><b>Search Rotated Sorted Array</b></a>
+│   ├── <a href="src/main/java/com/gkonovalov/problems/arrays/sorting/"><b>Sorting</b></a>
+│   │   ├── <a href="src/main/java/com/gkonovalov/problems/arrays/sorting/MergeIntervals.java"><b>Merge Intervals</b></a>
+│   │   └── <a href="src/main/java/com/gkonovalov/problems/arrays/sorting/MergeSortedArray.java"><b>Merge Sorted Array</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/problems/arrays/selection/"><b>Selection</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/problems/arrays/selection/KClosestPointsToOrigin.java"><b>Kth Closest Points to Origin</b></a>
 │   │   └── <a href="src/main/java/com/gkonovalov/problems/arrays/selection/KthLargestElementArray.java"><b>Kth Largest Element in Array</b></a>

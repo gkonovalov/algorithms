@@ -377,7 +377,7 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │   │   ├── <a href="src/main/java/com/gkonovalov/problems/recursion/dp/FibonacciNumbers.java"><b>Fibonacci Numbers</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/problems/recursion/dp/Knapsack01.java"><b>Knapsack 0/1</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/problems/recursion/dp/KnapsackUnbounded.java"><b>Knapsack Unbounded</b></a>
-│   │   ├── Traveling Salesman
+│   │   ├── <a href="src/main/java/com/gkonovalov/problems/recursion/dp/TravelingSalesmanProblem.java"><b>Traveling Salesman</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/problems/recursion/dp/LongestCommonSubsequence.java"><b>Longest Common Subsequence (LCS)</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/problems/recursion/dp/LongestIncreasingSubsequence.java"><b>Longest Increasing Subsequence (LIS)</b></a> 
 │   │   ├── <a href="src/main/java/com/gkonovalov/problems/recursion/dp/LongestPalindromicSubstring.java"><b>Longest Palindrome Subsequence (LPS)</b></a>
@@ -402,7 +402,7 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │   │   ├── Staircase
 │   │   └── Coin Change
 │   └── <a href="src/main/java/com/gkonovalov/problems/recursion/backtracking/"><b>Backtracking</b></a>
-│       ├── Traveling Salesman 
+│       ├── <a href="src/main/java/com/gkonovalov/problems/recursion/backtracking/TravelingSalesmanProblem.java"><b>Traveling Salesman</b></a>
 │       ├── <a href="src/main/java/com/gkonovalov/problems/recursion/backtracking/NQueens.java"><b>N-Queens</b></a>
 │       ├── Knight's Tour 
 │       ├── Sudoku Solver

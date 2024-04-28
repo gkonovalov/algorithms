@@ -411,7 +411,7 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │       ├── Subset Sum
 │       └── Word Search
 ├── Greedy
-│   ├── Knapsack Unbounded
+│   ├── <a href="src/main/java/com/gkonovalov/problems/greedy/Knapsack.java"><b>Knapsack</b></a>
 │   ├── Interval Scheduling
 │   ├── Job Scheduling 
 │   └── Coin Change
@@ -419,8 +419,8 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │   └── <a href="src/main/java/com/gkonovalov/problems/gametheory/GuessTheWord.java"><b>Guess The Word</b></a>
 ├── Bit Manipulation
 └── NP-complete problems
-     ├── Travelling Salesman
-     ├── Knapsack
+     ├── <a href="src/main/java/com/gkonovalov/problems/recursion/dp/TravelingSalesmanProblem.java"><b>Traveling Salesman</b></a>
+     ├── <a href="src/main/java/com/gkonovalov/problems/recursion/dp/KnapsackUnbounded.java"><b>Knapsack Unbounded</b></a>
      ├── SAT
      ├── Clique
      ├── Factorization

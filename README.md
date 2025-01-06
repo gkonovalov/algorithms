@@ -324,7 +324,7 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │   │   └── <a href="src/main/java/com/gkonovalov/problems/linkedlist/reversal/ReverseLinkedListTwo.java"><b>Reverse Linked List II</b></a>
 │   └── <a href="src/main/java/com/gkonovalov/problems/linkedlist/cache/"><b>Cache</b></a>
 │       ├── <a href="src/main/java/com/gkonovalov/problems/linkedlist/cache/LRUCache.java"><b>LRU</b></a>
-│       └── LFU 
+│       └── <a href="src/main/java/com/gkonovalov/problems/linkedlist/cache/LFUCache.java"><b>LFU</b></a> 
 ├── <a href="src/main/java/com/gkonovalov/problems/stack/"><b>Stacks</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/problems/stack/SimplifyPath.java"><b>Simplify Path</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/problems/stack/ValidParentheses.java"><b>Valid Parentheses</b></a>

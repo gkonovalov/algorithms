@@ -91,11 +91,11 @@ public class LFUCache {
             }
         }
 
-        class QueueItem {
-            private final int key;
-            private final int value;
-            private final int count;
-            private final int time;
+        static class QueueItem {
+            private int key;
+            private int value;
+            private int count;
+            private int time;
 
             public QueueItem(int key, int value, int count, int time) {
                 this.key = key;

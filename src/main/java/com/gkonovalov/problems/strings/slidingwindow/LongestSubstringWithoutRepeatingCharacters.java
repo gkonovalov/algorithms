@@ -13,7 +13,7 @@ import java.util.HashSet;
  *      </a>
  * </p>
  * Runtime Complexity: O(n) for {@code lengthOfLongestSubstring},
- * Space Complexity:   O(n) for {@code lengthOfLongestSubstring}.
+ * Space Complexity:   O(min(m,n)) for {@code lengthOfLongestSubstring}.
  */
 public class LongestSubstringWithoutRepeatingCharacters {
 

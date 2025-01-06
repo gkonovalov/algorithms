@@ -290,7 +290,7 @@ These problems serve as valuable exercises to enhance your problem-solving skill
 │   ├── <a href="src/main/java/com/gkonovalov/problems/arrays/selection/"><b>Selection</b></a>
 │   │   ├── <a href="src/main/java/com/gkonovalov/problems/arrays/selection/KClosestPointsToOrigin.java"><b>Kth Closest Points to Origin</b></a>
 │   │   └── <a href="src/main/java/com/gkonovalov/problems/arrays/selection/KthLargestElementArray.java"><b>Kth Largest Element in Array</b></a>
-│   ├── Sliding Window
+│   ├── <a href="src/main/java/com/gkonovalov/problems/strings/slidingwindow/"><b>Sliding Window</b></a>
 │   │   └── <a href="src/main/java/com/gkonovalov/problems/strings/slidingwindow/LongestSubstringWithoutRepeatingCharacters.java"><b>Longest Substring Without Repeating Characters</b></a>
 │   ├── <a href="src/main/java/com/gkonovalov/problems/arrays/twopointers/"><b>Two Pointers</b></a>
 │   │   └── <a href="src/main/java/com/gkonovalov/problems/arrays/twopointers/ContainerWithMostWater.java"><b>Container With Most Water</b></a>
